@@ -1,0 +1,10 @@
+{
+  "status": "verified",
+  "evidence_id": "ev_6009e842a201dd5d8a0a2c00dee5efa5bdb64e02fb43a8bf4eca98f98d91f4be",
+  "provider": "ghidra",
+  "address": "0xd293",
+  "bytes": "a000",
+  "mnemonic": "LDY",
+  "length": 2,
+  "scope": "one native instruction in the bounded 37-byte fetch-loop target"
+}

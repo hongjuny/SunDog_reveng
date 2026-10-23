@@ -213,3 +213,15 @@ no backup was created and the five requested REA environment values are still ab
 was substituted for the requested integration. A concrete one-command operator
 apply is documented; reconnecting REA and obtaining actual Ghidra-provider Evidence
 remain required. Checkpoint 1 is not passed. Total deterministic tests: 31.
+
+## 2026-10-23 — Actual REA/Ghidra connection passes
+
+The user's terminal apply supplied the Ghidra/Java/Swift environment. A live MCP
+query then failed because one Swift cache was addressed through both workspace
+aliases. Preserved that generated cache by renaming it, then used a fresh cache.
+REA successfully opened the D27B..D29F native slice with Ghidra 12.1.4. Load-image
+verification passed all 23 checks; D293 decoded A000, LDY #0, length 2; incoming
+references were D282/D286/D28F, matching the bounded direct Ghidra export. Saved
+four actual Evidence records plus snapshot locally, ran verify_rea_probe.py, and
+closed the session. High confidence for this bounded static integration check;
+no claim of observed Apple II execution or independent decoder agreement.

@@ -2,12 +2,25 @@
 
 ## Current state
 
-**Not yet passed.** Installed components and a bounded Ghidra reference target are
-verified. The running REA MCP server still lacks GHIDRA_INSTALL_DIR. A scoped CLI
-attempt fixed the Swift cache problem, but its owned Java probe is blocked in this
-shell environment with `spawn EPERM`; direct `ps` also returns operation not
-permitted. REA uses a process baseline before launching owned providers. No
-ownership/cleanup checks or host restrictions were disabled.
+**Passed on 2026-10-23.** The user applied the five environment settings and
+reconnected REA. The first live query exposed duplicate Swift module cache paths
+through the workspace alias and OneDrive path. The generated cache was renamed
+and preserved locally; a fresh cache resolved compilation without changing REA.
+
+Actual REA with provider **Ghidra 12.1.4** opened the 37-byte native slice at D27B.
+`inspect_native_load_image` verified all 23 mapping/source checks. D293 decoded as
+A000 / LDY #0 / length 2. Typed incoming references and `xrefs` both report D282,
+D286 and D28F, agreeing with the direct Ghidra bounded reference. Procedure
+assembly also returned the fetch loop through D29D's indirect jump. These are
+static results within the slice, not observed boot execution or complete runtime
+references. Both tools use Ghidra; agreement checks integration, not an independent
+decoder implementation.
+
+Four actual Evidence records and a 28,843-byte snapshot are retained under ignored
+`analysis/local/rea/`. The session was closed after saving. The instruction
+validator produced `analysis/rea-crosscheck.json`. The configuration/apply sections
+below describe the earlier preparation and denied agent attempt; the user's later
+successful terminal apply supersedes that pending state. No reapplication is needed.
 
 The complete installation is `/Users/ay5/Applications/ghidra_12.1.4_PUBLIC`.
 Its valid ARM64 decompiler is under
@@ -21,7 +34,7 @@ ignored under `analysis/local/ghidra-native/` and did not replace installed file
 this is not a successful REA analysis result. `tools/rea-env.sh --check-files`
 reproduces the file check. Java 21 works when invoked directly.
 
-## Concrete connection change
+## Historical connection preparation
 
 The current global `[mcp_servers.rea]` launches
 `npx -y rea-agents@6.7.0 mcp`. Its existing environment contains
@@ -88,7 +101,7 @@ The validator requires a Ghidra provider, an Evidence ID, and the decoded byte a
 instruction facts. It does not accept a doctor result or direct Ghidra export as
 REA analysis. No successful `analysis/rea-crosscheck.json` exists yet.
 
-## Authorized apply attempt and one-command operator action
+## Historical apply attempt and successful operator action
 
 The user explicitly requested configuring and using REA. The reviewed change is
 implemented in `tools/configure_rea.py`. Its default mode prints only the five
