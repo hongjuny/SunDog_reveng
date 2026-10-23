@@ -12,7 +12,7 @@ import SunDogCore
                 "Usage: SunDogRender FONT.bin OUTPUT.png [ASCII text]"])
         }
         let font = [UInt8](try Data(contentsOf: URL(fileURLWithPath: args[0])))
-        let text = args.count == 3 ? args[2] : "SUNDOG: FROZEN LEGACY\n\nNATIVE MACOS PORT"
+        let text = args.count == 3 ? args[2] : "SUNDOG: FROZEN LEGACY\\NATIVE MACOS PORT"
         let page = try NativeTextPage.compose(text: text, font: font)
         let frame = try HGRDecoder.decode(page: page)
         let bitmap = NSBitmapImageRep(cgImage: try frame.cgImage())

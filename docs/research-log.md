@@ -551,3 +551,36 @@ Signed arm64 app, offline PNG output and tests pass; GUI launch in the agent
 session fails in platform application registration, before model initialization.
 Interactive presentation remains unverified. See native-app.md for reproduction,
 supported functionality and the next semantic reconstruction requirements.
+
+## 2026-10-23 — Original text layout and scene selection
+
+Replaced the preview's host wrapping with reconstructed segment22 P48/P47/P45
+layout. Original backslash means conditional newline; vertical bar forces a
+space; ordinary leading spaces are omitted. Word wrapping and character wrap
+use distinct right-edge comparisons. P11(3) selects mask003F/mode3. P12's disabled
+line mode stores direct glyph coordinates; 273 original native helper cases
+verify x/7 and x%7. Fifty decoded-original CFG fixtures compare against Swift:
+48 complete placement/cursor results and two explicitly stopped P44 boundaries.
+The analysis evaluator is whitelisted and is not linked into the native app.
+
+Bounded the first text contract to 80 bytes, words up to20 bytes and a physical
+coordinate subset. The word restriction avoids aliasing later scalar locals in
+the original scratch area. P44 scrolling/clear behavior and P12 line mode remain
+unimplemented, rather than being replaced with preview overflow policy.
+
+Segment21 P1's eight references map to startup P4 locals9,2,3,4,5,6,7,8 in callee
+slot order. Native call-copy checks establish the reverse push mapping. This
+shared workspace is not assumed to be an event structure. Reconstructed P21/P40
+40x24 map lookup in TileSelection.swift, with exact signed16 wrap/division and
+magnitude remainder. The raw byte and P40 low nibble agree with293 original-fragment
+native-handler cases, including negative and wrap inputs. Divisor zero reaches
+original error106. Map allocation/content, full P40 override255 conditions and
+scene lifecycle remain unresolved; no fabricated game map was added to the app.
+
+Reproduction: tools/text_layout_evidence.py, tools/verify_native_text_layout.py,
+tools/event_contract.py and tools/verify_native_selection.py. Source coordinates,
+digests, supported contracts and remaining uncertainty are versioned in the
+corresponding analysis reports and docs/text-layout.md/docs/event-contract.md.
+Native app0.3 build and signature checks pass; 11 Swift XCTest cases and103 Python
+tests pass. GUI interaction remains unverified under the previously recorded
+application-registration restriction; no repeated launch success is claimed.

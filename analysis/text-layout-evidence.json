@@ -1,0 +1,156 @@
+{
+  "method": "Source-bound original decoded CFG evaluation of only text procedures, with explicit native drawing hook; no general VM or raster execution",
+  "source_sha256": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49",
+  "native_report_sha256": "b60c1b3517c1e2fcebb1b4dbe6e4615e7d7d6381d974fc5ad9b54aef1aee31e9",
+  "procedures": [
+    {
+      "procedure": 11,
+      "entry": 82,
+      "source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 53248,
+        "byte_in_sector": 82
+      },
+      "instruction_count": 19
+    },
+    {
+      "procedure": 12,
+      "entry": 364,
+      "source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 56832,
+        "byte_in_sector": 108
+      },
+      "instruction_count": 14
+    },
+    {
+      "procedure": 45,
+      "entry": 2142,
+      "source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 55040,
+        "byte_in_sector": 94
+      },
+      "instruction_count": 14
+    },
+    {
+      "procedure": 47,
+      "entry": 2218,
+      "source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 55040,
+        "byte_in_sector": 170
+      },
+      "instruction_count": 24
+    },
+    {
+      "procedure": 48,
+      "entry": 2276,
+      "source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 55040,
+        "byte_in_sector": 228
+      },
+      "instruction_count": 140
+    }
+  ],
+  "fixture_count": 50,
+  "fixtures": "analysis/local/text-layout/cases.json",
+  "fixtures_sha256": "347850039240411ea46a1311ccbf2fea9542ee9ed84e41474faf5cf315fc3e9d",
+  "coordinate_helper": {
+    "source_offset": 5639,
+    "normalized_entry": 22023,
+    "cases": 273,
+    "x_range": [
+      0,
+      272
+    ],
+    "formula": "column=x//7; shift=x%7",
+    "method": "Bounded original relocated 6502 helper; all native operands relocated using loader-derived tables",
+    "native_addresses": [
+      "0x5607",
+      "0x5609",
+      "0x560b",
+      "0x560d",
+      "0x560e",
+      "0x560f",
+      "0x5611",
+      "0x5612",
+      "0x5615",
+      "0x5616",
+      "0x5617",
+      "0x5618",
+      "0x5619",
+      "0x561a",
+      "0x561b",
+      "0x561d",
+      "0x561f",
+      "0x5621",
+      "0x5623",
+      "0x5625",
+      "0x5626",
+      "0x5628",
+      "0x562a",
+      "0x562b",
+      "0x562d",
+      "0x562f",
+      "0x5631",
+      "0x5632",
+      "0x5634",
+      "0x5636",
+      "0x5637",
+      "0x5639",
+      "0x563b",
+      "0x563d"
+    ]
+  },
+  "rules": {
+    "capacity": 80,
+    "over_capacity": "error113, not truncation",
+    "leading_space": "ignored unless x > left+2",
+    "vertical_bar": "always draw space",
+    "backslash": "new line only if x > left+2",
+    "word_pre_wrap": "x+6*word_length > right",
+    "glyph_pre_and_post_wrap": "x > right-5",
+    "newline": "x=left+2; y+=8; if y>bottom call P44",
+    "setup": "P11(3): table29[367]=3; table29[357]=63",
+    "positioning": "P12 stores x at365 and y at364; when table366>0 first calls P57 line routine"
+  },
+  "supported_native_contract": {
+    "text_bytes_max": 80,
+    "consecutive_nondelimiter_bytes_max": 20,
+    "positioning_mode366": 0,
+    "bottom_policy": "stop before P44",
+    "raster_x_range": [
+      0,
+      272
+    ],
+    "raster_baseline_range": [
+      7,
+      191
+    ]
+  },
+  "confidence": "high for selected CFG and native coordinate arithmetic; named geometry roles inferred from dataflow",
+  "limitations": [
+    "P9 hook records placement and independently established x+6; it does not execute raster in CFG evaluator.",
+    "P44/P57 are stop boundaries, not silently implemented.",
+    "Scratch local49 overlaps scalar local59 after20bytes; longer words excluded from first native contract.",
+    "ASCII LF is an ordinary character in P48, not a newline.",
+    "Host fixture sampling is not original hardware execution."
+  ]
+}

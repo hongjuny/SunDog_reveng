@@ -1,0 +1,18 @@
+{
+  "all_matched": true,
+  "bottom_boundaries": 2,
+  "cfg_cases": 48,
+  "invalid_input_cases": 3,
+  "method": "Swift planner versus bounded original P48/P47/P45/P11/P12 decoded control flow; no full-game execution",
+  "evidence": "analysis/text-layout-evidence.json",
+  "cases_sha256": "347850039240411ea46a1311ccbf2fea9542ee9ed84e41474faf5cf315fc3e9d",
+  "source_files": {
+    "native/SunDogLogic/WindowTextLayout.swift": "e4175298d5911ef5d98323a4f3034396e6d8ec5b0a246fcbe32638851579521a",
+    "tests/native/VerifyWindowTextLayout.swift": "78e1a82b01652baa46e4d0c11ba8c89df140c197330be84205480f83b4266903"
+  },
+  "limitations": [
+    "P44 scrolling and P12 line drawing are not ported.",
+    "Only 80-byte strings, words up to 20 bytes and declared coordinate ranges are supported.",
+    "Unsupported-path partial side effects are not reproduced."
+  ]
+}

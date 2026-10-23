@@ -16,7 +16,7 @@ final class NativeTextPageTests: XCTestCase {
         var font = [UInt8](repeating: 0, count: 1024)
         font[65 * 8 + 7] = 1
         font[65 * 8] = 2
-        let page = try NativeTextPage.compose(text: "A\nA", font: font)
+        let page = try NativeTextPage.compose(text: "A\\A", font: font)
         XCTAssertEqual(page[HGRDecoder.rowOffset(8) + 1], 1)
         XCTAssertEqual(page[HGRDecoder.rowOffset(15) + 1], 2)
         XCTAssertEqual(page[HGRDecoder.rowOffset(16) + 1], 1)
@@ -26,10 +26,17 @@ final class NativeTextPageTests: XCTestCase {
         XCTAssertThrowsError(try NativeTextPage.compose(text: "A", font: []))
         XCTAssertThrowsError(try NativeTextPage.compose(text: "한글", font: [UInt8](repeating: 0, count: 1024)))
     }
-    func testBottomAndHorizontalOverflowAreBounded() throws {
+    func testOriginalStringCapacityIsNotSilentlyTruncated() {
         let font = [UInt8](repeating: 0x3f, count: 1024)
-        let page = try NativeTextPage.compose(text: String(repeating: "A", count: 5000), font: font)
-        XCTAssertEqual(page.count, 8192)
-        XCTAssertTrue(page.contains(where: { $0 != 0 }))
+        XCTAssertThrowsError(try NativeTextPage.compose(text: String(repeating: "A", count: 81), font: font))
+    }
+    func testOriginalLeadingSpaceAndForcedSpaceReachRaster() throws {
+        var font = [UInt8](repeating: 0, count: 1024)
+        font[65 * 8 + 7] = 1
+        let ordinary = try NativeTextPage.compose(text: "A", font: font)
+        XCTAssertEqual(try NativeTextPage.compose(text: "  \\A", font: font), ordinary)
+        let forced = try NativeTextPage.compose(text: "|A", font: font)
+        XCTAssertEqual(forced[HGRDecoder.rowOffset(8) + 1], 64)
+        XCTAssertNotEqual(forced, ordinary)
     }
 }

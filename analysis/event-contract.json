@@ -1,0 +1,1337 @@
+{
+  "method": "Original decoded p-code dataflow, source-digest checks and actual native argument-copy probe; static effects, not an observed game event trace",
+  "source_sha256": "8f58c7e696db4e1b7c2e6eae4f51cd40eee8d4dc1019dc926bdb2f70248260cb",
+  "segment": 21,
+  "procedure": 1,
+  "parameter_bytes": 16,
+  "caller": {
+    "segment": 1,
+    "procedure": 4,
+    "call_offset": 264,
+    "source": {
+      "side": "play",
+      "track": 17,
+      "sector": 4,
+      "physical_sector": 7,
+      "offset": 70656,
+      "byte_in_sector": 8,
+      "image_offset": 70664
+    },
+    "source_sha256": "c01644b696e7b2bdef1e9773c6b98cc12ad139230edcf4a7994047c2396fcdc6",
+    "push_order": [
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      9
+    ]
+  },
+  "native_argument_copy": {
+    "start": 57848,
+    "stop_before": 57878,
+    "snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
+    "slice_sha256": "2d336b6cd8f6841db227a4e3fe9dcb8cb98a85392bc8ac9c1ecba4612ae5f1b1",
+    "cases": [
+      {
+        "pointer_base": 8192,
+        "callee_local_to_caller_local": [
+          9,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "pointer_base": 32768,
+        "callee_local_to_caller_local": [
+          9,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "pointer_base": 65280,
+        "callee_local_to_caller_local": [
+          9,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "ghidra_boundaries_match": true
+  },
+  "references": [
+    {
+      "callee_local": 1,
+      "caller_local": 9,
+      "accesses": [
+        {
+          "procedure": 1,
+          "offset": 7807,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 127,
+            "image_offset": 135551
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 1,
+          "offset": 7998,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 15,
+            "physical_sector": 15,
+            "offset": 139008,
+            "byte_in_sector": 62,
+            "image_offset": 139070
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 6,
+          "offset": 210,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 131072,
+            "byte_in_sector": 210,
+            "image_offset": 131282
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 6,
+          "offset": 376,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 134656,
+            "byte_in_sector": 120,
+            "image_offset": 134776
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 16,
+          "offset": 1954,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 8,
+            "physical_sector": 14,
+            "offset": 133120,
+            "byte_in_sector": 162,
+            "image_offset": 133282
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 16,
+          "offset": 1960,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 8,
+            "physical_sector": 14,
+            "offset": 133120,
+            "byte_in_sector": 168,
+            "image_offset": 133288
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 25,
+          "offset": 3718,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 131328,
+            "byte_in_sector": 134,
+            "image_offset": 131462
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 30,
+          "offset": 4957,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 138240,
+            "byte_in_sector": 93,
+            "image_offset": 138333
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 30,
+          "offset": 5475,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 137728,
+            "byte_in_sector": 99,
+            "image_offset": 137827
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        }
+      ]
+    },
+    {
+      "callee_local": 2,
+      "caller_local": 2,
+      "accesses": [
+        {
+          "procedure": 6,
+          "offset": 401,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 134656,
+            "byte_in_sector": 145,
+            "image_offset": 134801
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 19,
+          "offset": 2558,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 6,
+            "physical_sector": 3,
+            "offset": 132608,
+            "byte_in_sector": 254,
+            "image_offset": 132862
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 19,
+          "offset": 2615,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 132352,
+            "byte_in_sector": 55,
+            "image_offset": 132407
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 20,
+          "offset": 2520,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 6,
+            "physical_sector": 3,
+            "offset": 132608,
+            "byte_in_sector": 216,
+            "image_offset": 132824
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 21,
+          "offset": 2828,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 132096,
+            "byte_in_sector": 12,
+            "image_offset": 132108
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 21,
+          "offset": 2919,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 132096,
+            "byte_in_sector": 103,
+            "image_offset": 132199
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 21,
+          "offset": 2989,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 132096,
+            "byte_in_sector": 173,
+            "image_offset": 132269
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 30,
+          "offset": 5480,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 137728,
+            "byte_in_sector": 104,
+            "image_offset": 137832
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 40,
+          "offset": 7068,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 136192,
+            "byte_in_sector": 156,
+            "image_offset": 136348
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 40,
+          "offset": 7108,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 136192,
+            "byte_in_sector": 196,
+            "image_offset": 136388
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 40,
+          "offset": 7111,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 136192,
+            "byte_in_sector": 199,
+            "image_offset": 136391
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 40,
+          "offset": 7118,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 136192,
+            "byte_in_sector": 206,
+            "image_offset": 136398
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 40,
+          "offset": 7619,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 135680,
+            "byte_in_sector": 195,
+            "image_offset": 135875
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 40,
+          "offset": 7657,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 135680,
+            "byte_in_sector": 233,
+            "image_offset": 135913
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        }
+      ]
+    },
+    {
+      "callee_local": 3,
+      "caller_local": 3,
+      "accesses": [
+        {
+          "procedure": 12,
+          "offset": 1376,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 133632,
+            "byte_in_sector": 96,
+            "image_offset": 133728
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 12,
+          "offset": 1420,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 133632,
+            "byte_in_sector": 140,
+            "image_offset": 133772
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 12,
+          "offset": 1434,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 133632,
+            "byte_in_sector": 154,
+            "image_offset": 133786
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 12,
+          "offset": 1613,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 133376,
+            "byte_in_sector": 77,
+            "image_offset": 133453
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 25,
+          "offset": 3701,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 131328,
+            "byte_in_sector": 117,
+            "image_offset": 131445
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 36,
+          "offset": 6373,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 7,
+            "physical_sector": 1,
+            "offset": 136960,
+            "byte_in_sector": 229,
+            "image_offset": 137189
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 38,
+          "offset": 6717,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 136448,
+            "byte_in_sector": 61,
+            "image_offset": 136509
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 41,
+          "offset": 7691,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 11,
+            "image_offset": 135435
+          },
+          "usage": "word_read"
+        }
+      ]
+    },
+    {
+      "callee_local": 4,
+      "caller_local": 4,
+      "accesses": [
+        {
+          "procedure": 12,
+          "offset": 1365,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 133632,
+            "byte_in_sector": 85,
+            "image_offset": 133717
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 12,
+          "offset": 1393,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 133632,
+            "byte_in_sector": 113,
+            "image_offset": 133745
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 12,
+          "offset": 1407,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 133632,
+            "byte_in_sector": 127,
+            "image_offset": 133759
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 12,
+          "offset": 1602,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 133376,
+            "byte_in_sector": 66,
+            "image_offset": 133442
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 25,
+          "offset": 3690,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 131328,
+            "byte_in_sector": 106,
+            "image_offset": 131434
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 36,
+          "offset": 6362,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 7,
+            "physical_sector": 1,
+            "offset": 136960,
+            "byte_in_sector": 218,
+            "image_offset": 137178
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 38,
+          "offset": 6707,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 136448,
+            "byte_in_sector": 51,
+            "image_offset": 136499
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 41,
+          "offset": 7687,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 7,
+            "image_offset": 135431
+          },
+          "usage": "word_read"
+        }
+      ]
+    },
+    {
+      "callee_local": 5,
+      "caller_local": 5,
+      "accesses": [
+        {
+          "procedure": 6,
+          "offset": 243,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 131072,
+            "byte_in_sector": 243,
+            "image_offset": 131315
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 7,
+          "offset": 458,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 134656,
+            "byte_in_sector": 202,
+            "image_offset": 134858
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 9,
+          "offset": 701,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 134400,
+            "byte_in_sector": 189,
+            "image_offset": 134589
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 9,
+          "offset": 719,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 134400,
+            "byte_in_sector": 207,
+            "image_offset": 134607
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 12,
+          "offset": 1487,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 133632,
+            "byte_in_sector": 207,
+            "image_offset": 133839
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 12,
+          "offset": 1544,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 133376,
+            "byte_in_sector": 8,
+            "image_offset": 133384
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 12,
+          "offset": 1547,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 133376,
+            "byte_in_sector": 11,
+            "image_offset": 133387
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 13,
+          "offset": 1694,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 133376,
+            "byte_in_sector": 158,
+            "image_offset": 133534
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 21,
+          "offset": 2810,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 132352,
+            "byte_in_sector": 250,
+            "image_offset": 132602
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 25,
+          "offset": 3566,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 131584,
+            "byte_in_sector": 238,
+            "image_offset": 131822
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 26,
+          "offset": 4156,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 135168,
+            "byte_in_sector": 60,
+            "image_offset": 135228
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 28,
+          "offset": 4769,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 138496,
+            "byte_in_sector": 161,
+            "image_offset": 138657
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 28,
+          "offset": 4787,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 138496,
+            "byte_in_sector": 179,
+            "image_offset": 138675
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 28,
+          "offset": 4795,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 138496,
+            "byte_in_sector": 187,
+            "image_offset": 138683
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 33,
+          "offset": 6120,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 8,
+            "physical_sector": 14,
+            "offset": 137216,
+            "byte_in_sector": 232,
+            "image_offset": 137448
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 36,
+          "offset": 6242,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 7,
+            "physical_sector": 1,
+            "offset": 136960,
+            "byte_in_sector": 98,
+            "image_offset": 137058
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 40,
+          "offset": 7074,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 136192,
+            "byte_in_sector": 162,
+            "image_offset": 136354
+          },
+          "usage": "word_read"
+        }
+      ]
+    },
+    {
+      "callee_local": 6,
+      "caller_local": 6,
+      "accesses": [
+        {
+          "procedure": 6,
+          "offset": 225,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 131072,
+            "byte_in_sector": 225,
+            "image_offset": 131297
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 7,
+          "offset": 442,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 134656,
+            "byte_in_sector": 186,
+            "image_offset": 134842
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 9,
+          "offset": 697,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 134400,
+            "byte_in_sector": 185,
+            "image_offset": 134585
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 9,
+          "offset": 715,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 134400,
+            "byte_in_sector": 203,
+            "image_offset": 134603
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 12,
+          "offset": 1479,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 133632,
+            "byte_in_sector": 199,
+            "image_offset": 133831
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 12,
+          "offset": 1530,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 133632,
+            "byte_in_sector": 250,
+            "image_offset": 133882
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 12,
+          "offset": 1533,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 133632,
+            "byte_in_sector": 253,
+            "image_offset": 133885
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 13,
+          "offset": 1670,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 133376,
+            "byte_in_sector": 134,
+            "image_offset": 133510
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 21,
+          "offset": 2794,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 132352,
+            "byte_in_sector": 234,
+            "image_offset": 132586
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 25,
+          "offset": 3544,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 131584,
+            "byte_in_sector": 216,
+            "image_offset": 131800
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 26,
+          "offset": 4140,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 135168,
+            "byte_in_sector": 44,
+            "image_offset": 135212
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 28,
+          "offset": 4753,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 138496,
+            "byte_in_sector": 145,
+            "image_offset": 138641
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 33,
+          "offset": 6104,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 8,
+            "physical_sector": 14,
+            "offset": 137216,
+            "byte_in_sector": 216,
+            "image_offset": 137432
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 36,
+          "offset": 6226,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 7,
+            "physical_sector": 1,
+            "offset": 136960,
+            "byte_in_sector": 82,
+            "image_offset": 137042
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 40,
+          "offset": 7092,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 136192,
+            "byte_in_sector": 180,
+            "image_offset": 136372
+          },
+          "usage": "word_read"
+        }
+      ]
+    },
+    {
+      "callee_local": 7,
+      "caller_local": 7,
+      "accesses": [
+        {
+          "procedure": 3,
+          "offset": 104,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 131072,
+            "byte_in_sector": 104,
+            "image_offset": 131176
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 26,
+          "offset": 4063,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 15,
+            "physical_sector": 15,
+            "offset": 134912,
+            "byte_in_sector": 223,
+            "image_offset": 135135
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 28,
+          "offset": 4739,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 138496,
+            "byte_in_sector": 131,
+            "image_offset": 138627
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        }
+      ]
+    },
+    {
+      "callee_local": 8,
+      "caller_local": 8,
+      "accesses": [
+        {
+          "procedure": 3,
+          "offset": 90,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 131072,
+            "byte_in_sector": 90,
+            "image_offset": 131162
+          },
+          "usage": "word_read"
+        },
+        {
+          "procedure": 26,
+          "offset": 4049,
+          "source": {
+            "side": "play",
+            "track": 32,
+            "sector": 15,
+            "physical_sector": 15,
+            "offset": 134912,
+            "byte_in_sector": 209,
+            "image_offset": 135121
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        },
+        {
+          "procedure": 28,
+          "offset": 4734,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 138496,
+            "byte_in_sector": 126,
+            "image_offset": 138622
+          },
+          "usage": "pointer_use; effect requires following dataflow"
+        }
+      ]
+    }
+  ],
+  "selected_effects": [
+    {
+      "procedure": 21,
+      "start_offset": 2794,
+      "end_exclusive": 2840,
+      "meaning": "40-by-24 byte-map selection into reference2",
+      "source": {
+        "side": "play",
+        "track": 32,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 132352,
+        "byte_in_sector": 234,
+        "image_offset": 132586
+      },
+      "sha256": "d491f464c72fc54c467a5ac18ee5cdbe2efa5b3866128728852e7600576fdaf6",
+      "instruction_count": 29
+    },
+    {
+      "procedure": 40,
+      "start_offset": 7068,
+      "end_exclusive": 7118,
+      "meaning": "same lookup, then reference2 magnitude remainder16",
+      "source": {
+        "side": "play",
+        "track": 33,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 136192,
+        "byte_in_sector": 156,
+        "image_offset": 136348
+      },
+      "sha256": "97d4d2abde6486bf68c190e8b69f4895db139afb013f5f47a49e0cda3ac073c6",
+      "instruction_count": 31
+    },
+    {
+      "procedure": 12,
+      "start_offset": 1365,
+      "end_exclusive": 1387,
+      "meaning": "reference4=(root26+3)/7; reference3=(root25-3)/8",
+      "source": {
+        "side": "play",
+        "track": 32,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 133632,
+        "byte_in_sector": 85,
+        "image_offset": 133717
+      },
+      "sha256": "33d3e0673e02ad429b7812ee4437e7806a10b06a436fe0821d653b24a23a2a7d",
+      "instruction_count": 14
+    },
+    {
+      "procedure": 30,
+      "start_offset": 5475,
+      "end_exclusive": 5485,
+      "meaning": "clear reference1 and reference2",
+      "source": {
+        "side": "play",
+        "track": 33,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 137728,
+        "byte_in_sector": 99,
+        "image_offset": 137827
+      },
+      "sha256": "8831747a583ac6971a7444fbab7f523458effdc8e7fec683a5aba051a1e65d24",
+      "instruction_count": 6
+    },
+    {
+      "procedure": 1,
+      "start_offset": 7807,
+      "end_exclusive": 7810,
+      "meaning": "set reference1 to1",
+      "source": {
+        "side": "play",
+        "track": 33,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 135424,
+        "byte_in_sector": 127,
+        "image_offset": 135551
+      },
+      "sha256": "06c17ce6f1fce817139ba4b11e94d0a65cf2ea4af0957828461dbd762b9a65b5",
+      "instruction_count": 3
+    },
+    {
+      "procedure": 40,
+      "start_offset": 7657,
+      "end_exclusive": 7664,
+      "meaning": "set reference2 to255",
+      "source": {
+        "side": "play",
+        "track": 33,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 135680,
+        "byte_in_sector": 233,
+        "image_offset": 135913
+      },
+      "sha256": "27634b6fe44f80385dd937adfc850cdd8de6441ac57548ae5864d9961153a92b",
+      "instruction_count": 3
+    }
+  ],
+  "selection": {
+    "row_bytes": 40,
+    "rows": 24,
+    "total_bytes": 960,
+    "map_pointer": "P1 local55",
+    "column": "magnitude_remainder16(add16(*ref6, divide_signed16(add16(P1.local26,3),28)),40)",
+    "row": "magnitude_remainder16(add16(*ref5, divide_signed16(subtract16(P1.local25,3),P1.local21)),24)",
+    "byte_address": "P1.local55 + 40*row + column",
+    "output": "*ref2",
+    "P40_followup": "*ref2 = magnitude_remainder16(*ref2,16)"
+  },
+  "return_control": {
+    "root_flag_reference": 1,
+    "caller_local": 9,
+    "P1_loop_exit": "state(bits8..11) differs from saved nibble(bits4..7), or table29.word347 bit0, or *ref1 bit0",
+    "consumer": "Startup segment1 P4 state5 compares local2 to255 for segments17/18; state6 signed local2<=3 selects19, else20"
+  },
+  "confidence": "high for exact source fields, pointer ordering and selected arithmetic/dataflow; semantic names remain partial",
+  "remaining": [
+    "Full scene initialization and ownership of map/local55",
+    "Meaning of every selected byte and nibble",
+    "Joystick/keyboard event timing and cursor conversion before these expressions",
+    "Every caller-owned reference lifetime and all indirect callee side effects",
+    "Original map graphics/tile resources and clipping"
+  ]
+}

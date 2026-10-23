@@ -1,0 +1,44 @@
+{
+  "native_cases": 293,
+  "invalid_input_cases": 2,
+  "all_matched": true,
+  "method": "Compiled native Swift rule versus original p-code fragments through bounded original native handlers; synthetic frame and byte map",
+  "original_archive_sha256": "8f58c7e696db4e1b7c2e6eae4f51cd40eee8d4dc1019dc926bdb2f70248260cb",
+  "snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
+  "source_files": {
+    "native/SunDogLogic/TileSelection.swift": "35840687caae24dc2f4a33ea6b75df023fd0975dde97fe4e5a981b4768296c35",
+    "tests/native/VerifyTileSelection.swift": "3b2411e07d0b157e36068a7fa557bad90b72609576f8e07b07fe431463ccf0aa"
+  },
+  "cases_sha256": "cd3e8e1d72f6fcc4a42f01a0c395e523e4cdf27b5c07683d555f41acacf7ca12",
+  "fragments": [
+    {
+      "procedure": 21,
+      "start": 2794,
+      "end_exclusive": 2840,
+      "sha256": "d491f464c72fc54c467a5ac18ee5cdbe2efa5b3866128728852e7600576fdaf6"
+    },
+    {
+      "procedure": 40,
+      "start": 7068,
+      "end_exclusive": 7118,
+      "sha256": "97d4d2abde6486bf68c190e8b69f4895db139afb013f5f47a49e0cda3ac073c6"
+    }
+  ],
+  "zero_divisor_cases": [
+    {
+      "start": 2794,
+      "error": 106
+    },
+    {
+      "start": 7068,
+      "error": 106
+    }
+  ],
+  "native_instruction_count": 358,
+  "ghidra_boundaries_match": true,
+  "contract": "Signed16 wrapping addition/subtraction and division truncated toward zero; remainder of magnitudes; exact960-byte map",
+  "limitations": [
+    "No scene initialization, assets, physical input mapping, window clipping or whole event loop is implemented.",
+    "P40 later conditions and exceptional override255 are outside this lookup helper."
+  ]
+}

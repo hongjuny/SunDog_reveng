@@ -5,7 +5,7 @@ import SunDogCore
 import SunDogLogic
 
 @MainActor final class NativeModel: ObservableObject {
-    @Published var text = "SUNDOG: FROZEN LEGACY\n\nNATIVE MACOS PORT\n\nAPPLE II GLYPH RENDERING\n\nSPACE / RETURN OR CLICK"
+    @Published var text = "SUNDOG: FROZEN LEGACY\\NATIVE MACOS PORT\\ORIGINAL TEXT LAYOUT"
     @Published var frame: VideoFrame?
     @Published var message = "Open the original font exported from your Utility disk."
     @Published var presses = [0, 0]
@@ -67,9 +67,11 @@ import SunDogLogic
                 }
                 .aspectRatio(4.0/3.0, contentMode: .fit)
                 .accessibilityLabel("Native SunDog glyph canvas. Click to focus; Space and Return are input channels.")
-                TextField("Character codes 0–127", text: $model.text, axis: .vertical)
+                TextField("80 characters; \\ starts a line; | forces a space", text: $model.text, axis: .vertical)
                     .lineLimit(2...5).font(.system(.body, design: .monospaced))
                     .onChange(of: model.text) { _, _ in model.render() }
+                Text("Up to 80 characters · \\ line break · | forced space")
+                    .font(.caption).foregroundStyle(.secondary)
                 HStack {
                     Text("Input 1: \(model.presses[0])    Input 2: \(model.presses[1])")
                     Spacer()

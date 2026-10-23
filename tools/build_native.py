@@ -40,7 +40,7 @@ def build(tests=False, include_local_assets=False):
         shutil.copy2(ROOT/'analysis/local/native-assets/sundog-font.bin',font)
     info=dict(CFBundleExecutable='SunDog',CFBundleIdentifier='org.sundog.port.native',
               CFBundleName='SunDog',CFBundleDisplayName='SunDog',CFBundlePackageType='APPL',
-              CFBundleShortVersionString='0.2.0',CFBundleVersion='2',LSMinimumSystemVersion='14.0',
+              CFBundleShortVersionString='0.3.0',CFBundleVersion='3',LSMinimumSystemVersion='14.0',
               NSHighResolutionCapable=True,NSPrincipalClass='NSApplication')
     (app/'Contents/Info.plist').write_bytes(plistlib.dumps(info))
     run(['codesign','--force','--sign','-',str(app)])
