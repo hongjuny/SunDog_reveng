@@ -1,0 +1,943 @@
+{
+  "reference": "a2m 3.0.0; upstream d863ad98487639445db16134d260221839cb72e9 plus local inherited-fd/raw-LF/path patches",
+  "hardware_model": "Apple II Plus / NMOS 6502 / Language Card",
+  "limitations": [
+    "Emulator observations are not physical Apple II observations",
+    "Frontend wait-frame counts are not deterministic machine-frame or elapsed-time measurements",
+    "Play Track 34 remains unreadable and was not used as valid zero data",
+    "First capture has incorrect derived channel conversion and is excluded from visual validation"
+  ],
+  "input_native_facts": [
+    {
+      "side": "utility",
+      "bank": "lc2",
+      "address": "0xd6a5",
+      "meaning": "Register-preserving input/poll routine; increments BF13/BF14",
+      "location": {
+        "track": 27,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 111360,
+        "byte_in_sector": 165
+      },
+      "image_offset": 111525,
+      "confidence": "static instruction observed; keyboard read also runtime observed"
+    },
+    {
+      "side": "utility",
+      "bank": "lc2",
+      "address": "0xd6e0",
+      "meaning": "LDA C000 keyboard latch read",
+      "location": {
+        "track": 27,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 111360,
+        "byte_in_sector": 224
+      },
+      "image_offset": 111584,
+      "confidence": "static instruction observed; keyboard read also runtime observed"
+    }
+  ],
+  "rea_evidence_id": "ev_57c20871b560617e0baefb49f3981d05bdd48c5d0ec71ebaed8b7699ac0d1c4e",
+  "captures": [
+    {
+      "capture": "analysis/local/reference/20261023-114917",
+      "manifest_sha256": "10e69b6fb15be6311e599bb9405cea1e4a620852719c298a008573dd53d9cc18",
+      "status": "boot_to_first_bios_observed",
+      "method": "Observed execution of copied original WOZ in pinned a2m reference; not real Apple II hardware",
+      "model": "plus",
+      "media_file": null,
+      "original_media_sha256": "2b9c9882a3a0b4d7b1f8397f9343a64acf248351251ae5463ab77dbba9c0f4b4",
+      "rom_hashes": {
+        "system": "fc3e9d41e9428534a883df5aa10eb55b73ea53d2fcbb3ee4f39bed1b07a82905",
+        "slot6": "de1e3e035878bab43d0af8fe38f5839c527e9548647036598ee6fe7ec74d2a7d"
+      },
+      "executable": "10ad988481d9cc499f1e643b679e8ae405c405b4526574174fa665328f3a01f9",
+      "error": null,
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": [
+        {
+          "pc": "0x801",
+          "cpu": "pc=0801 a=01 x=60 y=00 sp=00 p=25 cycles=1878832",
+          "state": "state=paused has_cpu=1 frame=111 cycle=1878832 stop=breakpoint turbo=max mode=live focus_cycle=1878832 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$00012620 motors=$40 TEXT=1 MIXED=0 PAGE2=0 HIRES=0 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=0 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=85 cycle=7 frame=110",
+          "main_sha256": "399f307fc16192e6c077a18763dec4885c6674ee80c72a6ac5ea5b342310f930",
+          "boot_sector_matches": true,
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "sha256": "f11cabec87b8c3d1f1fb001815354370a6364bd0250bda85f0972b49f25c382b",
+            "png": "pc-0801.png",
+            "pixels": "pc-0801.rgba"
+          }
+        },
+        {
+          "pc": "0x8ff",
+          "cpu": "pc=08FF a=00 x=00 y=00 sp=FE p=26 cycles=2020414",
+          "state": "state=paused has_cpu=1 frame=119 cycle=2020414 stop=breakpoint turbo=max mode=live focus_cycle=2020414 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000106A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=0 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=167 cycle=19 frame=118",
+          "main_sha256": "1f46102d7ee34dffcc4e44a1a9b64c12cfba1bf68547a6b18938ae3794129e55",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "sha256": "8b493c8d298f16899554d23ad654a38a4773eaf76590e8c3848f7dd714476efd",
+            "png": "pc-08ff.png",
+            "pixels": "pc-08ff.rgba"
+          }
+        },
+        {
+          "pc": "0x4000",
+          "cpu": "pc=4000 a=0C x=00 y=06 sp=FE p=27 cycles=3642112",
+          "state": "state=paused has_cpu=1 frame=214 cycle=3642112 stop=breakpoint turbo=max mode=live focus_cycle=3642112 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000106A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=0 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=226 cycle=32 frame=213",
+          "main_sha256": "6555ab10bae10b6a7888003953e6a257433b9c7e38a2a5d81d210442db50c489",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "sha256": "8b493c8d298f16899554d23ad654a38a4773eaf76590e8c3848f7dd714476efd",
+            "png": "pc-4000.png",
+            "pixels": "pc-4000.rgba"
+          }
+        },
+        {
+          "pc": "0xfef2",
+          "cpu": "pc=FEF2 a=80 x=00 y=06 sp=00 p=A5 cycles=6177043",
+          "state": "state=paused has_cpu=1 frame=363 cycle=6177043 stop=breakpoint turbo=max mode=live focus_cycle=6177043 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000005A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=0 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=0 OA=0 CA=0 KEY_HELD=0 line=187 cycle=28 frame=362",
+          "main_sha256": "10d98983c7fd95386f1ff340ea83b21002f2d1333df8bbe7247ae6d533e59b1f",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "sha256": "963f625b4c32ceea5b97d4badeef2caff7c50983963d99ff11b5b08db3f8d30a",
+            "png": "pc-fef2.png",
+            "pixels": "pc-fef2.rgba"
+          }
+        },
+        {
+          "pc": "0x6800",
+          "cpu": "pc=6800 a=00 x=05 y=00 sp=00 p=27 cycles=6198363",
+          "state": "state=paused has_cpu=1 frame=364 cycle=6198363 stop=breakpoint turbo=max mode=live focus_cycle=6198363 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000101A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=0 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=253 cycle=28 frame=363",
+          "main_sha256": "bff588ab50859e29d9b0cec6dbf2473d6c92ab542f5e58877ed3ea231661b0fd",
+          "relocation_matches": true,
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "sha256": "963f625b4c32ceea5b97d4badeef2caff7c50983963d99ff11b5b08db3f8d30a",
+            "png": "pc-6800.png",
+            "pixels": "pc-6800.rgba"
+          }
+        },
+        {
+          "pc": "0xd293",
+          "cpu": "pc=D293 a=00 x=6C y=31 sp=FF p=27 cycles=12901940",
+          "state": "state=paused has_cpu=1 frame=758 cycle=12901940 stop=breakpoint turbo=max mode=live focus_cycle=12901940 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=157 cycle=25 frame=757",
+          "pcode_pc": "0xf248",
+          "main_sha256": "4980a60947b17f9a0996fe9466dedecda68250f560ee93ec5c3360e7176414a2",
+          "segment0_matches": true,
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "sha256": "963f625b4c32ceea5b97d4badeef2caff7c50983963d99ff11b5b08db3f8d30a",
+            "png": "pc-d293.png",
+            "pixels": "pc-d293.rgba"
+          }
+        },
+        {
+          "pc": "0xff06",
+          "cpu": "pc=FF06 a=DE x=02 y=01 sp=F9 p=A4 cycles=12902281",
+          "state": "state=paused has_cpu=1 frame=758 cycle=12902281 stop=breakpoint turbo=max mode=live focus_cycle=12902281 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=162 cycle=41 frame=757",
+          "main_sha256": "a8ef86326eb5afadf4e3a8634556d9497f38e0f738ed2189fb375e0c27f60ae4",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "sha256": "963f625b4c32ceea5b97d4badeef2caff7c50983963d99ff11b5b08db3f8d30a",
+            "png": "pc-ff06.png",
+            "pixels": "pc-ff06.rgba"
+          }
+        }
+      ]
+    },
+    {
+      "capture": "analysis/local/reference/20261023-115057",
+      "manifest_sha256": "b4bf9c67eb130acb2bacf62576e9c7aed7285fbadb2dace54580ddc593f6d281",
+      "status": "boot_to_first_bios_observed",
+      "method": "Observed execution of copied original WOZ in pinned a2m reference; not real Apple II hardware",
+      "model": "plus",
+      "media_file": null,
+      "original_media_sha256": "2b9c9882a3a0b4d7b1f8397f9343a64acf248351251ae5463ab77dbba9c0f4b4",
+      "rom_hashes": {
+        "system": "fc3e9d41e9428534a883df5aa10eb55b73ea53d2fcbb3ee4f39bed1b07a82905",
+        "slot6": "de1e3e035878bab43d0af8fe38f5839c527e9548647036598ee6fe7ec74d2a7d"
+      },
+      "executable": "10ad988481d9cc499f1e643b679e8ae405c405b4526574174fa665328f3a01f9",
+      "error": null,
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": [
+        {
+          "pc": "0x801",
+          "cpu": "pc=0801 a=01 x=60 y=00 sp=00 p=25 cycles=1878832",
+          "state": "state=paused has_cpu=1 frame=111 cycle=1878832 stop=breakpoint turbo=max mode=live focus_cycle=1878832 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$00012620 motors=$40 TEXT=1 MIXED=0 PAGE2=0 HIRES=0 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=0 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=85 cycle=7 frame=110",
+          "main_sha256": "399f307fc16192e6c077a18763dec4885c6674ee80c72a6ac5ea5b342310f930",
+          "boot_sector_matches": true,
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "6a8766b22602341762ebfe4ca0e5b5e8b85a1cf48afde99a2a554b09ca885153",
+            "png": "pc-0801.png",
+            "pixels": "pc-0801.rgba"
+          }
+        },
+        {
+          "pc": "0x8ff",
+          "cpu": "pc=08FF a=00 x=00 y=00 sp=FE p=26 cycles=2020414",
+          "state": "state=paused has_cpu=1 frame=119 cycle=2020414 stop=breakpoint turbo=max mode=live focus_cycle=2020414 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000106A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=0 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=167 cycle=19 frame=118",
+          "main_sha256": "1f46102d7ee34dffcc4e44a1a9b64c12cfba1bf68547a6b18938ae3794129e55",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "22ce12b47159e77ff93669dd0939cf821e865614b543da2e17a2dfac3dbe701c",
+            "png": "pc-08ff.png",
+            "pixels": "pc-08ff.rgba"
+          }
+        },
+        {
+          "pc": "0x4000",
+          "cpu": "pc=4000 a=0C x=00 y=06 sp=FE p=27 cycles=3642112",
+          "state": "state=paused has_cpu=1 frame=214 cycle=3642112 stop=breakpoint turbo=max mode=live focus_cycle=3642112 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000106A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=0 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=226 cycle=32 frame=213",
+          "main_sha256": "6555ab10bae10b6a7888003953e6a257433b9c7e38a2a5d81d210442db50c489",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "22ce12b47159e77ff93669dd0939cf821e865614b543da2e17a2dfac3dbe701c",
+            "png": "pc-4000.png",
+            "pixels": "pc-4000.rgba"
+          }
+        },
+        {
+          "pc": "0xfef2",
+          "cpu": "pc=FEF2 a=80 x=00 y=06 sp=00 p=A5 cycles=6177043",
+          "state": "state=paused has_cpu=1 frame=363 cycle=6177043 stop=breakpoint turbo=max mode=live focus_cycle=6177043 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000005A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=0 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=0 OA=0 CA=0 KEY_HELD=0 line=187 cycle=28 frame=362",
+          "main_sha256": "10d98983c7fd95386f1ff340ea83b21002f2d1333df8bbe7247ae6d533e59b1f",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "pc-fef2.png",
+            "pixels": "pc-fef2.rgba"
+          }
+        },
+        {
+          "pc": "0x6800",
+          "cpu": "pc=6800 a=00 x=05 y=00 sp=00 p=27 cycles=6198363",
+          "state": "state=paused has_cpu=1 frame=364 cycle=6198363 stop=breakpoint turbo=max mode=live focus_cycle=6198363 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000101A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=0 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=253 cycle=28 frame=363",
+          "main_sha256": "bff588ab50859e29d9b0cec6dbf2473d6c92ab542f5e58877ed3ea231661b0fd",
+          "relocation_matches": true,
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "pc-6800.png",
+            "pixels": "pc-6800.rgba"
+          }
+        },
+        {
+          "pc": "0xd293",
+          "cpu": "pc=D293 a=00 x=6C y=31 sp=FF p=27 cycles=12901940",
+          "state": "state=paused has_cpu=1 frame=758 cycle=12901940 stop=breakpoint turbo=max mode=live focus_cycle=12901940 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=157 cycle=25 frame=757",
+          "pcode_pc": "0xf248",
+          "main_sha256": "4980a60947b17f9a0996fe9466dedecda68250f560ee93ec5c3360e7176414a2",
+          "segment0_matches": true,
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "pc-d293.png",
+            "pixels": "pc-d293.rgba"
+          }
+        },
+        {
+          "pc": "0xff06",
+          "cpu": "pc=FF06 a=DE x=02 y=01 sp=F9 p=A4 cycles=12902281",
+          "state": "state=paused has_cpu=1 frame=758 cycle=12902281 stop=breakpoint turbo=max mode=live focus_cycle=12902281 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=162 cycle=41 frame=757",
+          "main_sha256": "a8ef86326eb5afadf4e3a8634556d9497f38e0f738ed2189fb375e0c27f60ae4",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "pc-ff06.png",
+            "pixels": "pc-ff06.rgba"
+          }
+        }
+      ]
+    },
+    {
+      "capture": "analysis/local/reference/20261023-115822",
+      "manifest_sha256": "a2a6e1533850b3f6110e7b80389ed804caf593b931a1d206eaedde8f6191e684",
+      "status": "boot_to_first_bios_observed",
+      "method": "Observed execution of validated logical Utility sectors re-encoded by a2m; not original WOZ bit timing",
+      "model": "plus",
+      "media_file": "utility.do",
+      "original_media_sha256": "6eb2925126f8ef39979a774ccf172c40958339cdc8d4c35a3d78dcac6944747e",
+      "rom_hashes": {
+        "system": "fc3e9d41e9428534a883df5aa10eb55b73ea53d2fcbb3ee4f39bed1b07a82905",
+        "slot6": "de1e3e035878bab43d0af8fe38f5839c527e9548647036598ee6fe7ec74d2a7d"
+      },
+      "executable": "10ad988481d9cc499f1e643b679e8ae405c405b4526574174fa665328f3a01f9",
+      "error": null,
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": [
+        {
+          "pc": "0x801",
+          "cpu": "pc=0801 a=01 x=60 y=00 sp=00 p=25 cycles=1792442",
+          "state": "state=paused has_cpu=1 frame=106 cycle=1792442 stop=breakpoint turbo=max mode=live focus_cycle=1792442 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$00012620 motors=$40 TEXT=1 MIXED=0 PAGE2=0 HIRES=0 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=0 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=66 cycle=2 frame=105",
+          "main_sha256": "80ce12b6c15ec54e6a6eab59cf8c9ad6c47337c64b6c17d3c6ad4a54acffeca6",
+          "boot_sector_matches": true,
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "6a8766b22602341762ebfe4ca0e5b5e8b85a1cf48afde99a2a554b09ca885153",
+            "png": "pc-0801.png",
+            "pixels": "pc-0801.rgba"
+          }
+        },
+        {
+          "pc": "0x8ff",
+          "cpu": "pc=08FF a=00 x=00 y=00 sp=FE p=26 cycles=1933974",
+          "state": "state=paused has_cpu=1 frame=114 cycle=1933974 stop=breakpoint turbo=max mode=live focus_cycle=1933974 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000106A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=0 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=147 cycle=29 frame=113",
+          "main_sha256": "98969d5cf7a24e742cbb3a51461e7f8d6accf109b8dc63ff8b2e43947df9db41",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "22ce12b47159e77ff93669dd0939cf821e865614b543da2e17a2dfac3dbe701c",
+            "png": "pc-08ff.png",
+            "pixels": "pc-08ff.rgba"
+          }
+        },
+        {
+          "pc": "0x4000",
+          "cpu": "pc=4000 a=0C x=00 y=06 sp=FE p=27 cycles=3756740",
+          "state": "state=paused has_cpu=1 frame=221 cycle=3756740 stop=breakpoint turbo=max mode=live focus_cycle=3756740 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000106A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=0 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=156 cycle=0 frame=220",
+          "main_sha256": "df5796f2aa03f27ff90ad29a61d013f8fda800866d2d73d2369454a43d7c6346",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "22ce12b47159e77ff93669dd0939cf821e865614b543da2e17a2dfac3dbe701c",
+            "png": "pc-4000.png",
+            "pixels": "pc-4000.rgba"
+          }
+        },
+        {
+          "pc": "0xfef2",
+          "cpu": "pc=FEF2 a=9F x=00 y=06 sp=00 p=A5 cycles=6818202",
+          "state": "state=paused has_cpu=1 frame=401 cycle=6818202 stop=breakpoint turbo=max mode=live focus_cycle=6818202 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000005A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=0 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=0 OA=0 CA=0 KEY_HELD=0 line=95 cycle=27 frame=400",
+          "main_sha256": "97ae8dfe20b56e376686590736cb5a006ea9fb7f460f6ba35203db84ee413ee8",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "pc-fef2.png",
+            "pixels": "pc-fef2.rgba"
+          }
+        },
+        {
+          "pc": "0x6800",
+          "cpu": "pc=6800 a=00 x=05 y=00 sp=00 p=27 cycles=6839522",
+          "state": "state=paused has_cpu=1 frame=402 cycle=6839522 stop=breakpoint turbo=max mode=live focus_cycle=6839522 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000101A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=0 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=161 cycle=27 frame=401",
+          "main_sha256": "d11d6970a136ca1874d3c75af7342248a65a02aa7531306a9a5ac4f813d67608",
+          "relocation_matches": true,
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "pc-6800.png",
+            "pixels": "pc-6800.rgba"
+          }
+        },
+        {
+          "pc": "0xd293",
+          "cpu": "pc=D293 a=00 x=6C y=31 sp=FF p=27 cycles=10257217",
+          "state": "state=paused has_cpu=1 frame=603 cycle=10257217 stop=breakpoint turbo=max mode=live focus_cycle=10257217 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=79 cycle=22 frame=602",
+          "pcode_pc": "0xf248",
+          "main_sha256": "53df0b530340d5f0304d5aa382521c101ff10c59e0ac57f21902fa269535712c",
+          "segment0_matches": true,
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "pc-d293.png",
+            "pixels": "pc-d293.rgba"
+          }
+        },
+        {
+          "pc": "0xff06",
+          "cpu": "pc=FF06 a=DE x=02 y=01 sp=F9 p=A4 cycles=10257558",
+          "state": "state=paused has_cpu=1 frame=603 cycle=10257558 stop=breakpoint turbo=max mode=live focus_cycle=10257558 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=84 cycle=38 frame=602",
+          "main_sha256": "c50312cdbc3f689af05d3ef465ccafaddfda21c20d5908f7f996d9c810e05311",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "pc-ff06.png",
+            "pixels": "pc-ff06.rgba"
+          }
+        }
+      ]
+    },
+    {
+      "capture": "analysis/local/reference/advance-20261023-122315",
+      "manifest_sha256": "932b37df8011fb502f1e3717b6a766f824f5f2d08aeacd2d6e9b0f00531eca45",
+      "status": "continuation_observed",
+      "method": "Bounded reference continuation; no game memory patches",
+      "model": "plus",
+      "media_file": null,
+      "original_media_sha256": null,
+      "rom_hashes": null,
+      "executable": null,
+      "error": null,
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": [
+        {
+          "label": "advanced",
+          "cpu": "pc=E17E a=7D x=2C y=00 sp=F9 p=24 cycles=1304969591",
+          "state": "state=paused has_cpu=1 frame=76628 cycle=1304969591 stop=pause turbo=max mode=live focus_cycle=1304969591 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=181 cycle=16 frame=76627",
+          "pcode_pc": "0x80e9",
+          "main_sha256": "a7242b1e18479c5e6a0a890a6ea195070e607f2e8f061520483a4684c90b58dd",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "8f2ee6ddeecd3823f185ea7946f4a0faa911b8b1ead624ee9987361f26b9aa63",
+            "png": "advanced.png",
+            "pixels": "advanced.rgba"
+          }
+        }
+      ]
+    },
+    {
+      "capture": "analysis/local/reference/follow-20261023-115323",
+      "manifest_sha256": "45aad6f61b207a5f27f4fe59cfe673a625e9420316354994773692c53ad5a07d",
+      "status": "reference_continuation_captured",
+      "method": "Observed continuation of original WOZ execution in a2m; no game memory patches",
+      "model": "plus",
+      "media_file": null,
+      "original_media_sha256": null,
+      "rom_hashes": null,
+      "executable": "10ad988481d9cc499f1e643b679e8ae405c405b4526574174fa665328f3a01f9",
+      "error": null,
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": [
+        {
+          "label": "bios-bank2",
+          "cpu": "pc=D7EF a=DE x=02 y=01 sp=F9 p=A4 cycles=12902347",
+          "state": "state=paused has_cpu=1 frame=758 cycle=12902347 stop=breakpoint turbo=max mode=live focus_cycle=12902347 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000107A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=163 cycle=42 frame=757",
+          "pcode_pc": "0xf24c",
+          "main_sha256": "45fafd55d064804cb6063830082abab6e834024f0269d9c56114b5d80e38aaa8",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "bios-bank2.png",
+            "pixels": "bios-bank2.rgba"
+          }
+        },
+        {
+          "label": "first-bios-return",
+          "cpu": "pc=D293 a=4E x=00 y=01 sp=FF p=24 cycles=12902511",
+          "state": "state=paused has_cpu=1 frame=758 cycle=12902511 stop=breakpoint turbo=max mode=live focus_cycle=12902511 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=166 cycle=11 frame=757",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "c36853388a884a0579ac47c82a10e4691dc2a42ff8b3cb491729bcca9d4a978b",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "first-bios-return.png",
+            "pixels": "first-bios-return.rgba"
+          }
+        },
+        {
+          "label": "after-120-frames",
+          "cpu": "pc=D63A a=08 x=01 y=07 sp=F4 p=25 cycles=204736590",
+          "state": "state=paused has_cpu=1 frame=12023 cycle=204736590 stop=pause turbo=max mode=live focus_cycle=204736590 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=29 cycle=45 frame=12022",
+          "pcode_pc": "0x0",
+          "main_sha256": "4eea154f506d4cfcf1f1543f1d1374a58985c2dfc0c6d7c32a3a2b18ba5e84cb",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "923de39473c6046f65036f70682777fa824574e9e38e61f04b4d6f865df9d400",
+            "png": "after-120-frames.png",
+            "pixels": "after-120-frames.rgba"
+          }
+        },
+        {
+          "label": "after-720-frames",
+          "cpu": "pc=D32F a=7F x=60 y=93 sp=FA p=24 cycles=1164646007",
+          "state": "state=paused has_cpu=1 frame=68388 cycle=1164646007 stop=pause turbo=max mode=live focus_cycle=1164646007 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=236 cycle=57 frame=68387",
+          "pcode_pc": "0x0",
+          "main_sha256": "e33c56f29b214e7f4117715726f84471c3731ef05e4ac18b767593674253017a",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "923de39473c6046f65036f70682777fa824574e9e38e61f04b4d6f865df9d400",
+            "png": "after-720-frames.png",
+            "pixels": "after-720-frames.rgba"
+          }
+        }
+      ]
+    },
+    {
+      "capture": "analysis/local/reference/follow-20261023-120102",
+      "manifest_sha256": "41d79a5c911d851d04451168836b1076e9b821821481b744b123a926055c35a0",
+      "status": "reference_continuation_captured",
+      "method": "Observed continuation of original WOZ execution in a2m; no game memory patches",
+      "model": "plus",
+      "media_file": null,
+      "original_media_sha256": null,
+      "rom_hashes": null,
+      "executable": "10ad988481d9cc499f1e643b679e8ae405c405b4526574174fa665328f3a01f9",
+      "error": null,
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": [
+        {
+          "label": "bios-bank2",
+          "cpu": "pc=D7EF a=DE x=02 y=01 sp=F9 p=A4 cycles=10257624",
+          "state": "state=paused has_cpu=1 frame=603 cycle=10257624 stop=breakpoint turbo=max mode=live focus_cycle=10257624 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000107A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=85 cycle=39 frame=602",
+          "pcode_pc": "0xf24c",
+          "main_sha256": "0d9bc929dcbe5f89b3d8156635407793ffcaad6792677d124b05f5eb7f399a3e",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "bios-bank2.png",
+            "pixels": "bios-bank2.rgba"
+          }
+        },
+        {
+          "label": "first-bios-return",
+          "cpu": "pc=D293 a=4E x=00 y=01 sp=FF p=24 cycles=10257788",
+          "state": "state=paused has_cpu=1 frame=603 cycle=10257788 stop=breakpoint turbo=max mode=live focus_cycle=10257788 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=88 cycle=8 frame=602",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "8273ed7f4b7d34891c723b404a203d11f4689c107db28d90e592a120bbba7e24",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "first-bios-return.png",
+            "pixels": "first-bios-return.rgba"
+          }
+        },
+        {
+          "label": "after-120-frames",
+          "cpu": "pc=D598 a=03 x=04 y=F8 sp=F1 p=65 cycles=208209767",
+          "state": "state=paused has_cpu=1 frame=12227 cycle=208209767 stop=pause turbo=max mode=live focus_cycle=208209767 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=15 cycle=12 frame=12226",
+          "pcode_pc": "0xb4a4",
+          "main_sha256": "be6541e2a120670e4113e29c6cabb2cc269153c5350ce2a09ea2d43df10138c7",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "923de39473c6046f65036f70682777fa824574e9e38e61f04b4d6f865df9d400",
+            "png": "after-120-frames.png",
+            "pixels": "after-120-frames.rgba"
+          }
+        },
+        {
+          "label": "after-720-frames",
+          "cpu": "pc=D28B a=00 x=01 y=00 sp=F8 p=27 cycles=1200898515",
+          "state": "state=paused has_cpu=1 frame=70517 cycle=1200898515 stop=pause turbo=max mode=live focus_cycle=1200898515 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=169 cycle=50 frame=70516",
+          "pcode_pc": "0x8317",
+          "main_sha256": "6279ec7a9ca90cb756c47226ab84f8d04727b3009dfab83be3ed41074fda5e76",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "9cbc39bfba42f2fd4a5b50bfe16efee90ebe1e04aba92b8f5c5f3dbbc6988f23",
+            "png": "after-720-frames.png",
+            "pixels": "after-720-frames.rgba"
+          }
+        }
+      ]
+    },
+    {
+      "capture": "analysis/local/reference/input-20261023-121350",
+      "manifest_sha256": "f43d8ba5b0f58a4a2f29befd7438c8dda3850136fb90ab7a7410be04afafd3e3",
+      "status": "capture_stopped",
+      "method": "Observed keyboard event against original game in reference emulator",
+      "model": null,
+      "media_file": null,
+      "original_media_sha256": null,
+      "rom_hashes": null,
+      "executable": null,
+      "error": "wait-paused 5000: timeout deferred response timed out",
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": []
+    },
+    {
+      "capture": "analysis/local/reference/input-20261023-121605",
+      "manifest_sha256": "d5a86cf6c4af3fe11455e85b46c5f24f6d4ef6cde7001822d5e0f0f1d2c059e7",
+      "status": "capture_stopped",
+      "method": "Observed keyboard event against original game in reference emulator",
+      "model": null,
+      "media_file": null,
+      "original_media_sha256": null,
+      "rom_hashes": null,
+      "executable": null,
+      "error": "wait-paused 5000: timeout deferred response timed out",
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": [
+        {
+          "label": "stopped-diagnostic",
+          "cpu": "pc=D29D a=C4 x=00 y=00 sp=F9 p=A5 cycles=1206014420",
+          "state": "state=paused has_cpu=1 frame=70818 cycle=1206014420 stop=pause turbo=1 mode=live focus_cycle=1206014420 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=14 cycle=0 frame=70817",
+          "pcode_pc": "0x8129",
+          "main_sha256": "36b9bf0c6f938c37ef537c4d9476f23ea943301714cc30c58848ee4a83f901e8",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "8f2ee6ddeecd3823f185ea7946f4a0faa911b8b1ead624ee9987361f26b9aa63",
+            "png": "stopped-diagnostic.png",
+            "pixels": "stopped-diagnostic.rgba"
+          }
+        }
+      ]
+    },
+    {
+      "capture": "analysis/local/reference/input-20261023-122122",
+      "manifest_sha256": "a641287959242198e5f067c3740e30c760923fd367a4a6313c6d871d9cbbaa5a",
+      "status": "input_boundary_observed",
+      "method": "Observed keyboard event against original game in reference emulator",
+      "model": null,
+      "media_file": null,
+      "original_media_sha256": null,
+      "rom_hashes": null,
+      "executable": null,
+      "error": null,
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": [
+        {
+          "label": "keyboard-read",
+          "cpu": "pc=D6E0 a=00 x=00 y=00 sp=EE p=26 cycles=10270900",
+          "state": "state=paused has_cpu=1 frame=604 cycle=10270900 stop=breakpoint turbo=max mode=live focus_cycle=10270900 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=27 cycle=55 frame=603",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "6d7bc053df205ecedc117a0053225de449cf63d3bd73ae3a23a9fb8b071dca2a",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "keyboard-read.png",
+            "pixels": "keyboard-read.rgba"
+          }
+        },
+        {
+          "label": "after-key",
+          "cpu": "pc=D63A a=BA x=10 y=00 sp=F0 p=25 cycles=110396354",
+          "state": "state=paused has_cpu=1 frame=6483 cycle=110396354 stop=pause turbo=max mode=live focus_cycle=110396354 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=121 cycle=29 frame=6482",
+          "pcode_pc": "0xa465",
+          "main_sha256": "39762e36c8916581c3ad84449eef52e26c652ac64f83309cd97b30e7a0bee49f",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "923de39473c6046f65036f70682777fa824574e9e38e61f04b4d6f865df9d400",
+            "png": "after-key.png",
+            "pixels": "after-key.rgba"
+          }
+        }
+      ]
+    },
+    {
+      "capture": "analysis/local/reference/input-20261023-122152",
+      "manifest_sha256": "c21ebca2587304286da941efa06c03c58e610b1bb3225f643e674fa9a03888f6",
+      "status": "capture_stopped",
+      "method": "Observed keyboard event against original game in reference emulator",
+      "model": null,
+      "media_file": null,
+      "original_media_sha256": null,
+      "rom_hashes": null,
+      "executable": null,
+      "error": "keyboard latch did not contain the requested key",
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": [
+        {
+          "label": "keyboard-read",
+          "cpu": "pc=D6E0 a=00 x=00 y=00 sp=EE p=26 cycles=10270900",
+          "state": "state=paused has_cpu=1 frame=604 cycle=10270900 stop=breakpoint turbo=max mode=live focus_cycle=10270900 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=27 cycle=55 frame=603",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "6d7bc053df205ecedc117a0053225de449cf63d3bd73ae3a23a9fb8b071dca2a",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "keyboard-read.png",
+            "pixels": "keyboard-read.rgba"
+          }
+        },
+        {
+          "label": "keyboard-loaded",
+          "cpu": "pc=D6E3 a=15 x=00 y=00 sp=EE p=24 cycles=10270904",
+          "state": "state=paused has_cpu=1 frame=604 cycle=10270904 stop=breakpoint turbo=max mode=live focus_cycle=10270904 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=27 cycle=59 frame=603",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "6d7bc053df205ecedc117a0053225de449cf63d3bd73ae3a23a9fb8b071dca2a",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "keyboard-loaded.png",
+            "pixels": "keyboard-loaded.rgba"
+          }
+        },
+        {
+          "label": "stopped-diagnostic",
+          "cpu": "pc=D6E3 a=15 x=00 y=00 sp=EE p=24 cycles=10270904",
+          "state": "state=paused has_cpu=1 frame=603 cycle=10270904 stop=breakpoint turbo=max mode=live focus_cycle=10270904 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=27 cycle=59 frame=603",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "6d7bc053df205ecedc117a0053225de449cf63d3bd73ae3a23a9fb8b071dca2a",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "stopped-diagnostic.png",
+            "pixels": "stopped-diagnostic.rgba"
+          }
+        }
+      ]
+    },
+    {
+      "capture": "analysis/local/reference/input-20261023-122220",
+      "manifest_sha256": "c1b2c0b28efd73ead219d145644e74ad06c2197c25305dae01bd9c88423a7975",
+      "status": "capture_stopped",
+      "method": "Observed keyboard event against original game in reference emulator",
+      "model": null,
+      "media_file": null,
+      "original_media_sha256": null,
+      "rom_hashes": null,
+      "executable": null,
+      "error": "keyboard latch did not contain the requested key",
+      "keyboard_latch_verified": false,
+      "unchanged": true,
+      "records": [
+        {
+          "label": "keyboard-read",
+          "cpu": "pc=D6E0 a=00 x=00 y=00 sp=EE p=26 cycles=10259093",
+          "state": "state=paused has_cpu=1 frame=603 cycle=10259093 stop=breakpoint turbo=max mode=live focus_cycle=10259093 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=108 cycle=13 frame=602",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "fecb38cf6cfe909fbb25ed43cdffcf94d2e8e0eaa9823e6cc41ef0a27bce27e7",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "keyboard-read.png",
+            "pixels": "keyboard-read.rgba"
+          }
+        },
+        {
+          "label": "keyboard-loaded",
+          "cpu": "pc=D6E3 a=15 x=00 y=00 sp=EE p=24 cycles=10270904",
+          "state": "state=paused has_cpu=1 frame=604 cycle=10270904 stop=breakpoint turbo=max mode=live focus_cycle=10270904 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=27 cycle=59 frame=603",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "6d7bc053df205ecedc117a0053225de449cf63d3bd73ae3a23a9fb8b071dca2a",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "keyboard-loaded.png",
+            "pixels": "keyboard-loaded.rgba"
+          }
+        },
+        {
+          "label": "stopped-diagnostic",
+          "cpu": "pc=D6E3 a=15 x=00 y=00 sp=EE p=24 cycles=10270904",
+          "state": "state=paused has_cpu=1 frame=603 cycle=10270904 stop=breakpoint turbo=max mode=live focus_cycle=10270904 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=27 cycle=59 frame=603",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "6d7bc053df205ecedc117a0053225de449cf63d3bd73ae3a23a9fb8b071dca2a",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "stopped-diagnostic.png",
+            "pixels": "stopped-diagnostic.rgba"
+          }
+        }
+      ]
+    },
+    {
+      "capture": "analysis/local/reference/input-20261023-122238",
+      "manifest_sha256": "f525a4738459e92fcdc825c8b6534994b36e83c441c77ebd2a561979e2fbfb7d",
+      "status": "input_boundary_observed",
+      "method": "Observed keyboard event against original game in reference emulator",
+      "model": null,
+      "media_file": null,
+      "original_media_sha256": null,
+      "rom_hashes": null,
+      "executable": null,
+      "error": null,
+      "keyboard_latch_verified": true,
+      "unchanged": true,
+      "records": [
+        {
+          "label": "keyboard-read",
+          "cpu": "pc=D6E0 a=00 x=00 y=00 sp=EE p=26 cycles=10259093",
+          "state": "state=paused has_cpu=1 frame=603 cycle=10259093 stop=breakpoint turbo=max mode=live focus_cycle=10259093 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$000107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=0 line=108 cycle=13 frame=602",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "fecb38cf6cfe909fbb25ed43cdffcf94d2e8e0eaa9823e6cc41ef0a27bce27e7",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "keyboard-read.png",
+            "pixels": "keyboard-read.rgba"
+          }
+        },
+        {
+          "label": "keyboard-loaded",
+          "cpu": "pc=D6E3 a=95 x=00 y=00 sp=EE p=A4 cycles=10259097",
+          "state": "state=paused has_cpu=1 frame=603 cycle=10259097 stop=breakpoint turbo=max mode=live focus_cycle=10259097 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001107A0 motors=$40 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=1 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=108 cycle=17 frame=602",
+          "pcode_pc": "0xf24e",
+          "main_sha256": "3baef88082dfc211fbffb95740d8341a083edfd35c3aa1b0cf4068261cde909a",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+            "png": "keyboard-loaded.png",
+            "pixels": "keyboard-loaded.rgba"
+          }
+        },
+        {
+          "label": "after-key",
+          "cpu": "pc=D57E a=0F x=00 y=00 sp=F7 p=24 cycles=110925021",
+          "state": "state=paused has_cpu=1 frame=6514 cycle=110925021 stop=pause turbo=max mode=live focus_cycle=110925021 start=unknown start_arg1=0",
+          "softswitches": "model=][+ flags=$001103A0 motors=$00 TEXT=0 MIXED=0 PAGE2=0 HIRES=1 COL80=0 DHIRES=0 ALTCHAR=0 80STORE=0 RAMRD=0 RAMWRT=0 ALTZP=0 LC_READ=1 LC_WRITE=1 LC_BANK2=0 CXROM=0 C3ROM_OFF=1 LC_PRE_WRITE=1 OA=0 CA=0 KEY_HELD=1 line=132 cycle=51 frame=6513",
+          "pcode_pc": "0xa6c2",
+          "main_sha256": "704db4828fe9f5e862cf36c76f304d0d3e5dda00f4468d2f2cb283efed796fdf",
+          "frame": {
+            "width": 560,
+            "height": 192,
+            "format": "rgba8888",
+            "wire_format": "argb8888-bgra-little-endian",
+            "sha256": "923de39473c6046f65036f70682777fa824574e9e38e61f04b4d6f865df9d400",
+            "png": "after-key.png",
+            "pixels": "after-key.rgba"
+          }
+        }
+      ]
+    }
+  ]
+}
