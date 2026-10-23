@@ -1,5 +1,9 @@
 # SunDog: Frozen Legacy — Apple II v2.0 investigation
 
+The product goal is a macOS app faithful to the Apple II game's graphics and
+behavior. See the [macOS port roadmap](docs/macos-port-roadmap.md) for staged
+implementation, fidelity criteria and release gates.
+
 Evidence-based reverse engineering of the supplied Utility and Play WOZ images.
 Original media and derived game binaries are local-only and ignored by Git. No
 Atari ST binary compatibility is assumed.
