@@ -1,0 +1,282 @@
+{
+  "method": "Static source/callgraph analysis, REA/Ghidra native disassembly, bounded synthetic row checks, and pre-existing reference-memory corroboration; no new emulator execution",
+  "source_archive_sha256": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49",
+  "source_segment_number": 22,
+  "source_payload_bytes": 6126,
+  "mixed_procedures": {
+    "total": 63,
+    "native": 18,
+    "pcode": 45
+  },
+  "procedures": [
+    {
+      "number": 9,
+      "kind": "native-6502",
+      "entry_offset": 4982,
+      "entry_source": {
+        "side": "utility",
+        "track": 14,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 60416,
+        "byte_in_sector": 118,
+        "image_offset": 60534
+      },
+      "static_callees": [],
+      "boundaries": [
+        {
+          "address": 4982,
+          "reason": "native 6502 body; separate Ghidra analysis required"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "kind": "pcode",
+      "entry_offset": 82,
+      "entry_source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 53248,
+        "byte_in_sector": 82,
+        "image_offset": 53330
+      },
+      "static_callees": [],
+      "boundaries": []
+    },
+    {
+      "number": 12,
+      "kind": "pcode",
+      "entry_offset": 364,
+      "entry_source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 56832,
+        "byte_in_sector": 108,
+        "image_offset": 56940
+      },
+      "static_callees": [
+        {
+          "kind": "current-segment",
+          "procedure": 57
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "number": 45,
+      "kind": "pcode",
+      "entry_offset": 2142,
+      "entry_source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 55040,
+        "byte_in_sector": 94,
+        "image_offset": 55134
+      },
+      "static_callees": [
+        {
+          "kind": "current-segment",
+          "procedure": 44
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "number": 47,
+      "kind": "pcode",
+      "entry_offset": 2218,
+      "entry_source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 55040,
+        "byte_in_sector": 170,
+        "image_offset": 55210
+      },
+      "static_callees": [
+        {
+          "kind": "current-segment",
+          "procedure": 45
+        },
+        {
+          "kind": "current-segment",
+          "procedure": 12
+        },
+        {
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "kind": "current-segment",
+          "procedure": 45
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "number": 48,
+      "kind": "pcode",
+      "entry_offset": 2276,
+      "entry_source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 55040,
+        "byte_in_sector": 228,
+        "image_offset": 55268
+      },
+      "static_callees": [
+        {
+          "kind": "current-segment",
+          "procedure": 11
+        },
+        {
+          "kind": "current-segment",
+          "procedure": 47
+        },
+        {
+          "kind": "current-segment",
+          "procedure": 45
+        },
+        {
+          "kind": "current-segment",
+          "procedure": 47
+        },
+        {
+          "kind": "current-segment",
+          "procedure": 45
+        },
+        {
+          "kind": "current-segment",
+          "procedure": 47
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "number": 49,
+      "kind": "pcode",
+      "entry_offset": 2524,
+      "entry_source": {
+        "side": "utility",
+        "track": 13,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 54784,
+        "byte_in_sector": 220,
+        "image_offset": 55004
+      },
+      "static_callees": [
+        {
+          "kind": "current-segment",
+          "procedure": 38
+        },
+        {
+          "kind": "external-segment-operand",
+          "segment_operand": 0,
+          "procedure": 23
+        },
+        {
+          "kind": "external-segment-operand",
+          "segment_operand": 0,
+          "procedure": 23
+        },
+        {
+          "kind": "current-segment",
+          "procedure": 48
+        }
+      ],
+      "boundaries": []
+    }
+  ],
+  "sundog_calls_to_segment22": {
+    "2": 21,
+    "3": 9,
+    "4": 4,
+    "7": 7,
+    "9": 4,
+    "10": 1,
+    "11": 1,
+    "12": 10,
+    "13": 1,
+    "14": 6,
+    "16": 1,
+    "17": 2,
+    "18": 8,
+    "19": 20,
+    "20": 2,
+    "23": 5,
+    "24": 4,
+    "28": 1,
+    "35": 8,
+    "37": 1,
+    "39": 4,
+    "40": 1,
+    "41": 7,
+    "42": 5,
+    "43": 3,
+    "44": 9,
+    "45": 18,
+    "46": 1,
+    "47": 3,
+    "48": 68,
+    "49": 10,
+    "50": 2,
+    "51": 5,
+    "52": 7,
+    "53": 10
+  },
+  "captured_mapping": {
+    "capture": "analysis/local/reference/advance-20261023-122315/advanced-main.bin",
+    "memory_sha256": "a7242b1e18479c5e6a0a890a6ea195070e607f2e8f061520483a4684c90b58dd",
+    "segment_base": 38334,
+    "segment_directory_cell": 48586,
+    "segment_directory_pointer": 44458,
+    "data29_base": 44476,
+    "native9_address": 43316,
+    "native_slice_length": 388,
+    "source_slice_sha256": "7e77250cdfc3fa8e04023d274d1d12b3d63cf4c36f48dfaa41f96ef88af3a986",
+    "captured_slice_sha256": "8379225c5156b4d2dc07bf0a21a12facfd3d7b0ac88964e4b046e4d1904b6e49",
+    "changed_bytes": 44,
+    "operand_word_deltas": {
+      "0xadbc": 17,
+      "0x95be": 3,
+      "0xa934": 2
+    },
+    "note": "22 operand-word changes explained by segment, data-29 and procedure bases; relocation parser still to be reconstructed"
+  },
+  "hgr_row_table": {
+    "low": 3520,
+    "high": 3712,
+    "rows": 192,
+    "formula_matches": true
+  },
+  "rea_evidence_ids": {
+    "native_source": "ev_7f31030127a94c609a6f96ffa111c85ada82528fffc46e6e1dc94e6407437e3e",
+    "captured_native": "ev_cbe61cfda63915ba6ceeb42fa9bae84e546ba25c27afcf29678f451669f7398b",
+    "coordinate_helper": "ev_ac887d04e6f063987252c107729ee1fb29352b9120a36dc4bedd5619e052ae35",
+    "frame_branch_base": "ev_8259e0fd1c8a18eb68a3c6cb9f8a99807dd360caeb29491927b56797c2d1a039"
+  },
+  "confidence": {
+    "call_operands": "high static",
+    "segment22_binding": "observed in retained snapshot only",
+    "native_row_composition": "420 synthetic cases; see glyph-compositor-evidence.json",
+    "string_layout_role": "strong static inference; exact wrapping/API contract still under analysis"
+  },
+  "remaining": [
+    "Native relocation table format",
+    "Mode-2 query/collision semantics",
+    "String wrapping and clipping boundary cases",
+    "Original glyph asset provenance",
+    "Input/event loop and actual game-state owners"
+  ]
+}

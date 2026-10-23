@@ -409,3 +409,50 @@ Used direct swiftc compilation under existing restrictions, without disabling th
 sandbox. Native bundle ad-hoc signing/verification and six Swift tests pass;
 55 deterministic Python tests pass. Media, snapshots, ROM bytes and captured
 screens remain ignored. See fidelity-spec.md and reference-execution.md.
+
+## 2026-10-23 — restart around original game reconstruction
+
+The user rejected the emulator-backed app direction. Quarantined its uncommitted
+C/Swift bridge, build scripts/tests and native app under
+analysis/local/abandoned-emulator-app, preserved the diff, and restored tracked
+prototype files. No new reference emulator was executed during this restart.
+The final product is to implement reconstructed game rules, state and rendering
+in native code; an emulator/bytecode executor embedded in a shell is not that port.
+Earlier app-building results must not be counted as game-logic reconstruction.
+
+Implemented bounded p-code decoding using the established Apple II native operand
+rules. Rechecked frame/trailer branch-base setup with actual REA/Ghidra 12.1.4.
+Discovered mixed native/Pascal procedures in machine-type-7 segments; segment 22
+has 45 p-code and 18 native procedures. Unsupported secondary-service paths stop.
+Full listings remain local rather than publishing proprietary instruction bytes.
+
+Validated the shared block-140 dictionary against Play, rather than imposing the
+Utility file extent on both sides. All 13 SYSTEM.STARTUP payloads have matching
+segment tags and valid self-relative procedure entries: 327 procedures, including
+segments 18–21 previously excluded. All source sectors match independent WOZ
+verification; the final storage end is block 272 exclusive. Play T34 is not used.
+This is a structural resolution; actual runtime disk-selection remains open.
+
+Generated a combined 590-procedure inventory and static call graph: 43,471 reachable
+p-code instructions and 3,310 call sites, with all service/native boundaries retained.
+These are analysis counts, not a percentage of verified game behavior. A text-and-
+procedure-context index prioritizes 21 candidate gameplay procedures, notably
+trade/cargo candidates in segment 20 and navigation/ship candidates in segment 13.
+Roles remain hypotheses until state transitions and contracts are reconstructed.
+
+Traced library string P48 → character placement P47 → native glyph P9. Matched
+the captured segment-22 directory binding and native source changes to three bases;
+22 relocated operand words explain all 44 changed bytes. Reused retained reference
+RAM only for corroboration, not as an application backend. Actual REA source,
+captured native function and coordinate-helper disassemblies were retained and
+sessions closed. Normal eight-row two-byte HGR composition was reconstructed as
+independent bit expressions and matched 420 declared synthetic fixtures using the
+existing bounded native-analysis probe. Added only the needed OR-absolute
+instruction to that probe, with a deterministic flags test. No game VM was built.
+
+Persisted six labels/comments in the Ghidra project with readback verification.
+An initial annotation hash checked total Program memory rather than the imported
+span and failed; a bounded imported-span hash passed. Full assembly and project
+remain private. Tests: 67 deterministic Python tests pass. Remaining work includes
+secondary-service continuation, actual game-entry/input flow, text layout/clipping,
+mode-2 glyph behavior, native relocation tables and gameplay state/rule reconstruction.

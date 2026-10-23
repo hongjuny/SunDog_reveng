@@ -33,3 +33,16 @@ and three type-2 (little-endian p-code) stored descriptors. Their graphics/UI
 responsibilities are still unknown. The Utility SYSTEM.STARTUP descriptor range
 also conflicts with independently verified native boot/graphics data, so its
 p-code-looking header cannot classify every byte in that range as p-code.
+
+## Game/library rendering path — reconstruction restart
+
+The new [game-code analysis](game-code-analysis.md) supersedes the earlier
+statement that no text/UI path was identified. SYSTEM.LIBRARY segment 22 is
+mixed: 45 p-code and 18 native procedures. P48 string processing calls P47
+character placement, which calls P12 positioning and native P9. Normal glyph
+composition uses eight rows, two adjacent HGR bytes, mask/shift/XOR and a six-unit
+x advance. The normal body matches 420 declared synthetic cases; caller setup,
+clipping and mode-2 behavior remain separate. Source locations, actual REA IDs,
+retained-memory correspondence and limitations are in `analysis/graphics-call-chain.json`
+and `analysis/glyph-compositor-evidence.json`. This reconstructs an original
+rendering operation; it does not implement a game VM or emulator application.

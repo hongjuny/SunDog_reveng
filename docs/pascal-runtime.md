@@ -103,3 +103,20 @@ packed layouts, call/return frames and the data-derived native return trampoline
 The generated [primary reference](opcode-reference.md) lists every high opcode.
 This does not establish exact stock Apple Pascal compatibility or complete service
 semantics for the modified runtime.
+
+## Restart correction: mixed procedures and Play application payloads
+
+`machine_type=7` does not classify every procedure in a segment as native.
+Native call resolution at E14F branches on the procedure tag: zero selects the
+native self-relative entry, nonzero selects Pascal frame setup. Segment 22 has
+45 p-code and 18 native procedures. The bounded static decoder in
+`tools/pcode_analysis.py` uses those per-procedure tags and verified Apple II
+operand rules, stopping at unsupported service boundaries.
+
+The block-140 SYSTEM.STARTUP dictionaries are identical on both sides. All 13
+payloads selected by those descriptors validate on Play, including the four
+previously rejected against the Utility directory extent. Their 327 procedure
+records and segment ordinals agree; the final storage block is 272 exclusive.
+Every participating Play sector is checked against the independent WOZ decode
+inventory. Runtime disk-selection behavior still needs verification. See
+`analysis/play-startup-inventory.json` and [game-code analysis](game-code-analysis.md).

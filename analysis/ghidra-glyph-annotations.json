@@ -1,0 +1,37 @@
+{
+  "program": "rea-library22-char9-captured.bin",
+  "source_sha256": "8379225c5156b4d2dc07bf0a21a12facfd3d7b0ac88964e4b046e4d1904b6e49",
+  "project_save_verified": true,
+  "annotations": [
+    {
+      "address": 43316,
+      "label": "library22_native9_glyph",
+      "comment_readback_matches": true
+    },
+    {
+      "address": 43432,
+      "label": "glyph_font_offset_char_times_8",
+      "comment_readback_matches": true
+    },
+    {
+      "address": 43481,
+      "label": "glyph_eight_row_loop",
+      "comment_readback_matches": true
+    },
+    {
+      "address": 43526,
+      "label": "glyph_hgr_two_byte_composite",
+      "comment_readback_matches": true
+    },
+    {
+      "address": 43549,
+      "label": "glyph_advance_x_by_6",
+      "comment_readback_matches": true
+    },
+    {
+      "address": 43566,
+      "label": "glyph_mode2_query_candidate",
+      "comment_readback_matches": true
+    }
+  ]
+}

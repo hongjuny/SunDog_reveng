@@ -74,6 +74,7 @@ class CPU:
         stores[0x8e]=('x','abs')
         arithmetic={0x69:('adc','imm'),0x65:('adc','zp'),0xe9:('sbc','imm'),0xe5:('sbc','zp'),0xc9:('cmp','imm'),0xc5:('cmp','zp'),0xe0:('cpx','imm'),0xc0:('cpy','imm'),0x29:('and','imm'),0x25:('and','zp'),0x09:('or','imm'),0x05:('or','zp'),0x49:('xor','imm'),0x45:('xor','zp')}
         arithmetic[0xf1]=('sbc','indy')
+        arithmetic[0x0d]=('or','abs')
         arithmetic.update({0xd1:('cmp','indy'),0x51:('xor','indy'),0x3d:('and','absx'),0xe4:('cpx','zp'),0xd5:('cmp','zpx'),0xdd:('cmp','absx')})
         if op in loads:
             reg,mode=loads[op];v=self.fetch() if mode=='imm' else self.read(self.operand_address(mode));setattr(self,reg,self.nz(v));return
