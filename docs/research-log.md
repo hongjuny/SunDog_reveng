@@ -504,3 +504,31 @@ No new reference emulator was run; the existing capture was used only as corrobo
 Python suite: 77 deterministic tests. Native Swift rule: 733 cases, three zero-error
 cases and an explicit unverified-domain rejection. Complete joystick/keyboard event
 construction, game-state ownership, transaction rules and rendering edge cases remain.
+
+## 2026-10-23 — Complete structural disassembly milestone
+
+Completed all 590 format-defined archive procedures: 559 p-code procedures with
+49,384 instructions, and 31 native procedures with 1,995 instructions. The native
+loader's four backward relocation groups account for 154 fixups. Actual Ghidra
+exports persist all native bodies and seven recovered boot/runtime memory views.
+REA confirms both overlapping 6502 entries at D029 and D5D3 without overwriting
+their canonical BIT instruction contexts.
+
+Resolved the former service decoding boundaries by native instruction-format
+evidence for 41 baseline selector cells. EXIT is a nonlocal transfer, not ordinary
+fallthrough. Explicit procedure EXIT-IC metadata recovers separate epilogues;
+13 otherwise unreachable compiler jumps require independently matching adjacent
+boundaries and existing destinations. The generated reset stub is accounted for
+through exact handler writes, stopping before hardware or ROM execution.
+
+Independent coverage accepts all identified procedure byte envelopes with zero
+unclassified bytes or ownership conflicts. Inferred zero alignment is separately
+identified; unreferenced boot/runtime DB stays unknown-role. Completion is
+structural, not a claim of complete game semantics or reconstruction of unreadable
+Play track 34. Next: assign state/data ownership and reconstruct native input,
+graphics and gameplay interfaces for a direct macOS implementation.
+
+Reproduction: `python3 tools/disassemble_all.py`; listing index and report hashes
+are in `analysis/disassembly-index.json`. Full listings and source media remain
+ignored. Validation: 94 deterministic Python tests pass. Publication requires a
+separate all-history media/secret audit and a configured destination remote.

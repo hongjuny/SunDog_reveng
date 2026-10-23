@@ -1,0 +1,222 @@
+{
+  "accepted": true,
+  "scope": "All format-defined archive procedures and recovered boot/runtime executable paths. Unknown-role unreferenced DB is explicit; gameplay semantics/undiscovered code are not asserted complete.",
+  "totals": {
+    "pcode_procedures": 559,
+    "pcode_instructions": 49384,
+    "unclassified_pcode_envelope_bytes": 0,
+    "inferred_zero_alignment_bytes": 275,
+    "native_procedures": 31,
+    "native_instructions": 1995,
+    "unclassified_native_envelope_bytes": 0
+  },
+  "reports": {
+    "analysis/disassembly-coverage.json": "c790cfaef5ed9020f3fcc60201d21594635dacd5d52f6dd8d1e3ba41fe1acc6c",
+    "analysis/pcode-callgraph.json": "fbfd2596e550166c3adaa7a6a38e5b483e1b17cd2101e892425e2a935e4a2306",
+    "analysis/native-archive-disassembly.json": "b60c1b3517c1e2fcebb1b4dbe6e4615e7d7d6381d974fc5ad9b54aef1aee31e9",
+    "analysis/native-stage-disassembly.json": "75b985423e19fbee14987cba46af7ba2ddd0fa454f98388d7bc8b55994123776",
+    "analysis/service-instruction-formats.json": "7fcedd7ddafeb9f80b1818875121f6a025669e7733494adc9d2dd36313162f80"
+  },
+  "private_listings": [
+    {
+      "path": "analysis/local/pcode/SUNDOG.LIBRARY-slot-00.txt",
+      "bytes": 306417,
+      "sha256": "d0816fee29e757601c5636e91ce7ed5b81e74454410e7d6c0059f45a8662ea34"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.LIBRARY-slot-01.txt",
+      "bytes": 115752,
+      "sha256": "bffa157259b61602225f8cc9a7daf3e1c15df3be53288138e154fd67a3941a3a"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.LIBRARY-slot-02.txt",
+      "bytes": 448,
+      "sha256": "cdbd9c6c44be0aaf5fdc6d66670b15f52d8eca1ecbf954b6653b9b1e0ecbe328"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.LIBRARY-slot-03.txt",
+      "bytes": 151392,
+      "sha256": "24a4f4395decff2f594cf4f64adb6d9551a5808f9d2a66f5be01430a07b48292"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.LIBRARY-slot-04.txt",
+      "bytes": 40528,
+      "sha256": "931ff3c0be7561f4ce66403c54fb4ce906b3ec04842bff52784f67ee85505dd2"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.LIBRARY-slot-05.txt",
+      "bytes": 68605,
+      "sha256": "b7b8e04059b1e6c2755e987b01d8bcd88ffc5c486c5ba92fe45b83cd73ddd93b"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.LIBRARY-slot-06.txt",
+      "bytes": 66206,
+      "sha256": "f2bd0d938e780c74f34727633071aefcc7b6552d529ba5d35a5594776e938935"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.LIBRARY-slot-07.txt",
+      "bytes": 12516,
+      "sha256": "442915edd0d7264d7779e15dc8cde744e042f266e9b3b7e1818631b743636038"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.PASCAL-slot-00.txt",
+      "bytes": 135307,
+      "sha256": "c983bce17c399022f1d172e21cbc752e686c05e8e1a110571603846d68c6fc52"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.PASCAL-slot-01.txt",
+      "bytes": 286,
+      "sha256": "adb8101cc8afa5be960620dabf490efd29856fb4d8b979346fd61a51caf47255"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.PASCAL-slot-02.txt",
+      "bytes": 35334,
+      "sha256": "4a0d80970042b1d05d191c1658e9175d126e970f0af71cf6378da44fbb472137"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.PASCAL-slot-03.txt",
+      "bytes": 286,
+      "sha256": "adb8101cc8afa5be960620dabf490efd29856fb4d8b979346fd61a51caf47255"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.PASCAL-slot-04.txt",
+      "bytes": 65282,
+      "sha256": "475c2a88d3cbde90a8ac9e5fb78a5f327423d5bada495c1b9dde53eca1971d67"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.PASCAL-slot-05.txt",
+      "bytes": 64687,
+      "sha256": "b7f7fc313487f40957a5ca4c9b168613a6ae912e2b1ce221bd0cd3b4b3f32adf"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.PASCAL-slot-06.txt",
+      "bytes": 161681,
+      "sha256": "5756913796f1339abb710855b96503d3f0ba0698da2b73b67df0029633925431"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-00-play.txt",
+      "bytes": 19335,
+      "sha256": "d5dd47fcca15af85f0b2eefe67ad07bb3e6e5bd086e754d471a3f9d5031a6b34"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-01-play.txt",
+      "bytes": 61358,
+      "sha256": "4d40ef707e650aeded78a959faadff4616161d8225d1bb8297d7185eeb08fba9"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-02-play.txt",
+      "bytes": 116406,
+      "sha256": "1fe0a0cf84bd40c93b6ae24b7ad654ffd4d8d720ecc476b475195a8154e23ed4"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-06-play.txt",
+      "bytes": 200036,
+      "sha256": "63237c2ca0fa7fabe7a2ed5ccb6ac664d61cb5b957eef75a0e208a7856ee9e58"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-07-play.txt",
+      "bytes": 369659,
+      "sha256": "209fcdb9d7d301b3b44bb054173222dbe6f289618bdd8287a012903982f26e57"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-08-play.txt",
+      "bytes": 95830,
+      "sha256": "963ee53a050e7f0c2f5c17f1371f88646ccee797e2ac7dcf0a0b1a174cb54451"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-09-play.txt",
+      "bytes": 99366,
+      "sha256": "b00d9cf8f8d20db3222b365989787ddc8eb87b95a9467a32f48e1d2452599ba1"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-10-play.txt",
+      "bytes": 285004,
+      "sha256": "8a3d7bf7f3da62d6cdf751f1563634e2a4decbf2770b074e61cae6621c230ad0"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-11-play.txt",
+      "bytes": 150705,
+      "sha256": "47c500d244d63132dba3e54788a36e633250e6063426d80a5e87df0a54f06f00"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-12-play.txt",
+      "bytes": 264215,
+      "sha256": "e6a98e4ba31fde1867d142238c71e6ecf70c90c54c4a972adbacea0fcc0d2af9"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-13-play.txt",
+      "bytes": 187478,
+      "sha256": "3e8f99bb80f4d6dcf23d1c38479868b086bdbde0f467e2f5cccbf44cf835b33c"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-14-play.txt",
+      "bytes": 252595,
+      "sha256": "f3dd40dc2a62cafbe5ac2eebc638e2bbab49194c88a12b2db21902a21737b962"
+    },
+    {
+      "path": "analysis/local/pcode/SYSTEM.STARTUP-slot-15-play.txt",
+      "bytes": 331505,
+      "sha256": "a1290c5c29910b19e22e323f6a10f6910c7e800de42c716e091085063603967b"
+    },
+    {
+      "path": "analysis/local/native-complete/library-22-normalized.txt",
+      "bytes": 30161,
+      "sha256": "238bc9493df569659d97542f163d3695969d31691658e6fba5e262d26c21b265"
+    },
+    {
+      "path": "analysis/local/native-complete/library-23-normalized.txt",
+      "bytes": 6248,
+      "sha256": "5e0d45266c68220a76012df5371b365fa21e7c79f21eb13e55f37004f0c840c5"
+    },
+    {
+      "path": "analysis/local/native-complete/library-24-normalized.txt",
+      "bytes": 6648,
+      "sha256": "0fcf213ca3deec1e8add2a0e9924020df40bfba71eaa73414ecc7309580fbb5c"
+    },
+    {
+      "path": "analysis/local/native-complete/library-26-normalized.txt",
+      "bytes": 9651,
+      "sha256": "1d4ae2d0d1ec39f1090499bd98e448f3e18a66dd49f543757b5ce6fb3841c0d6"
+    },
+    {
+      "path": "analysis/local/native-stages/boot-stage.txt",
+      "bytes": 8375,
+      "sha256": "adbec3db6f9010a5872c78a30726077a749d0ab1fa3b99df6eca6e5585478712"
+    },
+    {
+      "path": "analysis/local/native-stages/initial-4000.txt",
+      "bytes": 7665,
+      "sha256": "23b2517756e66999ddfc2f56601d93df34ccf53ae9571e59e0fd8cd476564800"
+    },
+    {
+      "path": "analysis/local/native-stages/interpreter-ready.txt",
+      "bytes": 90500,
+      "sha256": "5abde05b7202f5928ceb86288d40b2f0196dbb4ea6ac0130ad21dfe5bfe4f88c"
+    },
+    {
+      "path": "analysis/local/native-stages/lc-bank2.txt",
+      "bytes": 37336,
+      "sha256": "e56e76dd00d5b975e8d1b52d875fa01baeb197f38f3a81a50cf7e4b2a487eac0"
+    },
+    {
+      "path": "analysis/local/native-stages/play-bootstrap-code.txt",
+      "bytes": 2899,
+      "sha256": "d3f22742f7157a04026c57e1ddcc13bd3ab662565a7fcbacb68e4370c5e8e682"
+    },
+    {
+      "path": "analysis/local/native-stages/relocated-6800.txt",
+      "bytes": 13005,
+      "sha256": "a558e9f4e4902c005122996f51730aa1814fcd7c6adee6a3ec3b05d26b343c47"
+    },
+    {
+      "path": "analysis/local/native-stages/runtime-bank1.txt",
+      "bytes": 91010,
+      "sha256": "55c51b78e572ebb2454d74192b56a90c8b8578707c69b20fb2eeaec9f2fa695d"
+    }
+  ],
+  "limitations": [
+    "Unreadable Play track 34 remains unknown.",
+    "Gameplay semantics and unknown-role bytes require further research.",
+    "Native exports and REA evidence must first be regenerated if source inputs change."
+  ]
+}

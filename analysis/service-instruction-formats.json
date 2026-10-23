@@ -1,0 +1,835 @@
+{
+  "method": "Instruction encoding and native control-transfer classification, distinct from complete I/O/loader semantics",
+  "snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
+  "opcode": 158,
+  "services": [
+    {
+      "selector": 0,
+      "native_handler": 61148,
+      "pcode_length": 2,
+      "name": "check_io_result",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 220,
+        "image_offset": 121820,
+        "bank": "common"
+      },
+      "native_slice_sha256": "f89b917f26a787675389743989311905b89c05f30beedc9aa25067c92bc03c1f",
+      "rea_evidence_id": "ev_47833561bdd66be8523a48733d2018a5cff5433cd11cf6e45a56eb8fc5e208a6",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 1,
+      "native_handler": 54899,
+      "pcode_length": 2,
+      "name": "allocate",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648,
+        "byte_in_sector": 115,
+        "image_offset": 123763,
+        "bank": "bank1"
+      },
+      "native_slice_sha256": "931788634b4b41798a97cb989be7a74e51a8279cd21b1cf58d45571954f84eae",
+      "rea_evidence_id": "ev_5ff5cde590eb64ecc67af17a2260452eb48f3dbd60fdc88c65c1b5bd35363212",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 2,
+      "native_handler": 59512,
+      "pcode_length": 2,
+      "name": "copy_forward",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 120,
+        "image_offset": 115064,
+        "bank": "common"
+      },
+      "native_slice_sha256": "dc4e0c393544945dbadf5032783a00cf8d6c132b7a095bc0cd9914d06c4ae95c",
+      "rea_evidence_id": "ev_fbafca35a6306799ceb9398121e50c0e4b3d263fd8d2ddb98522de10f0d0721c",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 3,
+      "native_handler": 59512,
+      "pcode_length": 2,
+      "name": "copy_backward",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 120,
+        "image_offset": 115064,
+        "bank": "common"
+      },
+      "native_slice_sha256": "dc4e0c393544945dbadf5032783a00cf8d6c132b7a095bc0cd9914d06c4ae95c",
+      "rea_evidence_id": "ev_fbafca35a6306799ceb9398121e50c0e4b3d263fd8d2ddb98522de10f0d0721c",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 4,
+      "native_handler": 59228,
+      "pcode_length": 2,
+      "name": "exit_procedure",
+      "flow": "nonlocal_exit",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 115200,
+        "byte_in_sector": 92,
+        "image_offset": 115292,
+        "bank": "common"
+      },
+      "native_slice_sha256": "87c576a14e6a5512f87bb498b84cc6a93831d7e3d4adbf180e7fa35d05677b7b",
+      "rea_evidence_id": "ev_7d8399daf5cb7b50d85faa565f399dc2c8eb1ce82347db6ef42c131a41254391",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed",
+      "transfer": "exit target = (target trailer - 4) - word(target trailer - 4); frame unwind may select another procedure"
+    },
+    {
+      "selector": 5,
+      "native_handler": 61505,
+      "pcode_length": 2,
+      "name": "unit_read",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 121088,
+        "byte_in_sector": 65,
+        "image_offset": 121153,
+        "bank": "common"
+      },
+      "native_slice_sha256": "b04fda83aac5b23576a6ffba6a44a151d218f22743eaf18acb4ad10af7351b1c",
+      "rea_evidence_id": "ev_36c852ba31213b55e1797904618a49746fd585cf2f01f58c2ae4ec30b5c538a9",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 6,
+      "native_handler": 61510,
+      "pcode_length": 2,
+      "name": "unit_write",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 121088,
+        "byte_in_sector": 70,
+        "image_offset": 121158,
+        "bank": "common"
+      },
+      "native_slice_sha256": "ae6000c81fb4ef5ab84e511c3c0987c949a97d8bb221f6f70c5a233f0407ef40",
+      "rea_evidence_id": "ev_32f8a4dedbcdf16d378e6f85037822acf313a4873ac0762369cdd354558b93f9",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 7,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 8,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 9,
+      "native_handler": 59417,
+      "pcode_length": 2,
+      "name": "clear_pointer_pair",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 25,
+        "image_offset": 114969,
+        "bank": "common"
+      },
+      "native_slice_sha256": "b33723e13bede6e204abb5335421917693f5e5bf2b19b96f3e8f88479faba590",
+      "rea_evidence_id": "ev_5cb6dc671e42d9a86307293459d60e2277199dff3889f1ce936fcc7996894c05",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 10,
+      "native_handler": 59018,
+      "pcode_length": 2,
+      "name": "fill_bytes",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 138,
+        "image_offset": 115594,
+        "bank": "common"
+      },
+      "native_slice_sha256": "b792b91b3bed121c39745ed62f5be58b7416a4610d574c6fe300e96583566c88",
+      "rea_evidence_id": "ev_3d0ea78f79aaaf53660711d343bd7d3abe95e1a5dcab54bad7c2ab0033b36a16",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 11,
+      "native_handler": 59087,
+      "pcode_length": 2,
+      "name": "scan_bytes",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 207,
+        "image_offset": 115663,
+        "bank": "common"
+      },
+      "native_slice_sha256": "0d0e76066654c441fa3936d8e3d31b69eeeefcd251664b7d46a35e860bc7f78d",
+      "rea_evidence_id": "ev_45e59b750b362a487024aa774e2d4e71b317442bae9d898b0f65538c65a4301b",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 12,
+      "native_handler": 61183,
+      "pcode_length": 2,
+      "name": "unit_status",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 255,
+        "image_offset": 121855,
+        "bank": "common"
+      },
+      "native_slice_sha256": "32329cfc9df7c9a7f46e226cd200911233adaba07f0b7403c09101f5218b4e07",
+      "rea_evidence_id": "ev_28d58a2548fb199108885381037b2829751eee21b6ac390e4ea4e8ae9f97e1c2",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 13,
+      "native_handler": 0,
+      "pcode_length": 2,
+      "flow": "invalid_service",
+      "name": "zero_dispatch_cell",
+      "format_verified": true,
+      "proof": "selector byte is consumed by common dispatcher; zero baseline target is invalid",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 26,
+        "image_offset": 124954,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 14,
+      "native_handler": 0,
+      "pcode_length": 2,
+      "flow": "invalid_service",
+      "name": "zero_dispatch_cell",
+      "format_verified": true,
+      "proof": "selector byte is consumed by common dispatcher; zero baseline target is invalid",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 28,
+        "image_offset": 124956,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 15,
+      "native_handler": 0,
+      "pcode_length": 2,
+      "flow": "invalid_service",
+      "name": "zero_dispatch_cell",
+      "format_verified": true,
+      "proof": "selector byte is consumed by common dispatcher; zero baseline target is invalid",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 30,
+        "image_offset": 124958,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 16,
+      "native_handler": 0,
+      "pcode_length": 2,
+      "flow": "invalid_service",
+      "name": "zero_dispatch_cell",
+      "format_verified": true,
+      "proof": "selector byte is consumed by common dispatcher; zero baseline target is invalid",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 32,
+        "image_offset": 124960,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 17,
+      "native_handler": 0,
+      "pcode_length": 2,
+      "flow": "invalid_service",
+      "name": "zero_dispatch_cell",
+      "format_verified": true,
+      "proof": "selector byte is consumed by common dispatcher; zero baseline target is invalid",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 34,
+        "image_offset": 124962,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 18,
+      "native_handler": 0,
+      "pcode_length": 2,
+      "flow": "invalid_service",
+      "name": "zero_dispatch_cell",
+      "format_verified": true,
+      "proof": "selector byte is consumed by common dispatcher; zero baseline target is invalid",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 36,
+        "image_offset": 124964,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 19,
+      "native_handler": 0,
+      "pcode_length": 2,
+      "flow": "invalid_service",
+      "name": "zero_dispatch_cell",
+      "format_verified": true,
+      "proof": "selector byte is consumed by common dispatcher; zero baseline target is invalid",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 38,
+        "image_offset": 124966,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 20,
+      "native_handler": 0,
+      "pcode_length": 2,
+      "flow": "invalid_service",
+      "name": "zero_dispatch_cell",
+      "format_verified": true,
+      "proof": "selector byte is consumed by common dispatcher; zero baseline target is invalid",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 40,
+        "image_offset": 124968,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 21,
+      "native_handler": 58987,
+      "pcode_length": 2,
+      "name": "acquire_segment",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 107,
+        "image_offset": 115563,
+        "bank": "common"
+      },
+      "native_slice_sha256": "bc58c8fdadae0b9bffa87173ecaf783f524159d8f77408f5678d115488c45f63",
+      "rea_evidence_id": "ev_085d3add0a708d46238f5b1f21fb00398a576e0b0b75af05d169c5b22fbb3ad5",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 22,
+      "native_handler": 58997,
+      "pcode_length": 2,
+      "name": "release_segment",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 117,
+        "image_offset": 115573,
+        "bank": "common"
+      },
+      "native_slice_sha256": "c59899fe3d1ab79dadd0fec84e347013aaadac4c3bc114e6a434ec4da0dcb74e",
+      "rea_evidence_id": "ev_f7704a21dcd6156dc676a1da1decd54e36264fad0e02595465e2a1c4c7a4eac4",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 23,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 24,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 25,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 26,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 27,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 28,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 29,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 30,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 31,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 32,
+      "native_handler": 54959,
+      "pcode_length": 2,
+      "name": "snapshot_allocation_cursor",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648,
+        "byte_in_sector": 175,
+        "image_offset": 123823,
+        "bank": "bank1"
+      },
+      "native_slice_sha256": "07550b23a91005b3dc6c6848b85fc9d54e217f8e096e0cdd87d7c52ca7cd5a10",
+      "rea_evidence_id": "ev_c821d340c4997a4d3f76d0e33a1f57aa7957da5eb57ac0a105f47cb3686cc0ed",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 33,
+      "native_handler": 54982,
+      "pcode_length": 2,
+      "name": "restore_allocation_cursor",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648,
+        "byte_in_sector": 198,
+        "image_offset": 123846,
+        "bank": "bank1"
+      },
+      "native_slice_sha256": "9219a6bee780b31cf6b2bef06dfda93327dabebab9787b21224dc72dec3409c8",
+      "rea_evidence_id": "ev_80ce6cb165dd750c39667b8e6f62bf6d69e4bad15bd996dfe6222bf5607c6581",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 34,
+      "native_handler": 61137,
+      "pcode_length": 2,
+      "name": "read_io_result",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 209,
+        "image_offset": 121809,
+        "bank": "common"
+      },
+      "native_slice_sha256": "173a6c33566545d6709b6dcd1a12328ebfce4df128fac0fd0e1ad84aaffe32f8",
+      "rea_evidence_id": "ev_5ab3f680ace733b01a10c1eff024330049a1ed8ad5e15e8b74f61ef898b769c0",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 35,
+      "native_handler": 61159,
+      "pcode_length": 2,
+      "name": "unit_query",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 231,
+        "image_offset": 121831,
+        "bank": "common"
+      },
+      "native_slice_sha256": "6b769cba18ba8d6c2ff19177c1c16b3edab5f0390bbf0bc3bfa7e7ed081c0d00",
+      "rea_evidence_id": "ev_8ae6b4723c573453e510ac5a5e805ed82a666c2099ecc80673242332b62a6a07",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 36,
+      "native_handler": 53743,
+      "pcode_length": 2,
+      "flow": "error_transfer",
+      "name": "shared_error_111",
+      "format_verified": true,
+      "proof": "shared primary/native exception prefix; not a returning service",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 37,
+      "native_handler": 61173,
+      "pcode_length": 2,
+      "name": "validate_unit",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 245,
+        "image_offset": 121845,
+        "bank": "common"
+      },
+      "native_slice_sha256": "2f387a638b97e05bde296292f00aedc3aaea17be31cc326367264be442ea7dda",
+      "rea_evidence_id": "ev_5bdd14b1c356926cf435f1cecb6c44be232f9c220921931a9704540654de2071",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 38,
+      "native_handler": 61309,
+      "pcode_length": 2,
+      "name": "unit_initialization",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 121344,
+        "byte_in_sector": 125,
+        "image_offset": 121469,
+        "bank": "common"
+      },
+      "native_slice_sha256": "7012c2cdc1e5a3f3ffab98d1d6aff012f3ffbfba42cd4b2edd0b853918ad58ea",
+      "rea_evidence_id": "ev_90f7909382192f4968437322feac1449c3a1cd2dcf55911d651324237ac27e69",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 39,
+      "native_handler": 59403,
+      "pcode_length": 2,
+      "name": "raise_runtime_error",
+      "flow": "error_transfer",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 11,
+        "image_offset": 114955,
+        "bank": "common"
+      },
+      "native_slice_sha256": "e82f73660ade1047e2073c794058e48fd7bfed84d41f0f59bdc6c21278299165",
+      "rea_evidence_id": "ev_220eb493dd4b0621fae50e1e4d1e76dc98025511ed53bdd77d990206fffce67c",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    },
+    {
+      "selector": 40,
+      "native_handler": 59612,
+      "pcode_length": 2,
+      "name": "available_words",
+      "flow": "fallthrough",
+      "format_verified": true,
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 220,
+        "image_offset": 115164,
+        "bank": "common"
+      },
+      "native_slice_sha256": "1ea3ec45eb4ff3aead3aa95614d78a886cc7efb74d9ead389f9c413be88480a0",
+      "rea_evidence_id": "ev_7feb6140566e3d1fdb2efb72d68df9831047247a85d009e4988075a30dd097a9",
+      "proof": "native selector reader +1, stack-based arguments and explicit continuation/transfer; full service behavior not claimed"
+    }
+  ],
+  "scope": "41 baseline selector cells; reserved/error cells explicitly terminal; callable service normal returns conditional",
+  "limitations": [
+    "Indirect/native device behavior is not reconstructed by an instruction-length proof.",
+    "Nonlocal EXIT destination may depend on stack arguments and runtime frames.",
+    "Runtime dispatch-table patches must be represented as separate states."
+  ]
+}

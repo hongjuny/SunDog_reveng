@@ -12,6 +12,31 @@ def catalogue():
     return c
 
 class PCodeAnalysisTests(unittest.TestCase):
+    def test_verified_nonlocal_service_does_not_fall_through(self):
+        services={4:dict(pcode_length=2,name='exit',flow='nonlocal_exit')}
+        row=decode_one(Space([(0,bytes([0x9e,0x84]))]),0,0,catalogue(),services)
+        self.assertEqual(row['operands']['effective_selector'],4)
+        self.assertEqual(row['successors'],[])
+        self.assertEqual(row['terminal_transfer'],'nonlocal_exit')
+        self.assertIn('target_expression',row)
+    def test_exit_metadata_recovers_separate_block(self):
+        raw=bytes([0x9e,4,0xb9,0,0xad,0])
+        p=dict(entry_address=0,exit_address=4,attribute_address=6,trailer_address=14)
+        services={4:dict(pcode_length=2,name='exit',flow='nonlocal_exit')}
+        result=walk(Space([(0,raw)]),p,catalogue(),services)
+        self.assertFalse(result['boundaries'])
+        jump=next(i for i in result['instructions'] if i['address']==2)
+        self.assertEqual(jump['discovery'],'unreferenced_compiled_jump')
+        self.assertFalse(jump['reachable_from_entry'])
+        raw=bytes([0x9e,4,0xb9,1,0xad,0])
+        result=walk(Space([(0,raw)]),p,catalogue(),services)
+        self.assertNotIn(2,[i['address'] for i in result['instructions']])
+    def test_reset_and_shared_error_are_terminal(self):
+        c=catalogue();c[0xff]['rule']='shared_error_111'
+        for op in (0xd6,0xff):
+            row=decode_one(Space([(0,bytes([op]))]),0,0,c)
+            self.assertEqual(row['successors'],[])
+            self.assertIn('terminal_transfer',row)
     def test_variable_index_and_truncation(self):
         c=catalogue()
         self.assertEqual(decode_one(Space([(0,bytes([0xca,0x7f]))]),0,0,c)['length'],2)
