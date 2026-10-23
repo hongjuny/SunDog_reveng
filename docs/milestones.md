@@ -23,3 +23,9 @@ substitute shell-only Ghidra results for REA Evidence.
 The user requested continued work while checkpoint 1 remains externally blocked.
 Independent source/Ghidra verification and selected handler investigation proceed,
 with the missing REA acceptance explicitly retained rather than counted as passed.
+
+The user has explicitly prioritized actual Ghidra+REA usage. The next integration
+acceptance must be genuine REA provider output, not another shell-only analysis.
+A backed-up apply tool is ready and its real write attempt was denied before any
+change; see `analysis/rea-config-apply-result.json`. The one-command operator
+application/reconnection is the remaining external prerequisite.

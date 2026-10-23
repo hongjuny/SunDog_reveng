@@ -1,0 +1,30 @@
+{
+  "config": "/Users/ay5/.codex/config.toml",
+  "resolved_config": "/Users/ay5/Library/CloudStorage/OneDrive-OakRidgeNationalLaboratory/Settings/codex_sync/config.toml",
+  "backup": "/Users/ay5/Library/CloudStorage/OneDrive-OakRidgeNationalLaboratory/Settings/codex_sync/config.toml.rea-backup-36b510eaa3a2abb2",
+  "configuration_sha256": "36b510eaa3a2abb249a00eb031857375a1188818cd3e162be8af7cbef17bef1b",
+  "changes": {
+    "GHIDRA_INSTALL_DIR": {
+      "before": null,
+      "after": "/Users/ay5/Applications/ghidra_12.1.4_PUBLIC"
+    },
+    "JAVA_HOME": {
+      "before": null,
+      "after": "/Library/Java/JavaVirtualMachines/ibm-semeru-open-21.jdk/Contents/Home"
+    },
+    "REA_DARWIN_MODULE_CACHE_PATH": {
+      "before": null,
+      "after": "/Users/ay5/Library/CloudStorage/OneDrive-OakRidgeNationalLaboratory/works/fun/porting/SunDog/analysis/local/rea/module-cache"
+    },
+    "REA_DARWIN_SWIFTC_PATH": {
+      "before": null,
+      "after": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    },
+    "SDKROOT": {
+      "before": null,
+      "after": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
+    }
+  },
+  "other_parsed_settings_preserved": true,
+  "status": "review_only"
+}

@@ -118,7 +118,9 @@ transition into game-specific startup remain unresolved.
 The user requested active use of both tools and ordered checkpoints. Re-read the
 REA recovery guide for the observed provider blocker. The connected MCP server's
 raw-binary open request still returns provider_unavailable: no GHIDRA_INSTALL_DIR.
-The current Codex server entry has no environment values. No client files changed.
+The current Codex server entry has no selected Ghidra/Java/Swift environment values.
+A later full key-name check confirmed an existing HOPPER_LAUNCHER_PATH entry; it
+must be preserved. No client files changed.
 
 Corrected the installation diagnosis: /Applications contains a 14-byte 404 text
 file, but the complete user installation already has a valid ARM64 decompiler
@@ -195,3 +197,19 @@ also recorded without simulating BIOS success: normal return would resume at
 F24E, where CD selects SYSTEM.PASCAL slot 4 / procedure 1. Native operand selection,
 archive extent and all ten procedure records agree; entry offset 060A maps to
 Utility T33/DOS9 byte 10. Runtime allocation and actual call execution remain open.
+
+## 2026-10-23 — explicit REA setup request: scoped apply attempted
+
+The user made actual Ghidra+REA usage a priority and explicitly authorized REA
+configuration. Added a review/apply tool that merges only the five prepared REA
+path variables, validates full parsed preservation of unrelated settings, backs
+up the original, retains the existing symlink and supports idempotent reapplication.
+Four deterministic tests cover those behaviors and reject changes to tool policy.
+
+The real global config resolves to OneDrive Settings/codex_sync/config.toml.
+Attempted --apply under the available permissions. O_RDWR was denied with EPERM
+before any backup or write. Re-read the original and confirmed its hash is unchanged,
+no backup was created and the five requested REA environment values are still absent. No other analysis
+was substituted for the requested integration. A concrete one-command operator
+apply is documented; reconnecting REA and obtaining actual Ghidra-provider Evidence
+remain required. Checkpoint 1 is not passed. Total deterministic tests: 31.

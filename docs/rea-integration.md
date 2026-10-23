@@ -24,7 +24,8 @@ reproduces the file check. Java 21 works when invoked directly.
 ## Concrete connection change
 
 The current global `[mcp_servers.rea]` launches
-`npx -y rea-agents@6.7.0 mcp`, with no REA environment table.
+`npx -y rea-agents@6.7.0 mcp`. Its existing environment contains
+HOPPER_LAUNCHER_PATH, but none of the five prepared Ghidra/Java/Swift path values.
 `analysis/rea-launch-proposed.toml` is an **unapplied fragment**, containing only
 `[mcp_servers.rea.env]` values. Merge those variables into the existing server's
 environment, preserving its command, arguments, other variables and tool policy.
@@ -86,3 +87,32 @@ python3 tools/verify_rea_probe.py analysis/local/rea/instruction-evidence.json
 The validator requires a Ghidra provider, an Evidence ID, and the decoded byte and
 instruction facts. It does not accept a doctor result or direct Ghidra export as
 REA analysis. No successful `analysis/rea-crosscheck.json` exists yet.
+
+## Authorized apply attempt and one-command operator action
+
+The user explicitly requested configuring and using REA. The reviewed change is
+implemented in `tools/configure_rea.py`. Its default mode prints only the five
+requested environment changes; `--apply` creates a content-identified backup,
+preserves the visible configuration symlink, atomically replaces the resolved
+file, and checks readback. Full parsed equality ensures that unrelated settings
+and per-tool policy are preserved. An existing unrelated REA environment value is
+retained, and repeated application is idempotent.
+
+The actual authorized apply attempt in this session failed at the initial
+`os.open(target, O_RDWR)`, before any backup or write. The resolved target is the
+OneDrive-backed `Settings/codex_sync/config.toml`, outside writable roots. Its
+SHA-256 remains unchanged and the planned backup does not exist. These are
+recorded in `analysis/rea-config-apply-result.json`; the reviewed keys/backup path
+are in `analysis/rea-config-review.json`. No sandbox or provider ownership check
+was bypassed. This is a file-access restriction, not successful REA configuration.
+
+Run this reviewed action in a normal terminal with access to your settings:
+
+```sh
+/opt/homebrew/bin/python3 /Users/ay5/works/fun/porting/SunDog/tools/configure_rea.py --apply
+```
+
+Then reconnect the REA MCP server so it receives the new environment. Its existing
+`npx -y rea-agents@6.7.0 mcp` registration is preserved. Continue with the actual
+REA native load/instruction/reference acceptance test above; shell-only Ghidra
+results still do not count as passing this checkpoint.
