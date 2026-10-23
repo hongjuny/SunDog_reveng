@@ -371,3 +371,41 @@ complete. The report separates ordinary selected paths, eighteen error prefixes,
 secondary dispatch and external boundaries. Current 9E services, ROM/MMIO,
 nonresident I/O, exact p-system modifications and observed game execution remain
 next-layer work. See docs/primary-opcode-completion.md for scope and reproduction.
+
+## 2026-10-23 — original boot, input and native graphics milestone
+
+Executed the supplied game in the locally available pinned a2m 3.0.0 reference
+using inherited socketpair control. Preserved original media and mounted private,
+write-disabled copies. Actual breakpoints reached 0801, 08FF, 4000, FEF2, 6800,
+D293 and FF06; initial sector, relocation and initial Pascal segment matched the
+static reconstruction. BIOS bank-2 D7EF and return to p-code F24E were observed.
+This supersedes earlier statements of no observed execution for these boundaries;
+it does not turn earlier synthetic handler tests into actual runtime observations.
+
+Original WOZ and re-encoded logical-sector continuations differ: the bounded WOZ
+run remained in bank-2 disk work while the logical-sector run displayed the title
+caption and, following controlled Ctrl-U input, the utility menu. The compatibility
+cause is open. Play Track 34 remains unknown; Play media was not executed here.
+
+REA with actual Ghidra 12.1.4 rechecked D6A5 input polling and D6E0 keyboard read.
+Full Evidence and snapshot were retained privately and the session closed.
+The loader sector map locates these at Utility T27/S3, bytes A5/E0. Runtime
+Ctrl-U produced A=95 after LDA C000. Failed late-input waits, the initial wrong
+frame channel conversion, and an input ordering race were retained and explained
+in docs/reference-execution.md. a2m's key command resumes execution; arming the
+post-read breakpoint before injection removed the race without game patches.
+
+Implemented Swift AppleIIVideo, a hash-validating captured-memory adapter, CLI
+comparison tool and SwiftUI/AppKit/MetalKit reference viewer bundle. Twenty-four
+supported captured HGR screens match the CPU decoder exactly; seven incorrect
+legacy conversions are excluded and two text-mode frames are unsupported.
+Metal device creation is unavailable in the CLI environment, so GPU equivalence
+is open. The GUI process smoke test aborted without diagnostic output; actual
+window presentation is unverified. This app is a reference viewer, not a playable
+port or a completed VM.
+
+SwiftPM nested sandbox execution failed with sandbox_apply Operation not permitted.
+Used direct swiftc compilation under existing restrictions, without disabling the
+sandbox. Native bundle ad-hoc signing/verification and six Swift tests pass;
+55 deterministic Python tests pass. Media, snapshots, ROM bytes and captured
+screens remain ignored. See fidelity-spec.md and reference-execution.md.

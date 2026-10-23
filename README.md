@@ -30,7 +30,7 @@ and [research log](docs/research-log.md). The first milestone is static analysis
 not an observed emulator boot. Unreadable Play Track 34 remains unknown.
 
 Run `python3 tools/structural_evidence.py` after generating disk and boot regions
-to reproduce HGR table and directory-shape checks. Forty-nine deterministic tests
+to reproduce HGR table and directory-shape checks. Fifty-five deterministic Python tests
 require no original media. Raw searches, binaries, projects and disassembly stay
 local; structured statistics and provenance are versioned.
 
@@ -69,3 +69,28 @@ when executed with normal access to the global settings file. This restricted
 session's earlier apply attempt was denied before writing; the user subsequently
 applied it successfully and reconnected. See [connection record](docs/rea-integration.md).
 No configuration reapplication is needed for the verified connection.
+
+## macOS graphics milestone
+
+Build the native reference viewer and run its six Swift tests with Xcode installed:
+
+```sh
+python3 tools/build_native.py --tests
+Build/SunDog.app/Contents/MacOS/SunDog \
+  --capture "$PWD/analysis/local/reference/advance-20261023-122315" --label advanced
+```
+
+The app decodes captured original HGR memory; gameplay is not connected yet.
+Choose an existing capture folder and matching checkpoint label. No game, media,
+ROM or screenshots are embedded in the bundle. The selected digital colour preset
+matches 24 reference frames exactly; GPU readback and actual desktop presentation
+remain unverified. A process smoke test aborted in this agent environment, so a
+successful GUI launch is not claimed.
+
+The build tool uses direct `swiftc`, standard Apple frameworks and ad-hoc local
+signing. SwiftPM's nested sandbox failed in this environment; its sandbox was not
+disabled. `Package.swift` remains available for normal development environments.
+See [actual reference execution](docs/reference-execution.md),
+[fidelity specification](docs/fidelity-spec.md) and [third-party attribution](THIRD_PARTY.md).
+Reproduce frame comparisons using `tools/compare_reference_video.py CAPTURE_DIR ...`;
+it exports only hashes, counts and provenance to `analysis/video-comparison.json`.

@@ -2,14 +2,16 @@
 
 최종 목표는 **원본 Apple II 그래픽과 게임 규칙에 충실한 macOS 앱**이다.
 리버스 엔지니어링은 포팅과 검증에 필요한 근거를 만드는 작업으로 배치한다.
-이 문서는 구현 제안이며, 아직 실행하거나 성능·호환성을 확인한 결과가 아니다.
+단계별 목표와 현재 구현 상태를 함께 기록한다. 전체 게임의 성능·호환성은 아직 검증하지 않았다.
 
 ## 현재 위치
 
 - primary opcode 256개 값의 식별 및 선택된 native 경로 검증 완료.
 - 실제 REA/Ghidra 증거와 재현 도구 보유.
 - HGR page 1의 192개 행 주소 테이블 확인.
-- 실제 부팅, 게임 전체 실행, 하위 시스템 서비스 및 게임 전체 렌더러는 미확인.
+- 실제 a2m 부팅→첫 Pascal/BIOS→Ctrl-U→유틸리티 메뉴 관찰.
+- Swift HGR decoder의 캡처 24개 픽셀 비교 통과, macOS reference viewer 빌드 완료.
+- 독립 실행 코어, 게임 전체 실행, GPU/실제 창 표시 및 저장은 미검증.
 - SYSTEM.STARTUP descriptor 4개의 범위 충돌과 Play Track 34 읽기 실패가 남아 있다.
 
 따라서 opcode 목록 완성을 플레이 가능한 포팅의 완성률로 환산하지 않는다.
@@ -150,3 +152,11 @@ analysis/local/reference/    원본 기준 snapshot·프레임·trace
 달력 일정은 M1의 실제 실행과 미디어 의존성이 확인된 뒤 산정한다. 그 전의
 완료일 추정은 신뢰하기 어렵다. 진척은 문서량이나 opcode 개수 대신 위 통과 기준과
 플레이 가능한 산출물로 보고한다.
+
+## 2026-10-23 구현 상태
+
+M0는 [잠정 충실도 규격](fidelity-spec.md)으로 고정했다. M1의 boot와 첫 입력·메뉴는
+[실제 실행 증거](reference-execution.md)를 확보했지만 WOZ/논리 이미지의 이후 경로
+차이와 재현 가능한 game-time trace가 남았다. M3는 같은 디지털 preset의 CPU 영상
+비교를 통과했고 GPU/다른 모드는 남았다. `Build/SunDog.app`은 reference viewer이며
+M2 실행 코어와 M5 플레이 가능한 앱의 통과 조건을 충족한 상태가 아니다.

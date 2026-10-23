@@ -11,3 +11,6 @@ __pycache__/
 *.do
 *.bin
 /analysis/*-search.json
+/.build/
+/.swiftpm/
+/Build/
