@@ -1,0 +1,608 @@
+{
+  "method": "Actual Apple II service instructions in bounded synthetic native probes; not game execution or an application VM",
+  "snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
+  "services": [
+    {
+      "selector": 21,
+      "name": "acquire_segment",
+      "entry": 58987,
+      "end_exclusive": 58997,
+      "path": "analysis/regions/rea-service-15.bin",
+      "sha256": "bc58c8fdadae0b9bffa87173ecaf783f524159d8f77408f5678d115488c45f63",
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 107,
+        "image_offset": 115563,
+        "bank": "common"
+      },
+      "pcode_length": 2,
+      "continuation": "conditional on normal service return; PC+2",
+      "probe_cases": 24,
+      "tested_scope": "resident reference counts and explicit nonresident loader boundary",
+      "selected_memory_effects_verified": true,
+      "complete_runtime_semantics": false,
+      "rea_evidence_id": "ev_085d3add0a708d46238f5b1f21fb00398a576e0b0b75af05d169c5b22fbb3ad5"
+    },
+    {
+      "selector": 22,
+      "name": "release_segment",
+      "entry": 58997,
+      "end_exclusive": 59007,
+      "path": "analysis/regions/rea-service-16.bin",
+      "sha256": "c59899fe3d1ab79dadd0fec84e347013aaadac4c3bc114e6a434ec4da0dcb74e",
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 117,
+        "image_offset": 115573,
+        "bank": "common"
+      },
+      "pcode_length": 2,
+      "continuation": "conditional on normal service return; PC+2",
+      "probe_cases": 20,
+      "tested_scope": "resident decrement and saved allocation-top restore",
+      "selected_memory_effects_verified": true,
+      "complete_runtime_semantics": false,
+      "rea_evidence_id": "ev_f7704a21dcd6156dc676a1da1decd54e36264fad0e02595465e2a1c4c7a4eac4"
+    },
+    {
+      "selector": 32,
+      "name": "snapshot_allocation_cursor",
+      "entry": 54959,
+      "end_exclusive": 54982,
+      "path": "analysis/regions/rea-service-20.bin",
+      "sha256": "07550b23a91005b3dc6c6848b85fc9d54e217f8e096e0cdd87d7c52ca7cd5a10",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648,
+        "byte_in_sector": 175,
+        "image_offset": 123823,
+        "bank": "bank1"
+      },
+      "pcode_length": 2,
+      "continuation": "conditional on normal service return; PC+2",
+      "probe_cases": 16,
+      "tested_scope": "declared RAM/stack values; direct memory effects",
+      "selected_memory_effects_verified": true,
+      "complete_runtime_semantics": false,
+      "rea_evidence_id": "ev_c821d340c4997a4d3f76d0e33a1f57aa7957da5eb57ac0a105f47cb3686cc0ed"
+    },
+    {
+      "selector": 33,
+      "name": "restore_allocation_cursor",
+      "entry": 54982,
+      "end_exclusive": 55012,
+      "path": "analysis/regions/rea-service-21.bin",
+      "sha256": "9219a6bee780b31cf6b2bef06dfda93327dabebab9787b21224dc72dec3409c8",
+      "source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648,
+        "byte_in_sector": 198,
+        "image_offset": 123846,
+        "bank": "bank1"
+      },
+      "pcode_length": 2,
+      "continuation": "conditional on normal service return; PC+2",
+      "probe_cases": 8,
+      "tested_scope": "declared RAM/stack values; direct memory effects",
+      "selected_memory_effects_verified": true,
+      "complete_runtime_semantics": false,
+      "rea_evidence_id": "ev_80ce6cb165dd750c39667b8e6f62bf6d69e4bad15bd996dfe6222bf5607c6581"
+    },
+    {
+      "selector": 34,
+      "name": "read_io_result",
+      "entry": 61137,
+      "end_exclusive": 61148,
+      "path": "analysis/regions/rea-service-22.bin",
+      "sha256": "173a6c33566545d6709b6dcd1a12328ebfce4df128fac0fd0e1ad84aaffe32f8",
+      "source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 209,
+        "image_offset": 121809,
+        "bank": "common"
+      },
+      "pcode_length": 2,
+      "continuation": "conditional on normal service return; PC+2",
+      "probe_cases": 4,
+      "tested_scope": "declared RAM/stack values; direct memory effects",
+      "selected_memory_effects_verified": true,
+      "complete_runtime_semantics": false,
+      "rea_evidence_id": "ev_5ab3f680ace733b01a10c1eff024330049a1ed8ad5e15e8b74f61ef898b769c0"
+    }
+  ],
+  "cases": 72,
+  "probe_conditions": [
+    {
+      "selector": 21,
+      "condition": "resident slot=1, count=1",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=1, count=2",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=1, count=255",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=1, count=256",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=1, count=65534",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=7, count=1",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=7, count=2",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=7, count=255",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=7, count=256",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=7, count=65534",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=22, count=1",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=22, count=2",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=22, count=255",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=22, count=256",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=22, count=65534",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=30, count=1",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=30, count=2",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=30, count=255",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=30, count=256",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "resident slot=30, count=65534",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=1, count=1",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=1, count=2",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=1, count=255",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=1, count=256",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=1, count=65534",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=7, count=1",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=7, count=2",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=7, count=255",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=7, count=256",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=7, count=65534",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=22, count=1",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=22, count=2",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=22, count=255",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=22, count=256",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=22, count=65534",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=30, count=1",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=30, count=2",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=30, count=255",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=30, count=256",
+      "stop": 53907
+    },
+    {
+      "selector": 22,
+      "condition": "resident slot=30, count=65534",
+      "stop": 53907
+    },
+    {
+      "selector": 21,
+      "condition": "nonresident slot=1; stop before allocation/load",
+      "stop": 58626
+    },
+    {
+      "selector": 21,
+      "condition": "nonresident slot=7; stop before allocation/load",
+      "stop": 58626
+    },
+    {
+      "selector": 21,
+      "condition": "nonresident slot=22; stop before allocation/load",
+      "stop": 58626
+    },
+    {
+      "selector": 21,
+      "condition": "nonresident slot=30; stop before allocation/load",
+      "stop": 58626
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=0, pending=0, destination=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=0, pending=0, destination=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=0, pending=13398, destination=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=0, pending=13398, destination=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=20480, pending=0, destination=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=20480, pending=0, destination=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=20480, pending=13398, destination=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=20480, pending=13398, destination=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=32767, pending=0, destination=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=32767, pending=0, destination=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=32767, pending=13398, destination=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=32767, pending=13398, destination=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=65535, pending=0, destination=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=65535, pending=0, destination=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=65535, pending=13398, destination=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 32,
+      "condition": "cursor=65535, pending=13398, destination=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 33,
+      "condition": "restore value=0, address=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 33,
+      "condition": "restore value=0, address=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 33,
+      "condition": "restore value=16384, address=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 33,
+      "condition": "restore value=16384, address=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 33,
+      "condition": "restore value=32767, address=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 33,
+      "condition": "restore value=32767, address=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 33,
+      "condition": "restore value=65535, address=16384",
+      "stop": 53907
+    },
+    {
+      "selector": 33,
+      "condition": "restore value=65535, address=16895",
+      "stop": 53907
+    },
+    {
+      "selector": 34,
+      "condition": "I/O result=0",
+      "stop": 53907
+    },
+    {
+      "selector": 34,
+      "condition": "I/O result=1",
+      "stop": 53907
+    },
+    {
+      "selector": 34,
+      "condition": "I/O result=4660",
+      "stop": 53907
+    },
+    {
+      "selector": 34,
+      "condition": "I/O result=65535",
+      "stop": 53907
+    }
+  ],
+  "native_instruction_addresses": [
+    "0xd190",
+    "0xd193",
+    "0xd195",
+    "0xd198",
+    "0xd19a",
+    "0xd19b",
+    "0xd19d",
+    "0xd1a0",
+    "0xd1a2",
+    "0xd1a4",
+    "0xd1a7",
+    "0xd1a9",
+    "0xd1ac",
+    "0xd27b",
+    "0xd27d",
+    "0xd27e",
+    "0xd280",
+    "0xd282",
+    "0xd284",
+    "0xd286",
+    "0xd293",
+    "0xd295",
+    "0xd297",
+    "0xd299",
+    "0xd29a",
+    "0xd29d",
+    "0xd6af",
+    "0xd6b2",
+    "0xd6b3",
+    "0xd6b5",
+    "0xd6b6",
+    "0xd6b8",
+    "0xd6ba",
+    "0xd6bc",
+    "0xd6be",
+    "0xd6bf",
+    "0xd6c1",
+    "0xd6c3",
+    "0xd6c6",
+    "0xd6c7",
+    "0xd6c9",
+    "0xd6ca",
+    "0xd6cc",
+    "0xd6ce",
+    "0xd6d0",
+    "0xd6d2",
+    "0xd6d3",
+    "0xd6d5",
+    "0xd6d7",
+    "0xd6d9",
+    "0xd6dc",
+    "0xd6de",
+    "0xd6e1",
+    "0xe4e9",
+    "0xe4eb",
+    "0xe4ec",
+    "0xe4ed",
+    "0xe4f0",
+    "0xe4f2",
+    "0xe4f5",
+    "0xe4f7",
+    "0xe4f8",
+    "0xe4f9",
+    "0xe4fc",
+    "0xe4fe",
+    "0xe501",
+    "0xe646",
+    "0xe647",
+    "0xe648",
+    "0xe64a",
+    "0xe64b",
+    "0xe64e",
+    "0xe650",
+    "0xe653",
+    "0xe655",
+    "0xe658",
+    "0xe659",
+    "0xe65b",
+    "0xe65e",
+    "0xe660",
+    "0xe663",
+    "0xe665",
+    "0xe668",
+    "0xe66a",
+    "0xe66b",
+    "0xe66c",
+    "0xe66d",
+    "0xe66e",
+    "0xe66f",
+    "0xe672",
+    "0xe675",
+    "0xe676",
+    "0xe677",
+    "0xe678",
+    "0xe679",
+    "0xe67c",
+    "0xe67f",
+    "0xe681",
+    "0xe683",
+    "0xe684",
+    "0xe687",
+    "0xeed1",
+    "0xeed4",
+    "0xeed5",
+    "0xeed8",
+    "0xeed9"
+  ],
+  "ghidra_boundaries_match": true,
+  "remaining": [
+    "Nonresident loader I/O and bank switches",
+    "Validity of arbitrary pointer/count inputs",
+    "Game ownership and lifetime of each allocation"
+  ]
+}

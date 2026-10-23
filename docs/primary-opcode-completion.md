@@ -147,3 +147,13 @@ valid selector domain, nonresident disk loading, segment release/device effects,
 actual ROM/reset and Language Card behavior, exact p-system modifications, legal
 compiler operand domains, and game-specific execution. No primary entry remains
 unidentified, but those broader questions are not marked complete.
+
+
+## Later runtime-state qualification
+
+The initial primary table remains the source of this catalogue. Library-native
+input P2 can replace the opcode-82 (ADD16) dispatch word at D004 with an input-latch
+hook, which chains to the original D71D handler. Source disassembly and retained
+LC1 corroborate this specific modification; see [input analysis](input-system.md).
+Identification of the initial 256 values does not establish that dispatch cells
+stay unchanged or that all subsequent native hooks have been catalogued.

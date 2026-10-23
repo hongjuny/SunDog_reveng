@@ -1,0 +1,36 @@
+{
+  "program": "interpreter-ready.bin",
+  "project_save_verified": true,
+  "annotations": [
+    {
+      "selector": 21,
+      "entry": 58987,
+      "label": "service_9e_15_acquire_segment",
+      "readback_matches": true
+    },
+    {
+      "selector": 22,
+      "entry": 58997,
+      "label": "service_9e_16_release_segment",
+      "readback_matches": true
+    },
+    {
+      "selector": 32,
+      "entry": 54959,
+      "label": "service_9e_20_snapshot_allocation_cursor",
+      "readback_matches": true
+    },
+    {
+      "selector": 33,
+      "entry": 54982,
+      "label": "service_9e_21_restore_allocation_cursor",
+      "readback_matches": true
+    },
+    {
+      "selector": 34,
+      "entry": 61137,
+      "label": "service_9e_22_read_io_result",
+      "readback_matches": true
+    }
+  ]
+}

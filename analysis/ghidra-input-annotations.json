@@ -1,0 +1,36 @@
+{
+  "program": "rea-library22-input2-captured.bin",
+  "project_save_verified": true,
+  "annotations": [
+    {
+      "address": 41480,
+      "label": "library22_native2_channel_poll",
+      "readback_matches": true
+    },
+    {
+      "address": 41539,
+      "label": "input_read_selected_channel",
+      "readback_matches": true
+    },
+    {
+      "address": 41575,
+      "label": "input_rising_edge_filter",
+      "readback_matches": true
+    },
+    {
+      "address": 41600,
+      "label": "input_restore_add_dispatch",
+      "readback_matches": true
+    },
+    {
+      "address": 41627,
+      "label": "add16_input_latch_hook",
+      "readback_matches": true
+    },
+    {
+      "address": 41649,
+      "label": "input_chain_saved_add16",
+      "readback_matches": true
+    }
+  ]
+}

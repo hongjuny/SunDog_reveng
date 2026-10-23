@@ -2,7 +2,7 @@
   "method": "Static recursive p-code decoding using Apple II native-backed operand rules; no runtime execution or subsystem-name guessing",
   "limitations": [
     "External segment operands are not globally resolved module names.",
-    "Unverified 9E services stop a path; calls are conditional on return.",
+    "Unverified 9E services stop a path; calls/services are conditional on normal return.",
     "Relative archive analysis assumes an even load address for aligned inline data.",
     "SYSTEM.STARTUP uses structurally validated Play payloads; runtime side selection remains open."
   ],
@@ -21,30 +21,18 @@
           "kind": "pcode",
           "entry": 8386,
           "trailer": 8540,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 8507,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 76,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 2,
           "kind": "pcode",
           "entry": 6200,
           "trailer": 6240,
-          "decoded_instructions": 7,
-          "boundaries": [
-            {
-              "address": 6212,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 34
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 16,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 3,
@@ -541,6 +529,198 @@
       ],
       "calls": [
         {
+          "caller_procedure": 1,
+          "call_address": 8388,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 49920,
+            "byte_in_sector": 196
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8391,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 49920,
+            "byte_in_sector": 199
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8394,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 49920,
+            "byte_in_sector": 202
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 26,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8424,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 49920,
+            "byte_in_sector": 232
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 53
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8434,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 49920,
+            "byte_in_sector": 242
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 54
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8437,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 49920,
+            "byte_in_sector": 245
+          },
+          "kind": "current-segment",
+          "procedure": 8
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8447,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 49920,
+            "byte_in_sector": 255
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 42
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8454,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 49664,
+            "byte_in_sector": 6
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 43
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8460,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 49664,
+            "byte_in_sector": 12
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8465,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 49664,
+            "byte_in_sector": 17
+          },
+          "kind": "current-segment",
+          "procedure": 50
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8470,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 49664,
+            "byte_in_sector": 22
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8481,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 49664,
+            "byte_in_sector": 33
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 41
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8484,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 49664,
+            "byte_in_sector": 36
+          },
+          "kind": "current-segment",
+          "procedure": 42
+        },
+        {
           "caller_procedure": 2,
           "call_address": 6204,
           "source": {
@@ -569,6 +749,36 @@
           "kind": "external-segment-operand",
           "segment_operand": 22,
           "procedure": 12
+        },
+        {
+          "caller_procedure": 2,
+          "call_address": 6216,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 51968,
+            "byte_in_sector": 72
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 39
+        },
+        {
+          "caller_procedure": 2,
+          "call_address": 6222,
+          "source": {
+            "side": "utility",
+            "track": 12,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 51968,
+            "byte_in_sector": 78
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
         },
         {
           "caller_procedure": 3,
@@ -5861,11 +6071,11 @@
       ],
       "counts": {
         "procedures": 50,
-        "instructions": 3290,
-        "complete_procedures": 38,
-        "calls": 359,
+        "instructions": 3372,
+        "complete_procedures": 40,
+        "calls": 374,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 12
+          "secondary service operand/continuation not verified": 10
         }
       }
     },
@@ -10777,15 +10987,9 @@
           "kind": "pcode",
           "entry": 464,
           "trailer": 500,
-          "decoded_instructions": 5,
-          "boundaries": [
-            {
-              "address": 472,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 33
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 12,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 3,
@@ -10980,6 +11184,20 @@
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 2,
+          "call_address": 487,
+          "source": {
+            "side": "utility",
+            "track": 16,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 68608,
+            "byte_in_sector": 231
+          },
+          "kind": "current-segment",
+          "procedure": 8
+        },
         {
           "caller_procedure": 5,
           "call_address": 541,
@@ -11536,12 +11754,12 @@
       ],
       "counts": {
         "procedures": 18,
-        "instructions": 520,
-        "complete_procedures": 8,
-        "calls": 38,
+        "instructions": 527,
+        "complete_procedures": 9,
+        "calls": 39,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 3,
-          "native 6502 body; separate Ghidra analysis required": 7
+          "native 6502 body; separate Ghidra analysis required": 7,
+          "secondary service operand/continuation not verified": 2
         }
       }
     },
@@ -13509,17 +13727,12 @@
           "kind": "pcode",
           "entry": 63900,
           "trailer": 64152,
-          "decoded_instructions": 96,
+          "decoded_instructions": 162,
           "boundaries": [
             {
-              "address": 64068,
+              "address": 64096,
               "reason": "secondary service operand/continuation not verified",
-              "selector": 34
-            },
-            {
-              "address": 63999,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 34
+              "selector": 11
             }
           ],
           "complete_within_static_model": false
@@ -13577,15 +13790,9 @@
           "kind": "pcode",
           "entry": 64392,
           "trailer": 64644,
-          "decoded_instructions": 134,
-          "boundaries": [
-            {
-              "address": 64560,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 34
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 171,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 34,
@@ -13652,27 +13859,26 @@
           "kind": "pcode",
           "entry": 64954,
           "trailer": 65004,
-          "decoded_instructions": 2,
-          "boundaries": [
-            {
-              "address": 64957,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 33
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 19,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 38,
           "kind": "pcode",
           "entry": 48242,
           "trailer": 48410,
-          "decoded_instructions": 3,
+          "decoded_instructions": 69,
           "boundaries": [
             {
-              "address": 48389,
+              "address": 48365,
               "reason": "secondary service operand/continuation not verified",
-              "selector": 21
+              "selector": 35
+            },
+            {
+              "address": 48301,
+              "reason": "secondary service operand/continuation not verified",
+              "selector": 4
             }
           ],
           "complete_within_static_model": false
@@ -13682,12 +13888,12 @@
           "kind": "pcode",
           "entry": 65006,
           "trailer": 65066,
-          "decoded_instructions": 3,
+          "decoded_instructions": 26,
           "boundaries": [
             {
-              "address": 65048,
+              "address": 65033,
               "reason": "secondary service operand/continuation not verified",
-              "selector": 21
+              "selector": 4
             }
           ],
           "complete_within_static_model": false
@@ -14456,16 +14662,153 @@
           "kind": "external-segment-operand",
           "segment_operand": 0,
           "procedure": 19
+        },
+        {
+          "caller_procedure": 37,
+          "call_address": 64976,
+          "source": {
+            "side": "utility",
+            "track": 32,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 134144,
+            "byte_in_sector": 136
+          },
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 37,
+          "call_address": 64984,
+          "source": {
+            "side": "utility",
+            "track": 32,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 134144,
+            "byte_in_sector": 144
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 6,
+          "procedure": 9
+        },
+        {
+          "caller_procedure": 38,
+          "call_address": 48251,
+          "source": {
+            "region": "initial-helper",
+            "address": 48251
+          },
+          "kind": "current-segment",
+          "procedure": 37
+        },
+        {
+          "caller_procedure": 38,
+          "call_address": 48258,
+          "source": {
+            "region": "initial-helper",
+            "address": 48258
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 5,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 38,
+          "call_address": 48289,
+          "source": {
+            "region": "initial-helper",
+            "address": 48289
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 1,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 38,
+          "call_address": 48324,
+          "source": {
+            "region": "initial-helper",
+            "address": 48324
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 6,
+          "procedure": 9
+        },
+        {
+          "caller_procedure": 38,
+          "call_address": 48350,
+          "source": {
+            "region": "initial-helper",
+            "address": 48350
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 6,
+          "procedure": 5
+        },
+        {
+          "caller_procedure": 38,
+          "call_address": 48361,
+          "source": {
+            "region": "initial-helper",
+            "address": 48361
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 6,
+          "procedure": 5
+        },
+        {
+          "caller_procedure": 39,
+          "call_address": 65008,
+          "source": {
+            "side": "utility",
+            "track": 32,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 134144,
+            "byte_in_sector": 168
+          },
+          "kind": "current-segment",
+          "procedure": 37
+        },
+        {
+          "caller_procedure": 39,
+          "call_address": 65010,
+          "source": {
+            "side": "utility",
+            "track": 32,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 134144,
+            "byte_in_sector": 170
+          },
+          "kind": "current-segment",
+          "procedure": 38
+        },
+        {
+          "caller_procedure": 39,
+          "call_address": 65026,
+          "source": {
+            "side": "utility",
+            "track": 32,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 134144,
+            "byte_in_sector": 186
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 1,
+          "procedure": 1
         }
       ],
       "counts": {
         "procedures": 39,
-        "instructions": 1449,
-        "complete_procedures": 18,
-        "calls": 53,
+        "instructions": 1658,
+        "complete_procedures": 20,
+        "calls": 64,
         "boundary_reasons": {
           "generated reset stub": 1,
-          "secondary service operand/continuation not verified": 25
+          "secondary service operand/continuation not verified": 23
         }
       }
     },
@@ -14536,7 +14879,7 @@
           "kind": "pcode",
           "entry": 0,
           "trailer": 222,
-          "decoded_instructions": 99,
+          "decoded_instructions": 116,
           "boundaries": [
             {
               "address": 88,
@@ -14544,9 +14887,9 @@
               "selector": 2
             },
             {
-              "address": 153,
+              "address": 177,
               "reason": "secondary service operand/continuation not verified",
-              "selector": 34
+              "selector": 5
             },
             {
               "address": 151,
@@ -14579,17 +14922,22 @@
           "kind": "pcode",
           "entry": 384,
           "trailer": 782,
-          "decoded_instructions": 213,
+          "decoded_instructions": 242,
           "boundaries": [
-            {
-              "address": 585,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 34
-            },
             {
               "address": 520,
               "reason": "secondary service operand/continuation not verified",
               "selector": 2
+            },
+            {
+              "address": 630,
+              "reason": "secondary service operand/continuation not verified",
+              "selector": 10
+            },
+            {
+              "address": 618,
+              "reason": "secondary service operand/continuation not verified",
+              "selector": 5
             },
             {
               "address": 583,
@@ -14679,11 +15027,11 @@
       ],
       "counts": {
         "procedures": 5,
-        "instructions": 399,
+        "instructions": 445,
         "complete_procedures": 3,
         "calls": 5,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 6
+          "secondary service operand/continuation not verified": 7
         }
       }
     },
@@ -14745,12 +15093,12 @@
           "kind": "pcode",
           "entry": 1546,
           "trailer": 1974,
-          "decoded_instructions": 3,
+          "decoded_instructions": 26,
           "boundaries": [
             {
-              "address": 1948,
+              "address": 1595,
               "reason": "secondary service operand/continuation not verified",
-              "selector": 21
+              "selector": 10
             }
           ],
           "complete_within_static_model": false
@@ -14873,6 +15221,34 @@
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 1,
+          "call_address": 1563,
+          "source": {
+            "side": "utility",
+            "track": 33,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 137472,
+            "byte_in_sector": 27
+          },
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 1586,
+          "source": {
+            "side": "utility",
+            "track": 33,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 137472,
+            "byte_in_sector": 50
+          },
+          "kind": "current-segment",
+          "procedure": 7
+        },
         {
           "caller_procedure": 2,
           "call_address": 9,
@@ -15214,9 +15590,9 @@
       ],
       "counts": {
         "procedures": 10,
-        "instructions": 315,
+        "instructions": 338,
         "complete_procedures": 4,
-        "calls": 23,
+        "calls": 25,
         "boundary_reasons": {
           "secondary service operand/continuation not verified": 7
         }
@@ -15336,12 +15712,12 @@
           "kind": "pcode",
           "entry": 824,
           "trailer": 954,
-          "decoded_instructions": 16,
+          "decoded_instructions": 32,
           "boundaries": [
             {
-              "address": 851,
+              "address": 876,
               "reason": "secondary service operand/continuation not verified",
-              "selector": 34
+              "selector": 5
             }
           ],
           "complete_within_static_model": false
@@ -15351,12 +15727,17 @@
           "kind": "pcode",
           "entry": 956,
           "trailer": 1444,
-          "decoded_instructions": 39,
+          "decoded_instructions": 88,
           "boundaries": [
             {
-              "address": 1041,
+              "address": 1099,
               "reason": "secondary service operand/continuation not verified",
-              "selector": 34
+              "selector": 5
+            },
+            {
+              "address": 1406,
+              "reason": "secondary service operand/continuation not verified",
+              "selector": 4
             }
           ],
           "complete_within_static_model": false
@@ -15670,6 +16051,21 @@
           "procedure": 4
         },
         {
+          "caller_procedure": 9,
+          "call_address": 941,
+          "source": {
+            "side": "utility",
+            "track": 33,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 136192,
+            "byte_in_sector": 173
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 6,
+          "procedure": 5
+        },
+        {
           "caller_procedure": 10,
           "call_address": 1000,
           "source": {
@@ -15698,15 +16094,75 @@
           "kind": "external-segment-operand",
           "segment_operand": 6,
           "procedure": 4
+        },
+        {
+          "caller_procedure": 10,
+          "call_address": 1051,
+          "source": {
+            "side": "utility",
+            "track": 33,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 135936,
+            "byte_in_sector": 27
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 0,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 10,
+          "call_address": 1079,
+          "source": {
+            "side": "utility",
+            "track": 33,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 135936,
+            "byte_in_sector": 55
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 0,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 10,
+          "call_address": 1401,
+          "source": {
+            "side": "utility",
+            "track": 33,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 135680,
+            "byte_in_sector": 121
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 6,
+          "procedure": 5
+        },
+        {
+          "caller_procedure": 10,
+          "call_address": 1413,
+          "source": {
+            "side": "utility",
+            "track": 33,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 135680,
+            "byte_in_sector": 133
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 6,
+          "procedure": 5
         }
       ],
       "counts": {
         "procedures": 10,
-        "instructions": 612,
+        "instructions": 677,
         "complete_procedures": 5,
-        "calls": 23,
+        "calls": 28,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 7
+          "secondary service operand/continuation not verified": 8
         }
       }
     },
@@ -15751,17 +16207,17 @@
           "kind": "pcode",
           "entry": 2418,
           "trailer": 3184,
-          "decoded_instructions": 382,
+          "decoded_instructions": 442,
           "boundaries": [
             {
-              "address": 2489,
+              "address": 3150,
               "reason": "secondary service operand/continuation not verified",
-              "selector": 32
+              "selector": 5
             },
             {
-              "address": 3118,
+              "address": 2562,
               "reason": "secondary service operand/continuation not verified",
-              "selector": 33
+              "selector": 6
             },
             {
               "address": 3038,
@@ -15785,13 +16241,8 @@
           "kind": "pcode",
           "entry": 1140,
           "trailer": 1498,
-          "decoded_instructions": 236,
+          "decoded_instructions": 239,
           "boundaries": [
-            {
-              "address": 1372,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 34
-            },
             {
               "address": 1321,
               "reason": "secondary service operand/continuation not verified",
@@ -16394,11 +16845,11 @@
       ],
       "counts": {
         "procedures": 15,
-        "instructions": 1889,
+        "instructions": 1952,
         "complete_procedures": 10,
         "calls": 33,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 11
+          "secondary service operand/continuation not verified": 10
         }
       }
     },
@@ -16416,93 +16867,176 @@
           "kind": "pcode",
           "entry": 488,
           "trailer": 560,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 531,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 32,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 2,
           "kind": "pcode",
           "entry": 0,
           "trailer": 30,
-          "decoded_instructions": 5,
-          "boundaries": [
-            {
-              "address": 8,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 34
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 11,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 3,
           "kind": "pcode",
           "entry": 32,
           "trailer": 144,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 126,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 47,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 4,
           "kind": "pcode",
           "entry": 206,
           "trailer": 384,
-          "decoded_instructions": 18,
-          "boundaries": [
-            {
-              "address": 238,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 33
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 82,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 5,
           "kind": "pcode",
           "entry": 146,
           "trailer": 204,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 187,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 23,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 6,
           "kind": "pcode",
           "entry": 386,
           "trailer": 486,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 468,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 48,
+          "boundaries": [],
+          "complete_within_static_model": true
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 1,
+          "call_address": 490,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 234
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 493,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 237
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 23,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 496,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 240
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 499,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 243
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 502,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 246
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 26,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 505,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 249
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 27,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 508,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 252
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 511,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 255
+          },
+          "kind": "current-segment",
+          "procedure": 6
+        },
         {
           "caller_procedure": 2,
           "call_address": 0,
@@ -16532,16 +17066,296 @@
           "kind": "external-segment-operand",
           "segment_operand": 22,
           "procedure": 12
+        },
+        {
+          "caller_procedure": 2,
+          "call_address": 12,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 70912,
+            "byte_in_sector": 12
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 39
+        },
+        {
+          "caller_procedure": 3,
+          "call_address": 47,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 70912,
+            "byte_in_sector": 47
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 13,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 3,
+          "call_address": 52,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 70912,
+            "byte_in_sector": 52
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 15,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 3,
+          "call_address": 60,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 70912,
+            "byte_in_sector": 60
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 16,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 4,
+          "call_address": 264,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 8
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 21,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 4,
+          "call_address": 275,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 19
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 19,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 4,
+          "call_address": 281,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 25
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 20,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 4,
+          "call_address": 299,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 43
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 17,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 4,
+          "call_address": 311,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 55
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 18,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 4,
+          "call_address": 316,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 60
+          },
+          "kind": "current-segment",
+          "procedure": 5
+        },
+        {
+          "caller_procedure": 4,
+          "call_address": 323,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 67
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 16,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 5,
+          "call_address": 167,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 70912,
+            "byte_in_sector": 167
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 14,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 5,
+          "call_address": 178,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 70912,
+            "byte_in_sector": 178
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 8,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 415,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 159
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 53
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 425,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 169
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 54
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 429,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 173
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 7,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 442,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 186
+          },
+          "kind": "current-segment",
+          "procedure": 3
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 446,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 190
+          },
+          "kind": "current-segment",
+          "procedure": 4
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 459,
+          "source": {
+            "side": "play",
+            "track": 17,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 70656,
+            "byte_in_sector": 203
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 7,
+          "procedure": 1
         }
       ],
       "counts": {
         "procedures": 6,
-        "instructions": 35,
-        "complete_procedures": 0,
-        "calls": 2,
-        "boundary_reasons": {
-          "secondary service operand/continuation not verified": 6
-        }
+        "instructions": 243,
+        "complete_procedures": 6,
+        "calls": 29,
+        "boundary_reasons": {}
       }
     },
     {
@@ -16558,15 +17372,9 @@
           "kind": "pcode",
           "entry": 1798,
           "trailer": 1848,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 1829,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 22,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 2,
@@ -16615,12 +17423,12 @@
           "kind": "pcode",
           "entry": 704,
           "trailer": 930,
-          "decoded_instructions": 6,
+          "decoded_instructions": 50,
           "boundaries": [
             {
-              "address": 719,
+              "address": 812,
               "reason": "secondary service operand/continuation not verified",
-              "selector": 33
+              "selector": 10
             }
           ],
           "complete_within_static_model": false
@@ -16645,6 +17453,76 @@
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 1,
+          "call_address": 1808,
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 76288,
+            "byte_in_sector": 16
+          },
+          "kind": "current-segment",
+          "procedure": 4
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 1810,
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 76288,
+            "byte_in_sector": 18
+          },
+          "kind": "current-segment",
+          "procedure": 5
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 1812,
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 76288,
+            "byte_in_sector": 20
+          },
+          "kind": "current-segment",
+          "procedure": 6
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 1814,
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 76288,
+            "byte_in_sector": 22
+          },
+          "kind": "current-segment",
+          "procedure": 7
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 1818,
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 76288,
+            "byte_in_sector": 26
+          },
+          "kind": "current-segment",
+          "procedure": 8
+        },
         {
           "caller_procedure": 3,
           "call_address": 62,
@@ -17152,6 +18030,81 @@
           "kind": "external-segment-operand",
           "segment_operand": 22,
           "procedure": 18
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 731,
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 73728,
+            "byte_in_sector": 219
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 23
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 745,
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 73728,
+            "byte_in_sector": 233
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 23
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 759,
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 73728,
+            "byte_in_sector": 247
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 23
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 784,
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 77312,
+            "byte_in_sector": 16
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 53
+        },
+        {
+          "caller_procedure": 6,
+          "call_address": 801,
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 77312,
+            "byte_in_sector": 33
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 26,
+          "procedure": 4
         },
         {
           "caller_procedure": 7,
@@ -17710,11 +18663,11 @@
       ],
       "counts": {
         "procedures": 8,
-        "instructions": 637,
-        "complete_procedures": 5,
-        "calls": 71,
+        "instructions": 700,
+        "complete_procedures": 6,
+        "calls": 81,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 3
+          "secondary service operand/continuation not verified": 2
         }
       }
     },
@@ -25084,15 +26037,9 @@
           "kind": "pcode",
           "entry": 9606,
           "trailer": 10106,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 10083,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 273,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 2,
@@ -25616,6 +26563,238 @@
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 1,
+          "call_address": 9608,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 6,
+            "physical_sector": 3,
+            "offset": 87552,
+            "byte_in_sector": 136
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 9
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9633,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 6,
+            "physical_sector": 3,
+            "offset": 87552,
+            "byte_in_sector": 161
+          },
+          "kind": "current-segment",
+          "procedure": 12
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9664,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 6,
+            "physical_sector": 3,
+            "offset": 87552,
+            "byte_in_sector": 192
+          },
+          "kind": "current-segment",
+          "procedure": 52
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9716,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 6,
+            "physical_sector": 3,
+            "offset": 87552,
+            "byte_in_sector": 244
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 53
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9719,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 6,
+            "physical_sector": 3,
+            "offset": 87552,
+            "byte_in_sector": 247
+          },
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9777,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 87296,
+            "byte_in_sector": 49
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9787,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 87296,
+            "byte_in_sector": 59
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9809,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 87296,
+            "byte_in_sector": 81
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 50
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9817,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 87296,
+            "byte_in_sector": 89
+          },
+          "kind": "current-segment",
+          "procedure": 51
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9833,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 87296,
+            "byte_in_sector": 105
+          },
+          "kind": "current-segment",
+          "procedure": 45
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9855,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 87296,
+            "byte_in_sector": 127
+          },
+          "kind": "current-segment",
+          "procedure": 3
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9859,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 87296,
+            "byte_in_sector": 131
+          },
+          "kind": "current-segment",
+          "procedure": 47
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9882,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 87296,
+            "byte_in_sector": 154
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 12,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9906,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 87296,
+            "byte_in_sector": 178
+          },
+          "kind": "current-segment",
+          "procedure": 12
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 9926,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 5,
+            "physical_sector": 5,
+            "offset": 87296,
+            "byte_in_sector": 198
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 4
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 10030,
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 87040,
+            "byte_in_sector": 46
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 20
+        },
         {
           "caller_procedure": 2,
           "call_address": 72,
@@ -32262,11 +33441,11 @@
       ],
       "counts": {
         "procedures": 52,
-        "instructions": 4499,
-        "complete_procedures": 45,
-        "calls": 450,
+        "instructions": 4769,
+        "complete_procedures": 46,
+        "calls": 466,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 12
+          "secondary service operand/continuation not verified": 11
         }
       }
     },
@@ -34167,15 +35346,9 @@
           "kind": "pcode",
           "entry": 2416,
           "trailer": 2618,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 2591,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 110,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 2,
@@ -34320,6 +35493,210 @@
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 1,
+          "call_address": 2432,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 128
+          },
+          "kind": "current-segment",
+          "procedure": 11
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2456,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 152
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2461,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 157
+          },
+          "kind": "current-segment",
+          "procedure": 13
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2467,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 163
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 43
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2473,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 169
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2487,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 183
+          },
+          "kind": "current-segment",
+          "procedure": 15
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2491,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 187
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 8,
+          "procedure": 1
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2504,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 200
+          },
+          "kind": "current-segment",
+          "procedure": 11
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2527,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 223
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 9
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2533,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 229
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2538,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 234
+          },
+          "kind": "current-segment",
+          "procedure": 13
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2543,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 239
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2554,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 100864,
+            "byte_in_sector": 250
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 2563,
+          "source": {
+            "side": "play",
+            "track": 24,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 100608,
+            "byte_in_sector": 3
+          },
+          "kind": "current-segment",
+          "procedure": 16
+        },
         {
           "caller_procedure": 2,
           "call_address": 17,
@@ -35653,11 +37030,11 @@
       ],
       "counts": {
         "procedures": 16,
-        "instructions": 1203,
-        "complete_procedures": 14,
-        "calls": 90,
+        "instructions": 1310,
+        "complete_procedures": 15,
+        "calls": 104,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 2
+          "secondary service operand/continuation not verified": 1
         }
       }
     },
@@ -35675,15 +37052,9 @@
           "kind": "pcode",
           "entry": 7096,
           "trailer": 7346,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 7320,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 139,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 2,
@@ -36134,6 +37505,293 @@
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 1,
+          "call_address": 7098,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 109568,
+            "byte_in_sector": 186
+          },
+          "kind": "current-segment",
+          "procedure": 37
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7103,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 109568,
+            "byte_in_sector": 191
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7109,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 109568,
+            "byte_in_sector": 197
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7137,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 109568,
+            "byte_in_sector": 225
+          },
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7158,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 109568,
+            "byte_in_sector": 246
+          },
+          "kind": "current-segment",
+          "procedure": 34
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7164,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 109568,
+            "byte_in_sector": 252
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 43
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7170,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 2
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7188,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 20
+          },
+          "kind": "current-segment",
+          "procedure": 35
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7197,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 29
+          },
+          "kind": "current-segment",
+          "procedure": 34
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7213,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 45
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 27,
+          "procedure": 8
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7221,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 53
+          },
+          "kind": "current-segment",
+          "procedure": 45
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7230,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 62
+          },
+          "kind": "current-segment",
+          "procedure": 46
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7253,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 85
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 27,
+          "procedure": 10
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7263,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 95
+          },
+          "kind": "current-segment",
+          "procedure": 48
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7269,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 101
+          },
+          "kind": "current-segment",
+          "procedure": 34
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7275,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 107
+          },
+          "kind": "current-segment",
+          "procedure": 5
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7279,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 111
+          },
+          "kind": "current-segment",
+          "procedure": 41
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7286,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 118
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7298,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 130
+          },
+          "kind": "current-segment",
+          "procedure": 34
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7309,
+          "source": {
+            "side": "play",
+            "track": 26,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 109312,
+            "byte_in_sector": 141
+          },
+          "kind": "current-segment",
+          "procedure": 47
+        },
         {
           "caller_procedure": 2,
           "call_address": 4,
@@ -40054,11 +41712,11 @@
       ],
       "counts": {
         "procedures": 48,
-        "instructions": 3242,
-        "complete_procedures": 43,
-        "calls": 270,
+        "instructions": 3378,
+        "complete_procedures": 44,
+        "calls": 290,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 5
+          "secondary service operand/continuation not verified": 4
         }
       }
     },
@@ -41863,15 +43521,9 @@
           "kind": "pcode",
           "entry": 6130,
           "trailer": 6220,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 6198,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 35,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 2,
@@ -42176,6 +43828,120 @@
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 1,
+          "call_address": 6132,
+          "source": {
+            "side": "play",
+            "track": 28,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 115712,
+            "byte_in_sector": 244
+          },
+          "kind": "current-segment",
+          "procedure": 21
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 6134,
+          "source": {
+            "side": "play",
+            "track": 28,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 115712,
+            "byte_in_sector": 246
+          },
+          "kind": "current-segment",
+          "procedure": 26
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 6136,
+          "source": {
+            "side": "play",
+            "track": 28,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 115712,
+            "byte_in_sector": 248
+          },
+          "kind": "current-segment",
+          "procedure": 27
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 6138,
+          "source": {
+            "side": "play",
+            "track": 28,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 115712,
+            "byte_in_sector": 250
+          },
+          "kind": "current-segment",
+          "procedure": 28
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 6161,
+          "source": {
+            "side": "play",
+            "track": 28,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 115456,
+            "byte_in_sector": 17
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 29
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 6171,
+          "source": {
+            "side": "play",
+            "track": 28,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 115456,
+            "byte_in_sector": 27
+          },
+          "kind": "current-segment",
+          "procedure": 23
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 6184,
+          "source": {
+            "side": "play",
+            "track": 28,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 115456,
+            "byte_in_sector": 40
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 41
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 6187,
+          "source": {
+            "side": "play",
+            "track": 28,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 115456,
+            "byte_in_sector": 43
+          },
+          "kind": "current-segment",
+          "procedure": 22
+        },
         {
           "caller_procedure": 3,
           "call_address": 35,
@@ -44404,11 +46170,11 @@
       ],
       "counts": {
         "procedures": 28,
-        "instructions": 3284,
-        "complete_procedures": 19,
-        "calls": 152,
+        "instructions": 3316,
+        "complete_procedures": 20,
+        "calls": 160,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 11
+          "secondary service operand/continuation not verified": 10
         }
       }
     },
@@ -44426,15 +46192,9 @@
           "kind": "pcode",
           "entry": 5036,
           "trailer": 5144,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 5124,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 49,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 2,
@@ -44663,6 +46423,77 @@
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 1,
+          "call_address": 5038,
+          "source": {
+            "side": "play",
+            "track": 30,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 126464,
+            "byte_in_sector": 174
+          },
+          "kind": "current-segment",
+          "procedure": 26
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 5043,
+          "source": {
+            "side": "play",
+            "track": 30,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 126464,
+            "byte_in_sector": 179
+          },
+          "kind": "current-segment",
+          "procedure": 15
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 5047,
+          "source": {
+            "side": "play",
+            "track": 30,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 126464,
+            "byte_in_sector": 183
+          },
+          "kind": "current-segment",
+          "procedure": 17
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 5051,
+          "source": {
+            "side": "play",
+            "track": 30,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 126464,
+            "byte_in_sector": 187
+          },
+          "kind": "current-segment",
+          "procedure": 25
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 5112,
+          "source": {
+            "side": "play",
+            "track": 30,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 126464,
+            "byte_in_sector": 248
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 52
+        },
         {
           "caller_procedure": 2,
           "call_address": 5,
@@ -47826,12 +49657,10 @@
       ],
       "counts": {
         "procedures": 26,
-        "instructions": 2437,
-        "complete_procedures": 25,
-        "calls": 214,
-        "boundary_reasons": {
-          "secondary service operand/continuation not verified": 1
-        }
+        "instructions": 2483,
+        "complete_procedures": 26,
+        "calls": 219,
+        "boundary_reasons": {}
       }
     },
     {
@@ -47848,15 +49677,9 @@
           "kind": "pcode",
           "entry": 6674,
           "trailer": 6768,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 6748,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 50,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 2,
@@ -48235,6 +50058,49 @@
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 1,
+          "call_address": 6676,
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 127232,
+            "byte_in_sector": 20
+          },
+          "kind": "current-segment",
+          "procedure": 32
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 6681,
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 127232,
+            "byte_in_sector": 25
+          },
+          "kind": "current-segment",
+          "procedure": 28
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 6736,
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 127232,
+            "byte_in_sector": 80
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 52
+        },
         {
           "caller_procedure": 2,
           "call_address": 13,
@@ -51515,11 +53381,11 @@
       ],
       "counts": {
         "procedures": 32,
-        "instructions": 2969,
-        "complete_procedures": 20,
-        "calls": 223,
+        "instructions": 3016,
+        "complete_procedures": 21,
+        "calls": 226,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 18
+          "secondary service operand/continuation not verified": 17
         }
       }
     },
@@ -51537,15 +53403,9 @@
           "kind": "pcode",
           "entry": 7752,
           "trailer": 8046,
-          "decoded_instructions": 3,
-          "boundaries": [
-            {
-              "address": 8017,
-              "reason": "secondary service operand/continuation not verified",
-              "selector": 21
-            }
-          ],
-          "complete_within_static_model": false
+          "decoded_instructions": 161,
+          "boundaries": [],
+          "complete_within_static_model": true
         },
         {
           "number": 2,
@@ -51962,6 +53822,223 @@
         }
       ],
       "calls": [
+        {
+          "caller_procedure": 1,
+          "call_address": 7754,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 74
+          },
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7760,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 80
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 43
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7766,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 86
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7803,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 123
+          },
+          "kind": "current-segment",
+          "procedure": 41
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7815,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 135
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7824,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 144
+          },
+          "kind": "current-segment",
+          "procedure": 12
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7866,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 186
+          },
+          "kind": "current-segment",
+          "procedure": 21
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7872,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 192
+          },
+          "kind": "current-segment",
+          "procedure": 38
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7907,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 227
+          },
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7930,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 135424,
+            "byte_in_sector": 250
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 29
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7950,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 15,
+            "physical_sector": 15,
+            "offset": 139008,
+            "byte_in_sector": 14
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 3
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7968,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 15,
+            "physical_sector": 15,
+            "offset": 139008,
+            "byte_in_sector": 32
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 41
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7971,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 15,
+            "physical_sector": 15,
+            "offset": 139008,
+            "byte_in_sector": 35
+          },
+          "kind": "current-segment",
+          "procedure": 40
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 7977,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 15,
+            "physical_sector": 15,
+            "offset": 139008,
+            "byte_in_sector": 41
+          },
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 41
+        },
+        {
+          "caller_procedure": 1,
+          "call_address": 8003,
+          "source": {
+            "side": "play",
+            "track": 33,
+            "sector": 15,
+            "physical_sector": 15,
+            "offset": 139008,
+            "byte_in_sector": 67
+          },
+          "kind": "current-segment",
+          "procedure": 6
+        },
         {
           "caller_procedure": 3,
           "call_address": 94,
@@ -55624,13 +57701,14 @@
       ],
       "counts": {
         "procedures": 41,
-        "instructions": 4258,
-        "complete_procedures": 32,
-        "calls": 250,
+        "instructions": 4416,
+        "complete_procedures": 33,
+        "calls": 265,
         "boundary_reasons": {
-          "secondary service operand/continuation not verified": 10
+          "secondary service operand/continuation not verified": 9
         }
       }
     }
-  ]
+  ],
+  "secondary_service_catalogue_sha256": "8282ef65bc7c68a2686b108674bc9d1d34bb8fcb140cc63aa523b526d1e06fe1"
 }

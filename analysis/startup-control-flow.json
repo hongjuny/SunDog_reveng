@@ -1,0 +1,368 @@
+{
+  "method": "Original Play segment-1 CFG and verified native operand/packed-field rules; static normal-return conditions",
+  "source_sha256": "c01644b696e7b2bdef1e9773c6b98cc12ad139230edcf4a7994047c2396fcdc6",
+  "state_field": {
+    "table_selector": 29,
+    "word_index": 45,
+    "width": 4,
+    "shift": 8,
+    "formula": "(word(table[29] + 2*45) >> 8) & 15",
+    "note": "table[29] is the BD9E-indexed pointer; native assembler data base may be table[29]+2"
+  },
+  "initialization_events": [
+    {
+      "address": 531,
+      "service": "acquire_segment",
+      "argument": 30
+    },
+    {
+      "address": 534,
+      "service": "acquire_segment",
+      "argument": 31
+    },
+    {
+      "address": 537,
+      "service": "acquire_segment",
+      "argument": 29
+    },
+    {
+      "address": 540,
+      "service": "acquire_segment",
+      "argument": 30
+    },
+    {
+      "address": 543,
+      "service": "acquire_segment",
+      "argument": 31
+    },
+    {
+      "address": 490,
+      "kind": "external-segment-operand",
+      "segment_operand": 22,
+      "procedure": 1
+    },
+    {
+      "address": 493,
+      "kind": "external-segment-operand",
+      "segment_operand": 23,
+      "procedure": 1
+    },
+    {
+      "address": 496,
+      "kind": "external-segment-operand",
+      "segment_operand": 24,
+      "procedure": 1
+    },
+    {
+      "address": 499,
+      "kind": "external-segment-operand",
+      "segment_operand": 25,
+      "procedure": 1
+    },
+    {
+      "address": 502,
+      "kind": "external-segment-operand",
+      "segment_operand": 26,
+      "procedure": 1
+    },
+    {
+      "address": 505,
+      "kind": "external-segment-operand",
+      "segment_operand": 27,
+      "procedure": 1
+    },
+    {
+      "address": 508,
+      "kind": "external-segment-operand",
+      "segment_operand": 28,
+      "procedure": 1
+    },
+    {
+      "address": 511,
+      "kind": "current-segment",
+      "procedure": 6
+    },
+    {
+      "address": 514,
+      "service": "release_segment",
+      "argument": 31
+    },
+    {
+      "address": 517,
+      "service": "release_segment",
+      "argument": 30
+    },
+    {
+      "address": 520,
+      "service": "release_segment",
+      "argument": 29
+    },
+    {
+      "address": 523,
+      "service": "release_segment",
+      "argument": 31
+    },
+    {
+      "address": 526,
+      "service": "release_segment",
+      "argument": 30
+    }
+  ],
+  "dispatchers": [
+    {
+      "procedure": 3,
+      "case_offset": 65,
+      "case_source": {
+        "side": "play",
+        "track": 17,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 70912,
+        "byte_in_sector": 65,
+        "image_offset": 70977
+      },
+      "join_offset": 92,
+      "default_target": 70,
+      "entries": [
+        {
+          "state": 0,
+          "target_offset": 47,
+          "calls_before_join": [
+            {
+              "address": 47,
+              "kind": "external-segment-operand",
+              "segment_operand": 13,
+              "procedure": 1
+            }
+          ]
+        },
+        {
+          "state": 1,
+          "target_offset": 47,
+          "calls_before_join": [
+            {
+              "address": 47,
+              "kind": "external-segment-operand",
+              "segment_operand": 13,
+              "procedure": 1
+            }
+          ]
+        },
+        {
+          "state": 2,
+          "target_offset": 52,
+          "calls_before_join": [
+            {
+              "address": 52,
+              "kind": "external-segment-operand",
+              "segment_operand": 15,
+              "procedure": 1
+            }
+          ]
+        },
+        {
+          "state": 3,
+          "target_offset": 70,
+          "calls_before_join": []
+        },
+        {
+          "state": 4,
+          "target_offset": 70,
+          "calls_before_join": []
+        },
+        {
+          "state": 5,
+          "target_offset": 70,
+          "calls_before_join": []
+        },
+        {
+          "state": 6,
+          "target_offset": 70,
+          "calls_before_join": []
+        },
+        {
+          "state": 7,
+          "target_offset": 70,
+          "calls_before_join": []
+        },
+        {
+          "state": 8,
+          "target_offset": 70,
+          "calls_before_join": []
+        },
+        {
+          "state": 9,
+          "target_offset": 57,
+          "calls_before_join": [
+            {
+              "address": 60,
+              "kind": "external-segment-operand",
+              "segment_operand": 16,
+              "procedure": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "procedure": 4,
+      "case_offset": 328,
+      "case_source": {
+        "side": "play",
+        "track": 17,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 70656,
+        "byte_in_sector": 72,
+        "image_offset": 70728
+      },
+      "join_offset": 352,
+      "default_target": 334,
+      "entries": [
+        {
+          "state": 3,
+          "target_offset": 248,
+          "calls_before_join": [
+            {
+              "address": 264,
+              "kind": "external-segment-operand",
+              "segment_operand": 21,
+              "procedure": 1
+            }
+          ]
+        },
+        {
+          "state": 4,
+          "target_offset": 248,
+          "calls_before_join": [
+            {
+              "address": 264,
+              "kind": "external-segment-operand",
+              "segment_operand": 21,
+              "procedure": 1
+            }
+          ]
+        },
+        {
+          "state": 5,
+          "target_offset": 286,
+          "calls_before_join": [
+            {
+              "address": 299,
+              "kind": "external-segment-operand",
+              "segment_operand": 17,
+              "procedure": 1
+            },
+            {
+              "address": 311,
+              "kind": "external-segment-operand",
+              "segment_operand": 18,
+              "procedure": 1
+            }
+          ]
+        },
+        {
+          "state": 6,
+          "target_offset": 269,
+          "calls_before_join": [
+            {
+              "address": 275,
+              "kind": "external-segment-operand",
+              "segment_operand": 19,
+              "procedure": 1
+            },
+            {
+              "address": 281,
+              "kind": "external-segment-operand",
+              "segment_operand": 20,
+              "procedure": 1
+            }
+          ]
+        },
+        {
+          "state": 7,
+          "target_offset": 316,
+          "calls_before_join": [
+            {
+              "address": 316,
+              "kind": "current-segment",
+              "procedure": 5
+            }
+          ]
+        },
+        {
+          "state": 8,
+          "target_offset": 316,
+          "calls_before_join": [
+            {
+              "address": 316,
+              "kind": "current-segment",
+              "procedure": 5
+            }
+          ]
+        },
+        {
+          "state": 9,
+          "target_offset": 320,
+          "calls_before_join": [
+            {
+              "address": 323,
+              "kind": "external-segment-operand",
+              "segment_operand": 16,
+              "procedure": 1
+            }
+          ]
+        },
+        {
+          "state": 10,
+          "target_offset": 316,
+          "calls_before_join": [
+            {
+              "address": 316,
+              "kind": "current-segment",
+              "procedure": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_loop": {
+    "procedure": 6,
+    "loop_offset": 432,
+    "loop_source": {
+      "side": "play",
+      "track": 17,
+      "sector": 4,
+      "physical_sector": 7,
+      "offset": 70656,
+      "byte_in_sector": 176,
+      "image_offset": 70832
+    },
+    "low_state_predicate": "state <= 2",
+    "low_state_call": 3,
+    "other_state_call": 4,
+    "exit_predicate": "state >= 11",
+    "back_edge_offset": 456
+  },
+  "nested_dispatch": {
+    "procedure": 5,
+    "predicate": "state == 8",
+    "true_segment": 14,
+    "false_segment": 8
+  },
+  "subordinate_loop_exits": {
+    "3": "state >= 11 or state == 3 or state == 4",
+    "4": "state <= 2 or state >= 11"
+  },
+  "conditional_routes": {
+    "procedure4_state5": "local[2] == 255 selects segment 17, otherwise segment 18",
+    "procedure4_state6": "signed local[2] <= 3 selects segment 19, otherwise segment 20"
+  },
+  "remaining": [
+    "Meaning and ownership of every state value",
+    "Input event structure returned by segment 21",
+    "Runtime disk selection",
+    "Nested scene/transaction state changes"
+  ]
+}

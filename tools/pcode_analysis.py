@@ -40,7 +40,10 @@ def decode_one(space,pc,branch_base,catalogue,services=None):
             selector=space.byte(pc+1);row['length']=2;row['operands']['selector']=selector
             if selector not in services:
                 row['boundary']='secondary service operand/continuation not verified';return row
-            row['length']=services[selector]
+            service=services[selector]
+            row['length']=service if isinstance(service,int) else service['pcode_length']
+            if isinstance(service,dict):
+                row['service_name']=service['name'];row['service_evidence_id']=service['rea_evidence_id']
             row['service_continuation']='conditional on normal service return'
         elif op in (0xa1,0xb9):
             b=space.byte(pc+1);row['length']=2
@@ -93,6 +96,9 @@ def decode_one(space,pc,branch_base,catalogue,services=None):
             row['length']=3;segment=space.byte(pc+1);proc=space.byte(pc+2)
             row['operands'].update(segment_operand=segment,procedure=proc)
             row['calls']=[dict(kind='external-segment-operand',segment_operand=segment,procedure=proc)]
+        elif 0xd8<=op<=0xe7:row['operands']['index']=op-0xd8+1
+        elif 0xe8<=op<=0xf7:row['operands']['index']=op-0xe8+1
+        elif 0xf8<=op<=0xff:row['operands']['word_offset']=op-0xf8
         elif evidence.get('operands')!='none':
             raise DecodeBoundary('operand shape not explicitly supported: '+str(evidence.get('operands')))
     space.read(pc,row['length'])
@@ -144,13 +150,22 @@ def mixed_directory(raw):
 def analyse():
     catalogue=json.loads((ROOT/'analysis/opcode-evidence.json').read_text())
     opcodes={r['opcode']:r for r in catalogue['primary']}
+    verified_services={}
+    service_file=ROOT/'analysis/secondary-services.json'
+    if service_file.exists():
+        service_report=json.loads(service_file.read_text())
+        if service_report['snapshot_sha256']!=catalogue['snapshot_sha256']:raise ValueError('service catalogue snapshot differs')
+        for row in service_report['services']:
+            if row['pcode_length']!=2 or not row['probe_cases'] or not row['rea_evidence_id']:raise ValueError('service lacks bounded evidence')
+            verified_services[row['selector']]=row
     archives=json.loads((ROOT/'analysis/archive-inventory.json').read_text())['archives']
     out=ROOT/'analysis/local/pcode';out.mkdir(parents=True,exist_ok=True)
     report=dict(method='Static recursive p-code decoding using Apple II native-backed operand rules; no runtime execution or subsystem-name guessing',
                 limitations=['External segment operands are not globally resolved module names.',
-                             'Unverified 9E services stop a path; calls are conditional on return.',
+                             'Unverified 9E services stop a path; calls/services are conditional on normal return.',
                              'Relative archive analysis assumes an even load address for aligned inline data.',
                              'SYSTEM.STARTUP uses structurally validated Play payloads; runtime side selection remains open.'],archives=[])
+    if service_file.exists():report['secondary_service_catalogue_sha256']=hashlib.sha256(service_file.read_bytes()).hexdigest()
     selected=[(a,s) for a in archives if a['name'] in ('SUNDOG.LIBRARY','SYSTEM.PASCAL','SYSTEM.LIBRARY') for s in a['segments'] if s.get('machine_type') in (2,7) and s['status']=='stored']
     play_startup=ROOT/'analysis/play-startup-inventory.json'
     if play_startup.exists():
@@ -163,9 +178,9 @@ def analyse():
         if archive['name']=='SYSTEM.PASCAL' and segment['slot']==0:
             base=handoff['segment0']['load_address'];helper=(ROOT/'analysis/regions/initial-helper.bin').read_bytes()
             space=Space([(base,raw),(handoff['helper']['load_address'],helper)])
-            procedures=handoff['procedures'];services={0x26:2}
+            procedures=handoff['procedures'];services=dict(verified_services);services[0x26]=2
         else:
-            base=0;space=Space([(0,raw)]);procedures=mixed_directory(raw);services={}
+            base=0;space=Space([(0,raw)]);procedures=mixed_directory(raw);services=dict(verified_services)
         results=[walk(space,p,opcodes,services) if p.get('kind')!='native-6502' else dict(procedure=p,instructions=[],boundaries=[dict(address=p['entry_address'],reason='native 6502 body; separate Ghidra analysis required')],complete_within_static_model=False) for p in procedures]
         name=f"{archive['name']}-slot-{segment['slot']:02}"+("-play" if segment.get('side')=='play' else '')
         (out/(name+'.json')).write_text(json.dumps(results,indent=2)+'\n')

@@ -120,3 +120,19 @@ records and segment ordinals agree; the final storage block is 272 exclusive.
 Every participating Play sector is checked against the independent WOZ decode
 inventory. Runtime disk-selection behavior still needs verification. See
 `analysis/play-startup-inventory.json` and [game-code analysis](game-code-analysis.md).
+
+
+## Selected secondary services and an actual dispatch modification
+
+Five selected 9E interfaces now have explicit normal-return lengths and native
+memory/stack checks: segment acquisition/release (15/16), allocation-cursor
+save/restore (20/21), and I/O-result read (22), using hexadecimal selector notation.
+Seventy-two controlled cases and actual REA IDs are in `analysis/secondary-services.json`.
+Nonresident loading remains a boundary. See [startup control flow](game-startup-flow.md).
+
+The initial D004 ADD16 dispatch cell is not invariant across runtime states.
+Library-native input P2 installs a pending-input latch hook there, chaining back
+to the original D71D handler. The retained Utility-menu LC1 points to that hook.
+[Input analysis](input-system.md) records the self-modified JMP operand and exact
+probe/capture limits. The primary opcode catalogue describes the initial snapshot,
+not every later patched dispatcher state.
