@@ -8,7 +8,7 @@ connection is not counted as passed merely because a launcher exists.
 |---|---|---|
 | 1. REA–Ghidra connection | Passed 2026-10-23: actual REA/Ghidra 12.1.4 load, instruction, assembly and xrefs verified | Actual REA load verification, D293 instruction and bounded references agreeing with direct Ghidra |
 | 2. Memory views | Bounded static acceptance passed: six actual REA imports, 7,825 bytes; direct Ghidra array/type checks pass | Bank-specific D152, overlay and relocation agree; full bank emulation and annotation transfer remain outside this check |
-| 3. Instruction semantics | In progress: 1,676 controlled cases; ten additional opcodes checked with actual REA; 38 high opcodes unresolved | Operand lengths, stack effects and branches established from Apple II handlers |
+| 3. Instruction semantics | In progress: 2,621 controlled cases; twenty additional opcodes checked with actual REA; 28 high opcodes unresolved | Operand lengths, stack effects and branches established from Apple II handlers |
 | 4. Calls and segment loading | Initial loads/procedure pointers known; startup prefix reaches FF06; general calls/device boundary unresolved | Verified call/return, relocation and allocation paths |
 | 5. SYSTEM.STARTUP conflicts | Four descriptors exceed Utility directory extent | Explain disk selection and descriptor addressing without slicing unrelated bytes |
 | 6. P-code analysis tool | Not implemented | Implement only verified instructions and segment structures, with deterministic tests |

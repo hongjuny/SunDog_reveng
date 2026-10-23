@@ -283,3 +283,40 @@ analysis/rea-opcode-crosscheck.json for reproduction and Evidence IDs. This rema
 bounded static evidence plus declared synthetic replay, not observed Apple II
 execution, complete table ownership, complete arithmetic semantics or p-code
 disassembly. Checkpoint 3 continues with 38 unresolved opcodes.
+
+## 2026-10-23 — Scalar comparisons, pointer offsets and forward word copy
+
+Resolved ten more high values: C3/CB equality and inequality; C9/C5/C8/C4 signed
+relations; A2/A3 pointer offset and indexed word load; A4 scaled indexed address;
+and A8 forward word copying. Added 945 controlled native-model cases. Total is
+2,621 cases, covering 82 ordinary high values, 18 shared-error prefixes and all
+128 short constants. Twenty-eight high values remain unresolved.
+
+Actual REA/Ghidra inspected fourteen new native slices (299 bytes, 165 native
+instructions), including signed comparison, result-mask, scaled-index and copy
+helpers. Every slice passed 23 load checks and complete source-byte/instruction
+comparisons. Existing eleven Evidence sets were reused without reanalysis.
+Cumulative opcode-specific REA coverage is 25 targets, 656 bytes, 365 instructions
+and 575 load checks. Complete Evidence/snapshots remain local; all targets were
+closed. The versioned input manifest records Utility sector/offset provenance;
+the cross-check report links each actual Evidence ID.
+
+Unsigned ordering was excluded by explicit opposite-sign branches and signed
+boundary cases. A2/A3 have no frame-header offset. A4 multiplies stack index by
+twice an encoded word stride; stride one takes a shift path. A8 copies increasing
+addresses; an overlapping destination at source+2 propagates overwritten bytes,
+excluding overlap-safe memmove semantics. Copy tests cover zero, page boundaries,
+512-byte payloads and trailing guards. Ownership, legal Pascal bounds/overlap and
+larger counts remain unresolved.
+
+No new native instruction was required. Added a declared per-probe instruction
+budget for long copy loops (up to 4,196 steps in this case set), recorded maximum
+budgets per rule, and tested exact budget enforcement with a synthetic NOP fixture.
+All 41 deterministic tests pass. Fresh Ghidra analysis verifies all 761 visited
+native addresses, 46 persisted annotated entries and twenty entries linked to
+actual REA IDs; p-code/tables remain data. Startup replay still stops before BIOS
+FF06. No Apple II execution or timing measurement is claimed.
+
+The typed comparison family remains unresolved; its type-dependent operand and
+stack formats are not implied by the scalar comparisons established here.
+Checkpoint 3 continues with 28 unresolved high opcodes.

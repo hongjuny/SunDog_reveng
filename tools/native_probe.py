@@ -98,7 +98,7 @@ class CPU:
         if mode=='indy':return (self.zpword(self.fetch())+self.y)&65535
         raise ValueError('unsupported addressing mode '+mode)
 
-def handler_probe(snapshot,stream,stack=(),pc=0x4000,local_frame=0x6000,global_frame=0x7000,words=(),stop=0xd293):
+def handler_probe(snapshot,stream,stack=(),pc=0x4000,local_frame=0x6000,global_frame=0x7000,words=(),stop=0xd293,max_steps=500):
     if len(snapshot)!=0x3000:raise ValueError('expected interpreter-ready 12KB snapshot')
     if not 0<=pc<=65535-len(stream):raise ValueError('stream outside synthetic memory')
     cpu=CPU();cpu.memory[0xd000:]=snapshot;cpu.memory[pc:pc+len(stream)]=stream
@@ -107,5 +107,5 @@ def handler_probe(snapshot,stream,stack=(),pc=0x4000,local_frame=0x6000,global_f
     for p,value in words:
         cpu.memory[p]=value&255;cpu.memory[(p+1)&65535]=value>>8
     for value in stack:cpu.push_word(value)
-    initial_sp=cpu.sp;cpu.writes.clear();cpu.pc=0xd293;cpu.run({stop})
+    initial_sp=cpu.sp;cpu.writes.clear();cpu.pc=0xd293;cpu.run({stop},max_steps=max_steps)
     return cpu,initial_sp

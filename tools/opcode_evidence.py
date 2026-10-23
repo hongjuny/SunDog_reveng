@@ -13,10 +13,10 @@ def index_operand(value,wide=False):
 
 def investigate(snapshot,dispatch):
     records={x['opcode']:dict(opcode=x['opcode'],handler=x['handler'],source=x['handler_source'],status='unresolved') for x in dispatch['primary']}
-    counters={};visited={};low_count=0
-    def check(op,rule,stream,stack=(),result=None,delta=0,advance=None,words=(),memory_result=None,stop=0xd293):
+    counters={};visited={};budgets={};low_count=0
+    def check(op,rule,stream,stack=(),result=None,delta=0,advance=None,words=(),memory_result=None,stop=0xd293,max_steps=500):
         nonlocal low_count
-        cpu,initial_sp=handler_probe(snapshot,stream,stack,pc=0x40ff,words=words,stop=stop)
+        cpu,initial_sp=handler_probe(snapshot,stream,stack,pc=0x40ff,words=words,stop=stop,max_steps=max_steps)
         if cpu.sp!=(initial_sp+delta*2)&255:raise AssertionError(f'{op:02x} unexpected stack change')
         if advance is not None and cpu.word(0x58)!=(0x40ff+advance)&65535:raise AssertionError(f'{op:02x} unexpected next p-code address')
         if result is not None:
@@ -30,6 +30,7 @@ def investigate(snapshot,dispatch):
             visited.setdefault(op,set()).update(cpu.visited)
         else:low_count+=1
         counters[rule]=counters.get(rule,0)+1
+        budgets[rule]=max(budgets.get(rule,0),max_steps)
         return cpu
     def describe(ops,rule,semantic,operand,stack_words,advance,notes=''):
         for op in ops:
@@ -147,13 +148,55 @@ def investigate(snapshot,dispatch):
              'Negative-form operands index a self-relative word table through 54/55; not a negative PC displacement.')
     describe([0xa1],'branch_even_word','pop condition; branch when bit 0 is clear, otherwise advance 2',branch_rule,-1,'2 or branch target',
              'Only low-word bit 0 is tested; nonzero even values also branch. Table read is skipped when bit 0 is set.')
+    signed=lambda x:x-65536 if x&0x8000 else x
+    comparisons={0xc3:('compare_equal16',lambda a,b:a==b),0xc9:('compare_signed_less16',lambda a,b:signed(a)<signed(b)),
+                 0xc5:('compare_signed_greater16',lambda a,b:signed(a)>signed(b)),0xc8:('compare_signed_less_equal16',lambda a,b:signed(a)<=signed(b)),
+                 0xc4:('compare_signed_greater_equal16',lambda a,b:signed(a)>=signed(b)),0xcb:('compare_not_equal16',lambda a,b:a!=b)}
+    for op,(rule,oracle) in comparisons.items():
+        for left in values:
+            for right in values:
+                check(op,rule,bytes([op]),(left,right),int(oracle(left,right)),1,1)
+        describe([op],rule,rule+' of lower and top words; push canonical boolean 0 or 1','none',-1,1,
+                 'Signed order handles opposite signs explicitly before comparing bytes. Equality compares all 16 bits.')
+    for op,rule in ((0xa2,'offset_pointer_words'),(0xa3,'load_pointer_indexed_word')):
+        for base in (0x6500,0x65ff,0xffff):
+            for index,wide in ((0,False),(127,False),(128,False),(32767,False),(1,True)):
+                stream=bytes([op])+index_operand(index,wide);address=(base+2*index)&65535
+                check(op,rule,stream,(base,),address if op==0xa2 else 0x5aa5,0,len(stream),
+                      words=[] if op==0xa2 else [(address,0x5aa5)])
+        describe([op],rule,'replace pointer by '+('pointer+2*index' if op==0xa2 else 'word at pointer+2*index')+', modulo 65536',
+                 'encoded index',0,'2 or 3','No frame/header bias; distinct from local/global indexed access.')
+    for stride,wide in ((0,False),(1,False),(127,False),(128,False),(32767,False),(1,True)):
+        for index in (0,1,2,0x7fff,0x8000,0xffff):
+            stream=bytes([0xa4])+index_operand(stride,wide)
+            check(0xa4,'scaled_indexed_address',stream,(0x6500,index),(0x6500+2*stride*index)&65535,1,len(stream))
+    describe([0xa4],'scaled_indexed_address','pop index and base, push base+2*stride*index modulo 65536',
+             'encoded stride in words',-1,'2 or 3','Stride 1 has a shift fast path; other values use native multiply helper. No runtime bounds established.')
+    for source,destination in ((0x6500,0x6800),(0x65ff,0x68ff)):
+        for count in (0,1,2,16,127,128,256):
+            size=count*2
+            payload=bytes((19+73*n)&255 for n in range(size))
+            words=[(source+n,payload[n]|(payload[n+1]<<8)) for n in range(0,size,2)]
+            words.extend((destination+n,0xa5a5) for n in range(0,size+2,2))
+            stream=bytes([0xa8])+index_operand(count)
+            cpu=check(0xa8,'copy_words_forward',stream,(destination,source),delta=2,advance=len(stream),
+                      words=words,max_steps=size*8+100)
+            if cpu.memory[destination:destination+size]!=payload or cpu.word(destination+size)!=0xa5a5:
+                raise AssertionError('forward word copy or trailing guard differs')
+    # Explicitly distinguish increasing-address copy from overlap-safe memmove.
+    cpu=check(0xa8,'copy_words_forward',bytes([0xa8,2]),(0x6502,0x6500),delta=2,advance=2,
+              words=[(0x6500,0x2211),(0x6502,0x4433),(0x6504,0x6655)])
+    if cpu.memory[0x6500:0x6506]!=bytes.fromhex('112211221122'):
+        raise AssertionError('overlapping copy is not increasing-address byte order')
+    describe([0xa8],'copy_words_forward','pop source then destination; copy 2*count bytes in increasing address order',
+             'encoded word count',-2,'2 or 3','Not overlap-safe memmove. Zero count and 256/512-byte boundaries checked; larger counts not exhaustively replayed.')
     trapped=[op for op,x in records.items() if x['handler']==0xd1ef]
     for op in trapped:
         check(op,'shared_error_111',bytes([op]),delta=0,advance=0,stop=0xd20a,memory_result=(0xbdde,111))
     describe(trapped,'shared_error_111','enter common error path and store 111 at BDDE/BDDF; stop before error procedure call','unestablished',None,'no normal continuation','Only the path through D20A is checked; not a complete exception implementation or proof these slots are universally invalid.')
     for op,x in records.items():
         x['native_instruction_addresses']=[f'0x{a:04x}' for a in sorted(visited.get(op,()))]
-    return dict(method='selected binary-mode 6502 replay of actual snapshot bytes with declared synthetic RAM/stack inputs; not Apple II execution, not REA Evidence',snapshot_sha256=hashlib.sha256(snapshot).hexdigest(),low_immediate_family=dict(opcode_first=0,opcode_last=127,semantic='push unsigned opcode as 16-bit word',advance=1,cases=low_count),primary=[records[n] for n in sorted(records)],probe_case_counts=counters,total_probe_cases=sum(counters.values()),verified_high_opcodes=sum(x['status']=='verified_selected_semantics' for x in records.values()),unresolved_high_opcodes=[x['opcode'] for x in records.values() if x['status']=='unresolved'],limitations=['Initial interpreter-ready snapshot only; future table or code modifications are not modeled.','No decimal arithmetic, V flag branches, ROM, devices, cycles, interrupts or complete CPU implementation.','Unsupported native instructions and excessive steps fail explicitly.','Sampled word values and page-boundary cases are checks, not exhaustive mathematical proof.','No p-code file or instruction-stream disassembler is implemented.'])
+    return dict(method='selected binary-mode 6502 replay of actual snapshot bytes with declared synthetic RAM/stack inputs; not Apple II execution, not REA Evidence',snapshot_sha256=hashlib.sha256(snapshot).hexdigest(),low_immediate_family=dict(opcode_first=0,opcode_last=127,semantic='push unsigned opcode as 16-bit word',advance=1,cases=low_count),primary=[records[n] for n in sorted(records)],probe_case_counts=counters,max_native_instruction_budget_by_rule=budgets,total_probe_cases=sum(counters.values()),verified_high_opcodes=sum(x['status']=='verified_selected_semantics' for x in records.values()),unresolved_high_opcodes=[x['opcode'] for x in records.values() if x['status']=='unresolved'],limitations=['Initial interpreter-ready snapshot only; future table or code modifications are not modeled.','No decimal arithmetic, V flag branches, ROM, devices, cycles, interrupts or complete CPU implementation.','Unsupported native instructions and excessive steps fail explicitly.','Sampled word values and page-boundary cases are checks, not exhaustive mathematical proof.','No p-code file or instruction-stream disassembler is implemented.'])
 
 if __name__=='__main__':
     snapshot=(ROOT/'analysis/regions/interpreter-ready.bin').read_bytes()

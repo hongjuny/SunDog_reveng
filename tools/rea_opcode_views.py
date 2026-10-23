@@ -17,9 +17,23 @@ SPECS = (
     ('9a', 0xd4bc, 0xd4d6, (0x9a,)),
     ('be', 0xd567, 0xd581, (0xbe,)),
     ('bf', 0xd581, 0xd59b, (0xbf,)),
-    ('multiply-helper', 0xd75f, 0xd786, (0x8f, 0x98)),
+    ('multiply-helper', 0xd75f, 0xd786, (0x8f, 0x98, 0xa4)),
     ('8f', 0xd786, 0xd7cd, (0x8f,)),
     ('98', 0xd7cd, 0xd7d9, (0x98,)),
+    ('c9', 0xdf6f, 0xdf73, (0xc9,)),
+    ('c5', 0xdf73, 0xdf77, (0xc5,)),
+    ('c8', 0xdf77, 0xdf7b, (0xc8,)),
+    ('c4', 0xdf7b, 0xdf7f, (0xc4,)),
+    ('cb', 0xdf7f, 0xdf81, (0xcb,)),
+    ('signed-compare-helper', 0xdf81, 0xdfa9, (0xc9,0xc5,0xc8,0xc4,0xcb)),
+    ('c3', 0xdfa9, 0xdfca, (0xc3,)),
+    ('compare-result-helper', 0xdfd4, 0xdfdf, (0xc9,0xc5,0xc8,0xc4,0xcb)),
+    ('a3', 0xd9af, 0xd9cb, (0xa3,)),
+    ('a2', 0xd9cb, 0xd9de, (0xa2,)),
+    ('a4', 0xd9de, 0xda1d, (0xa4,)),
+    ('a8', 0xd59b, 0xd5af, (0xa8,)),
+    ('copy-words-helper', 0xe8aa, 0xe8d1, (0xa8,)),
+    ('scaled-index-helper', 0xd155, 0xd171, (0xa2,0xa3,0xa4,0xa8,0x9d,0xd1,0xa7)),
 )
 
 def sha(raw):
@@ -33,7 +47,7 @@ def prepare():
     disk = (ROOT/'extracted/utility.do').read_bytes()
     rows = []
     for name, start, end, ops in SPECS:
-        if name != 'multiply-helper':
+        if not name.endswith('helper'):
             for op in ops:
                 if next(r for r in dispatch['primary'] if r['opcode'] == op)['handler'] != start:
                     raise ValueError('native dispatch target changed')
@@ -58,7 +72,7 @@ def prepare():
     result = dict(snapshot_sha256=sha(snapshot), views=rows,
                   scope='Native-only bounded slices; calls/jumps outside slices remain unresolved in REA')
     (ROOT/'analysis/rea-opcode-inputs.json').write_text(json.dumps(result, indent=2)+'\n')
-    print(json.dumps(rows))
+    print(json.dumps([dict(name=r['name'], entry=r['base_and_entry'], length=r['length']) for r in rows]))
 
 def compare_assembly(assembly, listing, raw, base):
     direct = {int(a, 16): text.strip() for a, text in re.findall(r'^([0-9a-f]{4})  (.+)$', listing, re.M)}

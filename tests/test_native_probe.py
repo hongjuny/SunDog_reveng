@@ -1,6 +1,6 @@
 import pathlib,sys,unittest
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/'tools'))
-from native_probe import CPU,UnsupportedInstruction
+from native_probe import CPU,UnsupportedInstruction,handler_probe
 class NativeProbeTests(unittest.TestCase):
  def program(self,raw):
   c=CPU();c.memory[0x8000:0x8000+len(raw)]=raw;c.pc=0x8000;return c
@@ -41,4 +41,9 @@ class NativeProbeTests(unittest.TestCase):
  def test_negative_branch_displacement(self):
   c=self.program(bytes.fromhex('a201cad0fd'))
   c.run({0x8005});self.assertEqual((c.x,c.z),(0,1))
+ def test_handler_probe_respects_explicit_instruction_budget(self):
+  snapshot=bytearray(0x3000);snapshot[0x293:0x29b]=b'\xea'*8
+  c,_=handler_probe(snapshot,b'',stop=0xd29b,max_steps=8)
+  self.assertEqual((c.steps,c.pc),(8,0xd29b))
+  with self.assertRaises(ValueError):handler_probe(snapshot,b'',stop=0xd29b,max_steps=7)
 if __name__=='__main__':unittest.main()

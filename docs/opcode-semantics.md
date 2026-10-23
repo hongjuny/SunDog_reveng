@@ -10,15 +10,15 @@ emulator, a hardware observation, or REA Evidence. Decimal mode, V-flag branches
 interrupts, devices, timing and unknown-memory behavior are not modeled.
 Unsupported native instructions and instruction-budget overruns fail explicitly.
 
-`python3 tools/opcode_evidence.py` reproduces **1,676** checked cases. These cover
-all 128 short-immediate opcode values, selected semantics for **72 ordinary high
+`python3 tools/opcode_evidence.py` reproduces **2,621** checked cases. These cover
+all 128 short-immediate opcode values, selected semantics for **82 ordinary high
 opcodes**, and the initial shared error path of **18 high opcodes**. The remaining
-**38 high opcodes** are explicitly unresolved. Counts include alias families, not
-90 distinct algorithms. No complete p-code disassembler is implemented.
+**28 high opcodes** are explicitly unresolved. Counts include alias families, not
+100 distinct algorithms. No complete p-code disassembler is implemented.
 
 `analysis/opcode-evidence.json` includes each high opcode's handler, original
 Utility source location, operand rule, stack-word delta, continuation, and native
-instruction addresses visited by the probes. All **607 distinct visited native
+instruction addresses visited by the probes. All **761 distinct visited native
 addresses** are defined instructions in Ghidra's interpreter-ready listing.
 This cross-check validates alignment and provenance; it is not independent proof
 that the limited CPU model implements all 6502 behavior.
@@ -75,6 +75,12 @@ stock UCSD mnemonic assignments. Words and arithmetic results are 16-bit.
 | `$9D`, `$D1`, `$A7` | load/store/address at word(BD9E + 2*(selector & 7F)) + 2*index | u8 selector, encoded index | +1/−1/+1 |
 | `$B9` | unconditional branch using rule below | u8 branch operand | 0 |
 | `$A1` | pop condition; branch when bit 0 is clear | u8 branch operand | −1 |
+| `$C3`, `$CB` | full-word equal, not equal; canonical boolean result | none | −1 |
+| `$C9`, `$C5`, `$C8`, `$C4` | signed less, greater, less-or-equal, greater-or-equal | none | −1 |
+| `$A2` | replace pointer by pointer + 2*index | encoded index | 0 |
+| `$A3` | replace pointer by word at pointer + 2*index | encoded index | 0 |
+| `$A4` | pop index and base, push base + 2*stride*index | encoded word stride | −1 |
+| `$A8` | pop source and destination; copy 2*count bytes forward | encoded word count | −2 |
 
 Local and global here identify the observed bases `$52/$53` and `$50/$51`.
 `$D171` follows static links at frame offset zero for the nonlocal operations.
@@ -100,7 +106,7 @@ The probes include zero, one-byte limit, long-form limits, non-minimal form,
 carry. Boundary inputs test raw address calculation, not valid Pascal variables
 or allocated frame bounds.
 
-## Additional ten handlers: actual REA and controlled replay
+## First ten additions: actual REA and controlled replay
 
 On 2026-10-23, actual REA/Ghidra 12.1.4 inspected ten previously unresolved
 handlers and the multiply helper. Eleven native-only slices comprise 357 bytes;
@@ -195,10 +201,71 @@ semantics are separate checks; both analysis routes use Ghidra, not independent
 decoders. Confidence is high for the attested bytes and selected sampled effects;
 hardware execution and untested semantic paths remain unobserved.
 
+## Second ten additions: comparisons, pointer arithmetic and copying
+
+The next pass added 945 synthetic cases and fourteen new actual REA imports,
+reusing the first eleven Evidence sets without reissuing unchanged analyses.
+The new imports cover 299 source bytes and 165 native instructions, including
+shared signed-comparison, result-mask, scaled-index and copy helpers. Each source
+byte is checked against Utility sector provenance in the manifest. Cumulative REA
+coverage is now 25 bounded imports, 656 bytes, 575 load checks and 365 instructions.
+The comparison entries and shared helpers are separate bounded slices; external
+branches remain explicit, rather than being treated as an observed joined graph.
+
+| Opcode | Native entry | Cases | Selected operation |
+|---|---|---:|---|
+| C3 | DFA9 | 144 | Word equality |
+| CB | DF7F | 144 | Word inequality |
+| C9 | DF6F | 144 | Signed less than |
+| C5 | DF73 | 144 | Signed greater than |
+| C8 | DF77 | 144 | Signed less than or equal |
+| C4 | DF7B | 144 | Signed greater than or equal |
+| A2 | D9CB | 15 | Pointer plus twice the encoded index |
+| A3 | D9AF | 15 | Word load at pointer plus twice the encoded index |
+| A4 | D9DE | 36 | Base plus index times twice the encoded stride |
+| A8 | D59B | 15 | Increasing-address copy of encoded word count |
+
+The signed comparison helper first XORs the two high bytes and handles opposite
+signs before comparing bytes. Result masks select less/equal/greater; output is
+always a word 0 or 1. Equality compares all 16 bits. Each opcode is checked against
+all pairs of the twelve declared boundary values, including 8000, 7FFF, FF00 and
+FFFF. Treating these relational operations as unsigned would fail those cases.
+
+A2/A3 have no local/global frame bias. Their index uses the D155 encoding already
+documented above. A4 takes base then index on the stack, multiplies the index by
+twice the encoded word stride, adds the base and keeps the low 16 address bits.
+Stride one uses a shift path; other strides use D75F. Synthetic cases include
+stride zero, 7FFF, signed-looking indices and non-minimal operand encodings.
+These raw address calculations do not establish valid array bounds or ownership.
+
+A8 pops source first, then destination. D155 doubles the count and E8AA copies
+bytes at increasing addresses, first full pages and then the residual bytes.
+Fourteen non-overlapping cases check counts 0, 1, 2, 16, 127, 128 and 256 at two
+address alignments; all payload bytes and a trailing guard are checked. A fifteenth
+case places the destination two bytes after the source and confirms propagation
+of already overwritten bytes. Thus the routine has forward-copy semantics; it
+does not provide overlap-safe memmove behavior. Legal Pascal overlap requirements
+and larger counts remain unestablished.
+
+Copy cases use a declared native instruction budget of 8*byte_count+100 (maximum
+4,196 in these tests); the small overlap case retains the normal 500-step budget.
+Budgets are recorded per rule in the catalogue. A deterministic synthetic test
+confirms that the wrapper respects an explicit budget and fails when it is short.
+No additional native instruction or device behavior was admitted in this pass.
+
+All 41 deterministic tests pass. Persistent Ghidra annotations now cover 46 native
+entries, including twenty linked to actual REA assembly Evidence IDs. Every one of
+the 761 native PCs visited across controlled cases is a defined Ghidra instruction;
+the dispatch tables and initial p-code array remain typed data with no native
+instructions. Confidence remains high for these sampled effects and attested bytes,
+with no claim of exhaustive semantic proof or Apple II execution.
+
 Remaining unresolved high values are:
-`86 88 8E 9B 9E A2 A3 A4 A8 AA AC AD AE AF B0 B1 B3 B4 B5 B7 BA BB BC BD C0 C1 C2 C3 C4 C5 C8 C9 CB CD CE CF D5 D6`.
+`86 88 8E 9B 9E AA AC AD AE AF B0 B1 B3 B4 B5 B7 BA BB BC BD C0 C1 C2 CD CE CF D5 D6`.
 Their current handler addresses and sector provenance remain in the catalogue.
-Checkpoint 3 is still in progress; no full p-code disassembler is claimed.
+The typed comparison family AF/B0/B1/B4/B5/B7 remains unresolved: establishing
+the dedicated scalar comparisons above does not establish its type-dependent
+operand formats or stack layouts. Checkpoint 3 remains in progress.
 
 ## Shared error path
 
@@ -234,7 +301,7 @@ and subsequent Pascal execution still need observation or further scoped analysi
 
 ## Persistent Ghidra annotations
 
-`AnnotateOpcodes.java` writes snapshot-specific labels/comments at 36 native entry
+`AnnotateOpcodes.java` writes snapshot-specific labels/comments at 46 native entry
 addresses and explains the implicit A/Carry/Y interface. Comment readback and
 alias membership are checked and exported to `analysis/ghidra-opcode-annotations.json`.
 The project save is checked by the wrapper. No copied game disassembly is committed;
@@ -247,7 +314,7 @@ sh tools/run_opcode_analysis.sh
 ```
 
 The full `tools/run_ghidra.sh` pipeline includes this step. Actual REA checks now
-cover the ten new high-opcode handlers and their multiply helper, as described
+cover twenty added high-opcode handlers and shared helpers, as described
 below. Native static Evidence IDs are persisted beside the selected semantics;
 they attest the bounded native analysis, not execution of the synthetic cases.
 

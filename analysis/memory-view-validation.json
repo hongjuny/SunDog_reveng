@@ -10,10 +10,10 @@
     "ghidra_data_classification_matches": true,
     "ghidra_memory_hash_matches": true,
     "native_probe_addresses_match_ghidra": true,
-    "distinct_replayed_native_addresses": 607,
-    "annotated_native_entries": 36,
+    "distinct_replayed_native_addresses": 761,
+    "annotated_native_entries": 46,
     "annotation_aliases_match": true,
-    "rea_linked_native_entries": 10
+    "rea_linked_native_entries": 20
   },
   "ghidra_program": "interpreter-ready.bin",
   "snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
