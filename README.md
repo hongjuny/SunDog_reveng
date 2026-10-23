@@ -26,7 +26,7 @@ and [research log](docs/research-log.md). The first milestone is static analysis
 not an observed emulator boot. Unreadable Play Track 34 remains unknown.
 
 Run `python3 tools/structural_evidence.py` after generating disk and boot regions
-to reproduce HGR table and directory-shape checks. Thirteen deterministic tests
+to reproduce HGR table and directory-shape checks. Sixteen deterministic tests
 require no original media. Raw searches, binaries, projects and disassembly stay
 local; structured statistics and provenance are versioned.
 
@@ -38,3 +38,9 @@ native dispatch tables, the custom bootstrap directory at block 79, and the firs
 p-code address `$F248`. `run_ghidra.sh` also generates the archive inventory and a
 separate interpreter-ready memory snapshot. This remains static reconstruction,
 not a hardware/emulator execution trace or a full p-code disassembler.
+
+The current ordered tool-integration checkpoints are in
+[checkpoints](docs/milestones.md). [REA connection recovery](docs/rea-integration.md)
+contains a prepared environment fragment and a bounded native smoke test.
+Run `sh tools/rea-env.sh --check-files` for installed-file validation; this does
+not mark the REA integration as passed.

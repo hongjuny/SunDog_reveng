@@ -1,0 +1,68 @@
+{
+  "checkpoint": 1,
+  "status": "client_environment_and_reconnection_required",
+  "installation_checks": [
+    {
+      "name": "ghidra",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "/Users/ay5/Applications/ghidra_12.1.4_PUBLIC"
+    },
+    {
+      "name": "ghidra-platform",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "darwin"
+    },
+    {
+      "name": "ghidra-architecture",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "arm64"
+    },
+    {
+      "name": "ghidra-installation",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "/Users/ay5/Applications/ghidra_12.1.4_PUBLIC/Ghidra/application.properties"
+    },
+    {
+      "name": "ghidra-version",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "12.1.4"
+    },
+    {
+      "name": "ghidra-headless",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "/Users/ay5/Applications/ghidra_12.1.4_PUBLIC/support/analyzeHeadless"
+    },
+    {
+      "name": "ghidra-native_decompiler",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "/Users/ay5/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/Decompiler/build/os/mac_arm_64/decompile reports mach-o arm64, which matches darwin/arm64"
+    },
+    {
+      "name": "ghidra-java",
+      "ok": false,
+      "classification": "runtime_failure",
+      "detail": "/Library/Java/JavaVirtualMachines/ibm-semeru-open-21.jdk/Contents/Home/bin/java: spawn EPERM",
+      "remediation": "Update JAVA_HOME to the root of a 64-bit full JDK 21 or newer installation."
+    }
+  ],
+  "mcp_observation": {
+    "operation": "open_binary",
+    "provider": "ghidra",
+    "result": "provider_unavailable",
+    "reason": "GHIDRA_INSTALL_DIR not set in running server"
+  },
+  "direct_java_probe": "Java 21 succeeds",
+  "shell_process_probe": "ps: operation not permitted",
+  "direct_ghidra_probe": "saved rea-fetch.bin at D27B; D293 decodes as LDY #0",
+  "rea_native_crosscheck_completed": false,
+  "client_config_modified": false,
+  "proposed_config": "analysis/rea-launch-proposed.toml",
+  "scope": "installation and connection diagnosis; not REA native-analysis Evidence"
+}

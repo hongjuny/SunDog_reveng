@@ -1,0 +1,23 @@
+{
+  "path": "analysis/regions/rea-fetch.bin",
+  "architecture": "6502",
+  "load_and_entry": "0xd27b",
+  "length": 37,
+  "sha256": "b88f47cf48138e072fff429e9895d46f61609f13e7e6e6223ed77865df88c956",
+  "source_snapshot": "analysis/regions/interpreter-ready.bin",
+  "source_snapshot_offset": 635,
+  "source_disk": "utility",
+  "source_sector": {
+    "track": 30,
+    "sector": 7,
+    "physical_sector": 1,
+    "offset": 124672
+  },
+  "source_disk_offset": 124795,
+  "source_byte_in_sector": 123,
+  "check_address": "0xd293",
+  "check_bytes": "a000",
+  "expected_mnemonic": "LDY",
+  "xref_scope": "bounded fetch-loop slice only; not whole-program reference completeness",
+  "native_primary_patch": 53918
+}

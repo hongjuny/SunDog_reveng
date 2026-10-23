@@ -112,3 +112,33 @@ reproduce byte-for-byte. Seven bounded Ghidra Programs save successfully, includ
 the interpreter-ready view with segment 0 classified as p-code data. A controlled
 emulator trace, exact interpreter variant, opcode operand semantics, and the
 transition into game-specific startup remain unresolved.
+
+## 2026-10-23 — ordered checkpoint 1: REA connection recovery
+
+The user requested active use of both tools and ordered checkpoints. Re-read the
+REA recovery guide for the observed provider blocker. The connected MCP server's
+raw-binary open request still returns provider_unavailable: no GHIDRA_INSTALL_DIR.
+The current Codex server entry has no environment values. No client files changed.
+
+Corrected the installation diagnosis: /Applications contains a 14-byte 404 text
+file, but the complete user installation already has a valid ARM64 decompiler
+under Decompiler/build/os/mac_arm_64. A redundant local native build completed
+before this location was checked; it did not replace either installation.
+
+Setting REA_DARWIN_MODULE_CACHE_PATH, REA_DARWIN_SWIFTC_PATH and SDKROOT solved the
+previous Swift module-cache compilation failure. The next CLI doctor reports
+Java spawn EPERM during its owned process probe. Direct Java works, and direct
+ps is denied; REA's owned launcher requires a process baseline. Both detached and
+non-detached direct Node Java probes worked, so detachment alone is not the cause.
+No provider ownership protection or sandbox restriction was bypassed.
+
+Prepared a project environment launcher and an unapplied minimal client-env
+fragment, checked against official OpenAI MCP documentation. Client config lies
+outside writable roots and the running server needs reconnection with those
+variables. Recorded this as pending, not passed.
+
+Prepared a 37-byte, source-verified native entry slice at D27B to avoid seeding the
+D000 data table as executable code. Direct Ghidra saved the reference disassembly
+and finds A000 (LDY #0) at D293. Actual REA Evidence is still required. A validator
+and three added deterministic tests distinguish installed-file/readiness checks
+from matching native instruction Evidence. Sixteen tests pass.
