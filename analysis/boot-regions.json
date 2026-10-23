@@ -1,0 +1,933 @@
+[
+  {
+    "name": "initial-4000",
+    "start_block": 201,
+    "pages": 36,
+    "address": 16384,
+    "sha256": "1b9dfd8bbaa973ea73bc650e1c9161f3991d00d6a071bc2403d59582fdc6f29d",
+    "side": "utility",
+    "sectors": [
+      {
+        "track": 25,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 105728
+      },
+      {
+        "track": 25,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 105472
+      },
+      {
+        "track": 25,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 105216
+      },
+      {
+        "track": 25,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 104960
+      },
+      {
+        "track": 25,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 104704
+      },
+      {
+        "track": 25,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 104448
+      },
+      {
+        "track": 25,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 104192
+      },
+      {
+        "track": 25,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 103936
+      },
+      {
+        "track": 25,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 103680
+      },
+      {
+        "track": 25,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 103424
+      },
+      {
+        "track": 25,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 103168
+      },
+      {
+        "track": 25,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 102912
+      },
+      {
+        "track": 25,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 102656
+      },
+      {
+        "track": 25,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 106240
+      },
+      {
+        "track": 26,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 106496
+      },
+      {
+        "track": 26,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 110080
+      },
+      {
+        "track": 26,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 109824
+      },
+      {
+        "track": 26,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 109568
+      },
+      {
+        "track": 26,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 109312
+      },
+      {
+        "track": 26,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 109056
+      },
+      {
+        "track": 26,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 108800
+      },
+      {
+        "track": 26,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 108544
+      },
+      {
+        "track": 26,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 108288
+      },
+      {
+        "track": 26,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 108032
+      },
+      {
+        "track": 26,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 107776
+      },
+      {
+        "track": 26,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 107520
+      },
+      {
+        "track": 26,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 107264
+      },
+      {
+        "track": 26,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 107008
+      },
+      {
+        "track": 26,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 106752
+      },
+      {
+        "track": 26,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 110336
+      },
+      {
+        "track": 27,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 110592
+      },
+      {
+        "track": 27,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 114176
+      },
+      {
+        "track": 27,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 113920
+      },
+      {
+        "track": 27,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 113664
+      },
+      {
+        "track": 27,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 113408
+      },
+      {
+        "track": 27,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 113152
+      }
+    ],
+    "confidence": "high static reconstruction; execution and controller success unobserved"
+  },
+  {
+    "name": "lc-bank2",
+    "start_block": 219,
+    "pages": 48,
+    "address": 53248,
+    "sha256": "dc27d73b068c54c83e0bf1ffa6a91e27c88829025c320d5b1eedcacc1b83a69f",
+    "side": "utility",
+    "sectors": [
+      {
+        "track": 27,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 112896
+      },
+      {
+        "track": 27,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 112640
+      },
+      {
+        "track": 27,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 112384
+      },
+      {
+        "track": 27,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 112128
+      },
+      {
+        "track": 27,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 111872
+      },
+      {
+        "track": 27,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 111616
+      },
+      {
+        "track": 27,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 111360
+      },
+      {
+        "track": 27,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 111104
+      },
+      {
+        "track": 27,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 110848
+      },
+      {
+        "track": 27,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 114432
+      },
+      {
+        "track": 28,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 114688
+      },
+      {
+        "track": 28,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 118272
+      },
+      {
+        "track": 28,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 118016
+      },
+      {
+        "track": 28,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 117760
+      },
+      {
+        "track": 28,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 117504
+      },
+      {
+        "track": 28,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 117248
+      },
+      {
+        "track": 28,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 116992
+      },
+      {
+        "track": 28,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 116736
+      },
+      {
+        "track": 28,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 116480
+      },
+      {
+        "track": 28,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 116224
+      },
+      {
+        "track": 28,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 115968
+      },
+      {
+        "track": 28,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 115712
+      },
+      {
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456
+      },
+      {
+        "track": 28,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 115200
+      },
+      {
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944
+      },
+      {
+        "track": 28,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 118528
+      },
+      {
+        "track": 29,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 118784
+      },
+      {
+        "track": 29,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 122368
+      },
+      {
+        "track": 29,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 122112
+      },
+      {
+        "track": 29,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 121856
+      },
+      {
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600
+      },
+      {
+        "track": 29,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 121344
+      },
+      {
+        "track": 29,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 121088
+      },
+      {
+        "track": 29,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 120832
+      },
+      {
+        "track": 29,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 120576
+      },
+      {
+        "track": 29,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 120320
+      },
+      {
+        "track": 29,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 120064
+      },
+      {
+        "track": 29,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 119808
+      },
+      {
+        "track": 29,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 119552
+      },
+      {
+        "track": 29,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 119296
+      },
+      {
+        "track": 29,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 119040
+      },
+      {
+        "track": 29,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 122624
+      },
+      {
+        "track": 30,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 122880
+      },
+      {
+        "track": 30,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 126464
+      },
+      {
+        "track": 30,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 126208
+      },
+      {
+        "track": 30,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 125952
+      },
+      {
+        "track": 30,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 125696
+      },
+      {
+        "track": 30,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 125440
+      }
+    ],
+    "confidence": "high static reconstruction; execution and controller success unobserved"
+  },
+  {
+    "name": "lc-bank1",
+    "start_block": 243,
+    "pages": 16,
+    "address": 53248,
+    "sha256": "8cea6d3380eca10f7e12c8877be6aee22cb45f57fe7d347cc109b49eaf97b459",
+    "side": "utility",
+    "sectors": [
+      {
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184
+      },
+      {
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928
+      },
+      {
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672
+      },
+      {
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416
+      },
+      {
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160
+      },
+      {
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904
+      },
+      {
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648
+      },
+      {
+        "track": 30,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 123392
+      },
+      {
+        "track": 30,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 123136
+      },
+      {
+        "track": 30,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 126720
+      },
+      {
+        "track": 31,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 126976
+      },
+      {
+        "track": 31,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 130560
+      },
+      {
+        "track": 31,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 130304
+      },
+      {
+        "track": 31,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 130048
+      },
+      {
+        "track": 31,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 129792
+      },
+      {
+        "track": 31,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 129536
+      }
+    ],
+    "confidence": "high static reconstruction; execution and controller success unobserved"
+  },
+  {
+    "name": "runtime-bank1",
+    "address": 53248,
+    "length": 12288,
+    "sha256": "275beee7358872e73e06cf423c9969ffa77589102d478ad5b2fbca2f26ca41f6",
+    "side": "utility",
+    "sectors": [
+      {
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184
+      },
+      {
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928
+      },
+      {
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672
+      },
+      {
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416
+      },
+      {
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160
+      },
+      {
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904
+      },
+      {
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648
+      },
+      {
+        "track": 30,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 123392
+      },
+      {
+        "track": 30,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 123136
+      },
+      {
+        "track": 30,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 126720
+      },
+      {
+        "track": 31,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 126976
+      },
+      {
+        "track": 31,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 130560
+      },
+      {
+        "track": 31,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 130304
+      },
+      {
+        "track": 31,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 130048
+      },
+      {
+        "track": 31,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 129792
+      },
+      {
+        "track": 31,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 129536
+      },
+      {
+        "track": 28,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 116992
+      },
+      {
+        "track": 28,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 116736
+      },
+      {
+        "track": 28,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 116480
+      },
+      {
+        "track": 28,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 116224
+      },
+      {
+        "track": 28,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 115968
+      },
+      {
+        "track": 28,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 115712
+      },
+      {
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456
+      },
+      {
+        "track": 28,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 115200
+      },
+      {
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944
+      },
+      {
+        "track": 28,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 118528
+      },
+      {
+        "track": 29,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 118784
+      },
+      {
+        "track": 29,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 122368
+      },
+      {
+        "track": 29,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 122112
+      },
+      {
+        "track": 29,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 121856
+      },
+      {
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600
+      },
+      {
+        "track": 29,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 121344
+      },
+      {
+        "track": 29,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 121088
+      },
+      {
+        "track": 29,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 120832
+      },
+      {
+        "track": 29,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 120576
+      },
+      {
+        "track": 29,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 120320
+      },
+      {
+        "track": 29,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 120064
+      },
+      {
+        "track": 29,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 119808
+      },
+      {
+        "track": 29,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 119552
+      },
+      {
+        "track": 29,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 119296
+      },
+      {
+        "track": 29,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 119040
+      },
+      {
+        "track": 29,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 122624
+      },
+      {
+        "track": 30,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 122880
+      },
+      {
+        "track": 30,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 126464
+      },
+      {
+        "track": 30,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 126208
+      },
+      {
+        "track": 30,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 125952
+      },
+      {
+        "track": 30,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 125696
+      },
+      {
+        "track": 30,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 125440
+      }
+    ],
+    "confidence": "static view after FEF2 reads C08B"
+  }
+]

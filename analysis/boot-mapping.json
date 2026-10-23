@@ -1,0 +1,35 @@
+[
+  {
+    "side": "utility",
+    "track": 0,
+    "dos_sector": 0,
+    "physical_sector": 0,
+    "offset": 0,
+    "address": 2048,
+    "length": 256,
+    "sha256": "e3d9ef96869230dee62d48ca8540b64dce5c9099b93500dfc5e12dbf2e7a4d51",
+    "confidence": "conditional on standard Disk II ROM; derived from boot INC $3D"
+  },
+  {
+    "side": "utility",
+    "track": 0,
+    "dos_sector": 14,
+    "physical_sector": 2,
+    "offset": 3584,
+    "address": 2304,
+    "length": 256,
+    "sha256": "fc3f96c9fd015b8c31444cd84c8e603561a1802e2a46a6be319f54f09a36975f",
+    "confidence": "conditional on standard Disk II ROM; derived from boot INC $3D"
+  },
+  {
+    "side": "utility",
+    "track": 0,
+    "dos_sector": 13,
+    "physical_sector": 4,
+    "offset": 3328,
+    "address": 2560,
+    "length": 256,
+    "sha256": "1121a4fc8db132504e2db0eb1948494a0c9ec7bedc1216ece9f543d396820a6f",
+    "confidence": "conditional on standard Disk II ROM; derived from boot INC $3D"
+  }
+]

@@ -1,0 +1,296 @@
+[
+  {
+    "side": "utility",
+    "offset": 37120,
+    "track": 9,
+    "sector": 1,
+    "entry_count": 6,
+    "covers_blocks_3_through_279": true,
+    "entries": [
+      {
+        "offset": 37146,
+        "track": 9,
+        "sector": 1,
+        "byte_in_sector": 26,
+        "start_block": 3,
+        "end_block": 85,
+        "kind": 5,
+        "name": "SYSTEM.DATA"
+      },
+      {
+        "offset": 37172,
+        "track": 9,
+        "sector": 1,
+        "byte_in_sector": 52,
+        "start_block": 85,
+        "end_block": 103,
+        "kind": 2,
+        "name": "SUNDOG.LIBRARY"
+      },
+      {
+        "offset": 37198,
+        "track": 9,
+        "sector": 1,
+        "byte_in_sector": 78,
+        "start_block": 103,
+        "end_block": 140,
+        "kind": 5,
+        "name": "SYSTEM.LIBRARY"
+      },
+      {
+        "offset": 37224,
+        "track": 9,
+        "sector": 1,
+        "byte_in_sector": 104,
+        "start_block": 140,
+        "end_block": 219,
+        "kind": 2,
+        "name": "SYSTEM.STARTUP"
+      },
+      {
+        "offset": 37250,
+        "track": 9,
+        "sector": 1,
+        "byte_in_sector": 130,
+        "start_block": 219,
+        "end_block": 251,
+        "kind": 5,
+        "name": "SYSTEM.APPLE"
+      },
+      {
+        "offset": 37276,
+        "track": 9,
+        "sector": 1,
+        "byte_in_sector": 156,
+        "start_block": 251,
+        "end_block": 280,
+        "kind": 2,
+        "name": "SYSTEM.PASCAL"
+      }
+    ],
+    "confidence": "medium for directory-shaped contiguous extents; active location and addressing unconfirmed"
+  },
+  {
+    "side": "utility",
+    "offset": 40960,
+    "track": 10,
+    "sector": 0,
+    "entry_count": 6,
+    "covers_blocks_3_through_279": true,
+    "entries": [
+      {
+        "offset": 40986,
+        "track": 10,
+        "sector": 0,
+        "byte_in_sector": 26,
+        "start_block": 3,
+        "end_block": 85,
+        "kind": 5,
+        "name": "SYSTEM.DATA"
+      },
+      {
+        "offset": 41012,
+        "track": 10,
+        "sector": 0,
+        "byte_in_sector": 52,
+        "start_block": 85,
+        "end_block": 103,
+        "kind": 2,
+        "name": "SYSTEM.STARTUP"
+      },
+      {
+        "offset": 41038,
+        "track": 10,
+        "sector": 0,
+        "byte_in_sector": 78,
+        "start_block": 103,
+        "end_block": 140,
+        "kind": 5,
+        "name": "SYSTEM.LIBRARY"
+      },
+      {
+        "offset": 41064,
+        "track": 10,
+        "sector": 0,
+        "byte_in_sector": 104,
+        "start_block": 140,
+        "end_block": 219,
+        "kind": 5,
+        "name": "SUNDOG.LIBRARY"
+      },
+      {
+        "offset": 41090,
+        "track": 10,
+        "sector": 0,
+        "byte_in_sector": 130,
+        "start_block": 219,
+        "end_block": 251,
+        "kind": 5,
+        "name": "SYSTEM.APPLE"
+      },
+      {
+        "offset": 41116,
+        "track": 10,
+        "sector": 0,
+        "byte_in_sector": 156,
+        "start_block": 251,
+        "end_block": 280,
+        "kind": 2,
+        "name": "SYSTEM.PASCAL"
+      }
+    ],
+    "confidence": "medium for directory-shaped contiguous extents; active location and addressing unconfirmed"
+  },
+  {
+    "side": "utility",
+    "offset": 43776,
+    "track": 10,
+    "sector": 11,
+    "entry_count": 7,
+    "covers_blocks_3_through_279": true,
+    "entries": [
+      {
+        "offset": 43802,
+        "track": 10,
+        "sector": 11,
+        "byte_in_sector": 26,
+        "start_block": 3,
+        "end_block": 103,
+        "kind": 5,
+        "name": "SUNDOG.LIBRARY"
+      },
+      {
+        "offset": 43828,
+        "track": 10,
+        "sector": 11,
+        "byte_in_sector": 52,
+        "start_block": 103,
+        "end_block": 140,
+        "kind": 5,
+        "name": "SYSTEM.LIBRARY"
+      },
+      {
+        "offset": 43854,
+        "track": 10,
+        "sector": 11,
+        "byte_in_sector": 78,
+        "start_block": 140,
+        "end_block": 157,
+        "kind": 5,
+        "name": "DEMO.LIBRARY"
+      },
+      {
+        "offset": 43880,
+        "track": 10,
+        "sector": 11,
+        "byte_in_sector": 104,
+        "start_block": 157,
+        "end_block": 174,
+        "kind": 2,
+        "name": "SYSTEM.STARTUP"
+      },
+      {
+        "offset": 43906,
+        "track": 10,
+        "sector": 11,
+        "byte_in_sector": 130,
+        "start_block": 174,
+        "end_block": 219,
+        "kind": 5,
+        "name": "DEMO.DATA"
+      },
+      {
+        "offset": 43932,
+        "track": 10,
+        "sector": 11,
+        "byte_in_sector": 156,
+        "start_block": 219,
+        "end_block": 251,
+        "kind": 5,
+        "name": "SYSTEM.APPLE"
+      },
+      {
+        "offset": 43958,
+        "track": 10,
+        "sector": 11,
+        "byte_in_sector": 182,
+        "start_block": 251,
+        "end_block": 280,
+        "kind": 2,
+        "name": "SYSTEM.PASCAL"
+      }
+    ],
+    "confidence": "medium for directory-shaped contiguous extents; active location and addressing unconfirmed"
+  },
+  {
+    "side": "utility",
+    "offset": 44288,
+    "track": 10,
+    "sector": 13,
+    "entry_count": 6,
+    "covers_blocks_3_through_279": true,
+    "entries": [
+      {
+        "offset": 44314,
+        "track": 10,
+        "sector": 13,
+        "byte_in_sector": 26,
+        "start_block": 3,
+        "end_block": 85,
+        "kind": 5,
+        "name": "SYSTEM.DATA"
+      },
+      {
+        "offset": 44340,
+        "track": 10,
+        "sector": 13,
+        "byte_in_sector": 52,
+        "start_block": 85,
+        "end_block": 103,
+        "kind": 2,
+        "name": "SUNDOG.LIBRARY"
+      },
+      {
+        "offset": 44366,
+        "track": 10,
+        "sector": 13,
+        "byte_in_sector": 78,
+        "start_block": 103,
+        "end_block": 140,
+        "kind": 5,
+        "name": "SYSTEM.LIBRARY"
+      },
+      {
+        "offset": 44392,
+        "track": 10,
+        "sector": 13,
+        "byte_in_sector": 104,
+        "start_block": 140,
+        "end_block": 219,
+        "kind": 2,
+        "name": "SYSTEM.STARTUP"
+      },
+      {
+        "offset": 44418,
+        "track": 10,
+        "sector": 13,
+        "byte_in_sector": 130,
+        "start_block": 219,
+        "end_block": 251,
+        "kind": 5,
+        "name": "SYSTEM.APPLE"
+      },
+      {
+        "offset": 44444,
+        "track": 10,
+        "sector": 13,
+        "byte_in_sector": 156,
+        "start_block": 251,
+        "end_block": 280,
+        "kind": 2,
+        "name": "SYSTEM.PASCAL"
+      }
+    ],
+    "confidence": "medium for directory-shaped contiguous extents; active location and addressing unconfirmed"
+  }
+]

@@ -30,4 +30,20 @@ class DiskTests(unittest.TestCase):
    self.assertEqual(sum(x['status']=='unknown' for x in a),16)
    self.assertNotIn('sha256',a[-1])
    self.assertEqual(len(json.loads((root/'analysis/comparison.json').read_text())['corresponding_identical']),544)
+
+class BootMappingTests(unittest.TestCase):
+ def test_loader_skew(self):
+  # Independent anchors from CiderPress2 tables; each 512-byte block has two pages.
+  from boot_regions import skew
+  self.assertEqual(skew,(0,2,4,6,8,10,12,14,1,3,5,7,9,11,13,15))
+  self.assertEqual(DOS_TO_PHYSICAL.index(skew[(201*2)%16]),13)
+
+ def test_synthetic_boot_region(self):
+  from boot_regions import pages
+  import struct
+  image=b''.join(struct.pack('<H',n)+bytes(254) for n in range(560))
+  b,provenance=pages(201,2,image)
+  self.assertEqual(struct.unpack_from('<H',b)[0],25*16+13)
+  self.assertEqual(struct.unpack_from('<H',b,256)[0],25*16+12)
+  self.assertEqual(provenance[0]['offset'],offset(25,13))
 if __name__=='__main__':unittest.main()

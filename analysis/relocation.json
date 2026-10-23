@@ -1,0 +1,11 @@
+{
+  "source_address": 62096,
+  "destination_address": 26624,
+  "length": 1280,
+  "sha256": "0173682c76bc82d93d6298d0c93d8d8be980be09ff6cbf0a8f3e5336a2bcd2cc",
+  "source_region": "lc-bank2",
+  "source_region_offset": 8848,
+  "copy_routine": 62057,
+  "entry": 26624,
+  "confidence": "high static copy loop; runtime unobserved"
+}

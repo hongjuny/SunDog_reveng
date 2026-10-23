@@ -46,3 +46,24 @@ Language Card transitions. Validate active directories and segment descriptors;
 embedded old directory records may be misleading. Identify the interpreter from
 its dispatch loop before implementing any p-code disassembly. Measure performance
 only after booting a controlled emulation.
+
+The final bank-aware boot trace reaches `$0801 → $08FF → $4000`, then the loaded
+`$FFF8` vector `$FEF2`, bank 1 `$D152`, common `$F269`, relocated `$6800`, and
+bank 2 `$DAA9`. `$F290–$F78F` is copied to `$6800–$6CFF`; the relocated initializer
+clears earlier boot RAM. These are static, conditional execution paths.
+
+All 192 graphics row table entries in the first native region match the HGR
+formula. Four directory-shaped groups cover contiguous blocks 3–279, but no
+active filesystem or p-code format is proven. CiderPress2 independently matched
+13 selected readable sectors and failed on all 16 unknown Play Track 34 sectors.
+Both WOZ CRCs match and their INFO creators are `Applesauce v1.48b10`.
+
+A scoped REA CLI doctor with explicit Ghidra and Java locations failed building
+its Swift ownership helper because the external module cache was read-only.
+This does not block direct Ghidra exports. No persistent REA configuration changed.
+
+The workspace policy prohibits creating the root `.git` path. Local Git metadata
+was created at `analysis/local/repository/.git`, with repository root supplied as
+an explicit work tree by `tools/git-local.sh`. Use that wrapper for `status`,
+`log`, and other local Git commands. No original images, derived binaries, raw
+string dumps or disassembly exports are staged. Nothing was published or pushed.

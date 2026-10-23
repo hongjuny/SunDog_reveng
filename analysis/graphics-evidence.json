@@ -1,0 +1,987 @@
+{
+  "side": "utility",
+  "region": "initial-4000",
+  "lookup_routine": 16896,
+  "low_table": 16912,
+  "high_table": 17104,
+  "source_sectors": [
+    {
+      "memory_page": 66,
+      "track": 25,
+      "sector": 11,
+      "physical_sector": 8,
+      "offset": 105216
+    },
+    {
+      "memory_page": 67,
+      "track": 25,
+      "sector": 10,
+      "physical_sector": 10,
+      "offset": 104960
+    }
+  ],
+  "all_rows_match": true,
+  "rows": [
+    {
+      "row": 0,
+      "observed": 8192,
+      "expected": 8192
+    },
+    {
+      "row": 1,
+      "observed": 9216,
+      "expected": 9216
+    },
+    {
+      "row": 2,
+      "observed": 10240,
+      "expected": 10240
+    },
+    {
+      "row": 3,
+      "observed": 11264,
+      "expected": 11264
+    },
+    {
+      "row": 4,
+      "observed": 12288,
+      "expected": 12288
+    },
+    {
+      "row": 5,
+      "observed": 13312,
+      "expected": 13312
+    },
+    {
+      "row": 6,
+      "observed": 14336,
+      "expected": 14336
+    },
+    {
+      "row": 7,
+      "observed": 15360,
+      "expected": 15360
+    },
+    {
+      "row": 8,
+      "observed": 8320,
+      "expected": 8320
+    },
+    {
+      "row": 9,
+      "observed": 9344,
+      "expected": 9344
+    },
+    {
+      "row": 10,
+      "observed": 10368,
+      "expected": 10368
+    },
+    {
+      "row": 11,
+      "observed": 11392,
+      "expected": 11392
+    },
+    {
+      "row": 12,
+      "observed": 12416,
+      "expected": 12416
+    },
+    {
+      "row": 13,
+      "observed": 13440,
+      "expected": 13440
+    },
+    {
+      "row": 14,
+      "observed": 14464,
+      "expected": 14464
+    },
+    {
+      "row": 15,
+      "observed": 15488,
+      "expected": 15488
+    },
+    {
+      "row": 16,
+      "observed": 8448,
+      "expected": 8448
+    },
+    {
+      "row": 17,
+      "observed": 9472,
+      "expected": 9472
+    },
+    {
+      "row": 18,
+      "observed": 10496,
+      "expected": 10496
+    },
+    {
+      "row": 19,
+      "observed": 11520,
+      "expected": 11520
+    },
+    {
+      "row": 20,
+      "observed": 12544,
+      "expected": 12544
+    },
+    {
+      "row": 21,
+      "observed": 13568,
+      "expected": 13568
+    },
+    {
+      "row": 22,
+      "observed": 14592,
+      "expected": 14592
+    },
+    {
+      "row": 23,
+      "observed": 15616,
+      "expected": 15616
+    },
+    {
+      "row": 24,
+      "observed": 8576,
+      "expected": 8576
+    },
+    {
+      "row": 25,
+      "observed": 9600,
+      "expected": 9600
+    },
+    {
+      "row": 26,
+      "observed": 10624,
+      "expected": 10624
+    },
+    {
+      "row": 27,
+      "observed": 11648,
+      "expected": 11648
+    },
+    {
+      "row": 28,
+      "observed": 12672,
+      "expected": 12672
+    },
+    {
+      "row": 29,
+      "observed": 13696,
+      "expected": 13696
+    },
+    {
+      "row": 30,
+      "observed": 14720,
+      "expected": 14720
+    },
+    {
+      "row": 31,
+      "observed": 15744,
+      "expected": 15744
+    },
+    {
+      "row": 32,
+      "observed": 8704,
+      "expected": 8704
+    },
+    {
+      "row": 33,
+      "observed": 9728,
+      "expected": 9728
+    },
+    {
+      "row": 34,
+      "observed": 10752,
+      "expected": 10752
+    },
+    {
+      "row": 35,
+      "observed": 11776,
+      "expected": 11776
+    },
+    {
+      "row": 36,
+      "observed": 12800,
+      "expected": 12800
+    },
+    {
+      "row": 37,
+      "observed": 13824,
+      "expected": 13824
+    },
+    {
+      "row": 38,
+      "observed": 14848,
+      "expected": 14848
+    },
+    {
+      "row": 39,
+      "observed": 15872,
+      "expected": 15872
+    },
+    {
+      "row": 40,
+      "observed": 8832,
+      "expected": 8832
+    },
+    {
+      "row": 41,
+      "observed": 9856,
+      "expected": 9856
+    },
+    {
+      "row": 42,
+      "observed": 10880,
+      "expected": 10880
+    },
+    {
+      "row": 43,
+      "observed": 11904,
+      "expected": 11904
+    },
+    {
+      "row": 44,
+      "observed": 12928,
+      "expected": 12928
+    },
+    {
+      "row": 45,
+      "observed": 13952,
+      "expected": 13952
+    },
+    {
+      "row": 46,
+      "observed": 14976,
+      "expected": 14976
+    },
+    {
+      "row": 47,
+      "observed": 16000,
+      "expected": 16000
+    },
+    {
+      "row": 48,
+      "observed": 8960,
+      "expected": 8960
+    },
+    {
+      "row": 49,
+      "observed": 9984,
+      "expected": 9984
+    },
+    {
+      "row": 50,
+      "observed": 11008,
+      "expected": 11008
+    },
+    {
+      "row": 51,
+      "observed": 12032,
+      "expected": 12032
+    },
+    {
+      "row": 52,
+      "observed": 13056,
+      "expected": 13056
+    },
+    {
+      "row": 53,
+      "observed": 14080,
+      "expected": 14080
+    },
+    {
+      "row": 54,
+      "observed": 15104,
+      "expected": 15104
+    },
+    {
+      "row": 55,
+      "observed": 16128,
+      "expected": 16128
+    },
+    {
+      "row": 56,
+      "observed": 9088,
+      "expected": 9088
+    },
+    {
+      "row": 57,
+      "observed": 10112,
+      "expected": 10112
+    },
+    {
+      "row": 58,
+      "observed": 11136,
+      "expected": 11136
+    },
+    {
+      "row": 59,
+      "observed": 12160,
+      "expected": 12160
+    },
+    {
+      "row": 60,
+      "observed": 13184,
+      "expected": 13184
+    },
+    {
+      "row": 61,
+      "observed": 14208,
+      "expected": 14208
+    },
+    {
+      "row": 62,
+      "observed": 15232,
+      "expected": 15232
+    },
+    {
+      "row": 63,
+      "observed": 16256,
+      "expected": 16256
+    },
+    {
+      "row": 64,
+      "observed": 8232,
+      "expected": 8232
+    },
+    {
+      "row": 65,
+      "observed": 9256,
+      "expected": 9256
+    },
+    {
+      "row": 66,
+      "observed": 10280,
+      "expected": 10280
+    },
+    {
+      "row": 67,
+      "observed": 11304,
+      "expected": 11304
+    },
+    {
+      "row": 68,
+      "observed": 12328,
+      "expected": 12328
+    },
+    {
+      "row": 69,
+      "observed": 13352,
+      "expected": 13352
+    },
+    {
+      "row": 70,
+      "observed": 14376,
+      "expected": 14376
+    },
+    {
+      "row": 71,
+      "observed": 15400,
+      "expected": 15400
+    },
+    {
+      "row": 72,
+      "observed": 8360,
+      "expected": 8360
+    },
+    {
+      "row": 73,
+      "observed": 9384,
+      "expected": 9384
+    },
+    {
+      "row": 74,
+      "observed": 10408,
+      "expected": 10408
+    },
+    {
+      "row": 75,
+      "observed": 11432,
+      "expected": 11432
+    },
+    {
+      "row": 76,
+      "observed": 12456,
+      "expected": 12456
+    },
+    {
+      "row": 77,
+      "observed": 13480,
+      "expected": 13480
+    },
+    {
+      "row": 78,
+      "observed": 14504,
+      "expected": 14504
+    },
+    {
+      "row": 79,
+      "observed": 15528,
+      "expected": 15528
+    },
+    {
+      "row": 80,
+      "observed": 8488,
+      "expected": 8488
+    },
+    {
+      "row": 81,
+      "observed": 9512,
+      "expected": 9512
+    },
+    {
+      "row": 82,
+      "observed": 10536,
+      "expected": 10536
+    },
+    {
+      "row": 83,
+      "observed": 11560,
+      "expected": 11560
+    },
+    {
+      "row": 84,
+      "observed": 12584,
+      "expected": 12584
+    },
+    {
+      "row": 85,
+      "observed": 13608,
+      "expected": 13608
+    },
+    {
+      "row": 86,
+      "observed": 14632,
+      "expected": 14632
+    },
+    {
+      "row": 87,
+      "observed": 15656,
+      "expected": 15656
+    },
+    {
+      "row": 88,
+      "observed": 8616,
+      "expected": 8616
+    },
+    {
+      "row": 89,
+      "observed": 9640,
+      "expected": 9640
+    },
+    {
+      "row": 90,
+      "observed": 10664,
+      "expected": 10664
+    },
+    {
+      "row": 91,
+      "observed": 11688,
+      "expected": 11688
+    },
+    {
+      "row": 92,
+      "observed": 12712,
+      "expected": 12712
+    },
+    {
+      "row": 93,
+      "observed": 13736,
+      "expected": 13736
+    },
+    {
+      "row": 94,
+      "observed": 14760,
+      "expected": 14760
+    },
+    {
+      "row": 95,
+      "observed": 15784,
+      "expected": 15784
+    },
+    {
+      "row": 96,
+      "observed": 8744,
+      "expected": 8744
+    },
+    {
+      "row": 97,
+      "observed": 9768,
+      "expected": 9768
+    },
+    {
+      "row": 98,
+      "observed": 10792,
+      "expected": 10792
+    },
+    {
+      "row": 99,
+      "observed": 11816,
+      "expected": 11816
+    },
+    {
+      "row": 100,
+      "observed": 12840,
+      "expected": 12840
+    },
+    {
+      "row": 101,
+      "observed": 13864,
+      "expected": 13864
+    },
+    {
+      "row": 102,
+      "observed": 14888,
+      "expected": 14888
+    },
+    {
+      "row": 103,
+      "observed": 15912,
+      "expected": 15912
+    },
+    {
+      "row": 104,
+      "observed": 8872,
+      "expected": 8872
+    },
+    {
+      "row": 105,
+      "observed": 9896,
+      "expected": 9896
+    },
+    {
+      "row": 106,
+      "observed": 10920,
+      "expected": 10920
+    },
+    {
+      "row": 107,
+      "observed": 11944,
+      "expected": 11944
+    },
+    {
+      "row": 108,
+      "observed": 12968,
+      "expected": 12968
+    },
+    {
+      "row": 109,
+      "observed": 13992,
+      "expected": 13992
+    },
+    {
+      "row": 110,
+      "observed": 15016,
+      "expected": 15016
+    },
+    {
+      "row": 111,
+      "observed": 16040,
+      "expected": 16040
+    },
+    {
+      "row": 112,
+      "observed": 9000,
+      "expected": 9000
+    },
+    {
+      "row": 113,
+      "observed": 10024,
+      "expected": 10024
+    },
+    {
+      "row": 114,
+      "observed": 11048,
+      "expected": 11048
+    },
+    {
+      "row": 115,
+      "observed": 12072,
+      "expected": 12072
+    },
+    {
+      "row": 116,
+      "observed": 13096,
+      "expected": 13096
+    },
+    {
+      "row": 117,
+      "observed": 14120,
+      "expected": 14120
+    },
+    {
+      "row": 118,
+      "observed": 15144,
+      "expected": 15144
+    },
+    {
+      "row": 119,
+      "observed": 16168,
+      "expected": 16168
+    },
+    {
+      "row": 120,
+      "observed": 9128,
+      "expected": 9128
+    },
+    {
+      "row": 121,
+      "observed": 10152,
+      "expected": 10152
+    },
+    {
+      "row": 122,
+      "observed": 11176,
+      "expected": 11176
+    },
+    {
+      "row": 123,
+      "observed": 12200,
+      "expected": 12200
+    },
+    {
+      "row": 124,
+      "observed": 13224,
+      "expected": 13224
+    },
+    {
+      "row": 125,
+      "observed": 14248,
+      "expected": 14248
+    },
+    {
+      "row": 126,
+      "observed": 15272,
+      "expected": 15272
+    },
+    {
+      "row": 127,
+      "observed": 16296,
+      "expected": 16296
+    },
+    {
+      "row": 128,
+      "observed": 8272,
+      "expected": 8272
+    },
+    {
+      "row": 129,
+      "observed": 9296,
+      "expected": 9296
+    },
+    {
+      "row": 130,
+      "observed": 10320,
+      "expected": 10320
+    },
+    {
+      "row": 131,
+      "observed": 11344,
+      "expected": 11344
+    },
+    {
+      "row": 132,
+      "observed": 12368,
+      "expected": 12368
+    },
+    {
+      "row": 133,
+      "observed": 13392,
+      "expected": 13392
+    },
+    {
+      "row": 134,
+      "observed": 14416,
+      "expected": 14416
+    },
+    {
+      "row": 135,
+      "observed": 15440,
+      "expected": 15440
+    },
+    {
+      "row": 136,
+      "observed": 8400,
+      "expected": 8400
+    },
+    {
+      "row": 137,
+      "observed": 9424,
+      "expected": 9424
+    },
+    {
+      "row": 138,
+      "observed": 10448,
+      "expected": 10448
+    },
+    {
+      "row": 139,
+      "observed": 11472,
+      "expected": 11472
+    },
+    {
+      "row": 140,
+      "observed": 12496,
+      "expected": 12496
+    },
+    {
+      "row": 141,
+      "observed": 13520,
+      "expected": 13520
+    },
+    {
+      "row": 142,
+      "observed": 14544,
+      "expected": 14544
+    },
+    {
+      "row": 143,
+      "observed": 15568,
+      "expected": 15568
+    },
+    {
+      "row": 144,
+      "observed": 8528,
+      "expected": 8528
+    },
+    {
+      "row": 145,
+      "observed": 9552,
+      "expected": 9552
+    },
+    {
+      "row": 146,
+      "observed": 10576,
+      "expected": 10576
+    },
+    {
+      "row": 147,
+      "observed": 11600,
+      "expected": 11600
+    },
+    {
+      "row": 148,
+      "observed": 12624,
+      "expected": 12624
+    },
+    {
+      "row": 149,
+      "observed": 13648,
+      "expected": 13648
+    },
+    {
+      "row": 150,
+      "observed": 14672,
+      "expected": 14672
+    },
+    {
+      "row": 151,
+      "observed": 15696,
+      "expected": 15696
+    },
+    {
+      "row": 152,
+      "observed": 8656,
+      "expected": 8656
+    },
+    {
+      "row": 153,
+      "observed": 9680,
+      "expected": 9680
+    },
+    {
+      "row": 154,
+      "observed": 10704,
+      "expected": 10704
+    },
+    {
+      "row": 155,
+      "observed": 11728,
+      "expected": 11728
+    },
+    {
+      "row": 156,
+      "observed": 12752,
+      "expected": 12752
+    },
+    {
+      "row": 157,
+      "observed": 13776,
+      "expected": 13776
+    },
+    {
+      "row": 158,
+      "observed": 14800,
+      "expected": 14800
+    },
+    {
+      "row": 159,
+      "observed": 15824,
+      "expected": 15824
+    },
+    {
+      "row": 160,
+      "observed": 8784,
+      "expected": 8784
+    },
+    {
+      "row": 161,
+      "observed": 9808,
+      "expected": 9808
+    },
+    {
+      "row": 162,
+      "observed": 10832,
+      "expected": 10832
+    },
+    {
+      "row": 163,
+      "observed": 11856,
+      "expected": 11856
+    },
+    {
+      "row": 164,
+      "observed": 12880,
+      "expected": 12880
+    },
+    {
+      "row": 165,
+      "observed": 13904,
+      "expected": 13904
+    },
+    {
+      "row": 166,
+      "observed": 14928,
+      "expected": 14928
+    },
+    {
+      "row": 167,
+      "observed": 15952,
+      "expected": 15952
+    },
+    {
+      "row": 168,
+      "observed": 8912,
+      "expected": 8912
+    },
+    {
+      "row": 169,
+      "observed": 9936,
+      "expected": 9936
+    },
+    {
+      "row": 170,
+      "observed": 10960,
+      "expected": 10960
+    },
+    {
+      "row": 171,
+      "observed": 11984,
+      "expected": 11984
+    },
+    {
+      "row": 172,
+      "observed": 13008,
+      "expected": 13008
+    },
+    {
+      "row": 173,
+      "observed": 14032,
+      "expected": 14032
+    },
+    {
+      "row": 174,
+      "observed": 15056,
+      "expected": 15056
+    },
+    {
+      "row": 175,
+      "observed": 16080,
+      "expected": 16080
+    },
+    {
+      "row": 176,
+      "observed": 9040,
+      "expected": 9040
+    },
+    {
+      "row": 177,
+      "observed": 10064,
+      "expected": 10064
+    },
+    {
+      "row": 178,
+      "observed": 11088,
+      "expected": 11088
+    },
+    {
+      "row": 179,
+      "observed": 12112,
+      "expected": 12112
+    },
+    {
+      "row": 180,
+      "observed": 13136,
+      "expected": 13136
+    },
+    {
+      "row": 181,
+      "observed": 14160,
+      "expected": 14160
+    },
+    {
+      "row": 182,
+      "observed": 15184,
+      "expected": 15184
+    },
+    {
+      "row": 183,
+      "observed": 16208,
+      "expected": 16208
+    },
+    {
+      "row": 184,
+      "observed": 9168,
+      "expected": 9168
+    },
+    {
+      "row": 185,
+      "observed": 10192,
+      "expected": 10192
+    },
+    {
+      "row": 186,
+      "observed": 11216,
+      "expected": 11216
+    },
+    {
+      "row": 187,
+      "observed": 12240,
+      "expected": 12240
+    },
+    {
+      "row": 188,
+      "observed": 13264,
+      "expected": 13264
+    },
+    {
+      "row": 189,
+      "observed": 14288,
+      "expected": 14288
+    },
+    {
+      "row": 190,
+      "observed": 15312,
+      "expected": 15312
+    },
+    {
+      "row": 191,
+      "observed": 16336,
+      "expected": 16336
+    }
+  ],
+  "confidence": "high: all 192 row base addresses match Apple II HGR page 1 formula; no whole-game engine attribution"
+}

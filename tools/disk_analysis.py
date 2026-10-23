@@ -60,7 +60,16 @@ def analyze(root):
     (out/'regions.json').write_text(json.dumps(inventories,indent=2)+'\n')
     media=[]
     for p in sorted((root/'disk').glob('*.woz')):
-        b=p.read_bytes(); media.append(dict(path=str(p.relative_to(root)),size=len(b),sha256=digest(b),magic=b[:4].decode('ascii'),crc_stored=struct.unpack_from('<I',b,8)[0],crc_computed=zlib.crc32(b[12:])&0xffffffff))
+        b=p.read_bytes(); chunks=[]; cursor=12; info={}
+        while cursor+8<=len(b):
+            tag=b[cursor:cursor+4].decode('ascii'); length=struct.unpack_from('<I',b,cursor+4)[0]
+            if cursor+8+length>len(b): raise ValueError('truncated WOZ chunk')
+            chunks.append(dict(id=tag,offset=cursor,length=length))
+            if tag=='INFO':
+                payload=b[cursor+8:cursor+8+length]
+                info=dict(version=payload[0],disk_type=payload[1],creator=payload[5:37].decode('ascii').strip())
+            cursor+=8+length
+        media.append(dict(path=str(p.relative_to(root)),size=len(b),sha256=digest(b),magic=b[:4].decode('ascii'),crc_stored=struct.unpack_from('<I',b,8)[0],crc_computed=zlib.crc32(b[12:])&0xffffffff,chunks=chunks,info=info))
     (out/'media.json').write_text(json.dumps(media,indent=2)+'\n')
     print(json.dumps(dict(identical_sectors=len(corresponding),identical_tracks=shared_tracks,regions=len(inventories))))
 if __name__=='__main__':

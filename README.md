@@ -23,3 +23,11 @@ WOZ spot-checks are separate from complete extraction validation.
 Start with [disk layout](docs/disk-layout.md), [boot process](docs/boot-process.md),
 and [research log](docs/research-log.md). The first milestone is static analysis,
 not an observed emulator boot. Unreadable Play Track 34 remains unknown.
+
+Run `python3 tools/structural_evidence.py` after generating disk and boot regions
+to reproduce HGR table and directory-shape checks. Seven deterministic tests
+require no original media. Raw searches, binaries, projects and disassembly stay
+local; structured statistics and provenance are versioned.
+
+This workspace disallows writing root `.git`. Local history is stored separately;
+use `sh tools/git-local.sh status` and `sh tools/git-local.sh log --oneline`.
