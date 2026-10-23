@@ -252,3 +252,34 @@ wrong target/operation/address and same-address wrong-bank bytes. All 36 tests
 pass; the focused Ghidra pipeline also passes 908 controlled handler cases,
 memory/type checks, annotation readback and the bounded startup-prefix probe.
 Checkpoint 2 passed within the documented bounded scope; checkpoint 3 is next.
+
+## 2026-10-23 — Ten additional opcodes with actual REA native Evidence
+
+Inspected the 48 unresolved primary handlers and selected ten bounded operations:
+A1/B9 branching, 9D/D1/A7 table-based access, 9A indirect store, BE/BF indexed bytes,
+and 8F/98 multiplication/squaring. Exported eleven native-only slices including
+D75F's multiply helper, checked every source byte against readable Utility T30
+sectors, and used actual REA/Ghidra 12.1.4 for each import. All 357 bytes, 253 load
+checks and 200 native instructions agree with source/direct Ghidra. Retained 44
+actual Evidence records and eleven snapshots locally, then closed every target.
+
+A1 tests condition bit zero, so nonzero even words branch. B9's high-bit operand
+selects cell=word(54)+b-256, then target=cell-word(cell); treating it as a negative
+PC displacement would be wrong. This was a hypothesis to exclude, not a former
+accepted repository conclusion. The initial replay stopped explicitly on unsupported
+F1 at D2C9; added SBC (zp),Y to the limited model and tested borrow/flag/pointer
+behavior. No instruction was silently bypassed.
+
+Added 768 synthetic native-handler cases, including backward/forward table targets,
+address wrap, selector aliases, neighbor-byte preservation and arithmetic limits.
+Total is 1,676 cases: 72 ordinary high opcodes, 18 shared-error prefixes and all
+128 short constants. Thirty-eight high opcodes remain unresolved. Ghidra's
+persistent annotations cover 36 entries, ten linked to actual REA assembly IDs;
+all 607 visited native PCs match defined Ghidra instructions. The focused pipeline
+also retains correct p-code/table data types and the earlier startup boundary.
+
+All 40 deterministic tests pass. See docs/opcode-semantics.md and
+analysis/rea-opcode-crosscheck.json for reproduction and Evidence IDs. This remains
+bounded static evidence plus declared synthetic replay, not observed Apple II
+execution, complete table ownership, complete arithmetic semantics or p-code
+disassembly. Checkpoint 3 continues with 38 unresolved opcodes.

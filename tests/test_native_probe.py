@@ -26,6 +26,12 @@ class NativeProbeTests(unittest.TestCase):
  def test_y_comparison_preserves_register(self):
   c=self.program(bytes.fromhex('a001c003'));c.step();c.step()
   self.assertEqual((c.y,c.c,c.z,c.n),(1,0,0,1))
+ def test_indirect_y_subtract_with_borrow_and_pointer_wrap(self):
+  for a,value,carry,expected in ((0,1,1,(255,0,0,1)),(0,0,0,(255,0,0,1)),(0,0,1,(0,1,1,0)),(128,1,1,(127,1,0,0))):
+   with self.subTest(a=a,value=value,carry=carry):
+    c=self.program(bytes.fromhex('f1ff'));c.a=a;c.c=carry;c.y=1
+    c.memory[255]=255;c.memory[0]=0x40;c.memory[0x4100]=value
+    c.step();self.assertEqual((c.a,c.c,c.z,c.n),expected)
  def test_unsupported_and_budget_fail_explicitly(self):
   c=self.program(b'\xea');self.assertEqual(c.run({0x8001},max_steps=1),0x8001)
   c=self.program(b'\x00')

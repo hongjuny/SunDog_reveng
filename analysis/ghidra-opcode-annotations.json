@@ -34,6 +34,28 @@
     ]
   },
   {
+    "handler": 53920,
+    "label": "pc_branch_even_word",
+    "comment_readback_matches": true,
+    "rea_static_evidence_ids": [
+      "ev_8c1145a97fe6849e3521f314fd1b65664eed0f1e9b4261bb6847781555cc0ddf"
+    ],
+    "opcodes": [
+      161
+    ]
+  },
+  {
+    "handler": 53928,
+    "label": "pc_jump_encoded",
+    "comment_readback_matches": true,
+    "rea_static_evidence_ids": [
+      "ev_305bb54677aaf5a1daee6d88024824d8cf4d97e82fa51f7097e1e657815dd0ba"
+    ],
+    "opcodes": [
+      185
+    ]
+  },
+  {
     "handler": 53975,
     "label": "pc_zero_word",
     "comment_readback_matches": true,
@@ -168,6 +190,39 @@
     ]
   },
   {
+    "handler": 54338,
+    "label": "pc_load_table_indexed",
+    "comment_readback_matches": true,
+    "rea_static_evidence_ids": [
+      "ev_ac3e393b762414e6baeada05b4add955e6f66b851955b837a1ecf3e20a913eb9"
+    ],
+    "opcodes": [
+      157
+    ]
+  },
+  {
+    "handler": 54375,
+    "label": "pc_store_table_indexed",
+    "comment_readback_matches": true,
+    "rea_static_evidence_ids": [
+      "ev_6f0e870025219bce42470cec963cf6dc60511a48c2b5eb101fb9425ac38ddd39"
+    ],
+    "opcodes": [
+      209
+    ]
+  },
+  {
+    "handler": 54412,
+    "label": "pc_address_table_indexed",
+    "comment_readback_matches": true,
+    "rea_static_evidence_ids": [
+      "ev_1d8d26d63eff5b5a934d052af3673780f5b750647660481e86dbe9fd1300381f"
+    ],
+    "opcodes": [
+      167
+    ]
+  },
+  {
     "handler": 54440,
     "label": "pc_load_indirect_short",
     "comment_readback_matches": true,
@@ -187,6 +242,39 @@
     "comment_readback_matches": true,
     "opcodes": [
       248
+    ]
+  },
+  {
+    "handler": 54460,
+    "label": "pc_store_indirect_word",
+    "comment_readback_matches": true,
+    "rea_static_evidence_ids": [
+      "ev_69b89233ece73c509691adde0b164c64766dcb6f28db402be17a3f60d119c6db"
+    ],
+    "opcodes": [
+      154
+    ]
+  },
+  {
+    "handler": 54631,
+    "label": "pc_load_indexed_byte",
+    "comment_readback_matches": true,
+    "rea_static_evidence_ids": [
+      "ev_974a62b140b0c274bc04ca447dcb3ef28092f0057ae5ff56290e56233ad80d07"
+    ],
+    "opcodes": [
+      190
+    ]
+  },
+  {
+    "handler": 54657,
+    "label": "pc_store_indexed_byte",
+    "comment_readback_matches": true,
+    "rea_static_evidence_ids": [
+      "ev_33ca5caceda3d68207ea7ca95efe7fba73bac99801ad801a02f39504ff0845a9"
+    ],
+    "opcodes": [
+      191
     ]
   },
   {
@@ -243,6 +331,30 @@
     "comment_readback_matches": true,
     "opcodes": [
       149
+    ]
+  },
+  {
+    "handler": 55174,
+    "label": "pc_multiply16",
+    "comment_readback_matches": true,
+    "rea_static_evidence_ids": [
+      "ev_91d1521564913eeb6e6c214436807aa1b2c886ba65089c5721eea4686be9298e",
+      "ev_79083d8264201ce2dbd0ea0cbd8fcafea95ad56ec2c8cf03adb7222e76afa3ad"
+    ],
+    "opcodes": [
+      143
+    ]
+  },
+  {
+    "handler": 55245,
+    "label": "pc_square16",
+    "comment_readback_matches": true,
+    "rea_static_evidence_ids": [
+      "ev_91d1521564913eeb6e6c214436807aa1b2c886ba65089c5721eea4686be9298e",
+      "ev_6c36133536d76618f55b97be71fdcf208981fc7ba2c033d5be726aea7170dfc8"
+    ],
+    "opcodes": [
+      152
     ]
   },
   {

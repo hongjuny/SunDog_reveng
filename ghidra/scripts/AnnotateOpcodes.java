@@ -20,10 +20,12 @@ public class AnnotateOpcodes extends GhidraScript {
    createLabel(toAddr(entry.getKey()),"pc_"+rule,true);
    StringBuilder comment=new StringBuilder("Selected semantics checked against actual native bytes with synthetic probes. Not a hardware/REA trace. Initial interpreter-ready snapshot only.\n");
    for(JsonObject row:entry.getValue()) comment.append(String.format("%02X: %s; operands=%s; advance=%s. %s\n",row.get("opcode").getAsInt(),row.get("semantic").getAsString(),row.get("operands").getAsString(),row.get("advance").isJsonPrimitive()?row.get("advance").getAsString():"unresolved",row.get("notes").getAsString()));
+   for(JsonObject row:entry.getValue()) if(row.has("rea_static_evidence_ids")) comment.append("REA bounded native assembly cross-check (not runtime semantics): ").append(row.get("rea_static_evidence_ids").toString()).append("\n");
    setPreComment(toAddr(entry.getKey()),comment.toString());
    CodeUnit unit=currentProgram.getListing().getCodeUnitAt(toAddr(entry.getKey()));
    if(unit==null || !comment.toString().equals(unit.getComment(CodeUnit.PRE_COMMENT))) throw new IllegalStateException("Comment readback failed");
    JsonObject saved=new JsonObject();saved.addProperty("handler",entry.getKey());saved.addProperty("label","pc_"+rule);saved.addProperty("comment_readback_matches",true);
+   if(first.has("rea_static_evidence_ids")) saved.add("rea_static_evidence_ids",first.get("rea_static_evidence_ids"));
    JsonArray aliases=new JsonArray();for(JsonObject row:entry.getValue())aliases.add(row.get("opcode").getAsInt());saved.add("opcodes",aliases);annotations.add(saved);
   }
   createLabel(toAddr(0xd155),"read_scaled_index",true);

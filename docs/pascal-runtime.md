@@ -83,9 +83,16 @@ emulator before describing hardware-specific branches as executed facts.
 [Selected opcode semantics](opcode-semantics.md) now records the Apple II native
 basis for arithmetic/bitwise operations, short constants, local/global/nonlocal
 addressing, literal words, inline pointers and the variable-width scaled index.
-908 native-model probes exercise 62 ordinary high opcode values, 18 shared error
-slots, and all 128 short-immediate values. Forty-eight high opcode values remain
+1,676 native-model probes exercise 72 ordinary high opcode values, 18 shared error
+slots, and all 128 short-immediate values. Thirty-eight high opcode values remain
 unresolved. Aliases depend on the opcode-derived A/Carry/Y state; pointer equality
 alone is insufficient. Full p-code disassembly and complete interpreter emulation
 are still deferred. The startup prefix now reaches BIOS FF06 in controlled
 synthetic replay, stopping before its bank switch/device behavior.
+
+Actual REA/Ghidra native analysis now confirms the ten additional handlers for
+conditional/unconditional branching, table-based load/store/address, indirect
+word store, indexed bytes, multiplication and squaring. Eleven bounded imports
+cross-check 200 native instructions. The branch operand's high-bit form selects
+a self-relative word through 54/55; it is not a negative PC-relative displacement.
+Synthetic replay and native static Evidence remain separate authorities.

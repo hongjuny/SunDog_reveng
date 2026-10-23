@@ -42,6 +42,10 @@ def main():
     saved_aliases={op for r in annotations for op in r['opcodes']}
     if saved_aliases!=expected_aliases or not all(r['comment_readback_matches'] for r in annotations):raise ValueError('Ghidra annotation readback differs from verified catalogue')
     checks['annotated_native_entries']=len(annotations);checks['annotation_aliases_match']=True
+    linked={r['handler']:r['rea_static_evidence_ids'] for r in catalogue['primary'] if r.get('rea_static_evidence_ids')}
+    for row in annotations:
+        if row['handler'] in linked and row.get('rea_static_evidence_ids')!=linked[row['handler']]:raise ValueError('Ghidra annotation lost actual REA Evidence links')
+    checks['rea_linked_native_entries']=len(linked)
     report=dict(scope='direct Ghidra and source-byte composition verification; separate bounded REA acceptance in analysis/rea-memory-crosscheck.json',checks=checks,ghidra_program=state['program'],snapshot_sha256=digest,region_classifications=state['regions'],uninitialized_blocks=[b for b in state['blocks'] if not b['initialized']],relocation_source='analysis/relocation.json',overlay_source='analysis/boot-handoff.json')
     (ROOT/'analysis/memory-view-validation.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(checks))

@@ -1,0 +1,188 @@
+{
+  "status": "verified_bounded_native_handlers",
+  "snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
+  "views": [
+    {
+      "name": "a1",
+      "opcodes": [
+        161
+      ],
+      "sha256": "7616375165b2603cd180b1a04ee310539e091dbf2a06f65ec9ab22a17f4fdcbd",
+      "complete_bytes_verified": 8,
+      "load_checks": 23,
+      "native_instructions_compared": 6,
+      "evidence_ids": {
+        "load": "ev_9d5109c564a830400dc8f79d5d8b1591219df467ba7b8c112451e89723f467a7",
+        "bytes": "ev_69578c6ba7c47c7c42f9130986094ddb7ff1791e2fde655ef0b7cfaf1c79b38e",
+        "entry": "ev_2146a7b86b90b51cd1bf127b8fd020d8d079ea41d448b8f6f9f5fe7942509e53",
+        "assembly": "ev_8c1145a97fe6849e3521f314fd1b65664eed0f1e9b4261bb6847781555cc0ddf"
+      }
+    },
+    {
+      "name": "b9",
+      "opcodes": [
+        185
+      ],
+      "sha256": "b5ca41d5842279950e3f6c7afa5d7daf8bee01652802b97ff187db397703c494",
+      "complete_bytes_verified": 47,
+      "load_checks": 23,
+      "native_instructions_compared": 24,
+      "evidence_ids": {
+        "load": "ev_9bf8d19dc2bba6362fc2db1573c23e679fe6202e983d9b1b8763b2cc40593d0c",
+        "bytes": "ev_8414cd1f63dace749e29fd51d3350480a0bb33d55f0536a43036bef596c16020",
+        "entry": "ev_e9d31cfc4b80b012242d8e330b1dcc1b7ed8c07a8593036a5f95186e1600f640",
+        "assembly": "ev_305bb54677aaf5a1daee6d88024824d8cf4d97e82fa51f7097e1e657815dd0ba"
+      }
+    },
+    {
+      "name": "9d",
+      "opcodes": [
+        157
+      ],
+      "sha256": "ff3f043e85aecb922b0d6a2eab1e02b570cfc65529d3abe2b21bf134b4d693bc",
+      "complete_bytes_verified": 37,
+      "load_checks": 23,
+      "native_instructions_compared": 20,
+      "evidence_ids": {
+        "load": "ev_f7002243814aed4db02aad9e07b9de5f2b0bc32d4d61e5a6337ba6be09d6e239",
+        "bytes": "ev_278f8e85eb75f600b7143d0eca6c57be27c9fee56365911fb4cecd474716e6f3",
+        "entry": "ev_a9e1bc5477b6870759bf581411e6e52839e907b6a8439e417962110fca426d82",
+        "assembly": "ev_ac3e393b762414e6baeada05b4add955e6f66b851955b837a1ecf3e20a913eb9"
+      }
+    },
+    {
+      "name": "d1",
+      "opcodes": [
+        209
+      ],
+      "sha256": "9204e5e99c9e52abaeddc8154485d27d0db36436e018ffaedb98f7db90da6565",
+      "complete_bytes_verified": 37,
+      "load_checks": 23,
+      "native_instructions_compared": 20,
+      "evidence_ids": {
+        "load": "ev_164f8d5ecedcb84a19bb3db174508df7007bcd0d10425bff03c1a63797d884fb",
+        "bytes": "ev_5e49fd114956a01fd23d49bf6f9f3f630eeb4d867017c4b3a2ac9b82d6422a64",
+        "entry": "ev_7ca1e038d19ad6bda615a6aefc777d53645bac81384bdadefb6ea96385a0dfa2",
+        "assembly": "ev_6f0e870025219bce42470cec963cf6dc60511a48c2b5eb101fb9425ac38ddd39"
+      }
+    },
+    {
+      "name": "a7",
+      "opcodes": [
+        167
+      ],
+      "sha256": "1b37507fb6c01457306103d5be3063129caf9b90021c7735338f6a3c0dc2b8ca",
+      "complete_bytes_verified": 28,
+      "load_checks": 23,
+      "native_instructions_compared": 16,
+      "evidence_ids": {
+        "load": "ev_a92c9659fce9f9c12605a5f176b51d8a43fbf35375658701ca99ecddce739311",
+        "bytes": "ev_7e325565b955421bf707c26ec45911cd1c2c3a28fdb375a18bb0103e9eea9a43",
+        "entry": "ev_aff40495a1cd86b361a2a4235ee4e4d1d1bdf0f8a2c01930458154ba4106f805",
+        "assembly": "ev_1d8d26d63eff5b5a934d052af3673780f5b750647660481e86dbe9fd1300381f"
+      }
+    },
+    {
+      "name": "9a",
+      "opcodes": [
+        154
+      ],
+      "sha256": "1f46e62bb8c79708049a02950f396b052c87a804e4ec33f77b5d35f6899092e3",
+      "complete_bytes_verified": 26,
+      "load_checks": 23,
+      "native_instructions_compared": 15,
+      "evidence_ids": {
+        "load": "ev_e673604d83bc3cbc91617723903586bda11c83bb368a00e5b99c1e7efeb3f9ba",
+        "bytes": "ev_cb27a13d117825fd4c3cc97034eec7913615bc197c91aff4b8fa6b9985270b8f",
+        "entry": "ev_d400f5c380464cb3e2935c585610c121351484d39803fbed9d1c35d8ced1cfac",
+        "assembly": "ev_69b89233ece73c509691adde0b164c64766dcb6f28db402be17a3f60d119c6db"
+      }
+    },
+    {
+      "name": "be",
+      "opcodes": [
+        190
+      ],
+      "sha256": "6d0c36c14ea7f3b3f58aea8b9b62c69c29dd6881227a98e880750de50ee166b4",
+      "complete_bytes_verified": 26,
+      "load_checks": 23,
+      "native_instructions_compared": 16,
+      "evidence_ids": {
+        "load": "ev_7a5637d00fd3998dff70b5076ee1b67b9724494c64f7b201a3e27c34134e8b7c",
+        "bytes": "ev_c9cb6dff3930e9e078d17655ab950ab31ed0cfac53ef6884d0fa4271a7ae78fc",
+        "entry": "ev_6d267ce58a6dfd2b86cbb1ed2c3654c19fef17bb1b102687313c2ef0cf84b418",
+        "assembly": "ev_974a62b140b0c274bc04ca447dcb3ef28092f0057ae5ff56290e56233ad80d07"
+      }
+    },
+    {
+      "name": "bf",
+      "opcodes": [
+        191
+      ],
+      "sha256": "db236d3b8c1288ed1f26355a073dde48bf282287742433ca5d637c8fe564217e",
+      "complete_bytes_verified": 26,
+      "load_checks": 23,
+      "native_instructions_compared": 17,
+      "evidence_ids": {
+        "load": "ev_a7fbc85bed4dc3471cbd6d64d8d1abf71258af0f607ca401d1b461ddceca8eae",
+        "bytes": "ev_5409d682cd2d9a465c446fa02e9c89c6060d4f5396129aebea74ed2cd4e4d4e4",
+        "entry": "ev_cceec8dfb0b0879e44325156e5c3608fec4c9664e9c2f4d02e493e1ee9cb15b9",
+        "assembly": "ev_33ca5caceda3d68207ea7ca95efe7fba73bac99801ad801a02f39504ff0845a9"
+      }
+    },
+    {
+      "name": "multiply-helper",
+      "opcodes": [
+        143,
+        152
+      ],
+      "sha256": "acb9a37d28d45b35ac14183d4af72cd69d1f3c7ed660513b707c6c7a13432ad9",
+      "complete_bytes_verified": 39,
+      "load_checks": 23,
+      "native_instructions_compared": 21,
+      "evidence_ids": {
+        "load": "ev_2681b0b3d9616a849afcd5b5c5c546e817b37653da53b196e09c1f8844d05d6e",
+        "bytes": "ev_9f9cd31c10f2700dc5fd2f752d3fd7d04c22b94e178ac28445b7e68c6e44d58b",
+        "entry": "ev_cd9a8e680e34affe547b4b33b60703710f1c364b5177f66d9c407a3864e7a8cb",
+        "assembly": "ev_91d1521564913eeb6e6c214436807aa1b2c886ba65089c5721eea4686be9298e"
+      }
+    },
+    {
+      "name": "8f",
+      "opcodes": [
+        143
+      ],
+      "sha256": "456e64480cba72c1c603bb69b666785e12b841a6d2eb8f1724be19dd31b69bb2",
+      "complete_bytes_verified": 71,
+      "load_checks": 23,
+      "native_instructions_compared": 39,
+      "evidence_ids": {
+        "load": "ev_f7eb0ca92a661bd647ae073fe2053debfdd5d79a607f13dcceca8947e136b301",
+        "bytes": "ev_bdce7dcfa98ff56ee4e94691e7de679389b58c2ce6d342f6e28a320416ca9361",
+        "entry": "ev_38a8b4cea90248d285f10ba1119a620f5699de69ae47caa46ed2d61c17c2407b",
+        "assembly": "ev_79083d8264201ce2dbd0ea0cbd8fcafea95ad56ec2c8cf03adb7222e76afa3ad"
+      }
+    },
+    {
+      "name": "98",
+      "opcodes": [
+        152
+      ],
+      "sha256": "591064f6a0c90691923344852b953a865d8ce3e06b08e63d29f59c62fc19e8df",
+      "complete_bytes_verified": 12,
+      "load_checks": 23,
+      "native_instructions_compared": 6,
+      "evidence_ids": {
+        "load": "ev_59cb5e34a435da062c749a1583f83ed3ac48aad1c5873d7fe27e5b5073baa33b",
+        "bytes": "ev_bf384a8bd1c2d82d060d6757f474d9e5256fb1872ef0c26a54784f39824d8d72",
+        "entry": "ev_a30891e21738725c174f135e91c3cb238a2d1bd72ec75e146ea8ad55888569e4",
+        "assembly": "ev_6c36133536d76618f55b97be71fdcf208981fc7ba2c033d5be726aea7170dfc8"
+      }
+    }
+  ],
+  "limitations": [
+    "REA and direct analysis both use Ghidra.",
+    "Static bounded views do not prove runtime bank state, stack contents or all indirect targets.",
+    "Selected semantics are established separately by synthetic native-handler replay."
+  ]
+}

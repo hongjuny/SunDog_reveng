@@ -1,0 +1,249 @@
+{
+  "snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
+  "views": [
+    {
+      "name": "a1",
+      "path": "analysis/regions/rea-opcode-a1.bin",
+      "base_and_entry": "0xd2a0",
+      "end_exclusive": "0xd2a8",
+      "length": 8,
+      "sha256": "7616375165b2603cd180b1a04ee310539e091dbf2a06f65ec9ab22a17f4fdcbd",
+      "opcodes": [
+        161
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 124832,
+          "memory_address": "0xd2a0",
+          "length": 8
+        }
+      ]
+    },
+    {
+      "name": "b9",
+      "path": "analysis/regions/rea-opcode-b9.bin",
+      "base_and_entry": "0xd2a8",
+      "end_exclusive": "0xd2d7",
+      "length": 47,
+      "sha256": "b5ca41d5842279950e3f6c7afa5d7daf8bee01652802b97ff187db397703c494",
+      "opcodes": [
+        185
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 124840,
+          "memory_address": "0xd2a8",
+          "length": 47
+        }
+      ]
+    },
+    {
+      "name": "9d",
+      "path": "analysis/regions/rea-opcode-9d.bin",
+      "base_and_entry": "0xd442",
+      "end_exclusive": "0xd467",
+      "length": 37,
+      "sha256": "ff3f043e85aecb922b0d6a2eab1e02b570cfc65529d3abe2b21bf134b4d693bc",
+      "opcodes": [
+        157
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 5,
+          "physical_sector": 5,
+          "disk_offset": 124226,
+          "memory_address": "0xd442",
+          "length": 37
+        }
+      ]
+    },
+    {
+      "name": "d1",
+      "path": "analysis/regions/rea-opcode-d1.bin",
+      "base_and_entry": "0xd467",
+      "end_exclusive": "0xd48c",
+      "length": 37,
+      "sha256": "9204e5e99c9e52abaeddc8154485d27d0db36436e018ffaedb98f7db90da6565",
+      "opcodes": [
+        209
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 5,
+          "physical_sector": 5,
+          "disk_offset": 124263,
+          "memory_address": "0xd467",
+          "length": 37
+        }
+      ]
+    },
+    {
+      "name": "a7",
+      "path": "analysis/regions/rea-opcode-a7.bin",
+      "base_and_entry": "0xd48c",
+      "end_exclusive": "0xd4a8",
+      "length": 28,
+      "sha256": "1b37507fb6c01457306103d5be3063129caf9b90021c7735338f6a3c0dc2b8ca",
+      "opcodes": [
+        167
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 5,
+          "physical_sector": 5,
+          "disk_offset": 124300,
+          "memory_address": "0xd48c",
+          "length": 28
+        }
+      ]
+    },
+    {
+      "name": "9a",
+      "path": "analysis/regions/rea-opcode-9a.bin",
+      "base_and_entry": "0xd4bc",
+      "end_exclusive": "0xd4d6",
+      "length": 26,
+      "sha256": "1f46e62bb8c79708049a02950f396b052c87a804e4ec33f77b5d35f6899092e3",
+      "opcodes": [
+        154
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 5,
+          "physical_sector": 5,
+          "disk_offset": 124348,
+          "memory_address": "0xd4bc",
+          "length": 26
+        }
+      ]
+    },
+    {
+      "name": "be",
+      "path": "analysis/regions/rea-opcode-be.bin",
+      "base_and_entry": "0xd567",
+      "end_exclusive": "0xd581",
+      "length": 26,
+      "sha256": "6d0c36c14ea7f3b3f58aea8b9b62c69c29dd6881227a98e880750de50ee166b4",
+      "opcodes": [
+        190
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 4,
+          "physical_sector": 7,
+          "disk_offset": 124007,
+          "memory_address": "0xd567",
+          "length": 26
+        }
+      ]
+    },
+    {
+      "name": "bf",
+      "path": "analysis/regions/rea-opcode-bf.bin",
+      "base_and_entry": "0xd581",
+      "end_exclusive": "0xd59b",
+      "length": 26,
+      "sha256": "db236d3b8c1288ed1f26355a073dde48bf282287742433ca5d637c8fe564217e",
+      "opcodes": [
+        191
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 4,
+          "physical_sector": 7,
+          "disk_offset": 124033,
+          "memory_address": "0xd581",
+          "length": 26
+        }
+      ]
+    },
+    {
+      "name": "multiply-helper",
+      "path": "analysis/regions/rea-opcode-multiply-helper.bin",
+      "base_and_entry": "0xd75f",
+      "end_exclusive": "0xd786",
+      "length": 39,
+      "sha256": "acb9a37d28d45b35ac14183d4af72cd69d1f3c7ed660513b707c6c7a13432ad9",
+      "opcodes": [
+        143,
+        152
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 2,
+          "physical_sector": 11,
+          "disk_offset": 123487,
+          "memory_address": "0xd75f",
+          "length": 39
+        }
+      ]
+    },
+    {
+      "name": "8f",
+      "path": "analysis/regions/rea-opcode-8f.bin",
+      "base_and_entry": "0xd786",
+      "end_exclusive": "0xd7cd",
+      "length": 71,
+      "sha256": "456e64480cba72c1c603bb69b666785e12b841a6d2eb8f1724be19dd31b69bb2",
+      "opcodes": [
+        143
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 2,
+          "physical_sector": 11,
+          "disk_offset": 123526,
+          "memory_address": "0xd786",
+          "length": 71
+        }
+      ]
+    },
+    {
+      "name": "98",
+      "path": "analysis/regions/rea-opcode-98.bin",
+      "base_and_entry": "0xd7cd",
+      "end_exclusive": "0xd7d9",
+      "length": 12,
+      "sha256": "591064f6a0c90691923344852b953a865d8ce3e06b08e63d29f59c62fc19e8df",
+      "opcodes": [
+        152
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 2,
+          "physical_sector": 11,
+          "disk_offset": 123597,
+          "memory_address": "0xd7cd",
+          "length": 12
+        }
+      ]
+    }
+  ],
+  "scope": "Native-only bounded slices; calls/jumps outside slices remain unresolved in REA"
+}

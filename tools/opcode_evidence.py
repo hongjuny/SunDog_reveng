@@ -84,6 +84,69 @@ def investigate(snapshot,dispatch):
             stream=bytes([op,length])+bytes((n&255 for n in range(length)))
             check(op,rule,stream,result=0x40ff+pointer_offset,delta=-1,advance=length+2)
         describe([op],rule,'push address of '+('length byte' if pointer_offset==1 else 'payload')+' and skip inline byte payload','u8 length followed by length bytes',1,'length+2','No assumption about text encoding or payload data type.')
+    for left in values:
+        for right in values:
+            check(0x8f,'multiply16',bytes([0x8f]),(left,right),(left*right)&65535,1,1)
+    describe([0x8f],'multiply16','replace two words by low 16 bits of their product','none',-1,1,
+             'D786 uses the 16-step D75F shift/add helper. Sampled sign and overflow boundaries; no overflow exception on these paths.')
+    for value in values:
+        check(0x98,'square16',bytes([0x98]),(value,),(value*value)&65535,0,1)
+    describe([0x98],'square16','replace top word by low 16 bits of its square','none',0,1,
+             'D7CD duplicates the stack word then enters D786; sampled sign and overflow boundaries.')
+    for pointer in (0x6500,0x65ff,0xffff):
+        for value in values:
+            check(0x9a,'store_indirect_word',bytes([0x9a]),(pointer,value),delta=2,advance=1,
+                  memory_result=(pointer,value))
+    describe([0x9a],'store_indirect_word','pop value then pointer and store the word at that pointer','none',-2,1,
+             'Little-endian word store, including address FFFF wrapping high byte to 0000 in the synthetic model.')
+    for base in (0x6500,0x65ff,0xffff):
+        for index in (0,1,255,256,65535):
+            address=(base+index)&65535
+            for value in (0,0x7f,0x80,0xff):
+                check(0xbe,'load_indexed_byte',bytes([0xbe]),(base,index),value,1,1,
+                      words=[(address,0xa500|value)])
+            for value in (0,0x80,0x1234,0xff00,0xffff):
+                check(0xbf,'store_indexed_byte',bytes([0xbf]),(base,index,value),delta=3,advance=1,
+                      words=[(address,0xa5cc)],memory_result=(address,0xa500|(value&255)))
+    describe([0xbe],'load_indexed_byte','pop index and base, push zero-extended byte at (base+index)&FFFF','none',-1,1,
+             'Byte offsets are unscaled; synthetic boundary addresses include page and 16-bit wrap.')
+    describe([0xbf],'store_indexed_byte','pop value, index, base; store low byte at (base+index)&FFFF','none',-3,1,
+             'High byte of value discarded; neighboring byte checked unchanged.')
+    for op,rule,kind in ((0x9d,'load_table_indexed','load'),(0xd1,'store_table_indexed','store'),(0xa7,'address_table_indexed','address')):
+        for selector in (0,1,31,127,128,255):
+            for index,wide in ((0,False),(127,False),(128,False),(32767,False),(1,True)):
+                table=0xbd9e+2*(selector&127);base=0x6500;address=(base+2*index)&65535
+                stream=bytes([op,selector])+index_operand(index,wide)
+                words=[(table,base)]
+                if kind=='load':check(op,rule,stream,result=0x5aa5,delta=-1,advance=len(stream),words=words+[(address,0x5aa5)])
+                elif kind=='store':check(op,rule,stream,(0x1234,),delta=1,advance=len(stream),words=words,memory_result=(address,0x1234))
+                else:check(op,rule,stream,result=address,delta=-1,advance=len(stream),words=words)
+        describe([op],rule,kind+' at word(BD9E+2*(selector&7F)) + 2*index, modulo 65536',
+                 'u8 selector, then encoded index',-1 if kind=='store' else 1,'3 or 4',
+                 'Selector ASL wraps to 8 bits, so bit 7 is ignored in this path. Table ownership/allocation bounds not established.')
+    # A high-bit branch operand selects a backward self-relative table cell;
+    # it is not a signed relative displacement from the p-code PC.
+    for op,rule in ((0xb9,'jump_encoded'),(0xa1,'branch_even_word')):
+        for operand in (0,1,127,128,129,254,255):
+            targets=[(0x6200,0x4300)] if operand<128 else [(base,target) for base in (0x6200,0x40,0xfff0) for target in (0x4300,0x4080,0xfff0)]
+            for base,target in targets:
+                if operand<128:
+                    target=(0x40ff+2+operand)&65535;words=[]
+                else:
+                    cell=(base+operand-256)&65535
+                    words=[(0x54,base),(cell,(cell-target)&65535)]
+                if op==0xb9:
+                    check(op,rule,bytes([op,operand]),(0x5aa5,),0x5aa5,0,(target-0x40ff)&65535,words=words)
+                else:
+                    for condition in (0,1,2,3,0x100,0x101,0x8000,0xffff):
+                        expected=0x4101 if condition&1 else target
+                        check(op,rule,bytes([op,operand]),(condition,),delta=1,
+                              advance=(expected-0x40ff)&65535,words=words)
+    branch_rule='u8 b: if b<0x80 target=PC+2+b; otherwise cell=word(0x54)+b-256, target=cell-word(cell), all modulo 65536'
+    describe([0xb9],'jump_encoded','set p-code pointer to decoded branch target',branch_rule,0,'branch target',
+             'Negative-form operands index a self-relative word table through 54/55; not a negative PC displacement.')
+    describe([0xa1],'branch_even_word','pop condition; branch when bit 0 is clear, otherwise advance 2',branch_rule,-1,'2 or branch target',
+             'Only low-word bit 0 is tested; nonzero even values also branch. Table read is skipped when bit 0 is set.')
     trapped=[op for op,x in records.items() if x['handler']==0xd1ef]
     for op in trapped:
         check(op,'shared_error_111',bytes([op]),delta=0,advance=0,stop=0xd20a,memory_result=(0xbdde,111))
@@ -99,5 +162,15 @@ if __name__=='__main__':
         p=record['table_address']-0xd000
         if int.from_bytes(snapshot[p:p+2],'little')!=record['handler']:raise ValueError('dispatch report differs from replay snapshot')
     report=investigate(snapshot,dispatch)
+    crosscheck_path=ROOT/'analysis/rea-opcode-crosscheck.json'
+    if crosscheck_path.exists():
+        crosscheck=json.loads(crosscheck_path.read_text())
+        if crosscheck.get('status')!='verified_bounded_native_handlers' or crosscheck.get('snapshot_sha256')!=report['snapshot_sha256']:
+            raise ValueError('REA opcode cross-check belongs to a different snapshot')
+        for row in report['primary']:
+            links=[r for r in crosscheck['views'] if row['opcode'] in r['opcodes']]
+            if links:
+                row['rea_static_evidence_ids']=[r['evidence_ids']['assembly'] for r in links]
+        report['rea_native_static_crosscheck']='analysis/rea-opcode-crosscheck.json'
     (ROOT/'analysis/opcode-evidence.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(dict(cases=report['total_probe_cases'],verified_high=report['verified_high_opcodes'],unresolved_high=len(report['unresolved_high_opcodes']))))

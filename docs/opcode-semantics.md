@@ -10,15 +10,15 @@ emulator, a hardware observation, or REA Evidence. Decimal mode, V-flag branches
 interrupts, devices, timing and unknown-memory behavior are not modeled.
 Unsupported native instructions and instruction-budget overruns fail explicitly.
 
-`python3 tools/opcode_evidence.py` reproduces **908** checked cases. These cover
-all 128 short-immediate opcode values, selected semantics for **62 ordinary high
+`python3 tools/opcode_evidence.py` reproduces **1,676** checked cases. These cover
+all 128 short-immediate opcode values, selected semantics for **72 ordinary high
 opcodes**, and the initial shared error path of **18 high opcodes**. The remaining
-**48 high opcodes** are explicitly unresolved. Counts include alias families, not
-80 distinct algorithms. No complete p-code disassembler is implemented.
+**38 high opcodes** are explicitly unresolved. Counts include alias families, not
+90 distinct algorithms. No complete p-code disassembler is implemented.
 
 `analysis/opcode-evidence.json` includes each high opcode's handler, original
 Utility source location, operand rule, stack-word delta, continuation, and native
-instruction addresses visited by the probes. All **407 distinct visited native
+instruction addresses visited by the probes. All **607 distinct visited native
 addresses** are defined instructions in Ghidra's interpreter-ready listing.
 This cross-check validates alignment and provenance; it is not independent proof
 that the limited CPU model implements all 6502 behavior.
@@ -67,6 +67,14 @@ stock UCSD mnemonic assignments. Words and arithmetic results are 16-bit.
 | `$B6`, `$B2`, `$B8` | nonlocal load/address/store after following frame links | u8 depth, encoded index | +1/+1/−1 |
 | `$A6` | push address of length byte, skip inline payload | u8 length, payload | +1 |
 | `$D0` | push address after length byte, skip inline payload | u8 length, payload | +1 |
+| `$8F` | replace two words by low 16 bits of their product | none | −1 |
+| `$98` | replace top word by low 16 bits of its square | none | 0 |
+| `$9A` | pop value and pointer; store word at pointer | none | −2 |
+| `$BE` | pop index and base; push zero-extended byte at base + index | none | −1 |
+| `$BF` | pop value, index, base; store low byte at base + index | none | −3 |
+| `$9D`, `$D1`, `$A7` | load/store/address at word(BD9E + 2*(selector & 7F)) + 2*index | u8 selector, encoded index | +1/−1/+1 |
+| `$B9` | unconditional branch using rule below | u8 branch operand | 0 |
+| `$A1` | pop condition; branch when bit 0 is clear | u8 branch operand | −1 |
 
 Local and global here identify the observed bases `$52/$53` and `$50/$51`.
 `$D171` follows static links at frame offset zero for the nonlocal operations.
@@ -91,6 +99,106 @@ The probes include zero, one-byte limit, long-form limits, non-minimal form,
 16-bit address wrap, and a p-code pointer starting at `$40FF` to exercise page
 carry. Boundary inputs test raw address calculation, not valid Pascal variables
 or allocated frame bounds.
+
+## Additional ten handlers: actual REA and controlled replay
+
+On 2026-10-23, actual REA/Ghidra 12.1.4 inspected ten previously unresolved
+handlers and the multiply helper. Eleven native-only slices comprise 357 bytes;
+each passed 23 load-image checks, a complete byte read and an entry instruction
+check. All 200 bounded native instructions agree with the persistent direct
+Ghidra listing. Sources are readable Utility Track 30 sectors, not inferred
+Atari/ST opcode assignments. `analysis/rea-opcode-inputs.json` provides the exact
+DOS sectors, byte offsets, memory addresses and hashes;
+`analysis/rea-opcode-crosscheck.json` links actual Evidence IDs. Complete Evidence,
+assembly and eleven saved snapshots remain local under `analysis/local/rea/opcodes/`.
+All REA targets were closed after saving.
+
+The ten additional handlers contribute 768 checked native-model cases:
+
+| Opcode | Native entry | Cases | Selected operation |
+|---|---|---:|---|
+| A1 | D2A0 | 312 | Pop condition, branch when low bit is clear |
+| B9 | D2A8 | 39 | Unconditional encoded branch |
+| 9D | D442 | 30 | Table-based indexed word load |
+| D1 | D467 | 30 | Table-based indexed word store |
+| A7 | D48C | 30 | Table-based indexed address |
+| 9A | D4BC | 36 | Indirect word store |
+| BE | D567 | 60 | Base-plus-index byte load, zero extended |
+| BF | D581 | 75 | Base-plus-index byte store, high value byte discarded |
+| 8F | D786 | 144 | Product modulo 65536 |
+| 98 | D7CD | 12 | Square modulo 65536 |
+
+Stack arguments in the table follow bottom-to-top order: 9A takes pointer, value;
+BE takes base, index; BF takes base, index, value. Byte indices are not scaled.
+The BF probes also check that the neighboring byte remains unchanged. These are
+raw operations on controlled synthetic addresses, including page and 16-bit wrap;
+they do not establish valid Pascal array bounds or the real program's RAM values.
+
+9D/D1/A7 read a selector byte, double it in an 8-bit register, then add twice the
+encoded index to the word fetched at BD9E plus that doubled selector. Thus selector
+bit 7 is discarded by this native path. No local/global ownership, legal selector
+range or allocation lifetime is established by these synthetic table entries.
+
+The D75F helper makes 16 shift/add iterations. D786 returns the low word; D7CD
+duplicates the top word before entering it. Tested inputs cover zero, sign
+boundaries and wraparound. This is not a claim about checked Pascal arithmetic,
+all possible operands, or the helper's complete wider-result semantics.
+
+### Branch operand rule
+
+Let PC be the opcode address, b the following unsigned byte, and P the word in
+54/55. All address calculations wrap modulo 65536:
+
+- If b is below 80 hexadecimal: target = PC + 2 + b.
+- Otherwise: cell = P + b - 256; target = cell - word(cell).
+
+The high-bit case is a table selection through P, followed by a backward
+self-relative word; it is not a signed PC displacement. Tests include table-cell
+address wrap and targets before PC, after PC and near FFFF.
+
+A1 pops an entire word but tests only bit zero. Odd values skip the branch operand
+and continue at PC+2; even values enter B9's decoder. Thus 0100 branches while
+0101 falls through, despite both being nonzero. When bit zero is clear, BNE at
+D2A6 falls through to D2A8; those routines are separately bounded REA imports.
+Their incomplete external branch graphs must not be presented as a full runtime
+control-flow trace.
+
+The first attempt to replay the table form explicitly failed on native F1 at
+D2C9, SBC (zp),Y. That addressing form was added to the limited model and checked
+with independent microprogram cases for borrow, N/Z flags and zero-page pointer
+wrap before admitting the branch cases. No unsupported instruction was skipped;
+the model still omits V/decimal/device behavior.
+
+### Reproduce the static cross-check
+
+```sh
+python3 tools/rea_opcode_views.py
+```
+
+For each manifest slice, use actual REA open_binary with provider ghidra,
+format raw-binary, architecture 6502 and its stated base/entry. Save the actual
+load-image, complete read_bytes, entry instruction and procedure_assembly Evidence
+as load.json, bytes.json, entry.json and assembly.json in the corresponding
+analysis/local/rea/opcodes/<name>/ directory. Save a snapshot and close the target.
+Then run:
+
+```sh
+python3 tools/rea_opcode_views.py --verify analysis/local/rea/opcodes
+sh tools/run_opcode_analysis.sh
+python3 -m unittest discover -s tests -v
+```
+
+The assembly validator rejects partial, duplicate, out-of-range and differing
+instruction observations. Actual REA Evidence IDs are linked in the catalogue
+and read back from Ghidra entry comments. Native static agreement and synthetic
+semantics are separate checks; both analysis routes use Ghidra, not independent
+decoders. Confidence is high for the attested bytes and selected sampled effects;
+hardware execution and untested semantic paths remain unobserved.
+
+Remaining unresolved high values are:
+`86 88 8E 9B 9E A2 A3 A4 A8 AA AC AD AE AF B0 B1 B3 B4 B5 B7 BA BB BC BD C0 C1 C2 C3 C4 C5 C8 C9 CB CD CE CF D5 D6`.
+Their current handler addresses and sector provenance remain in the catalogue.
+Checkpoint 3 is still in progress; no full p-code disassembler is claimed.
 
 ## Shared error path
 
@@ -126,7 +234,7 @@ and subsequent Pascal execution still need observation or further scoped analysi
 
 ## Persistent Ghidra annotations
 
-`AnnotateOpcodes.java` writes snapshot-specific labels/comments at 26 native entry
+`AnnotateOpcodes.java` writes snapshot-specific labels/comments at 36 native entry
 addresses and explains the implicit A/Carry/Y interface. Comment readback and
 alias membership are checked and exported to `analysis/ghidra-opcode-annotations.json`.
 The project save is checked by the wrapper. No copied game disassembly is committed;
@@ -138,8 +246,10 @@ Run the focused analysis after the base regions/seeds exist:
 sh tools/run_opcode_analysis.sh
 ```
 
-The full `tools/run_ghidra.sh` pipeline includes this step. REA's connection remains
-pending; these results must not be substituted for the missing REA cross-check.
+The full `tools/run_ghidra.sh` pipeline includes this step. Actual REA checks now
+cover the ten new high-opcode handlers and their multiply helper, as described
+below. Native static Evidence IDs are persisted beside the selected semantics;
+they attest the bounded native analysis, not execution of the synthetic cases.
 
 For the **unexecuted normal-return case** through `$F008 → $D27B`, the next
 p-code address would be `$F24E`. Original bytes there select opcode `$CD`, whose

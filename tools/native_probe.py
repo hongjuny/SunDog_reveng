@@ -71,6 +71,7 @@ class CPU:
         loads={0xa9:('a','imm'),0xa5:('a','zp'),0xad:('a','abs'),0xb1:('a','indy'),0xb5:('a','zpx'),0xbd:('a','absx'),0xb9:('a','absy'),0xa2:('x','imm'),0xa6:('x','zp'),0xa0:('y','imm'),0xa4:('y','zp')}
         stores={0x85:('a','zp'),0x8d:('a','abs'),0x91:('a','indy'),0x95:('a','zpx'),0x99:('a','absy'),0x86:('x','zp'),0x84:('y','zp')}
         arithmetic={0x69:('adc','imm'),0x65:('adc','zp'),0xe9:('sbc','imm'),0xe5:('sbc','zp'),0xc9:('cmp','imm'),0xc5:('cmp','zp'),0xe0:('cpx','imm'),0xc0:('cpy','imm'),0x29:('and','imm'),0x25:('and','zp'),0x09:('or','imm'),0x05:('or','zp'),0x49:('xor','imm'),0x45:('xor','zp')}
+        arithmetic[0xf1]=('sbc','indy')
         if op in loads:
             reg,mode=loads[op];v=self.fetch() if mode=='imm' else self.read(self.operand_address(mode));setattr(self,reg,self.nz(v));return
         if op in stores:
