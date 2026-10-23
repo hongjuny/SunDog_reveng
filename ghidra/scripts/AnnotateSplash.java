@@ -17,7 +17,7 @@ public class AnnotateSplash extends GhidraScript {
         String[] names = {"SplashReveal", "SplashCenterSeed", "SplashExpandIteration", "SplashTopFiveRows",
             "SplashRightEdge", "SplashBottomFiveRows", "SplashLeftEdge", "SplashExpandBounds", "SplashReturn", "SplashHGRAddress"};
         String[] comments = {
-            "Original title reveal; copies bitmap source = HGR destination + $2400. No p-code is involved. REA ev_51ca2df4d888134ce1cd657612ad428abb24719ec6ba9280940d9ed59c2a72ff.",
+            "Original spaceship/planet background reveal, without SUN DOG logo; copies bitmap source = HGR destination + $2400. No p-code is involved. REA ev_51ca2df4d888134ce1cd657612ad428abb24719ec6ba9280940d9ed59c2a72ff.",
             "Four center writes: rows95/96 and byte columns19/20.",
             "19 iterations. Initial L18 R21 T90 B101; each iteration L-- R++ T-=5 B+=5.",
             "Increasing columns; five ascending rows per column. Source pointers are corresponding HGR pointers + $2400.",

@@ -1,10 +1,12 @@
 # Original native splash reveal
 
-The title renderer is the native routine `$4000..$41FF`; its HGR row-address
+The ship-and-planet background renderer is the native routine `$4000..$41FF`; its HGR row-address
 helper is `$4200..$420F`. This is the routine called by the boot at `$0864`, before
 Language Card runtime initialization. It does not call Pascal or draw letters
-from the font. It progressively copies the already composed title bitmap from
-`$4400..$63FF` into HGR page1 at `$2000..$3FFF`.
+from the font. It progressively copies the ship-and-planet bitmap from
+`$4400..$63FF` into HGR page1 at `$2000..$3FFF`. The SUN DOG logo is not present
+in this bitmap or the resulting `$FEF2` screen. Its later rendering stage remains
+a separate investigation; the exact reveal proof below covers the background only.
 
 Original source is Utility T25 DOS sector13 for entry `$4000` (image offset105728),
 sector12 for its second code page, and sector11 for helper `$4200`. Source digest,

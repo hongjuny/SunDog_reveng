@@ -1,0 +1,17 @@
+{
+  "steps": 155,
+  "ordered_writes": 14256,
+  "invalid_inputs": 3,
+  "all_matched": true,
+  "method": "Compiled Swift logo animation versus original P13/P14/P15/P16 CFG and original native P9/P10/P11/P12 writes",
+  "evidence": "analysis/title-logo-evidence.json",
+  "fixture_sha256": "8a42a7bc2d4e45ab3f538787647595a5e44f391f22824f93ea9f2f0d1ff495fe",
+  "source_files": {
+    "native/SunDogLogic/TitleLogo.swift": "6f0692ae7b9599614f14e59498b94a49efdc74f013f181e27dbb64749a433bef",
+    "tests/native/VerifyTitleLogo.swift": "9c77a525e8c7d4098609fb5dc1794f1a669e7481a52ee6813b92b55f250d9ffa"
+  },
+  "limitations": [
+    "No original sound-generator delay or exact scene timing is claimed.",
+    "Only the visual title animation and final composition are compared."
+  ]
+}

@@ -602,6 +602,11 @@ test. Prototype status is explicit in the window and generated initial text.
 
 ## 2026-10-23 — Original boot-to-title and native reveal
 
+Correction recorded below: this milestone's original claim that the SUN DOG
+lettering was part of the same bitmap was false. The measurements cover the
+ship-and-planet background only. The original account remains here as research
+history; the later correction governs the current interpretation.
+
 Traced the source-specific DiskII slot6 ROM through headers01/03/05, physical
 sectors0/2/4, the cold clear path and native disk loader. Captured entry4000
 contains all36 loaded pages and the actual0866 return word, establishing JSR0864
@@ -627,3 +632,49 @@ claiming original scanout synchronization or floppy timing. Nine headless actual
 bundle cycle snapshots and the final reference RGBA hash are checked separately.
 Desktop GUI presentation remains unverified under the recorded session restriction.
 Validation:114 Python tests and15 Swift XCTest cases pass.
+
+## 2026-10-23 — Correction: background reveal is not the complete title
+
+The user reported that the center-out background appeared but SUN DOG lettering
+was missing. Direct comparison confirms the report. The initial4000 bitmap and
+post-background pc-FEF2 page contain the ship and planet only. The later retained
+follow-20261023-115323 after120/720 pages add the orange SUN DOG logo. Earlier
+statements in the boot-to-title milestone that the lettering was part of the
+same bitmap were incorrect; that milestone reconstructed only the background.
+The original ordered-write and cycle comparisons remain valid for that narrower
+stage and do not establish a complete title-screen revival.
+
+The pc-FEF2 RGBA digest80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a
+is the background reference. The later logo-bearing capture has RGBA digest
+923de39473c6046f65036f70682777fa824574e9e38e61f04b4d6f865df9d400
+and HGR page digest7e4f8f739f8b9d40a411f462036f740e1b518ce547184d03c5f4c746d0cc317d.
+The changed bytes are confined to rows32..79 and byte columns0..29. The actual
+logo source and renderer are being investigated separately. No corrected logo
+implementation is claimed by this documentation change.
+
+## 2026-10-23 — Missing SUN DOG stage recovered and connected
+
+The conditional write-watch attempts at2201 timed out: that row is cleared to
+zero, so a value!=0 predicate was inappropriate. An unconditional write breakpoint
+from the retained logical-media first-BIOS-return snapshot stopped at native86DA,
+p-code PC7F33. Captured bytes bind this to segment26 native P9 and P16 source00A3.
+The fresh process was analysis-only, mounted a write-disabled private Utility copy
+and did not alter original media or add a runtime backend to the product.
+
+P13 calls P14 and P16. P14 loads12blocks from67..79 into4000..57FF via segment22P53.
+The6144bytes contain six letters, eight prerasterized frames each,128byte stride.
+Every sector matches the original WOZ decode, and all bytes match the new runtime
+capture. Native P9/P10/P11/P12 draw the border, save960background bytes, draw the
+moving letter frames and restore trailing columns. Fresh actual REA/Ghidra native
+P11 evidence is retained and identified in title-logo-evidence.json.
+
+The source-bound P13–P16 CFG and bounded original native primitives produce155
+visual steps and14256ordered HGR writes. Rewritten Swift matches every write and
+every intermediate page. The complete page equals the later original logo-bearing
+reference, HGR7e4f8f... and RGBA923de3..., rather than the earlier background80d586....
+The real bundle now separately checks background cycle snapshots and complete-title
+composition. Missing logo resources cause an error instead of silently accepting
+a background-only screen. Version0.5.1 plays both stages. Logo steps use a declared
+16ms host interval; the154original sound calls are recorded but sound and original
+sound-driven timing remain open. The user has observed the background on desktop;
+the corrected logo is verified through the actual bundle's headless output.

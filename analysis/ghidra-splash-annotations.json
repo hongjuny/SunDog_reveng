@@ -5,7 +5,7 @@
     {
       "address": 16384,
       "label": "SplashReveal",
-      "comment": "Original title reveal; copies bitmap source \u003d HGR destination + $2400. No p-code is involved. REA ev_51ca2df4d888134ce1cd657612ad428abb24719ec6ba9280940d9ed59c2a72ff.",
+      "comment": "Original spaceship/planet background reveal, without SUN DOG logo; copies bitmap source \u003d HGR destination + $2400. No p-code is involved. REA ev_51ca2df4d888134ce1cd657612ad428abb24719ec6ba9280940d9ed59c2a72ff.",
       "readback_verified": true
     },
     {

@@ -1,0 +1,349 @@
+{
+  "artifact": "analysis/local/native-assets/sundog-logo.bin",
+  "length": 6144,
+  "sha256": "c49ef7d757ac42f03b2d33ef8fd95c9c83faf02a0d29ac27ad9af1a756d9c2a2",
+  "identity": "Original separate SUN DOG animated logo sprites, added after the native spaceship/planet reveal",
+  "method": "Direct original loader-order extraction; P14 read arguments and verified original WOZ sector hashes",
+  "source_side": "utility",
+  "source_image": "extracted/utility.do",
+  "source_image_sha256": "6eb2925126f8ef39979a774ccf172c40958339cdc8d4c35a3d78dcac6944747e",
+  "loader": {
+    "archive": "SYSTEM.LIBRARY",
+    "slot": 5,
+    "segment_number": 26,
+    "procedure": 14,
+    "call_offset": 110,
+    "call_segment": 22,
+    "call_procedure": 53,
+    "buffer": 16384,
+    "requested_block": 64,
+    "unit": 4,
+    "block_bias": 3,
+    "actual_start_block": 67,
+    "end_block_exclusive": 79,
+    "block_count": 12,
+    "pages": 24,
+    "source_sha256": "188476754bcdeb89a5843ec91e2e626e2680c324ee6d2b3641ad292dc1d99b5d"
+  },
+  "layout": {
+    "glyph_count": 6,
+    "frame_count": 8,
+    "glyph_stride": 1024,
+    "frame_stride": 128,
+    "rows": 24,
+    "bytes_per_row": 4,
+    "displayed_frame_bytes": 96,
+    "padding_bytes_per_frame": 32,
+    "phase_policy": "Original native P11 ORs each copied byte with0x80"
+  },
+  "final_layout": {
+    "glyph_frame": 7,
+    "baseline_row_start": 44,
+    "target_byte_columns": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25
+    ],
+    "modified_rows": [
+      32,
+      79
+    ],
+    "modified_byte_columns": [
+      0,
+      29
+    ],
+    "page_sha256": "7e4f8f739f8b9d40a411f462036f740e1b518ce547184d03c5f4c746d0cc317d"
+  },
+  "woz_verification_sha256": "d5f157976fd39a3bdcfbab7cb660099dfa9e176297e7a9f89d47e2450a596d1d",
+  "sources": [
+    {
+      "side": "utility",
+      "track": 8,
+      "sector": 9,
+      "physical_sector": 12,
+      "offset": 35072,
+      "destination_offset": 0,
+      "load_address": 16384,
+      "length": 256,
+      "sha256": "92b0446e8360f941fee8ff5f6bc8422c43264b8b3c178bf2f2713d960255800c"
+    },
+    {
+      "side": "utility",
+      "track": 8,
+      "sector": 8,
+      "physical_sector": 14,
+      "offset": 34816,
+      "destination_offset": 256,
+      "load_address": 16640,
+      "length": 256,
+      "sha256": "e8d933cb8f1444de8c42aeb96dba9ee9faceb02ce6e0b0a83335151add2cd68d"
+    },
+    {
+      "side": "utility",
+      "track": 8,
+      "sector": 7,
+      "physical_sector": 1,
+      "offset": 34560,
+      "destination_offset": 512,
+      "load_address": 16896,
+      "length": 256,
+      "sha256": "f143ffb7762d155765d8700d7d4544a06a6a30089b896d98b54e26ee709ffad4"
+    },
+    {
+      "side": "utility",
+      "track": 8,
+      "sector": 6,
+      "physical_sector": 3,
+      "offset": 34304,
+      "destination_offset": 768,
+      "load_address": 17152,
+      "length": 256,
+      "sha256": "2c6642e52ff660143572eb72dd5e9a4cf8583d56f0df08b89abb2ad1207035ce"
+    },
+    {
+      "side": "utility",
+      "track": 8,
+      "sector": 5,
+      "physical_sector": 5,
+      "offset": 34048,
+      "destination_offset": 1024,
+      "load_address": 17408,
+      "length": 256,
+      "sha256": "777be726b0b87ea9fe0b0322b78d25db33c6f4a440aa5ab9b14703a7f52e6ca0"
+    },
+    {
+      "side": "utility",
+      "track": 8,
+      "sector": 4,
+      "physical_sector": 7,
+      "offset": 33792,
+      "destination_offset": 1280,
+      "load_address": 17664,
+      "length": 256,
+      "sha256": "a75086ab5d3f0c0c87e3e4ed65fe2a14fd1811743749b5c7ffa9ba9a2cf921be"
+    },
+    {
+      "side": "utility",
+      "track": 8,
+      "sector": 3,
+      "physical_sector": 9,
+      "offset": 33536,
+      "destination_offset": 1536,
+      "load_address": 17920,
+      "length": 256,
+      "sha256": "9ad64214a3e1a82e614302e75a78e0b79fddcb73fe657f724197303e9fe6bf6b"
+    },
+    {
+      "side": "utility",
+      "track": 8,
+      "sector": 2,
+      "physical_sector": 11,
+      "offset": 33280,
+      "destination_offset": 1792,
+      "load_address": 18176,
+      "length": 256,
+      "sha256": "0ac415fe52c2d6b5e2dad10c56c82b4ca3cd7c626d8608c4815b2180273bb509"
+    },
+    {
+      "side": "utility",
+      "track": 8,
+      "sector": 1,
+      "physical_sector": 13,
+      "offset": 33024,
+      "destination_offset": 2048,
+      "load_address": 18432,
+      "length": 256,
+      "sha256": "f8070ae95f6909735427699caeacca153c4da39b44186a669acba8c47f3e106f"
+    },
+    {
+      "side": "utility",
+      "track": 8,
+      "sector": 15,
+      "physical_sector": 15,
+      "offset": 36608,
+      "destination_offset": 2304,
+      "load_address": 18688,
+      "length": 256,
+      "sha256": "f84e057b0afc278219287241a773091d17a238f8d736665badf001501c8a4735"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 0,
+      "physical_sector": 0,
+      "offset": 36864,
+      "destination_offset": 2560,
+      "load_address": 18944,
+      "length": 256,
+      "sha256": "55aaa0a1bdfdc90b3d1fa080ad42dac2a9853ada201723997536b3406ecf7145"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 14,
+      "physical_sector": 2,
+      "offset": 40448,
+      "destination_offset": 2816,
+      "load_address": 19200,
+      "length": 256,
+      "sha256": "f95a3380931546e307023138a81feb1745a6fae6f6c644c130c873947b6123db"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 13,
+      "physical_sector": 4,
+      "offset": 40192,
+      "destination_offset": 3072,
+      "load_address": 19456,
+      "length": 256,
+      "sha256": "3c969ea1ea2786ef606474c96db3b2ad190e656d27cc263546e3d884c65a48d2"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 12,
+      "physical_sector": 6,
+      "offset": 39936,
+      "destination_offset": 3328,
+      "load_address": 19712,
+      "length": 256,
+      "sha256": "22a8a911398000ff8c709a70c41b14d7c7c36845b4a3280980032b09a920083f"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 11,
+      "physical_sector": 8,
+      "offset": 39680,
+      "destination_offset": 3584,
+      "load_address": 19968,
+      "length": 256,
+      "sha256": "4245f0b90b468630e59885f218b90b2fe311c0930218195b25b7fc7a6737a83f"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 10,
+      "physical_sector": 10,
+      "offset": 39424,
+      "destination_offset": 3840,
+      "load_address": 20224,
+      "length": 256,
+      "sha256": "1ae8ea6131e979b99946cb186a7c381a313c2bff5dade8a5617abb5aecbbbcbb"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 9,
+      "physical_sector": 12,
+      "offset": 39168,
+      "destination_offset": 4096,
+      "load_address": 20480,
+      "length": 256,
+      "sha256": "66875cbe39c6aab239827917ffc137725198bd8a1b916a2ded63b3bd4be978ed"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 8,
+      "physical_sector": 14,
+      "offset": 38912,
+      "destination_offset": 4352,
+      "load_address": 20736,
+      "length": 256,
+      "sha256": "45bc9ef6bbc1d5158fc1a72ad0bc0adffc43719406cc44503641736ce13d3f3c"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 7,
+      "physical_sector": 1,
+      "offset": 38656,
+      "destination_offset": 4608,
+      "load_address": 20992,
+      "length": 256,
+      "sha256": "cf5370ec3f40f48283e038b782b41a2b2d10eea0bf5fbef9bafeca5e29e8ef54"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 6,
+      "physical_sector": 3,
+      "offset": 38400,
+      "destination_offset": 4864,
+      "load_address": 21248,
+      "length": 256,
+      "sha256": "1dcac99d1045357bcef07f3abcdf0a20c5e09483b9cbc842513d310366f41896"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 5,
+      "physical_sector": 5,
+      "offset": 38144,
+      "destination_offset": 5120,
+      "load_address": 21504,
+      "length": 256,
+      "sha256": "1f191ac67b87928f72a4ec5532892879d89e0d35a08964e78eaaa711e1cfa8c1"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 4,
+      "physical_sector": 7,
+      "offset": 37888,
+      "destination_offset": 5376,
+      "load_address": 21760,
+      "length": 256,
+      "sha256": "0ec913b2c5cdb7808217586721e1eb101a70852b6d38fe4dcef43c2ea60e9a11"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 3,
+      "physical_sector": 9,
+      "offset": 37632,
+      "destination_offset": 5632,
+      "load_address": 22016,
+      "length": 256,
+      "sha256": "b4fa29eb2686f07cd2093ecb4a8a6b13afaa45144ed4b12329e2d5e258108c44"
+    },
+    {
+      "side": "utility",
+      "track": 9,
+      "sector": 2,
+      "physical_sector": 11,
+      "offset": 37376,
+      "destination_offset": 5888,
+      "load_address": 22272,
+      "length": 256,
+      "sha256": "67a1b248c6de8bcee71d11b2671e55958506cd7c32ad1e832286a1e94b31e0b6"
+    }
+  ],
+  "corroboration": [
+    {
+      "path": "analysis/local/reference/logo-write-20261023-151127/first-logo-write-main.bin",
+      "memory_sha256": "2bcb31e7e08c74aeb1bf1066f65f8f2e58185b697f1cf2e04ebb0d7756c040f7",
+      "loaded_address": 16384,
+      "loaded_length": 6144,
+      "resource_equal": true,
+      "role": "Runtime corroboration; never extraction source"
+    },
+    {
+      "path": "analysis/local/reference/follow-20261023-115323/after-720-frames-main.bin",
+      "memory_sha256": "e33c56f29b214e7f4117715726f84471c3731ef05e4ac18b767593674253017a",
+      "full_page_equal": true,
+      "page_sha256": "7e4f8f739f8b9d40a411f462036f740e1b518ce547184d03c5f4c746d0cc317d",
+      "role": "Full final-page corroboration; never bitmap source"
+    }
+  ],
+  "confidence": "High for original resource bytes, loader mapping, and independent final HGR equality",
+  "limitations": [
+    "This asset is separate from the earlier boot bitmap; its extraction alone does not implement the animation.",
+    "Physical display timing and input behavior remain outside asset identity."
+  ]
+}

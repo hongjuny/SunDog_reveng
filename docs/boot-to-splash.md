@@ -1,10 +1,16 @@
-# ROM boot to original title display
+# ROM boot to initial background reveal
 
-The title is drawn before the Pascal system starts. The complete selected path is
+The subsequently identified SUN DOG logo stage is
+[segment26 P13/P14/P16](title-logo.md), using a [separate sprite resource](title-logo-asset.md).
+Version0.5.1 connects both stages; this document covers the earlier boot background.
+
+The ship-and-planet background is revealed before the Pascal system starts.
+The selected path is
 slot6 Disk II ROM → `$0801` → ROM `$C65C` twice → `$0819` → `$08FF` → native `$4000`
-→ return `$0867`. The large SUN DOG lettering, spaceship and planet are already
-pixels in the bitmap; this first title does not call the later Pascal text or
-font engine.
+→ return `$0867`. The spaceship and planet are pixels in the bitmap. **The SUN DOG
+lettering is absent at this stage.** It appears in a later retained execution
+checkpoint, so this path does not yet explain the complete title screen. The
+background routine itself does not call Pascal or the font engine.
 
 `python3 tools/boot_splash_evidence.py` reproduces the source checks and writes
 `analysis/boot-splash-chain.json`. It consumes the original Utility image, mapped
@@ -42,7 +48,7 @@ the retained actual `$0801` and `$08FF` checkpoints.
 ## Cold-start screen preparation
 
 At `$0819`, the loader tests resident bytes around `$4000` against its existing
-error-message region. Matching can bypass both first load and title display,
+error-message region. Matching can bypass both first load and background display,
 entering `$0867` directly. A mismatch can also skip clearing when the decremented
 Y becomes zero. These branches must not be silently collapsed into unconditional
 cold boot.
@@ -72,15 +78,16 @@ picture bytes at destination+$2400 and writes HGR page1. Ordered reveals and
 loop timing are documented separately in the reveal analysis.
 
 After the return, `$0867` begins the Language Card operations and further loads.
-The post-title `$FEF2` checkpoint's entire HGR page equals the normalized original
+The post-background `$FEF2` checkpoint's entire HGR page equals the normalized original
 disk bitmap. Only later does startup reach the p-machine fetch loop `$D293`.
-There is no Pascal interpreter or character-renderer call in the title path.
+There is no Pascal interpreter or character-renderer call in this background path.
+This does not establish how the later SUN DOG logo is drawn.
 
 ## Observed time versus inferred time
 
 The retained logical-media run records `$0801` at cycle1,792,442, first `$08FF`
-at1,933,974, native title entry `$4000` at3,756,740 and post-title `$FEF2`
-at6,818,202. The interval4000→FEF2 includes title execution **and subsequent disk
+at1,933,974, native background entry `$4000` at3,756,740 and post-background `$FEF2`
+at6,818,202. The interval4000→FEF2 includes background reveal execution **and subsequent disk
 loads**, so it is not a measurement of the reveal duration. The run used
 re-encoded logical media, not original WOZ bit timing. These historical counters
 corroborate ordering but cannot establish physical disk or monitor timing.

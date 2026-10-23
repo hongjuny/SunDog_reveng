@@ -215,7 +215,7 @@
         "image_offset": 103,
         "byte_in_sector": 103
       },
-      "role": "Only after title: Language Card runtime loads"
+      "role": "After spaceship/planet background reveal: Language Card runtime loads; SUN DOG logo is later"
     }
   ],
   "first_load": {
@@ -465,8 +465,8 @@
   },
   "title_identity": {
     "asset_sha256": "623c8808ab8653a9d20bcbc26ce5cf4058a458764915a9b0c0071d9e35508c37",
-    "post_title_page_equal": true,
-    "logo": "SUN DOG lettering and spaceship/planet are already bitmap pixels; no Pascal text/font rendering is needed here"
+    "post_background_page_equal": true,
+    "logo": "This boot bitmap contains spaceship/planet only. SUN DOG lettering is added by a later stage; the 4000 routine does not draw it."
   },
   "checkpoints": [
     {

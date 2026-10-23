@@ -6,7 +6,7 @@
   "width": 280,
   "height": 192,
   "decoded_width": 560,
-  "identity": "Original initial SunDog title/splash image, before the Utility menu",
+  "identity": "Original boot spaceship/planet background, without the later SUN DOG logo",
   "method": "Direct verified disk-sector extraction in original loader order; HGR non-display-hole normalization",
   "source_side": "utility",
   "source_image": "extracted/utility.do",
@@ -407,7 +407,7 @@
     "visible_bytes_equal": 7680,
     "role": "Original post-animation boot RAM corroborates disk-derived asset; not used for construction"
   },
-  "confidence": "High for original bitmap bytes and final boot-screen identity",
+  "confidence": "High for original boot background bytes; the later SUN DOG logo is separate",
   "limitations": [
     "Initial native reveal animation and timing are not implemented by this static asset.",
     "RGB/NTSC color fidelity depends on the separately declared HGR decoder profile.",

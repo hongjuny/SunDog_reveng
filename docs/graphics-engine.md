@@ -1,7 +1,9 @@
 # Graphics evidence — initial native region
 
 The initial region's purpose is now established: native4000..41FF reveals the
-original title bitmap via helper4200, before Pascal starts. The full write order,
+original ship-and-planet background via helper4200, before Pascal starts. The
+SUN DOG lettering is absent from this bitmap and appears later; the previous
+complete-title interpretation was incorrect. The full write order,
 cycle accounting and Swift port are documented in [splash reveal](splash-reveal.md)
 and [native startup app](native-app.md). Earlier uncertainties below record the
 investigation's initial stage.

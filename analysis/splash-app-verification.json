@@ -49,9 +49,12 @@
   ],
   "all_matched": true,
   "final_rgba_sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
-  "final_reference": "Retained original pc-FEF2 Apple II Plus execution; bitmap itself comes directly from Utility disk",
-  "executable_sha256": "3106da1adfee9adfcfe4ec72040c5f1dda03a36c8989d83996ac41730521a120",
+  "final_reference": "Retained original pc-FEF2 spaceship/planet background only, without SUN DOG logo; bitmap comes directly from Utility disk",
+  "executable_sha256": "c60bd59434461649890db1cd12f9d61e6cf3f98e9de6ffa6bb50b8685c1a6123",
   "gui_verified": false,
+  "title_complete": true,
+  "title_page_sha256": "7e4f8f739f8b9d40a411f462036f740e1b518ce547184d03c5f4c746d0cc317d",
+  "title_rgba_sha256": "923de39473c6046f65036f70682777fa824574e9e38e61f04b4d6f865df9d400",
   "limitations": [
     "This verifies model, timing lookup and frame production; window presentation remains unverified in the restricted session.",
     "Nominal host clock and sampled presentation do not establish exact physical Apple II scanout."

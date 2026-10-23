@@ -125,7 +125,7 @@ def main():
         (0x842,'Select HGR page1/full graphics'),(0x861,'Read block201,36 pages to4000'),
         (0x864,'Native JSR4000; pushed return0866'),(0x4000,'Native splash reveal entry'),
         (0x4200,'HGR destination row-address helper'),(0x41ff,'RTS returns0867'),
-        (0x867,'Only after title: Language Card runtime loads'))]
+        (0x867,'After spaceship/planet background reveal: Language Card runtime loads; SUN DOG logo is later'))]
     observed=[]
     for pc,(row,_) in checkpoints.items():
         fields=dict(part.split('=',1) for part in row['cpu'].split() if '=' in part)
@@ -139,8 +139,8 @@ def main():
                         native_code_and_tables=[0x4000,0x4400],bitmap=[0x4400,0x6400],sectors=sectors),
         title_return=dict(jsr=0x864,saved_return=0x866,return_address=0x867,stack_offsets=[0x1ff,0x100],
                           observed_entry_stack_matches=True,complete_hgr_blank_at_entry=True),
-        title_identity=dict(asset_sha256=SHA(splash),post_title_page_equal=True,
-            logo='SUN DOG lettering and spaceship/planet are already bitmap pixels; no Pascal text/font rendering is needed here'),
+        title_identity=dict(asset_sha256=SHA(splash),post_background_page_equal=True,
+            logo='This boot bitmap contains spaceship/planet only. SUN DOG lettering is added by a later stage; the 4000 routine does not draw it.'),
         checkpoints=observed,
         confidence='High for this original Utility image and the retained ROM/model context',
         limitations=['Existing capture cycles include disk I/O and are not splash-only timing.',

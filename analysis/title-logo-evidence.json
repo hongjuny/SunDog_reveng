@@ -1,0 +1,43 @@
+{
+  "method": "Original P13/P14/P15/P16 decoded CFG with bounded original relocated native P9/P10/P11/P12; disk read bound to original asset and sound call recorded only",
+  "archive": "SYSTEM.LIBRARY",
+  "segment": 26,
+  "source_sha256": "188476754bcdeb89a5843ec91e2e626e2680c324ee6d2b3641ad292dc1d99b5d",
+  "runtime_base": 32398,
+  "observed_write_breakpoint": {
+    "path": "analysis/local/reference/logo-write-20261023-151127",
+    "pc": 34522,
+    "pcode_pc": 32563,
+    "source_offset": 2124,
+    "caller_procedure": 16,
+    "caller_call_offset": 163
+  },
+  "rea_evidence_id": "ev_ef594b9512e6e5a5acc3492c78e1360b88fb51c8e6c7fa3dde65c592da18ef62",
+  "native_calls": 268,
+  "native_instruction_addresses": 317,
+  "pcode_instruction_addresses": 272,
+  "cfg_operations": 15842,
+  "animation_steps": 155,
+  "ordered_hgr_writes": 14256,
+  "final_page_sha256": "7e4f8f739f8b9d40a411f462036f740e1b518ce547184d03c5f4c746d0cc317d",
+  "glyph_resource": {
+    "length": 6144,
+    "shape": [
+      6,
+      8,
+      128
+    ],
+    "visible_frame_shape": [
+      24,
+      4
+    ],
+    "source_relative_block": 64,
+    "unit_read_absolute_block": 67
+  },
+  "fixture_sha256": "8a42a7bc2d4e45ab3f538787647595a5e44f391f22824f93ea9f2f0d1ff495fe",
+  "sound_calls": 154,
+  "limitations": [
+    "Sound-generator delays and physical timing are not reproduced by this visual contract.",
+    "P14 disk-load transition timing and the rest of the startup menu are outside this comparison."
+  ]
+}

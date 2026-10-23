@@ -81,7 +81,7 @@ def main():
     output.write_bytes(asset)
     report = dict(artifact=str(output.relative_to(ROOT)), length=8192, sha256=SHA(asset),
                   raw_sha256=SHA(raw), width=280, height=192, decoded_width=560,
-                  identity='Original initial SunDog title/splash image, before the Utility menu',
+                  identity='Original boot spaceship/planet background, without the later SUN DOG logo',
                   method='Direct verified disk-sector extraction in original loader order; HGR non-display-hole normalization',
                   source_side='utility', source_image=str(disk_path.relative_to(ROOT)), source_image_sha256=SHA(disk),
                   loader=dict(entry=0x4000, region_start_block=201, region_pages=36,
@@ -95,7 +95,7 @@ def main():
                   padding_policy='Zero, matching cleared boot HGR RAM; no displayed pixel byte is changed',
                   woz_verification_sha256=SHA(verification_path.read_bytes()), sources=sources,
                   corroboration=corroboration,
-                  confidence='High for original bitmap bytes and final boot-screen identity',
+                  confidence='High for original boot background bytes; the later SUN DOG logo is separate',
                   limitations=['Initial native reveal animation and timing are not implemented by this static asset.',
                                'RGB/NTSC color fidelity depends on the separately declared HGR decoder profile.',
                                'Displaying this splash does not implement the game or Utility menu.'])
