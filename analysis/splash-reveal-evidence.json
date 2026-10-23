@@ -1,0 +1,299 @@
+{
+  "method": "Bounded original 4000..420F native execution versus independent geometric write-order reconstruction; no ROM/MMIO/runtime or app emulator",
+  "source_side": "utility",
+  "region": "initial-4000",
+  "region_sha256": "1b9dfd8bbaa973ea73bc650e1c9161f3991d00d6a071bc2403d59582fdc6f29d",
+  "routine_entry": 16384,
+  "routine_return": 16895,
+  "row_helper": 16896,
+  "entry_source": {
+    "side": "utility",
+    "track": 25,
+    "sector": 13,
+    "physical_sector": 4,
+    "offset": 105728,
+    "byte_in_sector": 0,
+    "image_offset": 105728
+  },
+  "return_source": {
+    "side": "utility",
+    "track": 25,
+    "sector": 12,
+    "physical_sector": 6,
+    "offset": 105472,
+    "byte_in_sector": 255,
+    "image_offset": 105727
+  },
+  "helper_source": {
+    "side": "utility",
+    "track": 25,
+    "sector": 11,
+    "physical_sector": 8,
+    "offset": 105216,
+    "byte_in_sector": 0,
+    "image_offset": 105216
+  },
+  "rea_evidence_ids": [
+    "ev_51ca2df4d888134ce1cd657612ad428abb24719ec6ba9280940d9ed59c2a72ff",
+    "ev_d1836c939bcb0c2c50178c38f60aac98adaf1db2dda742bbcde0a90b2e41f851"
+  ],
+  "native_instruction_count": 270,
+  "native_steps": 143457,
+  "ordered_write_count": 8041,
+  "unique_visible_bytes": 7680,
+  "final_page_sha256": "623c8808ab8653a9d20bcbc26ce5cf4058a458764915a9b0c0071d9e35508c37",
+  "ordered_writes_match": true,
+  "iteration_boundaries_match": true,
+  "total_cycles": 515593,
+  "cycle_origin": "First cycle of LDA at4000; caller JSR excluded; final RTS included. HGR STA commit is recorded at its final instruction cycle.",
+  "timing_reference": {
+    "method": "Base NMOS timing facts independently checked against installed CiderPress2 Cpu6502/OpDef; relevant index-page and branch penalties applied per original execution",
+    "cpu_definition_sha256": "1a076b3b74011792084e1d37d8946cac7be006c6c1171826a1a561baeff1c636",
+    "opcode_definition_sha256": "b911671269e0965069e6c91f6fd4985489cdcfdb26f43701c994277767022cd0",
+    "base_cycles": {
+      "18": 2,
+      "20": 6,
+      "38": 2,
+      "4C": 3,
+      "60": 6,
+      "65": 3,
+      "69": 2,
+      "81": 6,
+      "85": 3,
+      "88": 2,
+      "90": 2,
+      "91": 6,
+      "A0": 2,
+      "A1": 6,
+      "A2": 2,
+      "A4": 3,
+      "A5": 3,
+      "A6": 3,
+      "A9": 2,
+      "B0": 2,
+      "B1": 5,
+      "BD": 4,
+      "C0": 2,
+      "C5": 3,
+      "C6": 5,
+      "C8": 2,
+      "C9": 2,
+      "D0": 2,
+      "D6": 6,
+      "E0": 2,
+      "E5": 3,
+      "E6": 5,
+      "E8": 2,
+      "E9": 2,
+      "F0": 2,
+      "F6": 6
+    }
+  },
+  "milestones": [
+    {
+      "stage": "seed",
+      "iteration": -1,
+      "write_count": 4,
+      "cycles": 211
+    },
+    {
+      "stage": "ring",
+      "iteration": 0,
+      "write_count": 67,
+      "cycles": 4477,
+      "left": 18,
+      "right": 21,
+      "top": 90,
+      "bottom": 101
+    },
+    {
+      "stage": "ring",
+      "iteration": 1,
+      "write_count": 170,
+      "cycles": 11295,
+      "left": 17,
+      "right": 22,
+      "top": 85,
+      "bottom": 106
+    },
+    {
+      "stage": "ring",
+      "iteration": 2,
+      "write_count": 313,
+      "cycles": 20655,
+      "left": 16,
+      "right": 23,
+      "top": 80,
+      "bottom": 111
+    },
+    {
+      "stage": "ring",
+      "iteration": 3,
+      "write_count": 496,
+      "cycles": 32557,
+      "left": 15,
+      "right": 24,
+      "top": 75,
+      "bottom": 116
+    },
+    {
+      "stage": "ring",
+      "iteration": 4,
+      "write_count": 719,
+      "cycles": 47001,
+      "left": 14,
+      "right": 25,
+      "top": 70,
+      "bottom": 121
+    },
+    {
+      "stage": "ring",
+      "iteration": 5,
+      "write_count": 982,
+      "cycles": 63987,
+      "left": 13,
+      "right": 26,
+      "top": 65,
+      "bottom": 126
+    },
+    {
+      "stage": "ring",
+      "iteration": 6,
+      "write_count": 1285,
+      "cycles": 83515,
+      "left": 12,
+      "right": 27,
+      "top": 60,
+      "bottom": 131
+    },
+    {
+      "stage": "ring",
+      "iteration": 7,
+      "write_count": 1628,
+      "cycles": 105585,
+      "left": 11,
+      "right": 28,
+      "top": 55,
+      "bottom": 136
+    },
+    {
+      "stage": "ring",
+      "iteration": 8,
+      "write_count": 2011,
+      "cycles": 130197,
+      "left": 10,
+      "right": 29,
+      "top": 50,
+      "bottom": 141
+    },
+    {
+      "stage": "ring",
+      "iteration": 9,
+      "write_count": 2434,
+      "cycles": 157343,
+      "left": 9,
+      "right": 30,
+      "top": 45,
+      "bottom": 146
+    },
+    {
+      "stage": "ring",
+      "iteration": 10,
+      "write_count": 2897,
+      "cycles": 187019,
+      "left": 8,
+      "right": 31,
+      "top": 40,
+      "bottom": 151
+    },
+    {
+      "stage": "ring",
+      "iteration": 11,
+      "write_count": 3400,
+      "cycles": 219227,
+      "left": 7,
+      "right": 32,
+      "top": 35,
+      "bottom": 156
+    },
+    {
+      "stage": "ring",
+      "iteration": 12,
+      "write_count": 3943,
+      "cycles": 253967,
+      "left": 6,
+      "right": 33,
+      "top": 30,
+      "bottom": 161
+    },
+    {
+      "stage": "ring",
+      "iteration": 13,
+      "write_count": 4526,
+      "cycles": 291239,
+      "left": 5,
+      "right": 34,
+      "top": 25,
+      "bottom": 166
+    },
+    {
+      "stage": "ring",
+      "iteration": 14,
+      "write_count": 5149,
+      "cycles": 331043,
+      "left": 4,
+      "right": 35,
+      "top": 20,
+      "bottom": 171
+    },
+    {
+      "stage": "ring",
+      "iteration": 15,
+      "write_count": 5812,
+      "cycles": 373379,
+      "left": 3,
+      "right": 36,
+      "top": 15,
+      "bottom": 176
+    },
+    {
+      "stage": "ring",
+      "iteration": 16,
+      "write_count": 6515,
+      "cycles": 418247,
+      "left": 2,
+      "right": 37,
+      "top": 10,
+      "bottom": 181
+    },
+    {
+      "stage": "ring",
+      "iteration": 17,
+      "write_count": 7258,
+      "cycles": 465647,
+      "left": 1,
+      "right": 38,
+      "top": 5,
+      "bottom": 186
+    },
+    {
+      "stage": "ring",
+      "iteration": 18,
+      "write_count": 8041,
+      "cycles": 515579,
+      "left": 0,
+      "right": 39,
+      "top": 0,
+      "bottom": 191
+    }
+  ],
+  "fixture": "analysis/local/splash-reveal/writes.json",
+  "fixture_sha256": "242e9f5e34e26882d859ce4a0e274808f2ff7acccb46003dc941b672943a108b",
+  "confidence": "high for byte order and instruction-cycle count under declared binary-mode NMOS execution",
+  "limitations": [
+    "No analog RGB/NTSC fidelity claim.",
+    "Cycle count assumes binary-mode NMOS6502, no interrupts or memory wait states.",
+    "Wall-clock presentation depends on selected machine clock and macOS scheduling; native clock/refresh synchronization is not observed here.",
+    "Disk read duration, boot clear/resident branches and later game initialization are outside this isolated routine."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "method": "Actual macOS bundle headless startup model versus original native HGR write fixture",
+  "snapshots": [
+    {
+      "cycle": 0,
+      "writes": 0,
+      "page_sha256": "9f1dcbc35c350d6027f98be0f5c8b43b42ca52b7604459c0c42be3aa88913d47"
+    },
+    {
+      "cycle": 104,
+      "writes": 0,
+      "page_sha256": "9f1dcbc35c350d6027f98be0f5c8b43b42ca52b7604459c0c42be3aa88913d47"
+    },
+    {
+      "cycle": 105,
+      "writes": 1,
+      "page_sha256": "64c0e13de3e05d99dae49ff441f49c12189f22419b8c19d1338f24aace94cf02"
+    },
+    {
+      "cycle": 10000,
+      "writes": 156,
+      "page_sha256": "aa67af67e64b6945cc88af9ac55a25d412e4af402ed36373c2ce93cdd36fec2b"
+    },
+    {
+      "cycle": 50000,
+      "writes": 791,
+      "page_sha256": "21d1b2e5c9459bd1356a196895f41e20ce05ce4a23fc8b3c0c95802a5b9e20d5"
+    },
+    {
+      "cycle": 125000,
+      "writes": 1955,
+      "page_sha256": "070e67d4738e6a78112303f086bdf8f9a58aa885af96810ed1d5b33acace9a54"
+    },
+    {
+      "cycle": 250000,
+      "writes": 3900,
+      "page_sha256": "9d85b5ee0f1405aaa4866e2b02d745bf8ef312705137bf6188b70464ae0c7882"
+    },
+    {
+      "cycle": 400000,
+      "writes": 6276,
+      "page_sha256": "fd716efbcc89f6832e7e99941a509c4b2dae7cc5df78bfe61ac407dae6f3b11c"
+    },
+    {
+      "cycle": 515593,
+      "writes": 8041,
+      "page_sha256": "623c8808ab8653a9d20bcbc26ce5cf4058a458764915a9b0c0071d9e35508c37"
+    }
+  ],
+  "all_matched": true,
+  "final_rgba_sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a",
+  "final_reference": "Retained original pc-FEF2 Apple II Plus execution; bitmap itself comes directly from Utility disk",
+  "executable_sha256": "3106da1adfee9adfcfe4ec72040c5f1dda03a36c8989d83996ac41730521a120",
+  "gui_verified": false,
+  "limitations": [
+    "This verifies model, timing lookup and frame production; window presentation remains unverified in the restricted session.",
+    "Nominal host clock and sampled presentation do not establish exact physical Apple II scanout."
+  ]
+}

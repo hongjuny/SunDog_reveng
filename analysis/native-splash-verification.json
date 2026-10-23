@@ -1,0 +1,16 @@
+{
+  "ordered_writes": 8041,
+  "partial_frames": 9,
+  "all_matched": true,
+  "method": "Swift native algorithm versus complete ordered original $4000 HGR writes; bounded analysis-only replay",
+  "evidence": "analysis/splash-reveal-evidence.json",
+  "source_files": {
+    "native/SunDogLogic/SplashReveal.swift": "022f1c472c7715d4b151812069b732492aa3207bb60188cb96680cb1dd3e1ba1",
+    "tests/native/VerifySplashReveal.swift": "62f31ef8089cdc84c988027a7a7f0be3daa7effbf0e433e4e28902384a2e61c2"
+  },
+  "fixture_sha256": "242e9f5e34e26882d859ce4a0e274808f2ff7acccb46003dc941b672943a108b",
+  "limitations": [
+    "Nominal 1.023MHz host clock is a declared approximation, not a measured original machine clock.",
+    "Host display samples the original write schedule; no original scanout/raster synchronization is claimed."
+  ]
+}

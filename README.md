@@ -4,9 +4,9 @@ The product goal is a macOS app faithful to the Apple II game's graphics and
 behavior. See the [macOS port roadmap](docs/macos-port-roadmap.md) for staged
 implementation, fidelity criteria and release gates.
 
-The first [native app implementation](docs/native-app.md) now renders the original
-font with reconstructed Swift glyph operations and integrates the native input
-filter. This is a rendering/input preview; gameplay is not implemented. Build
+The [native app implementation](docs/native-app.md) now displays the original
+disk title with its reconstructed center-out reveal. The complete boot-to-title
+path and ordered native writes are verified. Gameplay is not implemented. Build
 locally with `python3 tools/build_native.py --tests --include-local-assets`.
 
 Evidence-based reverse engineering of the supplied Utility and Play WOZ images.

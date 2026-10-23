@@ -1,0 +1,66 @@
+{
+  "program": "initial-4000.bin",
+  "source_sha256": "1b9dfd8bbaa973ea73bc650e1c9161f3991d00d6a071bc2403d59582fdc6f29d",
+  "annotations": [
+    {
+      "address": 16384,
+      "label": "SplashReveal",
+      "comment": "Original title reveal; copies bitmap source \u003d HGR destination + $2400. No p-code is involved. REA ev_51ca2df4d888134ce1cd657612ad428abb24719ec6ba9280940d9ed59c2a72ff.",
+      "readback_verified": true
+    },
+    {
+      "address": 16404,
+      "label": "SplashCenterSeed",
+      "comment": "Four center writes: rows95/96 and byte columns19/20.",
+      "readback_verified": true
+    },
+    {
+      "address": 16478,
+      "label": "SplashExpandIteration",
+      "comment": "19 iterations. Initial L18 R21 T90 B101; each iteration L-- R++ T-\u003d5 B+\u003d5.",
+      "readback_verified": true
+    },
+    {
+      "address": 16611,
+      "label": "SplashTopFiveRows",
+      "comment": "Increasing columns; five ascending rows per column. Source pointers are corresponding HGR pointers + $2400.",
+      "readback_verified": true
+    },
+    {
+      "address": 16658,
+      "label": "SplashRightEdge",
+      "comment": "Right byte column; ascending rows top through bottom, inclusive.",
+      "readback_verified": true
+    },
+    {
+      "address": 16805,
+      "label": "SplashBottomFiveRows",
+      "comment": "Decreasing columns; five descending rows per column.",
+      "readback_verified": true
+    },
+    {
+      "address": 16852,
+      "label": "SplashLeftEdge",
+      "comment": "Left byte column; descending rows bottom through top+1. Top row is excluded here.",
+      "readback_verified": true
+    },
+    {
+      "address": 16866,
+      "label": "SplashExpandBounds",
+      "comment": "Expand bounds by one byte horizontally and five rows vertically; count19 ends at columns0/39, rows0/191.",
+      "readback_verified": true
+    },
+    {
+      "address": 16895,
+      "label": "SplashReturn",
+      "comment": "RTS returns to bootstrap0867 for the observed JSR0864 path; runtime/Language Card loads follow the picture.",
+      "readback_verified": true
+    },
+    {
+      "address": 16896,
+      "label": "SplashHGRAddress",
+      "comment": "A\u003dbyte column, X\u003drow. Returns HGR page1 address in zp18/19. Verified row tables and all192 rows. REA ev_d1836c939bcb0c2c50178c38f60aac98adaf1db2dda742bbcde0a90b2e41f851.",
+      "readback_verified": true
+    }
+  ]
+}

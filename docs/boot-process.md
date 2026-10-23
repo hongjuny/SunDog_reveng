@@ -1,5 +1,9 @@
 # Boot-chain reconstruction — milestone 1
 
+The later [ROM-to-title investigation](boot-to-splash.md) binds this path to the
+actual retained slot6 ROM and original startup RAM, checks the header reentry,
+clear loop and JSR/RTS stack, and links the complete [title reveal](splash-reveal.md).
+
 All game bytes below originate on Utility. Confidence is high for decoded static
 control flow and source mapping; actual hardware execution remains unobserved.
 `analysis/boot-mapping.json` and `analysis/boot-regions.json` give exact disk offsets,

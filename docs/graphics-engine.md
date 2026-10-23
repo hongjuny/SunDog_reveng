@@ -1,5 +1,11 @@
 # Graphics evidence — initial native region
 
+The initial region's purpose is now established: native4000..41FF reveals the
+original title bitmap via helper4200, before Pascal starts. The full write order,
+cycle accounting and Swift port are documented in [splash reveal](splash-reveal.md)
+and [native startup app](native-app.md). Earlier uncertainties below record the
+investigation's initial stage.
+
 The bootstrap reads `$C057`, `$C054`, `$C052`, `$C050` at `$0842–$084B`, selecting
 HGR page 1 and full-screen graphics. Its conditional clearing loop writes
 `$2000–$3FFF`. Source is Utility T0 DOS sector 0, corresponding image offsets

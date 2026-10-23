@@ -1,0 +1,516 @@
+{
+  "method": "Original disk and retained-ROM byte checks, bounded boot-fragment replay, and hash-bound existing execution checkpoints",
+  "side": "utility",
+  "boot_sha256": "068b86236cbe9512a8cf53ab49a0db20887e1b3d150f9f5e609e811bb10a473f",
+  "rom": {
+    "path": "analysis/local/reference/20261023-115822/slot6-rom.bin",
+    "sha256": "de1e3e035878bab43d0af8fe38f5839c527e9548647036598ee6fe7ec74d2a7d",
+    "source": "Existing local a2m AppleIIPlus slot6 ROM capture; not proof of every historical physical controller ROM"
+  },
+  "rom_entry": {
+    "initial_physical_sector": 0,
+    "initial_destination": 2048,
+    "entry": 2049,
+    "header_role": "Post-read sector-count threshold, not instruction"
+  },
+  "header_and_sector_sequence": [
+    {
+      "physical_sector": 0,
+      "threshold_before": 1,
+      "destination": 2048,
+      "rom_post_read": {
+        "next_pc": 2049,
+        "sector": 1,
+        "destination_page": 9,
+        "slot_x": 96
+      },
+      "bootstrap_reentry": {
+        "next_pc": 50780,
+        "header": 3,
+        "sector": 2
+      }
+    },
+    {
+      "physical_sector": 2,
+      "threshold_before": 3,
+      "destination": 2304,
+      "rom_post_read": {
+        "next_pc": 2049,
+        "sector": 3,
+        "destination_page": 10,
+        "slot_x": 96
+      },
+      "bootstrap_reentry": {
+        "next_pc": 50780,
+        "header": 5,
+        "sector": 4
+      }
+    },
+    {
+      "physical_sector": 4,
+      "threshold_before": 5,
+      "destination": 2560,
+      "rom_post_read": {
+        "next_pc": 2049,
+        "sector": 5,
+        "destination_page": 11,
+        "slot_x": 96
+      },
+      "bootstrap_reentry": {
+        "next_pc": 2073,
+        "header": 5,
+        "sector": 5
+      }
+    }
+  ],
+  "cold_start": {
+    "next_pc": 2114,
+    "entered_clear_loop": true,
+    "hgr_write_count": 8192,
+    "hgr_all_zero": true,
+    "contiguous_hgr_writes": true,
+    "signature_path_addresses": [
+      2073,
+      2076,
+      2079,
+      2082,
+      2084,
+      2085,
+      2089,
+      2090,
+      2092,
+      2094,
+      2096,
+      2098,
+      2099,
+      2101,
+      2103,
+      2104,
+      2106,
+      2107,
+      2109,
+      2111,
+      2112
+    ]
+  },
+  "chain": [
+    {
+      "address": 2049,
+      "source": {
+        "side": "utility",
+        "track": 0,
+        "dos_sector": 0,
+        "physical_sector": 0,
+        "image_offset": 1,
+        "byte_in_sector": 1
+      },
+      "role": "Slot6 check and ROM-assisted sector-count expansion"
+    },
+    {
+      "address": 2073,
+      "source": {
+        "side": "utility",
+        "track": 0,
+        "dos_sector": 0,
+        "physical_sector": 0,
+        "image_offset": 25,
+        "byte_in_sector": 25
+      },
+      "role": "Resident-signature decision"
+    },
+    {
+      "address": 2094,
+      "source": {
+        "side": "utility",
+        "track": 0,
+        "dos_sector": 0,
+        "physical_sector": 0,
+        "image_offset": 46,
+        "byte_in_sector": 46
+      },
+      "role": "Conditional full HGR clear"
+    },
+    {
+      "address": 2114,
+      "source": {
+        "side": "utility",
+        "track": 0,
+        "dos_sector": 0,
+        "physical_sector": 0,
+        "image_offset": 66,
+        "byte_in_sector": 66
+      },
+      "role": "Select HGR page1/full graphics"
+    },
+    {
+      "address": 2145,
+      "source": {
+        "side": "utility",
+        "track": 0,
+        "dos_sector": 0,
+        "physical_sector": 0,
+        "image_offset": 97,
+        "byte_in_sector": 97
+      },
+      "role": "Read block201,36 pages to4000"
+    },
+    {
+      "address": 2148,
+      "source": {
+        "side": "utility",
+        "track": 0,
+        "dos_sector": 0,
+        "physical_sector": 0,
+        "image_offset": 100,
+        "byte_in_sector": 100
+      },
+      "role": "Native JSR4000; pushed return0866"
+    },
+    {
+      "address": 16384,
+      "source": {
+        "side": "utility",
+        "track": 25,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 105728,
+        "image_offset": 105728,
+        "byte_in_sector": 0
+      },
+      "role": "Native splash reveal entry"
+    },
+    {
+      "address": 16896,
+      "source": {
+        "side": "utility",
+        "track": 25,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 105216,
+        "image_offset": 105216,
+        "byte_in_sector": 0
+      },
+      "role": "HGR destination row-address helper"
+    },
+    {
+      "address": 16895,
+      "source": {
+        "side": "utility",
+        "track": 25,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 105472,
+        "image_offset": 105727,
+        "byte_in_sector": 255
+      },
+      "role": "RTS returns0867"
+    },
+    {
+      "address": 2151,
+      "source": {
+        "side": "utility",
+        "track": 0,
+        "dos_sector": 0,
+        "physical_sector": 0,
+        "image_offset": 103,
+        "byte_in_sector": 103
+      },
+      "role": "Only after title: Language Card runtime loads"
+    }
+  ],
+  "first_load": {
+    "block": 201,
+    "pages": 36,
+    "base": 16384,
+    "end_exclusive": 25600,
+    "sha256": "1b9dfd8bbaa973ea73bc650e1c9161f3991d00d6a071bc2403d59582fdc6f29d",
+    "captured_bytes_equal": true,
+    "native_code_and_tables": [
+      16384,
+      17408
+    ],
+    "bitmap": [
+      17408,
+      25600
+    ],
+    "sectors": [
+      {
+        "track": 25,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 105728
+      },
+      {
+        "track": 25,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 105472
+      },
+      {
+        "track": 25,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 105216
+      },
+      {
+        "track": 25,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 104960
+      },
+      {
+        "track": 25,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 104704
+      },
+      {
+        "track": 25,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 104448
+      },
+      {
+        "track": 25,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 104192
+      },
+      {
+        "track": 25,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 103936
+      },
+      {
+        "track": 25,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 103680
+      },
+      {
+        "track": 25,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 103424
+      },
+      {
+        "track": 25,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 103168
+      },
+      {
+        "track": 25,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 102912
+      },
+      {
+        "track": 25,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 102656
+      },
+      {
+        "track": 25,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 106240
+      },
+      {
+        "track": 26,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 106496
+      },
+      {
+        "track": 26,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 110080
+      },
+      {
+        "track": 26,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 109824
+      },
+      {
+        "track": 26,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 109568
+      },
+      {
+        "track": 26,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 109312
+      },
+      {
+        "track": 26,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 109056
+      },
+      {
+        "track": 26,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 108800
+      },
+      {
+        "track": 26,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 108544
+      },
+      {
+        "track": 26,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 108288
+      },
+      {
+        "track": 26,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 108032
+      },
+      {
+        "track": 26,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 107776
+      },
+      {
+        "track": 26,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 107520
+      },
+      {
+        "track": 26,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 107264
+      },
+      {
+        "track": 26,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 107008
+      },
+      {
+        "track": 26,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 106752
+      },
+      {
+        "track": 26,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 110336
+      },
+      {
+        "track": 27,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 110592
+      },
+      {
+        "track": 27,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 114176
+      },
+      {
+        "track": 27,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 113920
+      },
+      {
+        "track": 27,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 113664
+      },
+      {
+        "track": 27,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 113408
+      },
+      {
+        "track": 27,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 113152
+      }
+    ]
+  },
+  "title_return": {
+    "jsr": 2148,
+    "saved_return": 2150,
+    "return_address": 2151,
+    "stack_offsets": [
+      511,
+      256
+    ],
+    "observed_entry_stack_matches": true,
+    "complete_hgr_blank_at_entry": true
+  },
+  "title_identity": {
+    "asset_sha256": "623c8808ab8653a9d20bcbc26ce5cf4058a458764915a9b0c0071d9e35508c37",
+    "post_title_page_equal": true,
+    "logo": "SUN DOG lettering and spaceship/planet are already bitmap pixels; no Pascal text/font rendering is needed here"
+  },
+  "checkpoints": [
+    {
+      "address": 2049,
+      "cycles": 1792442,
+      "cpu": "pc=0801 a=01 x=60 y=00 sp=00 p=25 cycles=1792442",
+      "memory_sha256": "80ce12b6c15ec54e6a6eab59cf8c9ad6c47337c64b6c17d3c6ad4a54acffeca6",
+      "frame_sha256": "6a8766b22602341762ebfe4ca0e5b5e8b85a1cf48afde99a2a554b09ca885153"
+    },
+    {
+      "address": 2303,
+      "cycles": 1933974,
+      "cpu": "pc=08FF a=00 x=00 y=00 sp=FE p=26 cycles=1933974",
+      "memory_sha256": "98969d5cf7a24e742cbb3a51461e7f8d6accf109b8dc63ff8b2e43947df9db41",
+      "frame_sha256": "22ce12b47159e77ff93669dd0939cf821e865614b543da2e17a2dfac3dbe701c"
+    },
+    {
+      "address": 16384,
+      "cycles": 3756740,
+      "cpu": "pc=4000 a=0C x=00 y=06 sp=FE p=27 cycles=3756740",
+      "memory_sha256": "df5796f2aa03f27ff90ad29a61d013f8fda800866d2d73d2369454a43d7c6346",
+      "frame_sha256": "22ce12b47159e77ff93669dd0939cf821e865614b543da2e17a2dfac3dbe701c"
+    },
+    {
+      "address": 65266,
+      "cycles": 6818202,
+      "cpu": "pc=FEF2 a=9F x=00 y=06 sp=00 p=A5 cycles=6818202",
+      "memory_sha256": "97ae8dfe20b56e376686590736cb5a006ea9fb7f460f6ba35203db84ee413ee8",
+      "frame_sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a"
+    },
+    {
+      "address": 53907,
+      "cycles": 10257217,
+      "cpu": "pc=D293 a=00 x=6C y=31 sp=FF p=27 cycles=10257217",
+      "memory_sha256": "53df0b530340d5f0304d5aa382521c101ff10c59e0ac57f21902fa269535712c",
+      "frame_sha256": "80d5864f3e444bc5dd96f8839e5a02e4b04e25e6246598ffdfc092a514d0ff4a"
+    }
+  ],
+  "confidence": "High for this original Utility image and the retained ROM/model context",
+  "limitations": [
+    "Existing capture cycles include disk I/O and are not splash-only timing.",
+    "No new emulator or hardware boot was run for this report.",
+    "Resident-signature match can bypass first-load/title path; only retained cold-start context was replayed.",
+    "Reveal animation timing and ordered stores are analyzed separately.",
+    "ROM analog behavior, disk timing and display NTSC characteristics are outside fragment checks."
+  ]
+}

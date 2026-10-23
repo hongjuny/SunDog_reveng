@@ -1,101 +1,66 @@
-# macOS native port — first implementation
+# Native macOS startup screen
 
-`Build/SunDog.app` version 0.3.1 is a native rendering/input preview, not a playable
-SunDog game. It draws original font data with reconstructed Swift glyph operations
-and routes macOS button samples through the original rising-edge filter rules.
-It does not load reference screenshots as its screen. The older capture viewer
-is now the separate `SunDogReference` executable.
-
-Build and run locally:
+`Build/SunDog.app` version0.5 displays the original Apple II title and reconstructs
+its center-out reveal. The app contains Swift image decoding and a rewritten
+reveal algorithm, not an Apple II CPU, p-machine or disk emulator. Gameplay and
+post-title transitions are not implemented.
 
 ```sh
 python3 tools/build_native.py --tests --include-local-assets
-open Build/SunDog.app
+open -n Build/SunDog.app
 ```
 
-The optional asset flag verifies and copies the 1,024-byte original font from the
-user's media into this local bundle. Both the font and bundle remain ignored by
-Git; do not distribute this asset-containing build. Without the flag, use Open
-Original Font to select the exported file or pass `--font PATH` to the executable.
-Rebuilding without the flag removes a previously bundled font.
+The local-assets flag verifies the user's original Utility sectors, reconstructs
+an8,192-byte bitmap, verifies the original native reveal against Swift, and bundles
+the bitmap and cycle metadata. Original artwork and the resulting app remain
+ignored and must not be included in the public repository. A build without the
+flag removes bundled original assets and shows an explicit missing-resource error.
+No font selection or capture directory is required for the title.
 
-Edit the 7-bit text to exercise the original text placement and glyph compositor.
-P48 accepts up to 80 bytes. Backslash is its conditional newline marker; repeated
-newlines at the left margin are ignored. Ordinary leading spaces are omitted;
-vertical bar forces a space glyph. ASCII LF is an ordinary glyph, not a newline.
-The selected safe word length is 20 bytes, because longer words can alias the
-original procedure's later scalar locals. Bottom-window handling is not ported;
-reaching it reports a boundary instead of silently truncating text.
-Click the display for focus.
-Space/primary click map to preview channel 0; Return/secondary click map to channel
-1. Counters record rising edges, including interleaved presses. These host mappings
-and per-event sampling are preview policy, not recovered Apple II device mappings
-or timing. Focus loss releases both samples.
+The picture is the actual disk bitmap at original load addresses4400..63FF. The
+SUN DOG lettering is part of that picture, not newly typeset text. The background
+starts black; four center bytes appear first, then19 rectangular expansions fill
+all7,680 visible HGR bytes. Repeated edge/corner writes are preserved in the
+8,041-write sequence. The final frame's RGBA SHA matches the retained original
+Apple II Plus reference exactly under the declared HGR decoder profile.
 
-The app combines:
+[Boot to title](boot-to-splash.md) documents the ROM/loader chain. The original
+routine and write/cycle proof are in [reveal reconstruction](splash-reveal.md).
+Ghidra annotations persist in project SunDogNativeStages and are reproducible with
+`python3 tools/run_splash_analysis.py`. Actual REA/Ghidra evidence is retained
+privately and identified in the public evidence reports.
 
-- [Original glyph compositor](native-glyph.md): eight bottom-first rows, adjacent
-  HGR bytes, masks, XOR, phase-bit preservation and six-pixel advance.
-- [Verified font prefix](native-font-asset.md): actual relocated pointer and four
-  matching original sectors, 128 character slots.
-- [Original input filter](native-input.md): pending press OR, edge/history and
-  level behavior; no copied interpreter or original game execution backend.
-- `WindowTextLayout` and `NativeTextPage`: reconstructed P48 tokenization and
-  word wrapping, P47 pre/post character wrap, and P45 eight-row newline. The
-  preview's selected window coordinates remain host policy. P48's P11(3) selects
-  mask003F and drawing mode3. P12 stores the direct coordinates when its line
-  mode is disabled; this verified mode connects logical layout to native P9.
-- Existing HGR color profile and CoreGraphics image display. The color profile remains a
-  declared approximation, not a measured NTSC display match.
+The original routine takes515,593 modeled NMOS cycles, including its final RTS
+but excluding the caller's JSR. The app uses1.023MHz as an explicit nominal clock
+and samples the write schedule at approximately8ms intervals. Thus its duration
+is about0.504seconds. Exact hardware clock variations, raster scanout, macOS
+presentation timing and the preceding floppy loading delays are not emulated.
 
-Offline output using the same page composition is available for comparison:
+Verification commands:
 
 ```sh
-analysis/local/native-build/SunDogRender \
-  analysis/local/native-assets/sundog-font.bin \
-  analysis/local/native-assets/native-preview.png
+python3 tools/boot_splash_evidence.py
+python3 tools/verify_native_splash.py
+python3 tools/verify_splash_app.py
 ```
 
-Validation: 420 original native glyph fixtures compare complete 8,192-byte pages
-and next x with Swift; 512 filter and 256 latch fixtures compare input state;
-the existing arithmetic helper has 733 comparison cases. Fifty decoded-original
-CFG cases verify glyph positions and final cursors (including two explicit bottom
-boundaries), and 273 original native helper cases verify column/shift conversion.
-Eleven Swift XCTest cases
-cover display decoding, page layout, invalid inputs and interleaved host buttons;
-103 Python tests pass. Reproduce comparisons with `tools/verify_native_glyph.py`,
-`tools/verify_native_input.py`, `tools/verify_native_rules.py` and
-`tools/verify_native_text_layout.py`. The layout comparison evaluates only the
-whitelisted original decoded procedures with explicit native-call hooks; it is
-not a claim of full original application execution.
+The real app executable also exposes a headless diagnostic:
 
-The core library also now contains [segment21 map selection](event-contract.md):
-293 original-fragment comparisons cover signed16 arithmetic, wrapping origins,
-signed division, magnitude remainder and raw/nibble results. This function is not
-connected to the preview canvas: the actual scene map construction and lifecycle
-are still unresolved. A synthetic comparison map is never presented as game data.
+```sh
+Build/SunDog.app/Contents/MacOS/SunDog --diagnose \
+  --at-cycle 250000 --export-startup analysis/local/half-reveal.png
+```
 
-GUI verification remains incomplete in the restricted agent session: LaunchServices
-returned `kLSNoExecutableErr` although the signed arm64 executable exists. A direct
-launch aborted in `_RegisterApplication` during `NSApplication` initialization,
-before the native screen model was entered. Build, signature checks, XCTest and
-offline PNG rendering passed. This does not establish that interactive window or
-Metal presentation has been exercised successfully.
+Nine bundle-generated intermediate HGR frames are checked byte-for-byte by hash
+against the original routine's write fixture; the final RGBA digest is independently
+compared with the original execution reference. This checks actual bundle resource
+loading, timeline lookup, Swift writes and image production. It does not establish
+that a desktop window has been observed in the agent session: LaunchServices
+previously returned kLSNoExecutableErr there despite a valid signed executable.
+GUI interaction remains unverified; the native view uses direct CoreGraphics image
+presentation and has no GPU/shader initialization dependency.
 
-After the reported blank startup, the prototype's default screen was changed
-from a silent-error Metal path to a CoreGraphics image. The old Metal path could
-fail after device discovery and leave only a log; that is a demonstrated code
-defect, not confirmation of the specific cause on the user's desktop. The app
-now requests foreground activation and shows an explicit error/open-font panel
-when no frame exists. Its title and initial text identify it as a rendering
-prototype with gameplay absent.
-
-`Build/SunDog.app/Contents/MacOS/SunDog --diagnose` runs the actual bundle's model
-without starting NSApplication, checks its bundled font and reports generated
-frame dimensions/nonblack pixels. Asset-containing builds require this check
-to pass. This verifies startup content, not a visible window or game launch.
-
-Next required game work is P44 scrolling/window reset, native clipping and line
-modes, segment 21's scene workspace lifecycle, and scene-specific data ownership/state changes. Trading, travel,
-city scenes, sound and original save/load are not implemented. The disassembly
-milestone establishes code structure; it does not supply these missing semantics.
+The earlier font/layout/input/selection work remains in the core library and its
+separate analysis tools. Its counters and text editor are no longer the startup UI.
+Next game work remains scene initialization, input/state transitions, gameplay and
+persistence; none is inferred from successful title display.

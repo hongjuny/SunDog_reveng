@@ -1,0 +1,416 @@
+{
+  "artifact": "analysis/local/native-assets/sundog-splash.hgr",
+  "length": 8192,
+  "sha256": "623c8808ab8653a9d20bcbc26ce5cf4058a458764915a9b0c0071d9e35508c37",
+  "raw_sha256": "2b21fb1fc35477e73882e6f4003788631aa28e32d7cc6ed7991cdbaa317d17c1",
+  "width": 280,
+  "height": 192,
+  "decoded_width": 560,
+  "identity": "Original initial SunDog title/splash image, before the Utility menu",
+  "method": "Direct verified disk-sector extraction in original loader order; HGR non-display-hole normalization",
+  "source_side": "utility",
+  "source_image": "extracted/utility.do",
+  "source_image_sha256": "6eb2925126f8ef39979a774ccf172c40958339cdc8d4c35a3d78dcac6944747e",
+  "loader": {
+    "entry": 16384,
+    "region_start_block": 201,
+    "region_pages": 36,
+    "region_sha256": "1b9dfd8bbaa973ea73bc650e1c9161f3991d00d6a071bc2403d59582fdc6f29d",
+    "image_start_block": 203,
+    "image_pages": 32,
+    "image_loaded_address": 17408,
+    "target_address": 8192,
+    "source_minus_destination": 9216,
+    "row_helper": 16896,
+    "low_table": 16912,
+    "high_table": 17104,
+    "copy_examples": [
+      {
+        "read": 16432,
+        "write": 16434
+      },
+      {
+        "read": 16611,
+        "write": 16613
+      },
+      {
+        "read": 16852,
+        "write": 16854
+      }
+    ]
+  },
+  "displayed_bytes": 7680,
+  "nondisplay_padding_bytes": 512,
+  "padding_policy": "Zero, matching cleared boot HGR RAM; no displayed pixel byte is changed",
+  "woz_verification_sha256": "d5f157976fd39a3bdcfbab7cb660099dfa9e176297e7a9f89d47e2450a596d1d",
+  "sources": [
+    {
+      "side": "utility",
+      "track": 25,
+      "sector": 9,
+      "physical_sector": 12,
+      "offset": 104704,
+      "destination_offset": 0,
+      "initial_load_address": 17408,
+      "length": 256,
+      "sha256": "fc1c8dfc14b1e42cda07cf59b884ae3bcf6c0b504de5c6412ca1ecc8c8e117b4"
+    },
+    {
+      "side": "utility",
+      "track": 25,
+      "sector": 8,
+      "physical_sector": 14,
+      "offset": 104448,
+      "destination_offset": 256,
+      "initial_load_address": 17664,
+      "length": 256,
+      "sha256": "b5aa15fd74e817bb4817ba3be862a7eebce7a14d539e235d0e33dc30946b617a"
+    },
+    {
+      "side": "utility",
+      "track": 25,
+      "sector": 7,
+      "physical_sector": 1,
+      "offset": 104192,
+      "destination_offset": 512,
+      "initial_load_address": 17920,
+      "length": 256,
+      "sha256": "d10eb554dcfa8850a0c9db789997fe08d93499adc14059b2d59783441c820aef"
+    },
+    {
+      "side": "utility",
+      "track": 25,
+      "sector": 6,
+      "physical_sector": 3,
+      "offset": 103936,
+      "destination_offset": 768,
+      "initial_load_address": 18176,
+      "length": 256,
+      "sha256": "b546e1c3734955c3fbb458d2413820b3e608592de84edef806b3264500c7e3eb"
+    },
+    {
+      "side": "utility",
+      "track": 25,
+      "sector": 5,
+      "physical_sector": 5,
+      "offset": 103680,
+      "destination_offset": 1024,
+      "initial_load_address": 18432,
+      "length": 256,
+      "sha256": "deeaa5f734bcafca5336121a3989e7ccbe4e4282bbd233a9293e862585c24e49"
+    },
+    {
+      "side": "utility",
+      "track": 25,
+      "sector": 4,
+      "physical_sector": 7,
+      "offset": 103424,
+      "destination_offset": 1280,
+      "initial_load_address": 18688,
+      "length": 256,
+      "sha256": "0116f29dea6c3c0d661c7f938c0a1bee2c747e28e547d7815b9bb55b2fcbb919"
+    },
+    {
+      "side": "utility",
+      "track": 25,
+      "sector": 3,
+      "physical_sector": 9,
+      "offset": 103168,
+      "destination_offset": 1536,
+      "initial_load_address": 18944,
+      "length": 256,
+      "sha256": "da6fac4e7988388200db4872bb9c484ef5410f6dc82b363a605af72bd1017602"
+    },
+    {
+      "side": "utility",
+      "track": 25,
+      "sector": 2,
+      "physical_sector": 11,
+      "offset": 102912,
+      "destination_offset": 1792,
+      "initial_load_address": 19200,
+      "length": 256,
+      "sha256": "e4db1400b96f374b3490808f782755fd9102cd97ba03c3ca90ecafe1a94dbeaf"
+    },
+    {
+      "side": "utility",
+      "track": 25,
+      "sector": 1,
+      "physical_sector": 13,
+      "offset": 102656,
+      "destination_offset": 2048,
+      "initial_load_address": 19456,
+      "length": 256,
+      "sha256": "17ee77fe2d7f155f8d7f18672904c255a595d397a45bf5a5fd78d9cab8f66e20"
+    },
+    {
+      "side": "utility",
+      "track": 25,
+      "sector": 15,
+      "physical_sector": 15,
+      "offset": 106240,
+      "destination_offset": 2304,
+      "initial_load_address": 19712,
+      "length": 256,
+      "sha256": "82201bbf08d5b40060838c2653dfd76de85950c2daf84e75742d8a772589edee"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 0,
+      "physical_sector": 0,
+      "offset": 106496,
+      "destination_offset": 2560,
+      "initial_load_address": 19968,
+      "length": 256,
+      "sha256": "8ac974ad61409f9e7ce3e567eccc87a397acd34d56df297135a538cdf0014881"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 14,
+      "physical_sector": 2,
+      "offset": 110080,
+      "destination_offset": 2816,
+      "initial_load_address": 20224,
+      "length": 256,
+      "sha256": "ad05dc58833fdc461307abcd578912e18b1ea5a46114e99c855380de7e062fc4"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 13,
+      "physical_sector": 4,
+      "offset": 109824,
+      "destination_offset": 3072,
+      "initial_load_address": 20480,
+      "length": 256,
+      "sha256": "2451c8b6f146597f19d4aea08c376718f6c3360174dee68fe0ac8ea54fef2db6"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 12,
+      "physical_sector": 6,
+      "offset": 109568,
+      "destination_offset": 3328,
+      "initial_load_address": 20736,
+      "length": 256,
+      "sha256": "48159ca97d65823f38975fc36c5710fe97b02c8291e865970040b1885ec73e49"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 11,
+      "physical_sector": 8,
+      "offset": 109312,
+      "destination_offset": 3584,
+      "initial_load_address": 20992,
+      "length": 256,
+      "sha256": "84abcf1cb61d1cc17a5f665bcfaa1ded925269ce30d73e3670ca105668b47047"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 10,
+      "physical_sector": 10,
+      "offset": 109056,
+      "destination_offset": 3840,
+      "initial_load_address": 21248,
+      "length": 256,
+      "sha256": "7178fb01e418d345b28dc84bac36ff1c8f41153bef492f781d5992c5600d0253"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 9,
+      "physical_sector": 12,
+      "offset": 108800,
+      "destination_offset": 4096,
+      "initial_load_address": 21504,
+      "length": 256,
+      "sha256": "168b0a750fd7512e6fa92bb0adea2e301b344622e91a77fc5e38a3445cdcc4a1"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 8,
+      "physical_sector": 14,
+      "offset": 108544,
+      "destination_offset": 4352,
+      "initial_load_address": 21760,
+      "length": 256,
+      "sha256": "8c77afc8337b6cfc0614b21638de6fe3650680fa81825462c85ab6dc277aa513"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 7,
+      "physical_sector": 1,
+      "offset": 108288,
+      "destination_offset": 4608,
+      "initial_load_address": 22016,
+      "length": 256,
+      "sha256": "35c50856defd154894cc23b1b7194b25c574d58a8633bb348fb8a73f4f70c2d1"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 6,
+      "physical_sector": 3,
+      "offset": 108032,
+      "destination_offset": 4864,
+      "initial_load_address": 22272,
+      "length": 256,
+      "sha256": "e4cbee5ce6eaa944deac0607e33fe951117737b841103dc96a4cc89227e3304d"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 5,
+      "physical_sector": 5,
+      "offset": 107776,
+      "destination_offset": 5120,
+      "initial_load_address": 22528,
+      "length": 256,
+      "sha256": "39521e4b0164331eb57b1820afa3c056e6ddbf44785adc947b15af9645d40255"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 4,
+      "physical_sector": 7,
+      "offset": 107520,
+      "destination_offset": 5376,
+      "initial_load_address": 22784,
+      "length": 256,
+      "sha256": "c6a22a34035a07ba747225ab8fb95b939952dd33bf394495024b3e5fa0ea0479"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 3,
+      "physical_sector": 9,
+      "offset": 107264,
+      "destination_offset": 5632,
+      "initial_load_address": 23040,
+      "length": 256,
+      "sha256": "4a0cfdc898c97f87e218c92e21cbaff46abacebc9a09cd408e8921e64d9fa889"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 2,
+      "physical_sector": 11,
+      "offset": 107008,
+      "destination_offset": 5888,
+      "initial_load_address": 23296,
+      "length": 256,
+      "sha256": "b6ddebb5ba61a71c63c3b54d1b143bfa84ea979c1b585a20ffda3e56f4461a6f"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 1,
+      "physical_sector": 13,
+      "offset": 106752,
+      "destination_offset": 6144,
+      "initial_load_address": 23552,
+      "length": 256,
+      "sha256": "3488b6d22a400c5dfb7c662003a693b7725341448141220f335b1fae92dbcfad"
+    },
+    {
+      "side": "utility",
+      "track": 26,
+      "sector": 15,
+      "physical_sector": 15,
+      "offset": 110336,
+      "destination_offset": 6400,
+      "initial_load_address": 23808,
+      "length": 256,
+      "sha256": "dc3abfed8d80e4cd242cbf0836a5783e89c164e669498a78508bfb79cb1abdb6"
+    },
+    {
+      "side": "utility",
+      "track": 27,
+      "sector": 0,
+      "physical_sector": 0,
+      "offset": 110592,
+      "destination_offset": 6656,
+      "initial_load_address": 24064,
+      "length": 256,
+      "sha256": "be6d49deffc0f353051010403e432ff6001e235f189cefa3530018b64e0db3b3"
+    },
+    {
+      "side": "utility",
+      "track": 27,
+      "sector": 14,
+      "physical_sector": 2,
+      "offset": 114176,
+      "destination_offset": 6912,
+      "initial_load_address": 24320,
+      "length": 256,
+      "sha256": "551b45815ddd200686ffc9e4a2f7fe80456e2bea605068379c232b723d68433e"
+    },
+    {
+      "side": "utility",
+      "track": 27,
+      "sector": 13,
+      "physical_sector": 4,
+      "offset": 113920,
+      "destination_offset": 7168,
+      "initial_load_address": 24576,
+      "length": 256,
+      "sha256": "a980d83314332524e885ef42943d8b25e3f657576e907c41f5b660b9ba86d101"
+    },
+    {
+      "side": "utility",
+      "track": 27,
+      "sector": 12,
+      "physical_sector": 6,
+      "offset": 113664,
+      "destination_offset": 7424,
+      "initial_load_address": 24832,
+      "length": 256,
+      "sha256": "b7a0a6805e65a304cc6dfa4b541df24177f38b83d50cd7d87086797283aa4a82"
+    },
+    {
+      "side": "utility",
+      "track": 27,
+      "sector": 11,
+      "physical_sector": 8,
+      "offset": 113408,
+      "destination_offset": 7680,
+      "initial_load_address": 25088,
+      "length": 256,
+      "sha256": "19318866d5a8828cdb4d72fcf8c1a29d2dba65af777bc70576f141cb482a5c37"
+    },
+    {
+      "side": "utility",
+      "track": 27,
+      "sector": 10,
+      "physical_sector": 10,
+      "offset": 113152,
+      "destination_offset": 7936,
+      "initial_load_address": 25344,
+      "length": 256,
+      "sha256": "c49da75c3db58fc327096af362b47f2390062a172e5ee504de963419662640a5"
+    }
+  ],
+  "corroboration": {
+    "available": true,
+    "path": "analysis/local/reference/20261023-115822/pc-fef2-main.bin",
+    "memory_sha256": "97ae8dfe20b56e376686590736cb5a006ea9fb7f460f6ba35203db84ee413ee8",
+    "checkpoint": "0xFEF2",
+    "page_address": 8192,
+    "full_page_equal": true,
+    "visible_bytes_equal": 7680,
+    "role": "Original post-animation boot RAM corroborates disk-derived asset; not used for construction"
+  },
+  "confidence": "High for original bitmap bytes and final boot-screen identity",
+  "limitations": [
+    "Initial native reveal animation and timing are not implemented by this static asset.",
+    "RGB/NTSC color fidelity depends on the separately declared HGR decoder profile.",
+    "Displaying this splash does not implement the game or Utility menu."
+  ]
+}

@@ -599,3 +599,31 @@ diagnostic to the actual bundle entry point. Asset-containing builds now require
 the bundle itself to load its font and generate a nonblack560x192 frame. The
 diagnostic deliberately reports gameplay_available=false; it is not a UI smoke
 test. Prototype status is explicit in the window and generated initial text.
+
+## 2026-10-23 — Original boot-to-title and native reveal
+
+Traced the source-specific DiskII slot6 ROM through headers01/03/05, physical
+sectors0/2/4, the cold clear path and native disk loader. Captured entry4000
+contains all36 loaded pages and the actual0866 return word, establishing JSR0864
+and return0867. The title precedes Language Card runtime loads and Pascal entry.
+The logo lettering, ship and planet are all bytes of the same original bitmap.
+
+Extracted title data directly from verified Utility blocks203..219, normalized
+only512 nondisplay padding bytes, and matched retained original HGR RAM exactly.
+The app no longer opens the font/layout laboratory as its initial screen.
+
+Recovered the complete4000..41FF reveal: four center byte writes and19 rectangular
+expansions. Compared every8041 ordered write and7680 unique visible bytes with
+bounded original6502 execution. Native execution takes143457 instructions and
+515593 modeled NMOS cycles. Base cycle facts are independently checked; branch
+and indexed page-cross penalties are included. Actual REA/Ghidra checks cover all
+visited boundaries, and ten semantic labels/comments are saved and read back in
+the persistent native-stage Ghidra project.
+
+The native Swift rewrite matches all writes and nine intermediate page states.
+The app samples verified write-cycle offsets at a nominal1.023MHz host clock.
+That reconstructs the algorithm and approximately0.504second duration, without
+claiming original scanout synchronization or floppy timing. Nine headless actual
+bundle cycle snapshots and the final reference RGBA hash are checked separately.
+Desktop GUI presentation remains unverified under the recorded session restriction.
+Validation:114 Python tests and15 Swift XCTest cases pass.
