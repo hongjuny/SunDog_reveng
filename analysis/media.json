@@ -1,0 +1,18 @@
+[
+  {
+    "path": "disk/Sundog Frozen Legacy v2.0 - Play Side.woz",
+    "size": 241451,
+    "sha256": "2c0f93f7e530e71ca0135171082a8a9180e0d0b41421f69748941e79399342e3",
+    "magic": "WOZ2",
+    "crc_stored": 2381354407,
+    "crc_computed": 2381354407
+  },
+  {
+    "path": "disk/Sundog Frozen Legacy v2.0 - Utility Side (boot).woz",
+    "size": 234805,
+    "sha256": "2b9c9882a3a0b4d7b1f8397f9343a64acf248351251ae5463ab77dbba9c0f4b4",
+    "magic": "WOZ2",
+    "crc_stored": 1098602907,
+    "crc_computed": 1098602907
+  }
+]

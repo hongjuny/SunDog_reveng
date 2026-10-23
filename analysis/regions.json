@@ -1,0 +1,623 @@
+[
+  {
+    "path": "analysis/regions/utility-track-00.bin",
+    "side": "utility",
+    "offset": 0,
+    "length": 4096,
+    "sha256": "bf2bc365bdcf26844341e4183799e480a0b9c756fc613aa277b8f1b9e38b8cf3",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-01.bin",
+    "side": "utility",
+    "offset": 4096,
+    "length": 4096,
+    "sha256": "5676a7a18710e332d1933e4a1a3b209af138ec1a9be362814385428948afb257",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-02.bin",
+    "side": "utility",
+    "offset": 8192,
+    "length": 4096,
+    "sha256": "4a60bd7267f93b152006021f2df5df5d3c331c69b419874db7cb9c99805f7cb2",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-03.bin",
+    "side": "utility",
+    "offset": 12288,
+    "length": 4096,
+    "sha256": "7c4aa1800517f18b127ff467103185d64cd724884fe32d584a2cdb28531b5fb7",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-04.bin",
+    "side": "utility",
+    "offset": 16384,
+    "length": 4096,
+    "sha256": "d730609c424a19c3a44f04d044754ce5f4329fcd1cd31092dafe721fed5a0ad9",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-05.bin",
+    "side": "utility",
+    "offset": 20480,
+    "length": 4096,
+    "sha256": "cf9ed7907b56e84e4922e3fc9159d9b1959e3bca914fd9fbab8f1097662f262e",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-06.bin",
+    "side": "utility",
+    "offset": 24576,
+    "length": 4096,
+    "sha256": "933afdaac2f3f2b47f0fc298e61fb4289d7db7908d0ea775e7c1e6e532dd6d0b",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-07.bin",
+    "side": "utility",
+    "offset": 28672,
+    "length": 4096,
+    "sha256": "7fa635879cc05fc4c12c23bc7de3f49bc0de8014615b164176f5a05943063251",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-08.bin",
+    "side": "utility",
+    "offset": 32768,
+    "length": 4096,
+    "sha256": "c89e74ac08999480d206db4f752fe4f56510e71ac0c6b22ff77d46d6ee85e353",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-09.bin",
+    "side": "utility",
+    "offset": 36864,
+    "length": 4096,
+    "sha256": "f8b48f25960dcf88e3fa85c79515dae9197893e5d7df4e21e98fb183c116d761",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-10.bin",
+    "side": "utility",
+    "offset": 40960,
+    "length": 4096,
+    "sha256": "10b205d0c19bcec227f76231fb763e656bf8348a064a108a32d1efe9ba4f0053",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-11.bin",
+    "side": "utility",
+    "offset": 45056,
+    "length": 4096,
+    "sha256": "53d3ef4e4d5193b69fc9ab57fb95e5478f628356cf70bf4715388dac61f8ad41",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-12.bin",
+    "side": "utility",
+    "offset": 49152,
+    "length": 4096,
+    "sha256": "14fbfe99a62fd0f87fdc34a9b50fd03e0c2dda62194568d70f4e983ae3c10645",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-13.bin",
+    "side": "utility",
+    "offset": 53248,
+    "length": 4096,
+    "sha256": "8691ed1e60ab18ba8e7d6d9c29ab2d5eb00b73404f48283626d89dae7e287f28",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-14.bin",
+    "side": "utility",
+    "offset": 57344,
+    "length": 4096,
+    "sha256": "bc1c82e3e7ff867cab470f627aa8c6c8aac67d366e7a64cfde9df5fe51eee23b",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-15.bin",
+    "side": "utility",
+    "offset": 61440,
+    "length": 4096,
+    "sha256": "114eef2e8f23ac042611c2b8c6d541569c7153b42257c1f651c0424bc1f12fcd",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-16.bin",
+    "side": "utility",
+    "offset": 65536,
+    "length": 4096,
+    "sha256": "6c95b9d354738ca0cae3e38cce9a1b5ff87dd7b39a0f59a069cd64977fd27f82",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-17.bin",
+    "side": "utility",
+    "offset": 69632,
+    "length": 4096,
+    "sha256": "a9f00a541612417fe3e61621a241b9cf178de0aa9aaeb329f6da4c83d240cb17",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-18.bin",
+    "side": "utility",
+    "offset": 73728,
+    "length": 4096,
+    "sha256": "829327ff762424f863764b86a9d512444a9797e16723ec9c58f39cdd8647f15e",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-19.bin",
+    "side": "utility",
+    "offset": 77824,
+    "length": 4096,
+    "sha256": "46ab70a846223733794766d5db94efca482eeb608d02d45ff3db6612fd5a9cc1",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-20.bin",
+    "side": "utility",
+    "offset": 81920,
+    "length": 4096,
+    "sha256": "5d509cc64357152c37eac56cb8bfce88076ed9968491970c1d1cc986233d5bd1",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-21.bin",
+    "side": "utility",
+    "offset": 86016,
+    "length": 4096,
+    "sha256": "2ff0ad7f6e89878c629910f637bbfa10b52e1e19ab4ff82e1cbd212ccb49efc0",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-22.bin",
+    "side": "utility",
+    "offset": 90112,
+    "length": 4096,
+    "sha256": "be7f6b59ba680945c47d3040bcc7b3d046dc68ac1595589cfbff891b6b088b52",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-23.bin",
+    "side": "utility",
+    "offset": 94208,
+    "length": 4096,
+    "sha256": "3d434ea05d5ee359f032a4761d3ebc970c60152f5b1f6f74f357be0e0a52643e",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-24.bin",
+    "side": "utility",
+    "offset": 98304,
+    "length": 4096,
+    "sha256": "41c2deaf247624ed525b169e444327f74fa9081e9da084a40828b8f6622e975c",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-25.bin",
+    "side": "utility",
+    "offset": 102400,
+    "length": 4096,
+    "sha256": "7a28d364971424645bbb3b1d446c338277a043659ca2a00b8dee621edd0de9f8",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-26.bin",
+    "side": "utility",
+    "offset": 106496,
+    "length": 4096,
+    "sha256": "b7d919cde1365fa01f6b7dbded8e97d272054164f49ab10f13304a7125b58cd9",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-27.bin",
+    "side": "utility",
+    "offset": 110592,
+    "length": 4096,
+    "sha256": "262bd9527974c561b98199fc98f0300fbe122de57a0b63a9c5b25e431544120a",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-28.bin",
+    "side": "utility",
+    "offset": 114688,
+    "length": 4096,
+    "sha256": "247f198981f4cd1b9eb4da42b83e987cee60e983fb16fa25b7cf6f5ed0a69977",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-29.bin",
+    "side": "utility",
+    "offset": 118784,
+    "length": 4096,
+    "sha256": "4d10a9942d326fe78cd12274f095f8e158f3cbd2c98ab20d757ba3eaa0643e57",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-30.bin",
+    "side": "utility",
+    "offset": 122880,
+    "length": 4096,
+    "sha256": "28871ab77ff9869ac5945584947ccc07bbd780aefa99a2e31d5b89d75d7d8d39",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-31.bin",
+    "side": "utility",
+    "offset": 126976,
+    "length": 4096,
+    "sha256": "ab8cc18e9e5517830064d9b52a6b63f690bc645f9f36790a4a0026bd882a9521",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-32.bin",
+    "side": "utility",
+    "offset": 131072,
+    "length": 4096,
+    "sha256": "b270095243e25693da2bee8057caea55ed946d175a57894fbc2002b3ac943572",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-33.bin",
+    "side": "utility",
+    "offset": 135168,
+    "length": 4096,
+    "sha256": "ffd074dda563bd189fc332742858690a97759feb479cf3a0beb4d45d4bf17ce0",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/utility-track-34.bin",
+    "side": "utility",
+    "offset": 139264,
+    "length": 4096,
+    "sha256": "5e043b38f469d620e1d14cc315d8eb2ceb17226362527bed3db4b002c1711166",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-00.bin",
+    "side": "play",
+    "offset": 0,
+    "length": 4096,
+    "sha256": "0c316121ac414bf7c8764221a6dd653b65b8b63f7da235206944acd71162e96d",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-01.bin",
+    "side": "play",
+    "offset": 4096,
+    "length": 4096,
+    "sha256": "3dd60cfc422f1f1cedc3c930652b2891dd3911656427c3e4da1ba7607cc271cc",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-02.bin",
+    "side": "play",
+    "offset": 8192,
+    "length": 4096,
+    "sha256": "99409142d133aaa85fc180d65a944bfc2d0f420a173396c4a22fe947ddf9fcb3",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-03.bin",
+    "side": "play",
+    "offset": 12288,
+    "length": 4096,
+    "sha256": "6a7deda20a24e3ee022b8913879b58075c49d889a68b094a3d20019972844f4a",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-04.bin",
+    "side": "play",
+    "offset": 16384,
+    "length": 4096,
+    "sha256": "2af5503ee06006cb9a6b1b6be37e1450b5d0923f9a2f2ed2074f0c557a8ceb46",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-05.bin",
+    "side": "play",
+    "offset": 20480,
+    "length": 4096,
+    "sha256": "07f5327fb4e8a43e5b4861b7d5dafb09fb63b258c2f23da034b15200e7cb4a16",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-06.bin",
+    "side": "play",
+    "offset": 24576,
+    "length": 4096,
+    "sha256": "6064b780dec06bad23e96ef5e259f7356814f057a08b398078e257cca874a3b5",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-07.bin",
+    "side": "play",
+    "offset": 28672,
+    "length": 4096,
+    "sha256": "1d97793c0dc9b050b569ba0530c6325d3fc17d7e1d8b52be4cce06d8e4e13a79",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-08.bin",
+    "side": "play",
+    "offset": 32768,
+    "length": 4096,
+    "sha256": "f78a7e74994e60d3b6b2de131b54af60ae73b92f0fb0da4aca86ae95b9146993",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-09.bin",
+    "side": "play",
+    "offset": 36864,
+    "length": 4096,
+    "sha256": "e6bca4c0756e46f22d830819b53026b59078fc0803aaad8eb8980cf0e15618b9",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-10.bin",
+    "side": "play",
+    "offset": 40960,
+    "length": 4096,
+    "sha256": "b3f09d502d500495a01147a7a2835d934646d5a4a323dff1adfe1649eeb67dcf",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-11.bin",
+    "side": "play",
+    "offset": 45056,
+    "length": 4096,
+    "sha256": "f6cbce0e9221296d21d0647bb9ac63995e74530cdd8d4d2b8fc073348946faf4",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-12.bin",
+    "side": "play",
+    "offset": 49152,
+    "length": 4096,
+    "sha256": "71b0cb9211c0321a51bb3ece5c5732d114af5a80349736f039fb4f12a31aa17a",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-13.bin",
+    "side": "play",
+    "offset": 53248,
+    "length": 4096,
+    "sha256": "8691ed1e60ab18ba8e7d6d9c29ab2d5eb00b73404f48283626d89dae7e287f28",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-14.bin",
+    "side": "play",
+    "offset": 57344,
+    "length": 4096,
+    "sha256": "bc1c82e3e7ff867cab470f627aa8c6c8aac67d366e7a64cfde9df5fe51eee23b",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-15.bin",
+    "side": "play",
+    "offset": 61440,
+    "length": 4096,
+    "sha256": "114eef2e8f23ac042611c2b8c6d541569c7153b42257c1f651c0424bc1f12fcd",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-16.bin",
+    "side": "play",
+    "offset": 65536,
+    "length": 4096,
+    "sha256": "6c95b9d354738ca0cae3e38cce9a1b5ff87dd7b39a0f59a069cd64977fd27f82",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-17.bin",
+    "side": "play",
+    "offset": 69632,
+    "length": 4096,
+    "sha256": "a9f00a541612417fe3e61621a241b9cf178de0aa9aaeb329f6da4c83d240cb17",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-18.bin",
+    "side": "play",
+    "offset": 73728,
+    "length": 4096,
+    "sha256": "fef67e07f2b6ea82a845c33d72a9af0fdbc18615fc1ba0b52e7f114534deeb1c",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-19.bin",
+    "side": "play",
+    "offset": 77824,
+    "length": 4096,
+    "sha256": "e4d1746612c1ad1d8ea5db7f4f131ec98fdb367c839c8197656f6b8c609d91a0",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-20.bin",
+    "side": "play",
+    "offset": 81920,
+    "length": 4096,
+    "sha256": "f39299a02ac3237c02bc3136c92ac7f375dc6eb06e01e52d53c73e0e9d81015c",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-21.bin",
+    "side": "play",
+    "offset": 86016,
+    "length": 4096,
+    "sha256": "9423128d3e0977cee55318f863f0d5624fe28a123b8fdb24a6244a09b0de24fb",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-22.bin",
+    "side": "play",
+    "offset": 90112,
+    "length": 4096,
+    "sha256": "c11da5b754e1e17f350347fd483a735142932fb2b7767de9e93f263e10b26521",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-23.bin",
+    "side": "play",
+    "offset": 94208,
+    "length": 4096,
+    "sha256": "45feb9d41949a156c7a2ccf0565748c66d0e4bd13775bbd8f1236ac1fec37770",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-24.bin",
+    "side": "play",
+    "offset": 98304,
+    "length": 4096,
+    "sha256": "c9fda35f682de4394aa3290ca1d0fc85066ec7428b3b8006feb119249032d72d",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-25.bin",
+    "side": "play",
+    "offset": 102400,
+    "length": 4096,
+    "sha256": "74dd9b58bd4ddcc6802cea12aaa38946fd74d2a5183c4b55ec3264beaef22ff2",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-26.bin",
+    "side": "play",
+    "offset": 106496,
+    "length": 4096,
+    "sha256": "7e84b5ba48bd90066917de72fdbd5460ea224157480ab3b1d1f3f199bd1e20c3",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-27.bin",
+    "side": "play",
+    "offset": 110592,
+    "length": 4096,
+    "sha256": "8643ca24969914c75581b0a560ee751da3c619be749f850a9f05b0fbfad04caa",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-28.bin",
+    "side": "play",
+    "offset": 114688,
+    "length": 4096,
+    "sha256": "f47873134762d9ca9ca6bbd3041d22fcd85da443317121682806a780e6f0bc3d",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-29.bin",
+    "side": "play",
+    "offset": 118784,
+    "length": 4096,
+    "sha256": "de99731e9330ae01d7a38a335c12a540e59b179b3ce12c747ae3107602c5b959",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-30.bin",
+    "side": "play",
+    "offset": 122880,
+    "length": 4096,
+    "sha256": "1e0cc637c20540aa2c02ba2f38e3f96eea69f44f7a8325f3c1c09c737455b3f5",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-31.bin",
+    "side": "play",
+    "offset": 126976,
+    "length": 4096,
+    "sha256": "1071fa75bc9b6404b735a324c20409e046288bb5fd2949056e83d21503f2035b",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-32.bin",
+    "side": "play",
+    "offset": 131072,
+    "length": 4096,
+    "sha256": "30724e5057f7d51a70482db9c1abcdd856516fa44fb0eccd31822ad9447d6ab7",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  },
+  {
+    "path": "analysis/regions/play-track-33.bin",
+    "side": "play",
+    "offset": 135168,
+    "length": 4096,
+    "sha256": "2f1032042e4af8ee739574a8c11a03b18b09dc913b1cadd2e886dc3d5a28e6a5",
+    "identity": "unclassified track",
+    "confidence": "high for byte provenance only"
+  }
+]

@@ -1,0 +1,276 @@
+[
+  {
+    "side": "utility",
+    "track": 0,
+    "sector": 0,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "e3d9ef96869230dee62d48ca8540b64dce5c9099b93500dfc5e12dbf2e7a4d51"
+  },
+  {
+    "side": "utility",
+    "track": 0,
+    "sector": 13,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "1121a4fc8db132504e2db0eb1948494a0c9ec7bedc1216ece9f543d396820a6f"
+  },
+  {
+    "side": "utility",
+    "track": 0,
+    "sector": 14,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "fc3f96c9fd015b8c31444cd84c8e603561a1802e2a46a6be319f54f09a36975f"
+  },
+  {
+    "side": "utility",
+    "track": 13,
+    "sector": 0,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "acc1e5f366dd8b6de742e11104097b679051a3e27baedbf9e66075d9957b050f"
+  },
+  {
+    "side": "utility",
+    "track": 17,
+    "sector": 15,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "37d5cd89622fb5348ffe0921f4c0ae3e9091206a942ce1d2c4ba7926d6e58f76"
+  },
+  {
+    "side": "utility",
+    "track": 33,
+    "sector": 15,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "b2f2558420798014f1a6368efee4cd6f3cd517c579b8cb92138b064236f780f6"
+  },
+  {
+    "side": "utility",
+    "track": 34,
+    "sector": 15,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "ac3e1c2674bfb17d20d79fd6a92dd6789f66940ad367180d26bb3796f1a24f1b"
+  },
+  {
+    "side": "play",
+    "track": 0,
+    "sector": 0,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "7d194a6d4df509cd4f335e86e9e7b1fb91070aeeb3aedd01db321d712e236eb8"
+  },
+  {
+    "side": "play",
+    "track": 0,
+    "sector": 13,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "8cbf27f5024c1bb0bce0f092f684a9b6516411835a85bb6d1a784ca550cb47e3"
+  },
+  {
+    "side": "play",
+    "track": 0,
+    "sector": 14,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "f96f5365c90431c15406cd0e28d342236651bcd5182481f3ae12349bbb5457da"
+  },
+  {
+    "side": "play",
+    "track": 13,
+    "sector": 0,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "acc1e5f366dd8b6de742e11104097b679051a3e27baedbf9e66075d9957b050f"
+  },
+  {
+    "side": "play",
+    "track": 17,
+    "sector": 15,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "37d5cd89622fb5348ffe0921f4c0ae3e9091206a942ce1d2c4ba7926d6e58f76"
+  },
+  {
+    "side": "play",
+    "track": 33,
+    "sector": 15,
+    "returncode": 0,
+    "decoded_bytes": 256,
+    "matches": true,
+    "stderr": "",
+    "sha256": "d8ffe29e51b44e7e594e609d9b72409ef7d7dc097482244e2aff11f68c33a82a"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 0,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S0)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 1,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S13)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 2,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S11)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 3,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S9)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 4,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S7)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 5,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S5)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 6,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S3)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 7,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S1)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 8,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S14)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 9,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S12)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 10,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S10)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 11,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S8)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 12,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S6)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 13,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S4)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 14,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S2)"
+  },
+  {
+    "side": "play",
+    "track": 34,
+    "sector": 15,
+    "returncode": 1,
+    "decoded_bytes": 0,
+    "matches": false,
+    "stderr": "Error: Sector not found (T34 S15)"
+  }
+]
