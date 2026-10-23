@@ -19,7 +19,7 @@ public class ExportMemoryState extends GhidraScript {
    if(block.isInitialized())row.addProperty("sha256",sha(block.getStart(),(int)block.getSize()));blocks.add(row);
   }
   result.add("blocks",blocks);JsonArray regions=new JsonArray();
-  int[][] spans={{0xd000,0xd0ff},{0xd100,0xd151},{0xf248,0xfe7b}};
+  int[][] spans={{0xd000,0xd0ff},{0xd100,0xd151},{0xddd6,0xddf7},{0xe189,0xe18a},{0xe18b,0xe18b},{0xf248,0xfe7b}};
   for(int[] span:spans) {
    JsonObject row=new JsonObject();row.addProperty("start",Integer.toHexString(span[0]));row.addProperty("end_inclusive",Integer.toHexString(span[1]));
    int instructions=0;InstructionIterator it=currentProgram.getListing().getInstructions(new AddressSet(toAddr(span[0]),toAddr(span[1])),true);while(it.hasNext()){it.next();instructions++;}

@@ -12,6 +12,13 @@ public class ExportBoot extends GhidraScript {
    clearListing(toAddr(0xd000),toAddr(0xd151));
    createData(toAddr(0xd000),new ArrayDataType(WordDataType.dataType,128,2));
    createData(toAddr(0xd100),new ArrayDataType(WordDataType.dataType,41,2));
+   clearListing(toAddr(0xddd6),toAddr(0xddf7));
+   createData(toAddr(0xddd6),new ArrayDataType(WordDataType.dataType,17,2));
+   createLabel(toAddr(0xddd6),"packed_field_masks",true);
+   clearListing(toAddr(0xe189),toAddr(0xe18b));
+   createData(toAddr(0xe189),WordDataType.dataType);
+   createData(toAddr(0xe18b),ByteDataType.dataType);
+   setPreComment(toAddr(0xe17e),"Native procedure return trampoline: data word E189 supplies E17D to the native stack, so RTS reaches E17E. E18B is a patched segment marker; nonnegative marker invokes E646 before fetch.");
   }
   if(ready) {
    clearListing(toAddr(0xf248),toAddr(0xfe7b));

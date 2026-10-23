@@ -77,3 +77,15 @@ relocated initializer agree with the static snapshots. See
 [REA memory views](rea-memory-views.md) and `analysis/rea-memory-crosscheck.json`
 for scope, Evidence IDs and reproduction. Full array typing remains in the
 persistent Ghidra Program; REA does not mirror those annotations or emulate banks.
+
+## Primary opcode completion: additional typed runtime data
+
+Native packed-field handlers and all seventeen source values identify DDD6–DDF7
+as word[17] masks, with cell n equal to 2^n−1. The native call resolver pushes the
+data word E189–E18A (E17D), so RTS reaches the newly seeded E17E trampoline. E18B
+is its patched segment marker. These data ranges are persisted as word/byte data,
+with zero native instructions verified on readback. Source hashes and Utility
+track/sector/offset provenance are in `analysis/opcode-coverage.json`.
+
+The common frame layout, synthetic call/return checks and remaining service
+boundaries are documented in [primary completion](primary-opcode-completion.md).

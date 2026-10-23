@@ -23,7 +23,7 @@ def main():
     if raw('relocated-6800')!=b2[p:p+relocation['length']]:raise ValueError('relocation snapshot differs from common-bank source')
     checks['relocation_matches']=True
     state=json.loads(args.state.read_text())
-    expected=[('d000',256),('d100',82),('f248',3124)]
+    expected=[('d000',256),('d100',82),('ddd6',34),('e189',2),('e18b',1),('f248',3124)]
     for address,length in expected:
         region=next(r for r in state['regions'] if r['start']==address)
         if region.get('data_length')!=length or region['native_instruction_count']!=0:raise ValueError('Ghidra table/p-code data classification failed: '+address)

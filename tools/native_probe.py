@@ -51,9 +51,9 @@ class CPU:
             if op in (0x0a,0x2a):self.c=value>>7;value=(value<<1)|(carry if op==0x2a else 0)
             else:self.c=value&1;value=(value>>1)|((carry<<7) if op==0x6a else 0)
             self.a=self.nz(value);return
-        if op in (0xe6,0xc6,0xee,0xce,0x26,0x06,0x46,0x66):
-            p=self.fetch_word() if op in (0xee,0xce) else self.fetch();v=self.read(p);carry=self.c
-            if op in (0xe6,0xee):v+=1
+        if op in (0xe6,0xc6,0xee,0xce,0xfe,0x26,0x06,0x46,0x66):
+            p=self.operand_address('absx') if op==0xfe else self.fetch_word() if op in (0xee,0xce) else self.fetch();v=self.read(p);carry=self.c
+            if op in (0xe6,0xee,0xfe):v+=1
             elif op in (0xc6,0xce):v-=1
             elif op in (0x26,0x06):self.c=v>>7;v=(v<<1)|(carry if op==0x26 else 0)
             else:self.c=v&1;v=(v>>1)|((carry<<7) if op==0x66 else 0)
@@ -69,9 +69,12 @@ class CPU:
             dest=self.fetch_word();self.push_word((self.pc-1)&65535);self.pc=dest;return
         if op==0x60:self.pc=(self.pop_word()+1)&65535;return
         loads={0xa9:('a','imm'),0xa5:('a','zp'),0xad:('a','abs'),0xb1:('a','indy'),0xb5:('a','zpx'),0xbd:('a','absx'),0xb9:('a','absy'),0xa2:('x','imm'),0xa6:('x','zp'),0xa0:('y','imm'),0xa4:('y','zp')}
+        loads[0xbc]=('y','absx')
         stores={0x85:('a','zp'),0x8d:('a','abs'),0x91:('a','indy'),0x95:('a','zpx'),0x99:('a','absy'),0x86:('x','zp'),0x84:('y','zp')}
+        stores[0x8e]=('x','abs')
         arithmetic={0x69:('adc','imm'),0x65:('adc','zp'),0xe9:('sbc','imm'),0xe5:('sbc','zp'),0xc9:('cmp','imm'),0xc5:('cmp','zp'),0xe0:('cpx','imm'),0xc0:('cpy','imm'),0x29:('and','imm'),0x25:('and','zp'),0x09:('or','imm'),0x05:('or','zp'),0x49:('xor','imm'),0x45:('xor','zp')}
         arithmetic[0xf1]=('sbc','indy')
+        arithmetic.update({0xd1:('cmp','indy'),0x51:('xor','indy'),0x3d:('and','absx'),0xe4:('cpx','zp'),0xd5:('cmp','zpx'),0xdd:('cmp','absx')})
         if op in loads:
             reg,mode=loads[op];v=self.fetch() if mode=='imm' else self.read(self.operand_address(mode));setattr(self,reg,self.nz(v));return
         if op in stores:

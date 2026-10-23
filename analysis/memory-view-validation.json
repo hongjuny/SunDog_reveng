@@ -10,10 +10,10 @@
     "ghidra_data_classification_matches": true,
     "ghidra_memory_hash_matches": true,
     "native_probe_addresses_match_ghidra": true,
-    "distinct_replayed_native_addresses": 761,
-    "annotated_native_entries": 46,
+    "distinct_replayed_native_addresses": 2049,
+    "annotated_native_entries": 74,
     "annotation_aliases_match": true,
-    "rea_linked_native_entries": 20
+    "rea_linked_native_entries": 48
   },
   "ghidra_program": "interpreter-ready.bin",
   "snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
@@ -31,6 +31,27 @@
       "native_instruction_count": 0,
       "data_type": "word[41]",
       "data_length": 82
+    },
+    {
+      "start": "ddd6",
+      "end_inclusive": "ddf7",
+      "native_instruction_count": 0,
+      "data_type": "word[17]",
+      "data_length": 34
+    },
+    {
+      "start": "e189",
+      "end_inclusive": "e18a",
+      "native_instruction_count": 0,
+      "data_type": "word",
+      "data_length": 2
+    },
+    {
+      "start": "e18b",
+      "end_inclusive": "e18b",
+      "native_instruction_count": 0,
+      "data_type": "byte",
+      "data_length": 1
     },
     {
       "start": "f248",

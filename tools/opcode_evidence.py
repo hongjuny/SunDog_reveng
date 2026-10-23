@@ -13,12 +13,12 @@ def index_operand(value,wide=False):
 
 def investigate(snapshot,dispatch):
     records={x['opcode']:dict(opcode=x['opcode'],handler=x['handler'],source=x['handler_source'],status='unresolved') for x in dispatch['primary']}
-    counters={};visited={};budgets={};low_count=0
-    def check(op,rule,stream,stack=(),result=None,delta=0,advance=None,words=(),memory_result=None,stop=0xd293,max_steps=500):
+    counters={};visited={};budgets={};op_counts={};low_count=0
+    def check(op,rule,stream,stack=(),result=None,delta=0,advance=None,words=(),memory_result=None,stop=0xd293,max_steps=500,pc=0x40ff):
         nonlocal low_count
-        cpu,initial_sp=handler_probe(snapshot,stream,stack,pc=0x40ff,words=words,stop=stop,max_steps=max_steps)
-        if cpu.sp!=(initial_sp+delta*2)&255:raise AssertionError(f'{op:02x} unexpected stack change')
-        if advance is not None and cpu.word(0x58)!=(0x40ff+advance)&65535:raise AssertionError(f'{op:02x} unexpected next p-code address')
+        cpu,initial_sp=handler_probe(snapshot,stream,stack,pc=pc,words=words,stop=stop,max_steps=max_steps)
+        if delta is not None and cpu.sp!=(initial_sp+delta*2)&255:raise AssertionError(f'{op:02x} unexpected stack change')
+        if advance is not None and cpu.word(0x58)!=(pc+advance)&65535:raise AssertionError(f'{op:02x} unexpected next p-code address')
         if result is not None:
             actual=cpu.pop_word()
             if actual!=result:raise AssertionError(f'{op:02x} {rule}: {actual:04x} != {result:04x}')
@@ -28,6 +28,8 @@ def investigate(snapshot,dispatch):
         if op>=128:
             if cpu.read(0xd29e)!=(op*2)&255:raise AssertionError('primary dispatch operand differs')
             visited.setdefault(op,set()).update(cpu.visited)
+            counts=op_counts.setdefault(op,{})
+            counts[rule]=counts.get(rule,0)+1
         else:low_count+=1
         counters[rule]=counters.get(rule,0)+1
         budgets[rule]=max(budgets.get(rule,0),max_steps)
@@ -190,12 +192,19 @@ def investigate(snapshot,dispatch):
         raise AssertionError('overlapping copy is not increasing-address byte order')
     describe([0xa8],'copy_words_forward','pop source then destination; copy 2*count bytes in increasing address order',
              'encoded word count',-2,'2 or 3','Not overlap-safe memmove. Zero count and 256/512-byte boundaries checked; larger counts not exhaustively replayed.')
+    from extended_opcode_evidence import extend_data
+    extend_data(snapshot,records,check,describe)
+    from call_opcode_evidence import extend_calls
+    extend_calls(snapshot,records,check,describe)
     trapped=[op for op,x in records.items() if x['handler']==0xd1ef]
     for op in trapped:
         check(op,'shared_error_111',bytes([op]),delta=0,advance=0,stop=0xd20a,memory_result=(0xbdde,111))
-    describe(trapped,'shared_error_111','enter common error path and store 111 at BDDE/BDDF; stop before error procedure call','unestablished',None,'no normal continuation','Only the path through D20A is checked; not a complete exception implementation or proof these slots are universally invalid.')
+    describe(trapped,'shared_error_111','enter common error path and store 111 at BDDE/BDDF; stop before error procedure call','none consumed before error boundary',None,'no normal continuation','Only the path through D20A is checked; not a complete exception implementation or proof these slots are universally invalid.')
     for op,x in records.items():
-        x['native_instruction_addresses']=[f'0x{a:04x}' for a in sorted(visited.get(op,()))]
+        x['native_instruction_addresses']=[f'0x{a:04x}' for a in sorted(visited.get(op,set())|set(x.pop('extra_native_addresses',())))]
+        x['probe_case_counts']=op_counts.get(op,{})
+        x['probe_cases']=sum(x['probe_case_counts'].values())
+        if x['status']=='verified_selected_semantics' and not x['probe_cases']:raise ValueError('semantic label lacks a checked case')
     return dict(method='selected binary-mode 6502 replay of actual snapshot bytes with declared synthetic RAM/stack inputs; not Apple II execution, not REA Evidence',snapshot_sha256=hashlib.sha256(snapshot).hexdigest(),low_immediate_family=dict(opcode_first=0,opcode_last=127,semantic='push unsigned opcode as 16-bit word',advance=1,cases=low_count),primary=[records[n] for n in sorted(records)],probe_case_counts=counters,max_native_instruction_budget_by_rule=budgets,total_probe_cases=sum(counters.values()),verified_high_opcodes=sum(x['status']=='verified_selected_semantics' for x in records.values()),unresolved_high_opcodes=[x['opcode'] for x in records.values() if x['status']=='unresolved'],limitations=['Initial interpreter-ready snapshot only; future table or code modifications are not modeled.','No decimal arithmetic, V flag branches, ROM, devices, cycles, interrupts or complete CPU implementation.','Unsupported native instructions and excessive steps fail explicitly.','Sampled word values and page-boundary cases are checks, not exhaustive mathematical proof.','No p-code file or instruction-stream disassembler is implemented.'])
 
 if __name__=='__main__':

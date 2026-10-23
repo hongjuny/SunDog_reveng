@@ -48,7 +48,7 @@ def main():
         x['handler_source']=dict(side='utility',**p,byte_in_sector=x['bank2_handler']%256)
     report['source_hashes']=dict(bank1=digest(b1),bank2=digest(b2))
     (ROOT/'analysis/runtime-dispatch.json').write_text(json.dumps(report,indent=2)+'\n')
-    seeds={0xfef2,0xd27b,0xd155,0xe67f,0xd293}
+    seeds={0xfef2,0xd27b,0xd155,0xe67f,0xd293,0xe17e}
     for group in ('primary','secondary'):
         seeds.update(x['handler'] for x in report[group] if x['handler']>=0xd152)
     (ROOT/'analysis/local/runtime-seeds.txt').write_text(','.join(format(n,'x') for n in sorted(seeds)))

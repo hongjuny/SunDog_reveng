@@ -10,15 +10,16 @@ emulator, a hardware observation, or REA Evidence. Decimal mode, V-flag branches
 interrupts, devices, timing and unknown-memory behavior are not modeled.
 Unsupported native instructions and instruction-budget overruns fail explicitly.
 
-`python3 tools/opcode_evidence.py` reproduces **2,621** checked cases. These cover
-all 128 short-immediate opcode values, selected semantics for **82 ordinary high
-opcodes**, and the initial shared error path of **18 high opcodes**. The remaining
-**28 high opcodes** are explicitly unresolved. Counts include alias families, not
-100 distinct algorithms. No complete p-code disassembler is implemented.
+`python3 tools/opcode_evidence.py` reproduces **4,976** checked cases. These cover
+all 128 short-immediate opcode values, selected semantics for **110 ordinary high
+opcodes**, and the initial shared error path of **18 high opcodes**.
+**No high primary entry remains unidentified.** Coverage includes explicit dispatcher,
+error and external-service boundaries; it is not exhaustive runtime verification.
+Counts include alias families, not 128 distinct algorithms. No complete p-code disassembler is implemented.
 
 `analysis/opcode-evidence.json` includes each high opcode's handler, original
 Utility source location, operand rule, stack-word delta, continuation, and native
-instruction addresses visited by the probes. All **761 distinct visited native
+instruction addresses visited by the probes. All **2,049 distinct visited native
 addresses** are defined instructions in Ghidra's interpreter-ready listing.
 This cross-check validates alignment and provenance; it is not independent proof
 that the limited CPU model implements all 6502 behavior.
@@ -253,19 +254,27 @@ Budgets are recorded per rule in the catalogue. A deterministic synthetic test
 confirms that the wrapper respects an explicit budget and fails when it is short.
 No additional native instruction or device behavior was admitted in this pass.
 
-All 41 deterministic tests pass. Persistent Ghidra annotations now cover 46 native
+In that pass, all 41 deterministic tests passed. Ghidra annotations covered 46 native
 entries, including twenty linked to actual REA assembly Evidence IDs. Every one of
-the 761 native PCs visited across controlled cases is a defined Ghidra instruction;
+the 761 native PCs visited in that pass was a defined Ghidra instruction;
 the dispatch tables and initial p-code array remain typed data with no native
 instructions. Confidence remains high for these sampled effects and attested bytes,
 with no claim of exhaustive semantic proof or Apple II execution.
 
-Remaining unresolved high values are:
-`86 88 8E 9B 9E AA AC AD AE AF B0 B1 B3 B4 B5 B7 BA BB BC BD C0 C1 C2 CD CE CF D5 D6`.
-Their current handler addresses and sector provenance remain in the catalogue.
-The typed comparison family AF/B0/B1/B4/B5/B7 remains unresolved: establishing
-the dedicated scalar comparisons above does not establish its type-dependent
-operand formats or stack layouts. Checkpoint 3 remains in progress.
+## Completion of the remaining 28 primary entries
+
+The final pass identifies all previously remaining entries with 2,355 additional
+cases, for 4,976 total. It adds 45 actual REA imports while reusing the earlier 25.
+Cumulative native coverage is 3,092 bytes, 1,656 instructions and 1,610 load checks.
+All 49 deterministic tests pass; 74 native entries have persisted annotations,
+including actual REA links for all 48 formerly unknown high entries.
+
+See [completion findings and limits](primary-opcode-completion.md), the generated
+[complete reference](opcode-reference.md) and `analysis/opcode-coverage.json`.
+That report separates complete primary identification from selected semantic
+coverage, error prefixes, secondary dispatch and external service boundaries.
+Individual 9E services, ROM/device execution and full p-system reconstruction
+remain open. No full p-code disassembler is claimed.
 
 ## Shared error path
 
@@ -301,7 +310,7 @@ and subsequent Pascal execution still need observation or further scoped analysi
 
 ## Persistent Ghidra annotations
 
-`AnnotateOpcodes.java` writes snapshot-specific labels/comments at 46 native entry
+`AnnotateOpcodes.java` writes snapshot-specific labels/comments at 74 native entry
 addresses and explains the implicit A/Carry/Y interface. Comment readback and
 alias membership are checked and exported to `analysis/ghidra-opcode-annotations.json`.
 The project save is checked by the wrapper. No copied game disassembly is committed;
@@ -314,7 +323,7 @@ sh tools/run_opcode_analysis.sh
 ```
 
 The full `tools/run_ghidra.sh` pipeline includes this step. Actual REA checks now
-cover twenty added high-opcode handlers and shared helpers, as described
+cover all 48 formerly unidentified high-opcode handlers and shared helpers, as described
 below. Native static Evidence IDs are persisted beside the selected semantics;
 they attest the bounded native analysis, not execution of the synthetic cases.
 
@@ -325,4 +334,6 @@ to absolute block 264, 1998 bytes. All ten of that payload's procedure records
 resolve in-file; procedure 1's entry offset is `$060A` (Utility T33, DOS sector 9,
 byte 10). This is a conditional static follow-up target, not a call observed in
 replay. Its actual RAM load address depends on allocation state and is unresolved.
-The full `$CD` call semantics remain in the unresolved high-opcode count.
+CD is now identified and checked on synthetic resident/native/global/lexical call
+fixtures. The actual startup allocation and nonresident/device execution remain
+unobserved; see the completion report.

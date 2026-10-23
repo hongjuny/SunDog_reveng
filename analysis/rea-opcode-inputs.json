@@ -566,6 +566,1152 @@
           "length": 28
         }
       ]
+    },
+    {
+      "name": "86",
+      "path": "analysis/regions/rea-opcode-86.bin",
+      "base_and_entry": "0xd87d",
+      "end_exclusive": "0xd8aa",
+      "length": 45,
+      "sha256": "eecad460ac474bf8f742a9da4e490e002d0199802256de2776f68da0094dc99c",
+      "opcodes": [
+        134
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 1,
+          "physical_sector": 13,
+          "disk_offset": 123261,
+          "memory_address": "0xd87d",
+          "length": 45
+        }
+      ]
+    },
+    {
+      "name": "8e",
+      "path": "analysis/regions/rea-opcode-8e.bin",
+      "base_and_entry": "0xd8aa",
+      "end_exclusive": "0xd8c2",
+      "length": 24,
+      "sha256": "914cb865e055cd7d1b7424a820abd90aa243b5ce80cfd43135ac215bc6c41ca3",
+      "opcodes": [
+        142
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 1,
+          "physical_sector": 13,
+          "disk_offset": 123306,
+          "memory_address": "0xd8aa",
+          "length": 24
+        }
+      ]
+    },
+    {
+      "name": "88",
+      "path": "analysis/regions/rea-opcode-88.bin",
+      "base_and_entry": "0xd8c2",
+      "end_exclusive": "0xd911",
+      "length": 79,
+      "sha256": "f859d06543870896990ee24fc71cf0be7786ac95df6922edf2d9fa5798cbb4dd",
+      "opcodes": [
+        136
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 1,
+          "physical_sector": 13,
+          "disk_offset": 123330,
+          "memory_address": "0xd8c2",
+          "length": 62
+        },
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 15,
+          "physical_sector": 15,
+          "disk_offset": 126720,
+          "memory_address": "0xd900",
+          "length": 17
+        }
+      ]
+    },
+    {
+      "name": "9b",
+      "path": "analysis/regions/rea-opcode-9b.bin",
+      "base_and_entry": "0xd98c",
+      "end_exclusive": "0xd9af",
+      "length": 35,
+      "sha256": "490d2e55a8740619d23c74793627a16843d806807dd7c2452348c056a4472c40",
+      "opcodes": [
+        155
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 15,
+          "physical_sector": 15,
+          "disk_offset": 126860,
+          "memory_address": "0xd98c",
+          "length": 35
+        }
+      ]
+    },
+    {
+      "name": "aa",
+      "path": "analysis/regions/rea-opcode-aa.bin",
+      "base_and_entry": "0xd94b",
+      "end_exclusive": "0xd98c",
+      "length": 65,
+      "sha256": "24ca288d3a00d3e0d0170d5ecce224e0a7fa7f504b400c780c9b530c8be46df4",
+      "opcodes": [
+        170
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 15,
+          "physical_sector": 15,
+          "disk_offset": 126795,
+          "memory_address": "0xd94b",
+          "length": 65
+        }
+      ]
+    },
+    {
+      "name": "ac",
+      "path": "analysis/regions/rea-opcode-ac.bin",
+      "base_and_entry": "0xd5e2",
+      "end_exclusive": "0xd673",
+      "length": 145,
+      "sha256": "01d5480730d472069208faf12362de370bc7fbb51a3432c0058b8c3a30eb7331",
+      "opcodes": [
+        172
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 4,
+          "physical_sector": 7,
+          "disk_offset": 124130,
+          "memory_address": "0xd5e2",
+          "length": 30
+        },
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 3,
+          "physical_sector": 9,
+          "disk_offset": 123648,
+          "memory_address": "0xd600",
+          "length": 115
+        }
+      ]
+    },
+    {
+      "name": "b3",
+      "path": "analysis/regions/rea-opcode-b3.bin",
+      "base_and_entry": "0xd4d6",
+      "end_exclusive": "0xd50a",
+      "length": 52,
+      "sha256": "b9b9104f367ea37fd418f8e2d5c50062db864424827f07c85c81de372a52913a",
+      "opcodes": [
+        179
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 5,
+          "physical_sector": 5,
+          "disk_offset": 124374,
+          "memory_address": "0xd4d6",
+          "length": 42
+        },
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 4,
+          "physical_sector": 7,
+          "disk_offset": 123904,
+          "memory_address": "0xd500",
+          "length": 10
+        }
+      ]
+    },
+    {
+      "name": "bc",
+      "path": "analysis/regions/rea-opcode-bc.bin",
+      "base_and_entry": "0xd50a",
+      "end_exclusive": "0xd539",
+      "length": 47,
+      "sha256": "2954763042d6370fd7131b62dcaddfafc7e3f03b08d3c19d2340124d24875b46",
+      "opcodes": [
+        188
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 4,
+          "physical_sector": 7,
+          "disk_offset": 123914,
+          "memory_address": "0xd50a",
+          "length": 47
+        }
+      ]
+    },
+    {
+      "name": "bd",
+      "path": "analysis/regions/rea-opcode-bd.bin",
+      "base_and_entry": "0xd539",
+      "end_exclusive": "0xd567",
+      "length": 46,
+      "sha256": "d98c13967b07111200d14d51ed5c7fad325c1f08f2fd09fe2c3150c4a47796b2",
+      "opcodes": [
+        189
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 4,
+          "physical_sector": 7,
+          "disk_offset": 123961,
+          "memory_address": "0xd539",
+          "length": 46
+        }
+      ]
+    },
+    {
+      "name": "c0",
+      "path": "analysis/regions/rea-opcode-c0.bin",
+      "base_and_entry": "0xda1d",
+      "end_exclusive": "0xda60",
+      "length": 67,
+      "sha256": "a3d33cd539e6decb8634258d6b65955c494d9e1553cdbb493da0fd1be6c16c94",
+      "opcodes": [
+        192
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 0,
+          "physical_sector": 0,
+          "disk_offset": 127005,
+          "memory_address": "0xda1d",
+          "length": 67
+        }
+      ]
+    },
+    {
+      "name": "ba",
+      "path": "analysis/regions/rea-opcode-ba.bin",
+      "base_and_entry": "0xda60",
+      "end_exclusive": "0xdab6",
+      "length": 86,
+      "sha256": "38db71893b63fd2768d5a83725f7ee426e8116565b7d84df79f0a6d41886fe69",
+      "opcodes": [
+        186
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 0,
+          "physical_sector": 0,
+          "disk_offset": 127072,
+          "memory_address": "0xda60",
+          "length": 86
+        }
+      ]
+    },
+    {
+      "name": "bb",
+      "path": "analysis/regions/rea-opcode-bb.bin",
+      "base_and_entry": "0xdab6",
+      "end_exclusive": "0xdb3f",
+      "length": 137,
+      "sha256": "244882cd094e099c8e2389a587e0468ae94d38c795880759656d3cf3d829285f",
+      "opcodes": [
+        187
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 0,
+          "physical_sector": 0,
+          "disk_offset": 127158,
+          "memory_address": "0xdab6",
+          "length": 74
+        },
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 14,
+          "physical_sector": 2,
+          "disk_offset": 130560,
+          "memory_address": "0xdb00",
+          "length": 63
+        }
+      ]
+    },
+    {
+      "name": "af",
+      "path": "analysis/regions/rea-opcode-af.bin",
+      "base_and_entry": "0xde2c",
+      "end_exclusive": "0xde2e",
+      "length": 2,
+      "sha256": "0aedda8d9dd0a5a53be3009f56a0b0e0ec81e0b2b94e6d54124228e47cfd92a0",
+      "opcodes": [
+        175
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 11,
+          "physical_sector": 8,
+          "disk_offset": 129836,
+          "memory_address": "0xde2c",
+          "length": 2
+        }
+      ]
+    },
+    {
+      "name": "b7",
+      "path": "analysis/regions/rea-opcode-b7.bin",
+      "base_and_entry": "0xde18",
+      "end_exclusive": "0xde1c",
+      "length": 4,
+      "sha256": "c0c60ddc66f46376c27c16899c8790937efe7aeb7bda67fedb738478172f4e9f",
+      "opcodes": [
+        183
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 11,
+          "physical_sector": 8,
+          "disk_offset": 129816,
+          "memory_address": "0xde18",
+          "length": 4
+        }
+      ]
+    },
+    {
+      "name": "b1",
+      "path": "analysis/regions/rea-opcode-b1.bin",
+      "base_and_entry": "0xde1c",
+      "end_exclusive": "0xde20",
+      "length": 4,
+      "sha256": "75aeecb4c81ad6b0e1bd9f2473000a81ed29dbc3698d7c9e876af6aeabaf92e0",
+      "opcodes": [
+        177
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 11,
+          "physical_sector": 8,
+          "disk_offset": 129820,
+          "memory_address": "0xde1c",
+          "length": 4
+        }
+      ]
+    },
+    {
+      "name": "b5",
+      "path": "analysis/regions/rea-opcode-b5.bin",
+      "base_and_entry": "0xde20",
+      "end_exclusive": "0xde24",
+      "length": 4,
+      "sha256": "3b6893a52bffb9e04e4c6c31e35cd4b4b6cd9757254df83b8f37097ec4854110",
+      "opcodes": [
+        181
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 11,
+          "physical_sector": 8,
+          "disk_offset": 129824,
+          "memory_address": "0xde20",
+          "length": 4
+        }
+      ]
+    },
+    {
+      "name": "b0",
+      "path": "analysis/regions/rea-opcode-b0.bin",
+      "base_and_entry": "0xde24",
+      "end_exclusive": "0xde28",
+      "length": 4,
+      "sha256": "7d984777bd8d3a9ab405820460b0e63ade29ba6f43a9a7e3943bf9fc2227a936",
+      "opcodes": [
+        176
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 11,
+          "physical_sector": 8,
+          "disk_offset": 129828,
+          "memory_address": "0xde24",
+          "length": 4
+        }
+      ]
+    },
+    {
+      "name": "b4",
+      "path": "analysis/regions/rea-opcode-b4.bin",
+      "base_and_entry": "0xde28",
+      "end_exclusive": "0xde2c",
+      "length": 4,
+      "sha256": "6f83728dca4fa9612a067f1be1cf48690fce6f204edec5f6257adc2ae9f01f26",
+      "opcodes": [
+        180
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 11,
+          "physical_sector": 8,
+          "disk_offset": 129832,
+          "memory_address": "0xde28",
+          "length": 4
+        }
+      ]
+    },
+    {
+      "name": "9e",
+      "path": "analysis/regions/rea-opcode-9e.bin",
+      "base_and_entry": "0xe67f",
+      "end_exclusive": "0xe68a",
+      "length": 11,
+      "sha256": "02db4a470fad7358f5b69f6decc62ee616e919be1d1769907fd570630f075f0c",
+      "opcodes": [
+        158
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 3,
+          "physical_sector": 9,
+          "disk_offset": 115583,
+          "memory_address": "0xe67f",
+          "length": 11
+        }
+      ]
+    },
+    {
+      "name": "d5",
+      "path": "analysis/regions/rea-opcode-d5.bin",
+      "base_and_entry": "0xe803",
+      "end_exclusive": "0xe80b",
+      "length": 8,
+      "sha256": "b2c8372590bf9708a52b4a926294ac128401835ec692a976f0e69ac4db36998e",
+      "opcodes": [
+        213
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 1,
+          "physical_sector": 13,
+          "disk_offset": 114947,
+          "memory_address": "0xe803",
+          "length": 8
+        }
+      ]
+    },
+    {
+      "name": "d6",
+      "path": "analysis/regions/rea-opcode-d6.bin",
+      "base_and_entry": "0xd6e4",
+      "end_exclusive": "0xd6ff",
+      "length": 27,
+      "sha256": "102b2f655b6ac3309bfa4417c5df94f860774d4855f5444de230f522dc13c015",
+      "opcodes": [
+        214
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 3,
+          "physical_sector": 9,
+          "disk_offset": 123876,
+          "memory_address": "0xd6e4",
+          "length": 27
+        }
+      ]
+    },
+    {
+      "name": "ae",
+      "path": "analysis/regions/rea-opcode-ae.bin",
+      "base_and_entry": "0xe285",
+      "end_exclusive": "0xe2d3",
+      "length": 78,
+      "sha256": "5f9fadc6f0ea16dd8e7249ceed25baa5ceed8f0704f8c959ef7791e77bde5d6e",
+      "opcodes": [
+        174
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 116613,
+          "memory_address": "0xe285",
+          "length": 78
+        }
+      ]
+    },
+    {
+      "name": "ce",
+      "path": "analysis/regions/rea-opcode-ce.bin",
+      "base_and_entry": "0xe2d3",
+      "end_exclusive": "0xe2ef",
+      "length": 28,
+      "sha256": "8a79a08e9d510b4f405e58935bf4396075c8915c4b7d1806923c947d920c360a",
+      "opcodes": [
+        206
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 116691,
+          "memory_address": "0xe2d3",
+          "length": 28
+        }
+      ]
+    },
+    {
+      "name": "cf",
+      "path": "analysis/regions/rea-opcode-cf.bin",
+      "base_and_entry": "0xe2ef",
+      "end_exclusive": "0xe306",
+      "length": 23,
+      "sha256": "489a5f89883c7521e89878de8d73e72d5f953b057c226b9e26fc129a9d30341f",
+      "opcodes": [
+        207
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 116719,
+          "memory_address": "0xe2ef",
+          "length": 17
+        },
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 6,
+          "physical_sector": 3,
+          "disk_offset": 116224,
+          "memory_address": "0xe300",
+          "length": 6
+        }
+      ]
+    },
+    {
+      "name": "cd",
+      "path": "analysis/regions/rea-opcode-cd.bin",
+      "base_and_entry": "0xe306",
+      "end_exclusive": "0xe32b",
+      "length": 37,
+      "sha256": "410a784e4255adaa833fd6c85ef62fd338cee43cc1b4faf6daad626bb6886c54",
+      "opcodes": [
+        205
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 6,
+          "physical_sector": 3,
+          "disk_offset": 116230,
+          "memory_address": "0xe306",
+          "length": 37
+        }
+      ]
+    },
+    {
+      "name": "c2",
+      "path": "analysis/regions/rea-opcode-c2.bin",
+      "base_and_entry": "0xe32b",
+      "end_exclusive": "0xe35c",
+      "length": 49,
+      "sha256": "b654892393a8ea4016ce93f2244c2db28eaf340caec3669705437fdacc94c743",
+      "opcodes": [
+        194
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 6,
+          "physical_sector": 3,
+          "disk_offset": 116267,
+          "memory_address": "0xe32b",
+          "length": 49
+        }
+      ]
+    },
+    {
+      "name": "c1",
+      "path": "analysis/regions/rea-opcode-c1.bin",
+      "base_and_entry": "0xe35c",
+      "end_exclusive": "0xe371",
+      "length": 21,
+      "sha256": "dc46f171a5cfc35b6108d040458890c93f5ef741e41075e124d1e8e42e90a523",
+      "opcodes": [
+        193
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 6,
+          "physical_sector": 3,
+          "disk_offset": 116316,
+          "memory_address": "0xe35c",
+          "length": 21
+        }
+      ]
+    },
+    {
+      "name": "ad",
+      "path": "analysis/regions/rea-opcode-ad.bin",
+      "base_and_entry": "0xe371",
+      "end_exclusive": "0xe3ec",
+      "length": 123,
+      "sha256": "70a6d630ae1834c5cea7771e0e614b7c25a570364a9c4d414189b58e6da1fc6e",
+      "opcodes": [
+        173
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 6,
+          "physical_sector": 3,
+          "disk_offset": 116337,
+          "memory_address": "0xe371",
+          "length": 123
+        }
+      ]
+    },
+    {
+      "name": "division-helper",
+      "path": "analysis/regions/rea-opcode-division-helper.bin",
+      "base_and_entry": "0xd7d9",
+      "end_exclusive": "0xd87d",
+      "length": 164,
+      "sha256": "15254a04ffa744536c3664bae734e6e291ee9727c741df807fd292b7cb470082",
+      "opcodes": [
+        134,
+        142,
+        192
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 2,
+          "physical_sector": 11,
+          "disk_offset": 123609,
+          "memory_address": "0xd7d9",
+          "length": 39
+        },
+        {
+          "side": "utility",
+          "track": 30,
+          "sector": 1,
+          "physical_sector": 13,
+          "disk_offset": 123136,
+          "memory_address": "0xd800",
+          "length": 125
+        }
+      ]
+    },
+    {
+      "name": "typed-dispatch-helper",
+      "path": "analysis/regions/rea-opcode-typed-dispatch-helper.bin",
+      "base_and_entry": "0xde2e",
+      "end_exclusive": "0xdea4",
+      "length": 118,
+      "sha256": "188b29c0e13232e2ead0de8ca898400f802fe732c852aede839eea386d35431e",
+      "opcodes": [
+        175,
+        183,
+        177,
+        181,
+        176,
+        180
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 11,
+          "physical_sector": 8,
+          "disk_offset": 129838,
+          "memory_address": "0xde2e",
+          "length": 118
+        }
+      ]
+    },
+    {
+      "name": "string-compare-helper",
+      "path": "analysis/regions/rea-opcode-string-compare-helper.bin",
+      "base_and_entry": "0xdea8",
+      "end_exclusive": "0xdf20",
+      "length": 120,
+      "sha256": "13435bb72482dad41df94fce7e783a96cdc3639a4cc5d5fc5d446b86a8d67a26",
+      "opcodes": [
+        175,
+        183,
+        177,
+        181,
+        176,
+        180
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 11,
+          "physical_sector": 8,
+          "disk_offset": 129960,
+          "memory_address": "0xdea8",
+          "length": 88
+        },
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 10,
+          "physical_sector": 10,
+          "disk_offset": 129536,
+          "memory_address": "0xdf00",
+          "length": 32
+        }
+      ]
+    },
+    {
+      "name": "fourbyte-compare-helper",
+      "path": "analysis/regions/rea-opcode-fourbyte-compare-helper.bin",
+      "base_and_entry": "0xdf20",
+      "end_exclusive": "0xdf5a",
+      "length": 58,
+      "sha256": "b2c2b89b9db2bb35885050f07d378ff03a1510f0c4446e73c9acd58313746934",
+      "opcodes": [
+        175,
+        183,
+        177,
+        181,
+        176,
+        180
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 10,
+          "physical_sector": 10,
+          "disk_offset": 129568,
+          "memory_address": "0xdf20",
+          "length": 58
+        }
+      ]
+    },
+    {
+      "name": "boolean-compare-helper",
+      "path": "analysis/regions/rea-opcode-boolean-compare-helper.bin",
+      "base_and_entry": "0xdf5a",
+      "end_exclusive": "0xdf6f",
+      "length": 21,
+      "sha256": "e152fec6a1d204e6e88baa5339452f0eadbfa8d9b78547404cac7893baf490ac",
+      "opcodes": [
+        175,
+        183,
+        177,
+        181,
+        176,
+        180
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 10,
+          "physical_sector": 10,
+          "disk_offset": 129626,
+          "memory_address": "0xdf5a",
+          "length": 21
+        }
+      ]
+    },
+    {
+      "name": "set-layout-helper",
+      "path": "analysis/regions/rea-opcode-set-layout-helper.bin",
+      "base_and_entry": "0xdfdf",
+      "end_exclusive": "0xe019",
+      "length": 58,
+      "sha256": "5c9ad5d59e511fcbbc4990080a0bc5210476bb59133613988979ecf998300201",
+      "opcodes": [
+        175,
+        183,
+        177,
+        181,
+        176,
+        180
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 31,
+          "sector": 10,
+          "physical_sector": 10,
+          "disk_offset": 129759,
+          "memory_address": "0xdfdf",
+          "length": 33
+        },
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 9,
+          "physical_sector": 12,
+          "disk_offset": 116992,
+          "memory_address": "0xe000",
+          "length": 25
+        }
+      ]
+    },
+    {
+      "name": "set-padding-negative-helper",
+      "path": "analysis/regions/rea-opcode-set-padding-negative-helper.bin",
+      "base_and_entry": "0xe019",
+      "end_exclusive": "0xe022",
+      "length": 9,
+      "sha256": "d7fef7df570c63f30f8c596226961b19f2097246ff3e215adfdea1b87359235c",
+      "opcodes": [
+        175,
+        183,
+        177,
+        181,
+        176,
+        180
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 9,
+          "physical_sector": 12,
+          "disk_offset": 117017,
+          "memory_address": "0xe019",
+          "length": 9
+        }
+      ]
+    },
+    {
+      "name": "set-padding-helper",
+      "path": "analysis/regions/rea-opcode-set-padding-helper.bin",
+      "base_and_entry": "0xe022",
+      "end_exclusive": "0xe036",
+      "length": 20,
+      "sha256": "4f75b591eced24fa78a16491f067afb6d4d9bf449581b2705f00390ce41b6f48",
+      "opcodes": [
+        175,
+        183,
+        177,
+        181,
+        176,
+        180
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 9,
+          "physical_sector": 12,
+          "disk_offset": 117026,
+          "memory_address": "0xe022",
+          "length": 20
+        }
+      ]
+    },
+    {
+      "name": "set-equality-helper",
+      "path": "analysis/regions/rea-opcode-set-equality-helper.bin",
+      "base_and_entry": "0xe036",
+      "end_exclusive": "0xe06b",
+      "length": 53,
+      "sha256": "85964334a44144852d4995a00864975fd8ee4ad8c2e56743245fd67e7a3d890f",
+      "opcodes": [
+        175,
+        183,
+        177,
+        181,
+        176,
+        180
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 9,
+          "physical_sector": 12,
+          "disk_offset": 117046,
+          "memory_address": "0xe036",
+          "length": 53
+        }
+      ]
+    },
+    {
+      "name": "set-comparison-helper",
+      "path": "analysis/regions/rea-opcode-set-comparison-helper.bin",
+      "base_and_entry": "0xe06b",
+      "end_exclusive": "0xe0e5",
+      "length": 122,
+      "sha256": "facaf558f9f9e71cf147968ad6485cded94df7af9dc25778fe9f79b5f8565f3e",
+      "opcodes": [
+        175,
+        183,
+        177,
+        181,
+        176,
+        180
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 9,
+          "physical_sector": 12,
+          "disk_offset": 117099,
+          "memory_address": "0xe06b",
+          "length": 122
+        }
+      ]
+    },
+    {
+      "name": "call-current-helper",
+      "path": "analysis/regions/rea-opcode-call-current-helper.bin",
+      "base_and_entry": "0xe100",
+      "end_exclusive": "0xe116",
+      "length": 22,
+      "sha256": "34d11412485aa3c96557686885ef0a50496aeb4fd05f22a014190b166b53a9df",
+      "opcodes": [
+        174,
+        206,
+        207,
+        194
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 8,
+          "physical_sector": 14,
+          "disk_offset": 116736,
+          "memory_address": "0xe100",
+          "length": 22
+        }
+      ]
+    },
+    {
+      "name": "call-segment-helper",
+      "path": "analysis/regions/rea-opcode-call-segment-helper.bin",
+      "base_and_entry": "0xe0e5",
+      "end_exclusive": "0xe100",
+      "length": 27,
+      "sha256": "1280e1dd8952da52fda1fd967cf7ccb50d4d1ca8e7f8213662baf868fa0a6f54",
+      "opcodes": [
+        205
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 9,
+          "physical_sector": 12,
+          "disk_offset": 117221,
+          "memory_address": "0xe0e5",
+          "length": 27
+        }
+      ]
+    },
+    {
+      "name": "call-prefix-helper",
+      "path": "analysis/regions/rea-opcode-call-prefix-helper.bin",
+      "base_and_entry": "0xe116",
+      "end_exclusive": "0xe129",
+      "length": 19,
+      "sha256": "c04fed89e35b2a4d244b9343063e47be494bbe9c025dff84606bc5e0a598e8da",
+      "opcodes": [
+        174,
+        206,
+        207,
+        205,
+        194
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 8,
+          "physical_sector": 14,
+          "disk_offset": 116758,
+          "memory_address": "0xe116",
+          "length": 19
+        }
+      ]
+    },
+    {
+      "name": "procedure-resolve-helper",
+      "path": "analysis/regions/rea-opcode-procedure-resolve-helper.bin",
+      "base_and_entry": "0xe129",
+      "end_exclusive": "0xe17e",
+      "length": 85,
+      "sha256": "73527deef22ddae9259834e62e7d71bf637ed1ffe39a20be5758ca00c7ac037e",
+      "opcodes": [
+        174,
+        206,
+        207,
+        205,
+        194
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 8,
+          "physical_sector": 14,
+          "disk_offset": 116777,
+          "memory_address": "0xe129",
+          "length": 85
+        }
+      ]
+    },
+    {
+      "name": "frame-build-helper",
+      "path": "analysis/regions/rea-opcode-frame-build-helper.bin",
+      "base_and_entry": "0xe18c",
+      "end_exclusive": "0xe285",
+      "length": 249,
+      "sha256": "e330aea6797fc694e70232a57867d598188ff433d4a2eccf2fff6b6982581e40",
+      "opcodes": [
+        174,
+        206,
+        207,
+        205,
+        194
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 8,
+          "physical_sector": 14,
+          "disk_offset": 116876,
+          "memory_address": "0xe18c",
+          "length": 116
+        },
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 116480,
+          "memory_address": "0xe200",
+          "length": 133
+        }
+      ]
+    },
+    {
+      "name": "segment-resident-helper",
+      "path": "analysis/regions/rea-opcode-segment-resident-helper.bin",
+      "base_and_entry": "0xe4e9",
+      "end_exclusive": "0xe502",
+      "length": 25,
+      "sha256": "bcb6e5d74aaa9f52d21c28c14f76d215fea505bf54b044778288260890a9ceb6",
+      "opcodes": [
+        205
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 5,
+          "physical_sector": 5,
+          "disk_offset": 116201,
+          "memory_address": "0xe4e9",
+          "length": 23
+        },
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 4,
+          "physical_sector": 7,
+          "disk_offset": 115712,
+          "memory_address": "0xe500",
+          "length": 2
+        }
+      ]
+    },
+    {
+      "name": "native-return-helper",
+      "path": "analysis/regions/rea-opcode-native-return-helper.bin",
+      "base_and_entry": "0xe17e",
+      "end_exclusive": "0xe189",
+      "length": 11,
+      "sha256": "37e8adea22c729d6f725b672eb480b16b9bfe315f0dd8fe5282d92a35c1e220e",
+      "opcodes": [
+        174,
+        206,
+        207,
+        205,
+        194
+      ],
+      "sources": [
+        {
+          "side": "utility",
+          "track": 28,
+          "sector": 8,
+          "physical_sector": 14,
+          "disk_offset": 116862,
+          "memory_address": "0xe17e",
+          "length": 11
+        }
+      ]
     }
   ],
   "scope": "Native-only bounded slices; calls/jumps outside slices remain unresolved in REA"

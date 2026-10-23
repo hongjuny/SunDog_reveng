@@ -9,6 +9,11 @@ mkdir -p analysis/local ghidra/exports
 python3 tools/opcode_evidence.py
 python3 - <<'PYCODE'
 from pathlib import Path
+p=Path('analysis/local/ready-seeds.txt')
+p.write_text(','.join(sorted(set(p.read_text().strip().split(','))|{'e17e'})))
+PYCODE
+python3 - <<'PYCODE'
+from pathlib import Path
 for name in ('ghidra-interpreter-memory','ghidra-opcode-annotations'):
     Path('analysis/local/'+name+'.next.json').unlink(missing_ok=True)
 PYCODE
@@ -27,3 +32,4 @@ for name in ('ghidra-interpreter-memory','ghidra-opcode-annotations'):
     Path('analysis/local/'+name+'.next.json').replace('analysis/'+name+'.json')
 PYCODE
 python3 tools/probe_startup_prefix.py
+python3 tools/export_opcode_catalogue.py

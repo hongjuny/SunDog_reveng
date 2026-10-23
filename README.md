@@ -26,7 +26,7 @@ and [research log](docs/research-log.md). The first milestone is static analysis
 not an observed emulator boot. Unreadable Play Track 34 remains unknown.
 
 Run `python3 tools/structural_evidence.py` after generating disk and boot regions
-to reproduce HGR table and directory-shape checks. Forty-one deterministic tests
+to reproduce HGR table and directory-shape checks. Forty-nine deterministic tests
 require no original media. Raw searches, binaries, projects and disassembly stay
 local; structured statistics and provenance are versioned.
 
@@ -47,15 +47,17 @@ the initial p-code overlay and relocated initializer. Evidence IDs and limits ar
 in `analysis/rea-memory-crosscheck.json`; full Evidence and snapshots stay local.
 
 Selected Apple II [opcode semantics](docs/opcode-semantics.md) are checked through
-2,621 controlled native-handler replay cases, without claiming a full CPU/device
+4,976 controlled native-handler replay cases, without claiming a full CPU/device
 emulator or p-code disassembler. `sh tools/run_opcode_analysis.sh` updates the
 focused Ghidra annotations, memory classification checks and startup-prefix probe.
 These direct checks retain native/data annotations in the persistent project;
 REA's temporary imports do not mirror them or emulate Language Card hardware.
-Actual REA assembly additionally cross-checks twenty newly established opcode handlers
-and shared helpers: 25 bounded imports, 656 bytes and 365 native instructions.
-Their Evidence IDs are persisted in Ghidra annotations. Twenty-eight high opcode
-values remain unresolved; see `analysis/rea-opcode-crosscheck.json`.
+All 256 primary values are identified with selected native-backed checks; no
+high entry remains unidentified. Actual REA cross-checks all 48 formerly unknown
+high entries and shared helpers: 70 imports, 3,092 bytes and 1,656 native instructions.
+Evidence IDs are persisted in Ghidra annotations. See the [complete reference](docs/opcode-reference.md)
+and [completion scope](docs/primary-opcode-completion.md). Individual 9E services,
+ROM/device execution and complete runtime semantics remain separate open work.
 
 To review the explicitly requested REA client environment merge, run
 `python3 tools/configure_rea.py`. `--apply` performs the backed-up, scoped change

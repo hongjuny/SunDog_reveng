@@ -1,0 +1,1303 @@
+{
+  "primary_entries": 256,
+  "short_constant_values": 128,
+  "high_entries": 128,
+  "all_primary_entries_identified": true,
+  "unresolved_high_opcodes": [],
+  "exhaustive_runtime_verified": false,
+  "coverage_by_high_opcode": [
+    {
+      "opcode": "80",
+      "rule": "absolute16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 12,
+      "native_handler": "D6FF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "81",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "82",
+      "rule": "add16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "D71D",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "83",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "84",
+      "rule": "bitwise_and16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "D5AF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "85",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "86",
+      "rule": "divide_signed16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 133,
+      "native_handler": "D87D",
+      "rea_evidence_ids": [
+        "ev_1f7836353145dfd5350417ff3bd50860a2a329a7ebd09d0ec5a8ad3e3a620675",
+        "ev_2a5fac711e971b991f28e4d39ee1f590b85b7f9d8a434647c14313070347f76c"
+      ]
+    },
+    {
+      "opcode": "87",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "88",
+      "rule": "check_signed_range",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 36,
+      "native_handler": "D8C2",
+      "rea_evidence_ids": [
+        "ev_3059acad3ea4b9f7eaec7c3aa545d88fbb8ddb91978af0aac1d20029b4394ac1"
+      ]
+    },
+    {
+      "opcode": "89",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "8A",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "8B",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "8C",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "8D",
+      "rule": "bitwise_or16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "D5C2",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "8E",
+      "rule": "remainder_magnitude16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 133,
+      "native_handler": "D8AA",
+      "rea_evidence_ids": [
+        "ev_b20df4d4c963ccbe5bb30b4fd5e1405e9d591ddf16f1e4656c74c29118abe4aa",
+        "ev_2a5fac711e971b991f28e4d39ee1f590b85b7f9d8a434647c14313070347f76c"
+      ]
+    },
+    {
+      "opcode": "8F",
+      "rule": "multiply16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "D786",
+      "rea_evidence_ids": [
+        "ev_91d1521564913eeb6e6c214436807aa1b2c886ba65089c5721eea4686be9298e",
+        "ev_79083d8264201ce2dbd0ea0cbd8fcafea95ad56ec2c8cf03adb7222e76afa3ad"
+      ]
+    },
+    {
+      "opcode": "90",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "91",
+      "rule": "negate16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 12,
+      "native_handler": "D735",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "92",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "93",
+      "rule": "bitwise_not16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 12,
+      "native_handler": "D5D5",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "94",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "95",
+      "rule": "subtract16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "D747",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "96",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "97",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "98",
+      "rule": "square16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 12,
+      "native_handler": "D7CD",
+      "rea_evidence_ids": [
+        "ev_91d1521564913eeb6e6c214436807aa1b2c886ba65089c5721eea4686be9298e",
+        "ev_6c36133536d76618f55b97be71fdcf208981fc7ba2c033d5be726aea7170dfc8"
+      ]
+    },
+    {
+      "opcode": "99",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "9A",
+      "rule": "store_indirect_word",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 36,
+      "native_handler": "D4BC",
+      "rea_evidence_ids": [
+        "ev_69b89233ece73c509691adde0b164c64766dcb6f28db402be17a3f60d119c6db"
+      ]
+    },
+    {
+      "opcode": "9B",
+      "rule": "check_string_index",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 24,
+      "native_handler": "D98C",
+      "rea_evidence_ids": [
+        "ev_4f4d1fe5d15513561b1b8c2a353e8d27422f62638bb0480d8cd5e2c2c82904a3"
+      ]
+    },
+    {
+      "opcode": "9C",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "9D",
+      "rule": "load_table_indexed",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 30,
+      "native_handler": "D442",
+      "rea_evidence_ids": [
+        "ev_ac3e393b762414e6baeada05b4add955e6f66b851955b837a1ecf3e20a913eb9",
+        "ev_3cd950e3e936ae8acdbd7ff7a58ed0bcbf94b75dceb61a4ba44f6be6def87d2a"
+      ]
+    },
+    {
+      "opcode": "9E",
+      "rule": "secondary_dispatch",
+      "coverage": "secondary-dispatch-only",
+      "checked_cases": 256,
+      "native_handler": "E67F",
+      "rea_evidence_ids": [
+        "ev_62023340f26e7593c20eaca8c3c41fe798bec83291bf8a2a1f786fee80789f38"
+      ]
+    },
+    {
+      "opcode": "9F",
+      "rule": "zero_word",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2D7",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "A0",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "A1",
+      "rule": "branch_even_word",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 312,
+      "native_handler": "D2A0",
+      "rea_evidence_ids": [
+        "ev_8c1145a97fe6849e3521f314fd1b65664eed0f1e9b4261bb6847781555cc0ddf"
+      ]
+    },
+    {
+      "opcode": "A2",
+      "rule": "offset_pointer_words",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 15,
+      "native_handler": "D9CB",
+      "rea_evidence_ids": [
+        "ev_60952bbbe35920943f64a925ed6680ec9343de30c4e62c24e0b066863c2d7a46",
+        "ev_3cd950e3e936ae8acdbd7ff7a58ed0bcbf94b75dceb61a4ba44f6be6def87d2a"
+      ]
+    },
+    {
+      "opcode": "A3",
+      "rule": "load_pointer_indexed_word",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 15,
+      "native_handler": "D9AF",
+      "rea_evidence_ids": [
+        "ev_6c97e296efc70d90f09a258eaed8fd90f6cbc4ed63538e066d0d064043524cb1",
+        "ev_3cd950e3e936ae8acdbd7ff7a58ed0bcbf94b75dceb61a4ba44f6be6def87d2a"
+      ]
+    },
+    {
+      "opcode": "A4",
+      "rule": "scaled_indexed_address",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 36,
+      "native_handler": "D9DE",
+      "rea_evidence_ids": [
+        "ev_91d1521564913eeb6e6c214436807aa1b2c886ba65089c5721eea4686be9298e",
+        "ev_1246129c848fd23474a925d85db87dfbf955d4a064c89b1a9d9415c3d7064927",
+        "ev_3cd950e3e936ae8acdbd7ff7a58ed0bcbf94b75dceb61a4ba44f6be6def87d2a"
+      ]
+    },
+    {
+      "opcode": "A5",
+      "rule": "address_global",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 10,
+      "native_handler": "D384",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "A6",
+      "rule": "inline_length_pointer",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 4,
+      "native_handler": "D929",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "A7",
+      "rule": "address_table_indexed",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 30,
+      "native_handler": "D48C",
+      "rea_evidence_ids": [
+        "ev_1d8d26d63eff5b5a934d052af3673780f5b750647660481e86dbe9fd1300381f",
+        "ev_3cd950e3e936ae8acdbd7ff7a58ed0bcbf94b75dceb61a4ba44f6be6def87d2a"
+      ]
+    },
+    {
+      "opcode": "A8",
+      "rule": "copy_words_forward",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 15,
+      "native_handler": "D59B",
+      "rea_evidence_ids": [
+        "ev_b0ac8fc1ff8c5e0ca90f865102925c549139645e3735488e53ab2442fbcd0088",
+        "ev_6ee750ff11d5a61fef1d899fdbd777f12e9237e3f74638c18ee19d1fab5c1fa6",
+        "ev_3cd950e3e936ae8acdbd7ff7a58ed0bcbf94b75dceb61a4ba44f6be6def87d2a"
+      ]
+    },
+    {
+      "opcode": "A9",
+      "rule": "load_global",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 10,
+      "native_handler": "D366",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "AA",
+      "rule": "assign_length_string",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 28,
+      "native_handler": "D94B",
+      "rea_evidence_ids": [
+        "ev_853a69778cff7ac91fc656ac93b32ccef57187de5f313a9ef5707ae8646e625b"
+      ]
+    },
+    {
+      "opcode": "AB",
+      "rule": "store_global",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 10,
+      "native_handler": "D3AA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "AC",
+      "rule": "case_table_branch",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 10,
+      "native_handler": "D5E2",
+      "rea_evidence_ids": [
+        "ev_e387377d008a08bbdf79a4a1ff1532436c1453cb7d59ee7c521975e196e52693"
+      ]
+    },
+    {
+      "opcode": "AD",
+      "rule": "return_restore_context",
+      "coverage": "controlled-call-return-and-service-boundaries",
+      "checked_cases": 5,
+      "native_handler": "E371",
+      "rea_evidence_ids": [
+        "ev_3003f1cc59c46f2a74fdfa497f8dfc8463a3189fe63a865cdcb23395c6acf003"
+      ]
+    },
+    {
+      "opcode": "AE",
+      "rule": "call_current_lexical_link",
+      "coverage": "controlled-call-return-and-service-boundaries",
+      "checked_cases": 10,
+      "native_handler": "E285",
+      "rea_evidence_ids": [
+        "ev_b4aef1bffebbf349f5d0aea265c15c42d02e9fe4b9de8717941d5bf5ecb54cfd",
+        "ev_b1afbb220ca3ac62ba5161d11c2d2c96a5d631cb9d26fcfc41c3b5ae94f1a5c1",
+        "ev_f73b8f1d785b62eaf4abd5a06a00b47366b85e19408e4dbd1b3739c879523e4b",
+        "ev_811bc8831651690374c422c1339b45d3780d65d6485ae73ce779545d3c1a566d",
+        "ev_8259e0fd1c8a18eb68a3c6cb9f8a99807dd360caeb29491927b56797c2d1a039",
+        "ev_ebacf9809e0ab84a3d2f1c69d607e4ef87c6931e5f6fe27a2153c9f09263ceda"
+      ]
+    },
+    {
+      "opcode": "AF",
+      "rule": "typed_compare_equal",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 209,
+      "native_handler": "DE2C",
+      "rea_evidence_ids": [
+        "ev_7f0080807ff4f0d09dea92d0da83ea4404cc7e24063982b2220811ea17d324f7",
+        "ev_f5b0ad8f73ba7af4d7b3524815ae470a00927f0c1938de739a5918d038619231",
+        "ev_0352e2d31fc5ddea63a6cfcae9a111ed89836ebb8bab6d58d743c3717893b0fa",
+        "ev_9bee46b2e430d0104e044893cdd57834e24a3fa5e01cbabae7c302f994d582c7",
+        "ev_f26361f17fd02e73ed4c75a6d37347973061fb3d85970d27e8cb71a3b6f5b7d5",
+        "ev_94aa98961ab65ab6b52e9cb89ea68ead5e4b1bb0e8da6a867e3b2ecb5275974c",
+        "ev_5f7729f571681623fd1d1b440e8dbe7c750c5e5506756acbf1cb015ff79c6d4b",
+        "ev_ea6da4aa663800c7586ad95cb504227f24724c56d44f4f0d4bfdc7cf3a846f1e",
+        "ev_d61da637f66172df1c46e9cd827976ee532d6ee6a450004d4194ca8251cef8fa",
+        "ev_9bf0d556774ac3942e1a608e5dadedb43190a39f7a1793713274d2dfac66cab0"
+      ]
+    },
+    {
+      "opcode": "B0",
+      "rule": "typed_compare_greater_equal",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 209,
+      "native_handler": "DE24",
+      "rea_evidence_ids": [
+        "ev_9303e1fcd4ba644db3b30bf0558eb19de5bf4ac55601a7a209b3c8886ad26187",
+        "ev_f5b0ad8f73ba7af4d7b3524815ae470a00927f0c1938de739a5918d038619231",
+        "ev_0352e2d31fc5ddea63a6cfcae9a111ed89836ebb8bab6d58d743c3717893b0fa",
+        "ev_9bee46b2e430d0104e044893cdd57834e24a3fa5e01cbabae7c302f994d582c7",
+        "ev_f26361f17fd02e73ed4c75a6d37347973061fb3d85970d27e8cb71a3b6f5b7d5",
+        "ev_94aa98961ab65ab6b52e9cb89ea68ead5e4b1bb0e8da6a867e3b2ecb5275974c",
+        "ev_5f7729f571681623fd1d1b440e8dbe7c750c5e5506756acbf1cb015ff79c6d4b",
+        "ev_ea6da4aa663800c7586ad95cb504227f24724c56d44f4f0d4bfdc7cf3a846f1e",
+        "ev_d61da637f66172df1c46e9cd827976ee532d6ee6a450004d4194ca8251cef8fa",
+        "ev_9bf0d556774ac3942e1a608e5dadedb43190a39f7a1793713274d2dfac66cab0"
+      ]
+    },
+    {
+      "opcode": "B1",
+      "rule": "typed_compare_greater",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 209,
+      "native_handler": "DE1C",
+      "rea_evidence_ids": [
+        "ev_eab056c093a24cf47a6cd9c8c9ee785f056308b0f687fd908003ec901b7b0baa",
+        "ev_f5b0ad8f73ba7af4d7b3524815ae470a00927f0c1938de739a5918d038619231",
+        "ev_0352e2d31fc5ddea63a6cfcae9a111ed89836ebb8bab6d58d743c3717893b0fa",
+        "ev_9bee46b2e430d0104e044893cdd57834e24a3fa5e01cbabae7c302f994d582c7",
+        "ev_f26361f17fd02e73ed4c75a6d37347973061fb3d85970d27e8cb71a3b6f5b7d5",
+        "ev_94aa98961ab65ab6b52e9cb89ea68ead5e4b1bb0e8da6a867e3b2ecb5275974c",
+        "ev_5f7729f571681623fd1d1b440e8dbe7c750c5e5506756acbf1cb015ff79c6d4b",
+        "ev_ea6da4aa663800c7586ad95cb504227f24724c56d44f4f0d4bfdc7cf3a846f1e",
+        "ev_d61da637f66172df1c46e9cd827976ee532d6ee6a450004d4194ca8251cef8fa",
+        "ev_9bf0d556774ac3942e1a608e5dadedb43190a39f7a1793713274d2dfac66cab0"
+      ]
+    },
+    {
+      "opcode": "B2",
+      "rule": "address_nonlocal",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 9,
+      "native_handler": "D3EE",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "B3",
+      "rule": "push_inline_words",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 16,
+      "native_handler": "D4D6",
+      "rea_evidence_ids": [
+        "ev_649bed2211cd4163cc7917ac37ba343e3960ec38e326c52713035212303dbddb"
+      ]
+    },
+    {
+      "opcode": "B4",
+      "rule": "typed_compare_less_equal",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 209,
+      "native_handler": "DE28",
+      "rea_evidence_ids": [
+        "ev_bc4346112012a5badbcaaec9672b8810531431fa3913cf8acd425fdeaeb3bbba",
+        "ev_f5b0ad8f73ba7af4d7b3524815ae470a00927f0c1938de739a5918d038619231",
+        "ev_0352e2d31fc5ddea63a6cfcae9a111ed89836ebb8bab6d58d743c3717893b0fa",
+        "ev_9bee46b2e430d0104e044893cdd57834e24a3fa5e01cbabae7c302f994d582c7",
+        "ev_f26361f17fd02e73ed4c75a6d37347973061fb3d85970d27e8cb71a3b6f5b7d5",
+        "ev_94aa98961ab65ab6b52e9cb89ea68ead5e4b1bb0e8da6a867e3b2ecb5275974c",
+        "ev_5f7729f571681623fd1d1b440e8dbe7c750c5e5506756acbf1cb015ff79c6d4b",
+        "ev_ea6da4aa663800c7586ad95cb504227f24724c56d44f4f0d4bfdc7cf3a846f1e",
+        "ev_d61da637f66172df1c46e9cd827976ee532d6ee6a450004d4194ca8251cef8fa",
+        "ev_9bf0d556774ac3942e1a608e5dadedb43190a39f7a1793713274d2dfac66cab0"
+      ]
+    },
+    {
+      "opcode": "B5",
+      "rule": "typed_compare_less",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 209,
+      "native_handler": "DE20",
+      "rea_evidence_ids": [
+        "ev_82192a80be4c74fe1030cdef0a3bde41e30a89338e7f60fb4365cdd115ce7cf6",
+        "ev_f5b0ad8f73ba7af4d7b3524815ae470a00927f0c1938de739a5918d038619231",
+        "ev_0352e2d31fc5ddea63a6cfcae9a111ed89836ebb8bab6d58d743c3717893b0fa",
+        "ev_9bee46b2e430d0104e044893cdd57834e24a3fa5e01cbabae7c302f994d582c7",
+        "ev_f26361f17fd02e73ed4c75a6d37347973061fb3d85970d27e8cb71a3b6f5b7d5",
+        "ev_94aa98961ab65ab6b52e9cb89ea68ead5e4b1bb0e8da6a867e3b2ecb5275974c",
+        "ev_5f7729f571681623fd1d1b440e8dbe7c750c5e5506756acbf1cb015ff79c6d4b",
+        "ev_ea6da4aa663800c7586ad95cb504227f24724c56d44f4f0d4bfdc7cf3a846f1e",
+        "ev_d61da637f66172df1c46e9cd827976ee532d6ee6a450004d4194ca8251cef8fa",
+        "ev_9bf0d556774ac3942e1a608e5dadedb43190a39f7a1793713274d2dfac66cab0"
+      ]
+    },
+    {
+      "opcode": "B6",
+      "rule": "load_nonlocal",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 9,
+      "native_handler": "D3C8",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "B7",
+      "rule": "typed_compare_not_equal",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 209,
+      "native_handler": "DE18",
+      "rea_evidence_ids": [
+        "ev_e691baebf6d90685e2b5e40af827e7a641065356086aa8fc24a8f85c6c0d67e7",
+        "ev_f5b0ad8f73ba7af4d7b3524815ae470a00927f0c1938de739a5918d038619231",
+        "ev_0352e2d31fc5ddea63a6cfcae9a111ed89836ebb8bab6d58d743c3717893b0fa",
+        "ev_9bee46b2e430d0104e044893cdd57834e24a3fa5e01cbabae7c302f994d582c7",
+        "ev_f26361f17fd02e73ed4c75a6d37347973061fb3d85970d27e8cb71a3b6f5b7d5",
+        "ev_94aa98961ab65ab6b52e9cb89ea68ead5e4b1bb0e8da6a867e3b2ecb5275974c",
+        "ev_5f7729f571681623fd1d1b440e8dbe7c750c5e5506756acbf1cb015ff79c6d4b",
+        "ev_ea6da4aa663800c7586ad95cb504227f24724c56d44f4f0d4bfdc7cf3a846f1e",
+        "ev_d61da637f66172df1c46e9cd827976ee532d6ee6a450004d4194ca8251cef8fa",
+        "ev_9bf0d556774ac3942e1a608e5dadedb43190a39f7a1793713274d2dfac66cab0"
+      ]
+    },
+    {
+      "opcode": "B8",
+      "rule": "store_nonlocal",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 9,
+      "native_handler": "D41C",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "B9",
+      "rule": "jump_encoded",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 39,
+      "native_handler": "D2A8",
+      "rea_evidence_ids": [
+        "ev_305bb54677aaf5a1daee6d88024824d8cf4d97e82fa51f7097e1e657815dd0ba"
+      ]
+    },
+    {
+      "opcode": "BA",
+      "rule": "load_packed_field",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 112,
+      "native_handler": "DA60",
+      "rea_evidence_ids": [
+        "ev_61c7d6e1d3909c64030c75d78ef3673ef8e9a16c0d94410a7f4d344bee90c20f"
+      ]
+    },
+    {
+      "opcode": "BB",
+      "rule": "store_packed_field",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 112,
+      "native_handler": "DAB6",
+      "rea_evidence_ids": [
+        "ev_5dc04b756814a673910fa6d5760f9440942d10beca8e27decd39492f3c140cde"
+      ]
+    },
+    {
+      "opcode": "BC",
+      "rule": "load_multiple_words",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 7,
+      "native_handler": "D50A",
+      "rea_evidence_ids": [
+        "ev_4b68b48bc6566f5c93589b618871dd105d1b548f49024bfc7a2300b4d32b5ac4"
+      ]
+    },
+    {
+      "opcode": "BD",
+      "rule": "store_multiple_words",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 5,
+      "native_handler": "D539",
+      "rea_evidence_ids": [
+        "ev_ded864f329414131c90675379536b36ac5165d0e776f91dff3f4e45e7b5699bb"
+      ]
+    },
+    {
+      "opcode": "BE",
+      "rule": "load_indexed_byte",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 60,
+      "native_handler": "D567",
+      "rea_evidence_ids": [
+        "ev_974a62b140b0c274bc04ca447dcb3ef28092f0057ae5ff56290e56233ad80d07"
+      ]
+    },
+    {
+      "opcode": "BF",
+      "rule": "store_indexed_byte",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 75,
+      "native_handler": "D581",
+      "rea_evidence_ids": [
+        "ev_33ca5caceda3d68207ea7ca95efe7fba73bac99801ad801a02f39504ff0845a9"
+      ]
+    },
+    {
+      "opcode": "C0",
+      "rule": "packed_array_descriptor",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 161,
+      "native_handler": "DA1D",
+      "rea_evidence_ids": [
+        "ev_008b16d8f7df986468a13ec4c14ca8d90cab82b7eb57542d9eb5bac8a9fe38ae",
+        "ev_2a5fac711e971b991f28e4d39ee1f590b85b7f9d8a434647c14313070347f76c"
+      ]
+    },
+    {
+      "opcode": "C1",
+      "rule": "return_restore_context",
+      "coverage": "controlled-call-return-and-service-boundaries",
+      "checked_cases": 5,
+      "native_handler": "E35C",
+      "rea_evidence_ids": [
+        "ev_e5952e11e118c1241394fc7a94e8cb157aef7f88e7e980183828855712a2af97"
+      ]
+    },
+    {
+      "opcode": "C2",
+      "rule": "call_current_new_global",
+      "coverage": "controlled-call-return-and-service-boundaries",
+      "checked_cases": 10,
+      "native_handler": "E32B",
+      "rea_evidence_ids": [
+        "ev_704e029ca7fa26088611541997afc2a9512dd0d53c95e6baeb16953c52d25b12",
+        "ev_b1afbb220ca3ac62ba5161d11c2d2c96a5d631cb9d26fcfc41c3b5ae94f1a5c1",
+        "ev_f73b8f1d785b62eaf4abd5a06a00b47366b85e19408e4dbd1b3739c879523e4b",
+        "ev_811bc8831651690374c422c1339b45d3780d65d6485ae73ce779545d3c1a566d",
+        "ev_8259e0fd1c8a18eb68a3c6cb9f8a99807dd360caeb29491927b56797c2d1a039",
+        "ev_ebacf9809e0ab84a3d2f1c69d607e4ef87c6931e5f6fe27a2153c9f09263ceda"
+      ]
+    },
+    {
+      "opcode": "C3",
+      "rule": "compare_equal16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "DFA9",
+      "rea_evidence_ids": [
+        "ev_0e073d22adafe3e952cb11f265422ef058898e6c340e0499d902009b291d4613"
+      ]
+    },
+    {
+      "opcode": "C4",
+      "rule": "compare_signed_greater_equal16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "DF7B",
+      "rea_evidence_ids": [
+        "ev_b0adc6b62c65ab45d1520078dfca2d6d8c0676baeeef9fa62a8c8ac5385e20f8",
+        "ev_264008503111aa4fe2e2c785282e624f5fe7b0dec21a52a56e79bf7fab78d290",
+        "ev_948225fb7da6f1dc05dfead32b2f35d9694abd09cdd992000f1452694240fe44"
+      ]
+    },
+    {
+      "opcode": "C5",
+      "rule": "compare_signed_greater16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "DF73",
+      "rea_evidence_ids": [
+        "ev_0b7d5b83ee5723157aa64122f580b8bb81ef4e1d6f71e9bd91836020a6b7f2f3",
+        "ev_264008503111aa4fe2e2c785282e624f5fe7b0dec21a52a56e79bf7fab78d290",
+        "ev_948225fb7da6f1dc05dfead32b2f35d9694abd09cdd992000f1452694240fe44"
+      ]
+    },
+    {
+      "opcode": "C6",
+      "rule": "address_local",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 10,
+      "native_handler": "D315",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "C7",
+      "rule": "literal_word",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 12,
+      "native_handler": "D2DE",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "C8",
+      "rule": "compare_signed_less_equal16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "DF77",
+      "rea_evidence_ids": [
+        "ev_e4a80c66ab2ad3aacb4346f150b7f759d2ff387d4720117d836c02bd2200e77d",
+        "ev_264008503111aa4fe2e2c785282e624f5fe7b0dec21a52a56e79bf7fab78d290",
+        "ev_948225fb7da6f1dc05dfead32b2f35d9694abd09cdd992000f1452694240fe44"
+      ]
+    },
+    {
+      "opcode": "C9",
+      "rule": "compare_signed_less16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "DF6F",
+      "rea_evidence_ids": [
+        "ev_66e6a83ca714ee3dfa124642b6522582efca8897cb3b200f1681aa0a03ff5c15",
+        "ev_264008503111aa4fe2e2c785282e624f5fe7b0dec21a52a56e79bf7fab78d290",
+        "ev_948225fb7da6f1dc05dfead32b2f35d9694abd09cdd992000f1452694240fe44"
+      ]
+    },
+    {
+      "opcode": "CA",
+      "rule": "load_local",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 10,
+      "native_handler": "D2F7",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "CB",
+      "rule": "compare_not_equal16",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 144,
+      "native_handler": "DF7F",
+      "rea_evidence_ids": [
+        "ev_1059b3d49b08a2c3c0b7161afb924b461dfba383f729ab369d1339855619aecb",
+        "ev_264008503111aa4fe2e2c785282e624f5fe7b0dec21a52a56e79bf7fab78d290",
+        "ev_948225fb7da6f1dc05dfead32b2f35d9694abd09cdd992000f1452694240fe44"
+      ]
+    },
+    {
+      "opcode": "CC",
+      "rule": "store_local",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 10,
+      "native_handler": "D33B",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "CD",
+      "rule": "call_external_segment",
+      "coverage": "controlled-call-return-and-service-boundaries",
+      "checked_cases": 11,
+      "native_handler": "E306",
+      "rea_evidence_ids": [
+        "ev_c4eeeb965f5def2d49d920de3805f8460e647d678c1b949072da9ded50e57de7",
+        "ev_9e4afe13f8eb06e0b722cf0754b0dd25a4068e0db68a3bde5bd6ab3e3effcbdb",
+        "ev_f73b8f1d785b62eaf4abd5a06a00b47366b85e19408e4dbd1b3739c879523e4b",
+        "ev_811bc8831651690374c422c1339b45d3780d65d6485ae73ce779545d3c1a566d",
+        "ev_8259e0fd1c8a18eb68a3c6cb9f8a99807dd360caeb29491927b56797c2d1a039",
+        "ev_3c9f59dc9dd27a0ff6a796b5b51dfcf97682a69f1f2e8e1708108a27bd0be186",
+        "ev_ebacf9809e0ab84a3d2f1c69d607e4ef87c6931e5f6fe27a2153c9f09263ceda"
+      ]
+    },
+    {
+      "opcode": "CE",
+      "rule": "call_current_dynamic_link",
+      "coverage": "controlled-call-return-and-service-boundaries",
+      "checked_cases": 11,
+      "native_handler": "E2D3",
+      "rea_evidence_ids": [
+        "ev_65768c0662c63a6c96d5598706ad6d1e88cb980f2ab0e0f6233b6e124447b299",
+        "ev_b1afbb220ca3ac62ba5161d11c2d2c96a5d631cb9d26fcfc41c3b5ae94f1a5c1",
+        "ev_f73b8f1d785b62eaf4abd5a06a00b47366b85e19408e4dbd1b3739c879523e4b",
+        "ev_811bc8831651690374c422c1339b45d3780d65d6485ae73ce779545d3c1a566d",
+        "ev_8259e0fd1c8a18eb68a3c6cb9f8a99807dd360caeb29491927b56797c2d1a039",
+        "ev_ebacf9809e0ab84a3d2f1c69d607e4ef87c6931e5f6fe27a2153c9f09263ceda"
+      ]
+    },
+    {
+      "opcode": "CF",
+      "rule": "call_current_global_link",
+      "coverage": "controlled-call-return-and-service-boundaries",
+      "checked_cases": 10,
+      "native_handler": "E2EF",
+      "rea_evidence_ids": [
+        "ev_4b580969084175d8ca43d44c93e4d8a21d5d314c8a823b3c47ea2abb31cf2b7d",
+        "ev_b1afbb220ca3ac62ba5161d11c2d2c96a5d631cb9d26fcfc41c3b5ae94f1a5c1",
+        "ev_f73b8f1d785b62eaf4abd5a06a00b47366b85e19408e4dbd1b3739c879523e4b",
+        "ev_811bc8831651690374c422c1339b45d3780d65d6485ae73ce779545d3c1a566d",
+        "ev_8259e0fd1c8a18eb68a3c6cb9f8a99807dd360caeb29491927b56797c2d1a039",
+        "ev_ebacf9809e0ab84a3d2f1c69d607e4ef87c6931e5f6fe27a2153c9f09263ceda"
+      ]
+    },
+    {
+      "opcode": "D0",
+      "rule": "inline_payload_pointer",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 4,
+      "native_handler": "D911",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "D1",
+      "rule": "store_table_indexed",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 30,
+      "native_handler": "D467",
+      "rea_evidence_ids": [
+        "ev_6f0e870025219bce42470cec963cf6dc60511a48c2b5eb101fb9425ac38ddd39",
+        "ev_3cd950e3e936ae8acdbd7ff7a58ed0bcbf94b75dceb61a4ba44f6be6def87d2a"
+      ]
+    },
+    {
+      "opcode": "D2",
+      "rule": "advance_only",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D28D",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "D3",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "D4",
+      "rule": "shared_error_111",
+      "coverage": "shared-error-prefix",
+      "checked_cases": 1,
+      "native_handler": "D1EF",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "D5",
+      "rule": "consume_ignored_index",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 5,
+      "native_handler": "E803",
+      "rea_evidence_ids": [
+        "ev_9d2ca5be725ad3b4a0fbd34c716279160fdf7f61ba25b08646d174821b49d78e"
+      ]
+    },
+    {
+      "opcode": "D6",
+      "rule": "reset_via_generated_stub",
+      "coverage": "generated-reset-stub-boundary",
+      "checked_cases": 1,
+      "native_handler": "D6E4",
+      "rea_evidence_ids": [
+        "ev_2c7e03f84fb70f2592879759fa2ce93617890f2251d357cb273db9d62357f542"
+      ]
+    },
+    {
+      "opcode": "D7",
+      "rule": "advance_only",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D28D",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "D8",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "D9",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "DA",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "DB",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "DC",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "DD",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "DE",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "DF",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "E0",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "E1",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "E2",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "E3",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "E4",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "E5",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "E6",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "E7",
+      "rule": "load_local_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D2EA",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "E8",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "E9",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "EA",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "EB",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "EC",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "ED",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "EE",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "EF",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "F0",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "F1",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "F2",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "F3",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "F4",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "F5",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "F6",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "F7",
+      "rule": "load_global_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D359",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "F8",
+      "rule": "load_indirect_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D4AB",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "F9",
+      "rule": "load_indirect_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D4A8",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "FA",
+      "rule": "load_indirect_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D4A8",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "FB",
+      "rule": "load_indirect_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D4A8",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "FC",
+      "rule": "load_indirect_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D4A8",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "FD",
+      "rule": "load_indirect_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D4A8",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "FE",
+      "rule": "load_indirect_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D4A8",
+      "rea_evidence_ids": []
+    },
+    {
+      "opcode": "FF",
+      "rule": "load_indirect_short",
+      "coverage": "selected-data-control-semantics",
+      "checked_cases": 1,
+      "native_handler": "D4A8",
+      "rea_evidence_ids": []
+    }
+  ],
+  "limitations": [
+    "Identification and selected native-model checks do not prove all inputs or Apple II execution.",
+    "18 shared-error slots are checked only to the exception machinery boundary.",
+    "9E is verified as a dispatcher; its target services are not thereby semantically verified.",
+    "ROM/MMIO, nonresident segment reads and release services remain explicit boundaries.",
+    "Legal Pascal type/operand combinations and complete modified p-system version remain open."
+  ],
+  "snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
+  "total_controlled_cases": 4976,
+  "layouts": [
+    {
+      "name": "packed-field-masks",
+      "address": "0xddd6",
+      "length": 34,
+      "sha256": "a4575e80860c4fb51be3d72b1f348857875814a0aae9b4a25601146f3f86a0f9",
+      "source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 130048,
+        "byte_in_sector": 214,
+        "image_offset": 130262
+      },
+      "method": "native data-flow, source-byte checks and persistent Ghidra data classification",
+      "confidence": "high static"
+    },
+    {
+      "name": "native-return-minus-one",
+      "address": "0xe189",
+      "length": 2,
+      "sha256": "2ad03b6735a1efdf395f05f1f71f8ab932f6eea021ef96dbab753c7f4386ca39",
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 116736,
+        "byte_in_sector": 137,
+        "image_offset": 116873
+      },
+      "method": "native data-flow, source-byte checks and persistent Ghidra data classification",
+      "confidence": "high static"
+    },
+    {
+      "name": "native-return-segment-marker",
+      "address": "0xe18b",
+      "length": 1,
+      "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 116736,
+        "byte_in_sector": 139,
+        "image_offset": 116875
+      },
+      "method": "native data-flow, source-byte checks and persistent Ghidra data classification",
+      "confidence": "high static"
+    }
+  ],
+  "rea_native_crosscheck": {
+    "report": "analysis/rea-opcode-crosscheck.json",
+    "views": 70,
+    "native_instructions": 1656,
+    "source_bytes": 3092,
+    "high_opcodes_linked": 48
+  }
+}

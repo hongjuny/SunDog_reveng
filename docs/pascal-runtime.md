@@ -83,17 +83,23 @@ emulator before describing hardware-specific branches as executed facts.
 [Selected opcode semantics](opcode-semantics.md) now records the Apple II native
 basis for arithmetic/bitwise operations, short constants, local/global/nonlocal
 addressing, literal words, inline pointers and the variable-width scaled index.
-2,621 native-model probes exercise 82 ordinary high opcode values, 18 shared error
-slots, and all 128 short-immediate values. Twenty-eight high opcode values remain
-unresolved. Aliases depend on the opcode-derived A/Carry/Y state; pointer equality
+4,976 native-model probes exercise 110 ordinary high opcode values, 18 shared error
+slots, and all 128 short-immediate values. No high primary entry remains unidentified; dispatcher/error/service boundaries
+remain explicitly distinct from complete runtime verification. Aliases depend on the opcode-derived A/Carry/Y state; pointer equality
 alone is insufficient. Full p-code disassembly and complete interpreter emulation
 are still deferred. The startup prefix now reaches BIOS FF06 in controlled
 synthetic replay, stopping before its bank switch/device behavior.
 
-Actual REA/Ghidra native analysis now confirms twenty additional handlers for
+Actual REA/Ghidra native analysis now confirms all 48 formerly unidentified handlers for
 conditional/unconditional branching, table-based load/store/address, indirect
 word store, indexed bytes, multiplication, squaring, signed comparisons, pointer
-offsets and forward word copies. Twenty-five bounded imports cross-check 365
+offsets and forward word copies. Seventy bounded imports cross-check 1,656
 native instructions. The branch operand's high-bit form selects
 a self-relative word through 54/55; it is not a negative PC-relative displacement.
 Synthetic replay and native static Evidence remain separate authorities.
+
+The [completion report](primary-opcode-completion.md) documents typed comparisons,
+packed layouts, call/return frames and the data-derived native return trampoline.
+The generated [primary reference](opcode-reference.md) lists every high opcode.
+This does not establish exact stock Apple Pascal compatibility or complete service
+semantics for the modified runtime.

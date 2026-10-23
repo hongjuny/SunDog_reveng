@@ -38,6 +38,27 @@
       "data_length": 82
     },
     {
+      "start": "ddd6",
+      "end_inclusive": "ddf7",
+      "native_instruction_count": 0,
+      "data_type": "word[17]",
+      "data_length": 34
+    },
+    {
+      "start": "e189",
+      "end_inclusive": "e18a",
+      "native_instruction_count": 0,
+      "data_type": "word",
+      "data_length": 2
+    },
+    {
+      "start": "e18b",
+      "end_inclusive": "e18b",
+      "native_instruction_count": 0,
+      "data_type": "byte",
+      "data_length": 1
+    },
+    {
       "start": "f248",
       "end_inclusive": "fe7b",
       "native_instruction_count": 0,

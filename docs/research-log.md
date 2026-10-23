@@ -320,3 +320,54 @@ FF06. No Apple II execution or timing measurement is claimed.
 The typed comparison family remains unresolved; its type-dependent operand and
 stack formats are not implied by the scalar comparisons established here.
 Checkpoint 3 continues with 28 unresolved high opcodes.
+
+## 2026-10-23 — Remaining 28 primary entries identified
+
+Continued without stopping at another partial batch, as requested. All 128 high
+entries now have checked native paths and per-opcode case accounting; all 128
+short constants were also checked. The catalogue has zero unidentified primary
+entries. Added 2,355 cases for 4,976 total, including typed comparisons, division,
+bounds/string checks, inline/multiple words, packed fields, case tables, dispatch,
+reset stub generation and call/return frame behavior. All 49 deterministic tests
+pass. This closes primary identification, not exhaustive runtime verification.
+
+Acquired 45 additional actual REA/Ghidra 12.1.4 targets, reusing the earlier 25
+without unchanged reanalysis. Cumulative source coverage: 70 imports, 3,092 bytes,
+1,656 native instructions and 1,610 load checks. All complete reads and bounded
+instruction sets match source and direct Ghidra. Retained complete Evidence and
+snapshots locally and closed all targets. Actual assembly Evidence IDs now link
+all 48 formerly unidentified high entries to persistent Ghidra annotations.
+
+Fresh Ghidra analysis confirms 2,049 visited native PCs and verified comments at
+74 entries. Packed masks at DDD6 (17 words), native return data at E189/E18B and
+initial p-code/dispatch tables remain data. E17E was added as an explicit seed:
+the resolver pushes E17D from source data and native RTS reaches that trampoline.
+A declared synthetic RTS callee checks the interface, never shipped native callee
+behavior. Segment-release and nonresident-load paths stop at explicit boundaries.
+
+Important corrections made during investigation: the bitmap word nearest its count
+is least significant, rather than the first word pushed; a failing oracle exposed
+the ordering and the native stack walk confirmed it. C2/CD global setup copies the
+old global frame's first word as static link, not the old global pointer. AE's
+search examines saved procedure anchors in frames; its predecessor selection was
+checked with one- and two-level fixtures. These provisional interpretations were
+corrected before inclusion in the accepted catalogue.
+
+The raw B3/BC zero and high counts expose u8 source/stack wrapping and PC aliases;
+they are documented, not normalized into an assumed safe load. Packed descriptor
+C0 uses magnitude division for negative-looking indices and pushes its low-byte
+offset twice. Typed kind 02 establishes sign-magnitude four-byte ordering, not
+numeric-format compatibility. Set kind 08's less/greater masks use a superset
+fallback; legal Pascal combinations remain open. Native instruction admission was
+extended only for encountered addressing forms and independently microtested;
+unsupported forms still fail explicitly.
+
+Added tools/extended_opcode_evidence.py, tools/call_opcode_evidence.py and
+tools/export_opcode_catalogue.py. The focused Ghidra pipeline now exports the
+generated docs/opcode-reference.md and analysis/opcode-coverage.json. Coverage
+tests require a checked case rather than merely a label, reject duplicate primary
+values and retain exhaustive_runtime_verified=false even when identification is
+complete. The report separates ordinary selected paths, eighteen error prefixes,
+secondary dispatch and external boundaries. Current 9E services, ROM/MMIO,
+nonresident I/O, exact p-system modifications and observed game execution remain
+next-layer work. See docs/primary-opcode-completion.md for scope and reproduction.
