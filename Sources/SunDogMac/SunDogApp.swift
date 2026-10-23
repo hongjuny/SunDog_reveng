@@ -5,12 +5,13 @@ import SunDogCore
 import SunDogLogic
 
 @MainActor final class NativeModel: ObservableObject {
-    @Published var text = "SUNDOG: FROZEN LEGACY\\NATIVE MACOS PORT\\ORIGINAL TEXT LAYOUT"
+    @Published var text = "SUNDOG\\RENDERING PROTOTYPE\\GAMEPLAY NOT IMPLEMENTED"
     @Published var frame: VideoFrame?
     @Published var message = "Open the original font exported from your Utility disk."
     @Published var presses = [0, 0]
     private var font: [UInt8]?
     private var buttons = HostButtonBridge()
+    private(set) var fontSource: URL?
 
     init() {
         let args = CommandLine.arguments
@@ -25,6 +26,7 @@ import SunDogLogic
             let candidate = [UInt8](try Data(contentsOf: url))
             _ = try NativeTextPage.compose(text: "", font: candidate)
             font = candidate
+            fontSource = url
             render()
         } catch { message = error.localizedDescription }
     }
@@ -49,10 +51,40 @@ import SunDogLogic
     }
 }
 
-@main @MainActor struct SunDogApp: App {
+@main @MainActor enum SunDogEntry {
+    static func main() {
+        if CommandLine.arguments.contains("--diagnose") {
+            let model = NativeModel()
+            let visiblePixels = model.frame.map { frame in
+                stride(from: 0, to: frame.rgba.count, by: 4).filter {
+                    frame.rgba[$0] != 0 || frame.rgba[$0 + 1] != 0 || frame.rgba[$0 + 2] != 0
+                }.count
+            } ?? 0
+            let report: [String: Any] = ["font": model.fontSource?.path ?? "missing",
+                "frame_width": model.frame?.width ?? 0, "frame_height": model.frame?.height ?? 0,
+                "visible_pixels": visiblePixels, "message": model.message,
+                "display": "CoreGraphics image", "gameplay_available": false]
+            if let data = try? JSONSerialization.data(withJSONObject: report, options: [.sortedKeys]) {
+                print(String(decoding: data, as: UTF8.self))
+            }
+            exit(visiblePixels > 0 ? 0 : 1)
+        }
+        SunDogApp.main()
+    }
+}
+
+@MainActor final class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        NSApplication.shared.setActivationPolicy(.regular)
+        NSApplication.shared.activate(ignoringOtherApps: true)
+    }
+}
+
+@MainActor struct SunDogApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
     @StateObject private var model = NativeModel()
     var body: some Scene {
-        WindowGroup("SunDog — Native Port Preview") {
+        WindowGroup("SunDog — Rendering Prototype") {
             VStack(spacing: 12) {
                 HStack {
                     Button("Open Original Font…") { model.openFont() }
@@ -62,7 +94,13 @@ import SunDogLogic
                 ZStack {
                     Color.black
                     if let frame = model.frame { NativeScreen(frame: frame) }
-                    else { Text("SunDog").font(.largeTitle).foregroundStyle(.white) }
+                    else {
+                        VStack(spacing: 16) {
+                            Text("SunDog — rendering prototype").font(.title)
+                            Text(model.message).multilineTextAlignment(.center)
+                            Button("Open Original Font…") { model.openFont() }
+                        }.padding().foregroundStyle(.white)
+                    }
                     InputSurface { channel, down in model.input(channel: channel, down: down) }
                 }
                 .aspectRatio(4.0/3.0, contentMode: .fit)

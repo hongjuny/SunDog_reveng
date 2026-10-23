@@ -1,6 +1,6 @@
 # macOS native port — first implementation
 
-`Build/SunDog.app` version 0.3 is a native rendering/input preview, not a playable
+`Build/SunDog.app` version 0.3.1 is a native rendering/input preview, not a playable
 SunDog game. It draws original font data with reconstructed Swift glyph operations
 and routes macOS button samples through the original rising-edge filter rules.
 It does not load reference screenshots as its screen. The older capture viewer
@@ -45,7 +45,7 @@ The app combines:
   preview's selected window coordinates remain host policy. P48's P11(3) selects
   mask003F and drawing mode3. P12 stores the direct coordinates when its line
   mode is disabled; this verified mode connects logical layout to native P9.
-- Existing HGR color profile and Metal display. The color profile remains a
+- Existing HGR color profile and CoreGraphics image display. The color profile remains a
   declared approximation, not a measured NTSC display match.
 
 Offline output using the same page composition is available for comparison:
@@ -81,6 +81,19 @@ launch aborted in `_RegisterApplication` during `NSApplication` initialization,
 before the native screen model was entered. Build, signature checks, XCTest and
 offline PNG rendering passed. This does not establish that interactive window or
 Metal presentation has been exercised successfully.
+
+After the reported blank startup, the prototype's default screen was changed
+from a silent-error Metal path to a CoreGraphics image. The old Metal path could
+fail after device discovery and leave only a log; that is a demonstrated code
+defect, not confirmation of the specific cause on the user's desktop. The app
+now requests foreground activation and shows an explicit error/open-font panel
+when no frame exists. Its title and initial text identify it as a rendering
+prototype with gameplay absent.
+
+`Build/SunDog.app/Contents/MacOS/SunDog --diagnose` runs the actual bundle's model
+without starting NSApplication, checks its bundled font and reports generated
+frame dimensions/nonblack pixels. Asset-containing builds require this check
+to pass. This verifies startup content, not a visible window or game launch.
 
 Next required game work is P44 scrolling/window reset, native clipping and line
 modes, segment 21's scene workspace lifecycle, and scene-specific data ownership/state changes. Trading, travel,

@@ -40,11 +40,16 @@ def build(tests=False, include_local_assets=False):
         shutil.copy2(ROOT/'analysis/local/native-assets/sundog-font.bin',font)
     info=dict(CFBundleExecutable='SunDog',CFBundleIdentifier='org.sundog.port.native',
               CFBundleName='SunDog',CFBundleDisplayName='SunDog',CFBundlePackageType='APPL',
-              CFBundleShortVersionString='0.3.0',CFBundleVersion='3',LSMinimumSystemVersion='14.0',
+              CFBundleShortVersionString='0.3.1',CFBundleVersion='4',LSMinimumSystemVersion='14.0',
               NSHighResolutionCapable=True,NSPrincipalClass='NSApplication')
     (app/'Contents/Info.plist').write_bytes(plistlib.dumps(info))
     run(['codesign','--force','--sign','-',str(app)])
     run(['codesign','--verify','--strict',str(app)])
+    if include_local_assets:
+        diagnostic=json.loads(subprocess.check_output([str(macos/'SunDog'),'--diagnose'],text=True))
+        if diagnostic['frame_width']!=560 or diagnostic['frame_height']!=192 or diagnostic['visible_pixels']<=0:
+            raise RuntimeError('Bundled app did not generate a visible startup frame')
+        (directory/'startup-diagnostic.json').write_text(json.dumps(diagnostic,indent=2)+'\n')
     if tests:
         developer=Path(subprocess.check_output(['xcode-select','-p'],text=True).strip())
         frameworks=developer/'Platforms/MacOSX.platform/Developer/Library/Frameworks'

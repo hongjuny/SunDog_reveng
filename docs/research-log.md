@@ -584,3 +584,18 @@ corresponding analysis reports and docs/text-layout.md/docs/event-contract.md.
 Native app0.3 build and signature checks pass; 11 Swift XCTest cases and103 Python
 tests pass. GUI interaction remains unverified under the previously recorded
 application-registration restriction; no repeated launch success is claimed.
+
+## 2026-10-23 — Blank-startup report
+
+User reported no visible output. The previously delivered artifact was still a
+rendering prototype, not a game; build/test success did not establish successful
+desktop presentation. Found a silent-error path: Metal device discovery selected
+the renderer even when later shader/queue/drawable initialization failed. The
+specific cause of the user's desktop symptom is not yet established.
+
+Replaced this prototype's display with CoreGraphics image presentation, added
+foreground activation and an explicit missing-frame error panel. Added a headless
+diagnostic to the actual bundle entry point. Asset-containing builds now require
+the bundle itself to load its font and generate a nonblack560x192 frame. The
+diagnostic deliberately reports gameplay_available=false; it is not a UI smoke
+test. Prototype status is explicit in the window and generated initial text.
