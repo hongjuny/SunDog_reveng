@@ -1,0 +1,81 @@
+{
+  "method": "Actual REA/Ghidra pointer reads, retained RAM binding, and exact verified disk-sector correspondence",
+  "artifact": "analysis/local/native-assets/sundog-font.bin",
+  "sha256": "eeadc8615ae25ac5611744c0f32589698d4d3cc4c57808a98df85268d08ca775",
+  "length": 1024,
+  "glyph_slots": 128,
+  "character_range": [
+    0,
+    127
+  ],
+  "bytes_per_glyph": 8,
+  "storage": "bottom row first; normal compositor masks each row with 0x7f",
+  "font_pointer_cell": 45186,
+  "captured_font_base": 4096,
+  "capture": "analysis/local/reference/advance-20261023-122315/advanced-main.bin",
+  "capture_sha256": "a7242b1e18479c5e6a0a890a6ea195070e607f2e8f061520483a4684c90b58dd",
+  "rea_evidence_id": "ev_cbe61cfda63915ba6ceeb42fa9bae84e546ba25c27afcf29678f451669f7398b",
+  "sectors": [
+    {
+      "side": "utility",
+      "track": 0,
+      "sector": 9,
+      "physical_sector": 12,
+      "image_offset": 2304,
+      "memory_address": 4096,
+      "length": 256,
+      "sha256": "cb53c391b9db8f6b64a1b0c213a84e6e7385b6732f758c6e9d2633e4dda2591a"
+    },
+    {
+      "side": "utility",
+      "track": 0,
+      "sector": 8,
+      "physical_sector": 14,
+      "image_offset": 2048,
+      "memory_address": 4352,
+      "length": 256,
+      "sha256": "ff8364a8dc4f12db61884cdc0a540a7629771d81b52ec02f4bde6ac4b06b0f32"
+    },
+    {
+      "side": "utility",
+      "track": 0,
+      "sector": 7,
+      "physical_sector": 1,
+      "image_offset": 1792,
+      "memory_address": 4608,
+      "length": 256,
+      "sha256": "fcd016a0d8f6c9f04b46f2b0171847c131a10d55b65b411a83fe7929b9c3b647"
+    },
+    {
+      "side": "utility",
+      "track": 0,
+      "sector": 6,
+      "physical_sector": 3,
+      "image_offset": 1536,
+      "memory_address": 4864,
+      "length": 256,
+      "sha256": "fcb1cf27254f5b238d26162b7bcbb6f1fab1f84d85fcee2e8763b9d74becdea9"
+    }
+  ],
+  "character_mapping": {
+    "method": "String byte passed unchanged to P47, then native P9 uses low byte times eight",
+    "pcode_addresses": [
+      2487,
+      2488,
+      2239,
+      2240
+    ],
+    "native_multiply_range": [
+      43423,
+      43432
+    ],
+    "note": "Selected 7-bit character slots; no Unicode or alternate character remapping inferred"
+  },
+  "confidence": "high for selected bytes and retained pointer binding",
+  "limitations": [
+    "This is a verified 128-slot prefix, not proof that the full font bank ends at 0x1400.",
+    "Font loading and later pointer swaps are not reconstructed.",
+    "Capture is existing Utility-menu evidence, not a new game execution.",
+    "No original glyph bytes are included in the public report."
+  ]
+}

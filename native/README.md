@@ -4,6 +4,10 @@ This target contains functions rewritten from established original game semantic
 The first is segment 20/procedure 18's integer scaling helper. Its selected input
 contract and rounding order are documented in `../docs/trade-arithmetic.md`.
 
+It now also includes the verified native glyph compositor and button filter.
+See `../docs/native-app.md` for the first macOS rendering/input integration and
+the explicit remaining game implementation scope.
+
 Reproduce its native comparison from the repository root:
 
 ```sh

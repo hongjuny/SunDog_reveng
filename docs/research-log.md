@@ -532,3 +532,22 @@ Reproduction: `python3 tools/disassemble_all.py`; listing index and report hashe
 are in `analysis/disassembly-index.json`. Full listings and source media remain
 ignored. Validation: 94 deterministic Python tests pass. Publication requires a
 separate all-history media/secret audit and a configured destination remote.
+
+## 2026-10-23 — Native glyph/input application integration
+
+Rewrote segment22 native P9's supported glyph body and P2's input filter as Swift.
+Matched 420 full-page native glyph fixtures and 512 filter/256 latch fixtures.
+Recovered the captured font pointer at relocated B082/B083, selecting 1000..13FF;
+all 1,024 bytes match Utility T0 DOS sectors9,8,7,6 in order. Only this 128-slot
+prefix is certified; the complete bank length and loading path remain open.
+
+Built native app0.2 with original glyph data and rewritten composition, preserving
+the old capture viewer under a separate executable. Host text layout and keyboard
+mapping are explicitly preview choices. Added a two-channel host bridge and an
+interleaved-release regression test. No original CPU or p-code interpreter is
+part of the app. No game scene or fabricated trading/travel rules were added.
+
+Signed arm64 app, offline PNG output and tests pass; GUI launch in the agent
+session fails in platform application registration, before model initialization.
+Interactive presentation remains unverified. See native-app.md for reproduction,
+supported functionality and the next semantic reconstruction requirements.

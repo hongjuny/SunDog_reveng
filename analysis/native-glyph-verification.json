@@ -1,0 +1,22 @@
+{
+  "native_cases": 420,
+  "invalid_input_cases": 6,
+  "all_matched": true,
+  "method": "Compiled Swift rewrite versus full HGR pages produced by bounded original native P9 body",
+  "source_files": {
+    "native/SunDogLogic/GlyphCompositor.swift": "87ec973ace19e4170ef1f429d502fdb52528cb5840e3b443387a1b7644739a87",
+    "tests/native/VerifyGlyphCompositor.swift": "5f18862ee9fe03f8400ad7a981cb6dae12646d21f3e5c6278f19ddb889efcd0e"
+  },
+  "original_archive_sha256": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49",
+  "native_slice_sha256": "7e77250cdfc3fa8e04023d274d1d12b3d63cf4c36f48dfaa41f96ef88af3a986",
+  "retained_rea_evidence_id": "ev_7f31030127a94c609a6f96ffa111c85ada82528fffc46e6e1dc94e6407437e3e",
+  "cases_sha256": "8b7bad1857b5068ec052d4e5c9e81b17893261804c13e09d9ce0031e345aa653",
+  "limitations": [
+    "Caller argument/return setup",
+    "Coordinate helper and clipping",
+    "Mode 2 collision/query branch",
+    "Original font glyph contents",
+    "Window/event/game logic",
+    "Physical display colour"
+  ]
+}

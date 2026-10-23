@@ -1,121 +1,117 @@
 import SwiftUI
 import AppKit
-import MetalKit
 import AppleIIVideo
 import SunDogCore
+import SunDogLogic
 
-@MainActor final class ScreenModel: ObservableObject {
-    @Published var capture: ReferenceCapture?
-    @Published var message = "Open an original execution capture to view its Apple II screen."
-    @Published var aspect = "4:3"
-    @Published var label = "after-720-frames"
+@MainActor final class NativeModel: ObservableObject {
+    @Published var text = "SUNDOG: FROZEN LEGACY\n\nNATIVE MACOS PORT\n\nAPPLE II GLYPH RENDERING\n\nSPACE / RETURN OR CLICK"
+    @Published var frame: VideoFrame?
+    @Published var message = "Open the original font exported from your Utility disk."
+    @Published var presses = [0, 0]
+    private var font: [UInt8]?
+    private var buttons = HostButtonBridge()
 
     init() {
         let args = CommandLine.arguments
-        if let i = args.firstIndex(of: "--label"), i+1 < args.count { label = args[i+1] }
-        if let i = args.firstIndex(of: "--capture"), i+1 < args.count {
-            load(URL(fileURLWithPath: args[i+1]))
+        if let i = args.firstIndex(of: "--font"), i + 1 < args.count {
+            load(URL(fileURLWithPath: args[i + 1]))
+        } else if let url = Bundle.main.url(forResource: "sundog-font", withExtension: "bin") {
+            load(url)
         }
     }
-    func load(_ directory: URL) {
+    func load(_ url: URL) {
         do {
-            capture = try ReferenceCapture.load(directory: directory, label: label)
-            message = "Captured Apple II screen · \(label) · \(HGRDecoder.preset)"
+            let candidate = [UInt8](try Data(contentsOf: url))
+            _ = try NativeTextPage.compose(text: "", font: candidate)
+            font = candidate
+            render()
         } catch { message = error.localizedDescription }
     }
-    func open() {
+    func render() {
+        guard let font else { return }
+        do {
+            frame = try HGRDecoder.decode(page: NativeTextPage.compose(text: text, font: font))
+            message = "Original glyph compositor · 280 × 192 · \(HGRDecoder.preset)"
+        } catch { message = error.localizedDescription }
+    }
+    func openFont() {
         let panel = NSOpenPanel()
-        panel.canChooseDirectories = true; panel.canChooseFiles = false
-        panel.prompt = "Open Capture"
+        panel.canChooseDirectories = false
+        panel.allowsMultipleSelection = false
+        panel.prompt = "Open Font"
         if panel.runModal() == .OK, let url = panel.url { load(url) }
+    }
+    func input(channel: Int, down: Bool) {
+        guard (0..<2).contains(channel) else { return }
+        guard let edges = try? buttons.set(channel: channel, down: down) else { return }
+        for index in 0..<2 where edges[index] { presses[index] += 1 }
     }
 }
 
 @main @MainActor struct SunDogApp: App {
-    @StateObject private var model = ScreenModel()
+    @StateObject private var model = NativeModel()
     var body: some Scene {
-        WindowGroup("SunDog — Apple II Graphics Reference") {
+        WindowGroup("SunDog — Native Port Preview") {
             VStack(spacing: 12) {
                 HStack {
-                    Button("Open Capture…") { model.open() }
-                    TextField("Checkpoint", text: $model.label).frame(width: 180)
-                    Picker("Display", selection: $model.aspect) {
-                        Text("4:3").tag("4:3")
-                        Text("280:192").tag("280:192")
-                        Text("Raw 560:192").tag("Raw")
-                    }.frame(width: 220)
+                    Button("Open Original Font…") { model.openFont() }
                     Spacer()
+                    Text("Rendering & input milestone").foregroundStyle(.secondary)
                 }
-                if let frame = model.capture?.frame {
-                    ReferenceScreen(frame: frame)
-                        .aspectRatio(model.aspect == "4:3" ? 4.0/3.0 : model.aspect == "Raw" ? 560.0/192.0 : 280.0/192.0, contentMode: .fit)
-                        .background(.black)
-                        .accessibilityLabel("Original SunDog Apple II reference screen")
-                } else {
-                    Color.black.overlay(Text("SunDog reference screen").foregroundStyle(.white))
-                        .aspectRatio(4.0/3.0, contentMode: .fit)
+                ZStack {
+                    Color.black
+                    if let frame = model.frame { NativeScreen(frame: frame) }
+                    else { Text("SunDog").font(.largeTitle).foregroundStyle(.white) }
+                    InputSurface { channel, down in model.input(channel: channel, down: down) }
                 }
+                .aspectRatio(4.0/3.0, contentMode: .fit)
+                .accessibilityLabel("Native SunDog glyph canvas. Click to focus; Space and Return are input channels.")
+                TextField("Character codes 0–127", text: $model.text, axis: .vertical)
+                    .lineLimit(2...5).font(.system(.body, design: .monospaced))
+                    .onChange(of: model.text) { _, _ in model.render() }
                 HStack {
-                    Text(model.message).font(.caption).textSelection(.enabled)
+                    Text("Input 1: \(model.presses[0])    Input 2: \(model.presses[1])")
                     Spacer()
-                    Text("Reference viewer · gameplay not connected").font(.caption).foregroundStyle(.secondary)
-                }
-            }.padding().frame(minWidth: 720, minHeight: 540)
-        }.defaultSize(width: 900, height: 720)
-        .commands { CommandGroup(replacing: .newItem) {
-            Button("Open Reference Capture…") { model.open() }.keyboardShortcut("o")
-        }}
+                    Text("Gameplay reconstruction in progress").foregroundStyle(.secondary)
+                }.font(.caption)
+                Text(model.message).font(.caption).textSelection(.enabled)
+            }.padding().frame(minWidth: 680, minHeight: 620)
+            .onReceive(NotificationCenter.default.publisher(for: NSApplication.didResignActiveNotification)) { _ in
+                model.input(channel: 0, down: false)
+                model.input(channel: 1, down: false)
+            }
+        }.defaultSize(width: 880, height: 820)
+        .commands {
+            CommandGroup(replacing: .newItem) {
+                Button("Open Original Font…") { model.openFont() }.keyboardShortcut("o")
+            }
+        }
     }
 }
 
-struct ReferenceScreen: View {
-    let frame: VideoFrame
-    var body: some View {
-        if MTLCreateSystemDefaultDevice() != nil {
-            MetalScreen(frame: frame)
-        } else if let image = try? frame.cgImage() {
-            Image(decorative: image, scale: 1).resizable().interpolation(.none)
-        } else { Text("Could not create the reference image.") }
+@MainActor struct InputSurface: NSViewRepresentable {
+    var input: (Int, Bool) -> Void
+    func makeNSView(context: Context) -> Surface {
+        let view = Surface(); view.input = input; return view
     }
-}
-
-struct MetalScreen: NSViewRepresentable {
-    let frame: VideoFrame
-    func makeCoordinator() -> Coordinator { Coordinator() }
-    func makeNSView(context: Context) -> MTKView {
-        let view = MTKView(frame: .zero, device: MTLCreateSystemDefaultDevice())
-        view.colorPixelFormat = .bgra8Unorm
-        view.colorspace = CGColorSpace(name: CGColorSpace.sRGB)
-        view.clearColor = MTLClearColorMake(0, 0, 0, 1)
-        view.isPaused = true; view.enableSetNeedsDisplay = true
-        view.delegate = context.coordinator
-        context.coordinator.frame = frame
-        context.coordinator.configure(view)
-        return view
-    }
-    func updateNSView(_ view: MTKView, context: Context) {
-        context.coordinator.frame = frame
-        view.setNeedsDisplay(view.bounds)
-    }
-    @MainActor final class Coordinator: NSObject, MTKViewDelegate {
-        var frame: VideoFrame?
-        var renderer: MetalFrameRenderer?
-        var queue: MTLCommandQueue?
-        func configure(_ view: MTKView) {
-            do {
-                guard let device = view.device else { throw MetalFrameError.unavailable("Metal device is unavailable.") }
-                renderer = try MetalFrameRenderer(device: device, pixelFormat: view.colorPixelFormat)
-                queue = device.makeCommandQueue()
-            } catch { NSLog("SunDog renderer: %@", error.localizedDescription) }
+    func updateNSView(_ view: Surface, context: Context) { view.input = input }
+    final class Surface: NSView {
+        var input: ((Int, Bool) -> Void)?
+        override var acceptsFirstResponder: Bool { true }
+        override func mouseDown(with event: NSEvent) { window?.makeFirstResponder(self); input?(0, true) }
+        override func mouseUp(with event: NSEvent) { input?(0, false) }
+        override func rightMouseDown(with event: NSEvent) { window?.makeFirstResponder(self); input?(1, true) }
+        override func rightMouseUp(with event: NSEvent) { input?(1, false) }
+        override func keyDown(with event: NSEvent) {
+            guard !event.isARepeat else { return }
+            if event.keyCode == 49 { input?(0, true) }
+            else if event.keyCode == 36 { input?(1, true) }
         }
-        func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {}
-        func draw(in view: MTKView) {
-            guard let frame, let renderer, let pass = view.currentRenderPassDescriptor,
-                  let drawable = view.currentDrawable, let command = queue?.makeCommandBuffer() else { return }
-            do {
-                try renderer.encode(frame: frame, pass: pass, command: command)
-                command.present(drawable); command.commit()
-            } catch { NSLog("SunDog draw: %@", error.localizedDescription) }
+        override func keyUp(with event: NSEvent) {
+            if event.keyCode == 49 { input?(0, false) }
+            else if event.keyCode == 36 { input?(1, false) }
         }
+        override func resignFirstResponder() -> Bool { input?(0, false); input?(1, false); return true }
     }
 }

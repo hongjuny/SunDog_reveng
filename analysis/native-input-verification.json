@@ -1,0 +1,22 @@
+{
+  "filter_cases": 512,
+  "latch_cases": 256,
+  "restore_cases": 1,
+  "invalid_selectors_rejected": 247,
+  "method": "Swift state transitions versus bounded original native instructions; raw MMIO samples supplied as test RAM",
+  "original_evidence": "analysis/button-input-evidence.json",
+  "rea_evidence_ids": [
+    "ev_fd796d9bd4d2aceeddccf92b83e462188ec6e0dc14af008a7f527d3b22d683e3",
+    "ev_86f79e029ae8fc0bc6c15c75f10039cae6f6d76def68598e93ef90bab25bda02"
+  ],
+  "source_files": {
+    "native/SunDogLogic/ButtonInput.swift": "85788385c2b5e512eb3bab1c7884ec6bdf6d80a4332223584f812adead128d47",
+    "tests/native/VerifyButtonInput.swift": "6c0ad3ab61346859737d6d94d9ef9f183bcf268490e3505f61c49cbea48aa37d"
+  },
+  "cases_sha256": "aa0580e8ad6e127aa2012597220fc1773aa18b2274adffc581ef5e4a77610df5",
+  "limitations": [
+    "No physical device timing or macOS mapping inferred.",
+    "Selector 8 emits a restore signal; native product does not patch p-code dispatch.",
+    "Only verified selectors 0 through 8 and boolean edge history are supported."
+  ]
+}
