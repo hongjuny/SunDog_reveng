@@ -1,0 +1,4522 @@
+{
+  "primary": [
+    {
+      "opcode": 128,
+      "table_address": 53248,
+      "handler": 55039,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 0,
+        "image_offset": 125184,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648,
+        "byte_in_sector": 255,
+        "image_offset": 123903,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 129,
+      "table_address": 53250,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 2,
+        "image_offset": 125186,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 130,
+      "table_address": 53252,
+      "handler": 55069,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 4,
+        "image_offset": 125188,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 123392,
+        "byte_in_sector": 29,
+        "image_offset": 123421,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 131,
+      "table_address": 53254,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 6,
+        "image_offset": 125190,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 132,
+      "table_address": 53256,
+      "handler": 54703,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 8,
+        "image_offset": 125192,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904,
+        "byte_in_sector": 175,
+        "image_offset": 124079,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 133,
+      "table_address": 53258,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 10,
+        "image_offset": 125194,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 134,
+      "table_address": 53260,
+      "handler": 55421,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 12,
+        "image_offset": 125196,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 123136,
+        "byte_in_sector": 125,
+        "image_offset": 123261,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 135,
+      "table_address": 53262,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 14,
+        "image_offset": 125198,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 136,
+      "table_address": 53264,
+      "handler": 55490,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 16,
+        "image_offset": 125200,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 123136,
+        "byte_in_sector": 194,
+        "image_offset": 123330,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 137,
+      "table_address": 53266,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 18,
+        "image_offset": 125202,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 138,
+      "table_address": 53268,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 20,
+        "image_offset": 125204,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 139,
+      "table_address": 53270,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 22,
+        "image_offset": 125206,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 140,
+      "table_address": 53272,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 24,
+        "image_offset": 125208,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 141,
+      "table_address": 53274,
+      "handler": 54722,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 26,
+        "image_offset": 125210,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904,
+        "byte_in_sector": 194,
+        "image_offset": 124098,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 142,
+      "table_address": 53276,
+      "handler": 55466,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 28,
+        "image_offset": 125212,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 123136,
+        "byte_in_sector": 170,
+        "image_offset": 123306,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 143,
+      "table_address": 53278,
+      "handler": 55174,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 30,
+        "image_offset": 125214,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 123392,
+        "byte_in_sector": 134,
+        "image_offset": 123526,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 144,
+      "table_address": 53280,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 32,
+        "image_offset": 125216,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 145,
+      "table_address": 53282,
+      "handler": 55093,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 34,
+        "image_offset": 125218,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 123392,
+        "byte_in_sector": 53,
+        "image_offset": 123445,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 146,
+      "table_address": 53284,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 36,
+        "image_offset": 125220,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 147,
+      "table_address": 53286,
+      "handler": 54741,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 38,
+        "image_offset": 125222,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904,
+        "byte_in_sector": 213,
+        "image_offset": 124117,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 148,
+      "table_address": 53288,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 40,
+        "image_offset": 125224,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 149,
+      "table_address": 53290,
+      "handler": 55111,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 42,
+        "image_offset": 125226,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 123392,
+        "byte_in_sector": 71,
+        "image_offset": 123463,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 150,
+      "table_address": 53292,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 44,
+        "image_offset": 125228,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 151,
+      "table_address": 53294,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 46,
+        "image_offset": 125230,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 152,
+      "table_address": 53296,
+      "handler": 55245,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 48,
+        "image_offset": 125232,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 123392,
+        "byte_in_sector": 205,
+        "image_offset": 123597,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 153,
+      "table_address": 53298,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 50,
+        "image_offset": 125234,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 154,
+      "table_address": 53300,
+      "handler": 54460,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 52,
+        "image_offset": 125236,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 188,
+        "image_offset": 124348,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 155,
+      "table_address": 53302,
+      "handler": 55692,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 54,
+        "image_offset": 125238,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 126720,
+        "byte_in_sector": 140,
+        "image_offset": 126860,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 156,
+      "table_address": 53304,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 56,
+        "image_offset": 125240,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 157,
+      "table_address": 53306,
+      "handler": 54338,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 58,
+        "image_offset": 125242,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 66,
+        "image_offset": 124226,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 158,
+      "table_address": 53308,
+      "handler": 59007,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 60,
+        "image_offset": 125244,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 127,
+        "image_offset": 115583,
+        "bank": "common"
+      }
+    },
+    {
+      "opcode": 159,
+      "table_address": 53310,
+      "handler": 53975,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 62,
+        "image_offset": 125246,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 215,
+        "image_offset": 124887,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 160,
+      "table_address": 53312,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 64,
+        "image_offset": 125248,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 161,
+      "table_address": 53314,
+      "handler": 53920,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 66,
+        "image_offset": 125250,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 160,
+        "image_offset": 124832,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 162,
+      "table_address": 53316,
+      "handler": 55755,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 68,
+        "image_offset": 125252,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 126720,
+        "byte_in_sector": 203,
+        "image_offset": 126923,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 163,
+      "table_address": 53318,
+      "handler": 55727,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 70,
+        "image_offset": 125254,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 126720,
+        "byte_in_sector": 175,
+        "image_offset": 126895,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 164,
+      "table_address": 53320,
+      "handler": 55774,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 72,
+        "image_offset": 125256,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 126720,
+        "byte_in_sector": 222,
+        "image_offset": 126942,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 165,
+      "table_address": 53322,
+      "handler": 54148,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 74,
+        "image_offset": 125258,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 132,
+        "image_offset": 124548,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 166,
+      "table_address": 53324,
+      "handler": 55593,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 76,
+        "image_offset": 125260,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 126720,
+        "byte_in_sector": 41,
+        "image_offset": 126761,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 167,
+      "table_address": 53326,
+      "handler": 54412,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 78,
+        "image_offset": 125262,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 140,
+        "image_offset": 124300,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 168,
+      "table_address": 53328,
+      "handler": 54683,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 80,
+        "image_offset": 125264,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904,
+        "byte_in_sector": 155,
+        "image_offset": 124059,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 169,
+      "table_address": 53330,
+      "handler": 54118,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 82,
+        "image_offset": 125266,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 102,
+        "image_offset": 124518,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 170,
+      "table_address": 53332,
+      "handler": 55627,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 84,
+        "image_offset": 125268,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 126720,
+        "byte_in_sector": 75,
+        "image_offset": 126795,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 171,
+      "table_address": 53334,
+      "handler": 54186,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 86,
+        "image_offset": 125270,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 170,
+        "image_offset": 124586,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 172,
+      "table_address": 53336,
+      "handler": 54754,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 88,
+        "image_offset": 125272,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904,
+        "byte_in_sector": 226,
+        "image_offset": 124130,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 173,
+      "table_address": 53338,
+      "handler": 58225,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 90,
+        "image_offset": 125274,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 116224,
+        "byte_in_sector": 113,
+        "image_offset": 116337,
+        "bank": "common"
+      }
+    },
+    {
+      "opcode": 174,
+      "table_address": 53340,
+      "handler": 57989,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 92,
+        "image_offset": 125276,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 116480,
+        "byte_in_sector": 133,
+        "image_offset": 116613,
+        "bank": "common"
+      }
+    },
+    {
+      "opcode": 175,
+      "table_address": 53342,
+      "handler": 56876,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 94,
+        "image_offset": 125278,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 129792,
+        "byte_in_sector": 44,
+        "image_offset": 129836,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 176,
+      "table_address": 53344,
+      "handler": 56868,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 96,
+        "image_offset": 125280,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 129792,
+        "byte_in_sector": 36,
+        "image_offset": 129828,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 177,
+      "table_address": 53346,
+      "handler": 56860,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 98,
+        "image_offset": 125282,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 129792,
+        "byte_in_sector": 28,
+        "image_offset": 129820,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 178,
+      "table_address": 53348,
+      "handler": 54254,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 100,
+        "image_offset": 125284,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 238,
+        "image_offset": 124654,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 179,
+      "table_address": 53350,
+      "handler": 54486,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 102,
+        "image_offset": 125286,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 214,
+        "image_offset": 124374,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 180,
+      "table_address": 53352,
+      "handler": 56872,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 104,
+        "image_offset": 125288,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 129792,
+        "byte_in_sector": 40,
+        "image_offset": 129832,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 181,
+      "table_address": 53354,
+      "handler": 56864,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 106,
+        "image_offset": 125290,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 129792,
+        "byte_in_sector": 32,
+        "image_offset": 129824,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 182,
+      "table_address": 53356,
+      "handler": 54216,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 108,
+        "image_offset": 125292,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 200,
+        "image_offset": 124616,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 183,
+      "table_address": 53358,
+      "handler": 56856,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 110,
+        "image_offset": 125294,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 129792,
+        "byte_in_sector": 24,
+        "image_offset": 129816,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 184,
+      "table_address": 53360,
+      "handler": 54300,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 112,
+        "image_offset": 125296,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 28,
+        "image_offset": 124188,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 185,
+      "table_address": 53362,
+      "handler": 53928,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 114,
+        "image_offset": 125298,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 168,
+        "image_offset": 124840,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 186,
+      "table_address": 53364,
+      "handler": 55904,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 116,
+        "image_offset": 125300,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 126976,
+        "byte_in_sector": 96,
+        "image_offset": 127072,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 187,
+      "table_address": 53366,
+      "handler": 55990,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 118,
+        "image_offset": 125302,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 126976,
+        "byte_in_sector": 182,
+        "image_offset": 127158,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 188,
+      "table_address": 53368,
+      "handler": 54538,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 120,
+        "image_offset": 125304,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904,
+        "byte_in_sector": 10,
+        "image_offset": 123914,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 189,
+      "table_address": 53370,
+      "handler": 54585,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 122,
+        "image_offset": 125306,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904,
+        "byte_in_sector": 57,
+        "image_offset": 123961,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 190,
+      "table_address": 53372,
+      "handler": 54631,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 124,
+        "image_offset": 125308,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904,
+        "byte_in_sector": 103,
+        "image_offset": 124007,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 191,
+      "table_address": 53374,
+      "handler": 54657,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 126,
+        "image_offset": 125310,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 123904,
+        "byte_in_sector": 129,
+        "image_offset": 124033,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 192,
+      "table_address": 53376,
+      "handler": 55837,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 128,
+        "image_offset": 125312,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 126976,
+        "byte_in_sector": 29,
+        "image_offset": 127005,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 193,
+      "table_address": 53378,
+      "handler": 58204,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 130,
+        "image_offset": 125314,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 116224,
+        "byte_in_sector": 92,
+        "image_offset": 116316,
+        "bank": "common"
+      }
+    },
+    {
+      "opcode": 194,
+      "table_address": 53380,
+      "handler": 58155,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 132,
+        "image_offset": 125316,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 116224,
+        "byte_in_sector": 43,
+        "image_offset": 116267,
+        "bank": "common"
+      }
+    },
+    {
+      "opcode": 195,
+      "table_address": 53382,
+      "handler": 57257,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 134,
+        "image_offset": 125318,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 129536,
+        "byte_in_sector": 169,
+        "image_offset": 129705,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 196,
+      "table_address": 53384,
+      "handler": 57211,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 136,
+        "image_offset": 125320,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 129536,
+        "byte_in_sector": 123,
+        "image_offset": 129659,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 197,
+      "table_address": 53386,
+      "handler": 57203,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 138,
+        "image_offset": 125322,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 129536,
+        "byte_in_sector": 115,
+        "image_offset": 129651,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 198,
+      "table_address": 53388,
+      "handler": 54037,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 140,
+        "image_offset": 125324,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 21,
+        "image_offset": 124437,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 199,
+      "table_address": 53390,
+      "handler": 53982,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 142,
+        "image_offset": 125326,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 222,
+        "image_offset": 124894,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 200,
+      "table_address": 53392,
+      "handler": 57207,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 144,
+        "image_offset": 125328,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 129536,
+        "byte_in_sector": 119,
+        "image_offset": 129655,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 201,
+      "table_address": 53394,
+      "handler": 57199,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 146,
+        "image_offset": 125330,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 129536,
+        "byte_in_sector": 111,
+        "image_offset": 129647,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 202,
+      "table_address": 53396,
+      "handler": 54007,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 148,
+        "image_offset": 125332,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 247,
+        "image_offset": 124919,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 203,
+      "table_address": 53398,
+      "handler": 57215,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 150,
+        "image_offset": 125334,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 31,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 129536,
+        "byte_in_sector": 127,
+        "image_offset": 129663,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 204,
+      "table_address": 53400,
+      "handler": 54075,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 152,
+        "image_offset": 125336,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 59,
+        "image_offset": 124475,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 205,
+      "table_address": 53402,
+      "handler": 58118,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 154,
+        "image_offset": 125338,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 116224,
+        "byte_in_sector": 6,
+        "image_offset": 116230,
+        "bank": "common"
+      }
+    },
+    {
+      "opcode": 206,
+      "table_address": 53404,
+      "handler": 58067,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 156,
+        "image_offset": 125340,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 116480,
+        "byte_in_sector": 211,
+        "image_offset": 116691,
+        "bank": "common"
+      }
+    },
+    {
+      "opcode": 207,
+      "table_address": 53406,
+      "handler": 58095,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 158,
+        "image_offset": 125342,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 116480,
+        "byte_in_sector": 239,
+        "image_offset": 116719,
+        "bank": "common"
+      }
+    },
+    {
+      "opcode": 208,
+      "table_address": 53408,
+      "handler": 55569,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 160,
+        "image_offset": 125344,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 126720,
+        "byte_in_sector": 17,
+        "image_offset": 126737,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 209,
+      "table_address": 53410,
+      "handler": 54375,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 162,
+        "image_offset": 125346,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 103,
+        "image_offset": 124263,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 210,
+      "table_address": 53412,
+      "handler": 53901,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 164,
+        "image_offset": 125348,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 141,
+        "image_offset": 124813,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 211,
+      "table_address": 53414,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 166,
+        "image_offset": 125350,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 212,
+      "table_address": 53416,
+      "handler": 53743,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 168,
+        "image_offset": 125352,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 213,
+      "table_address": 53418,
+      "handler": 59395,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 170,
+        "image_offset": 125354,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 3,
+        "image_offset": 114947,
+        "bank": "common"
+      }
+    },
+    {
+      "opcode": 214,
+      "table_address": 53420,
+      "handler": 55012,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 172,
+        "image_offset": 125356,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648,
+        "byte_in_sector": 228,
+        "image_offset": 123876,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 215,
+      "table_address": 53422,
+      "handler": 53901,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 174,
+        "image_offset": 125358,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 141,
+        "image_offset": 124813,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 216,
+      "table_address": 53424,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 176,
+        "image_offset": 125360,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 217,
+      "table_address": 53426,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 178,
+        "image_offset": 125362,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 218,
+      "table_address": 53428,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 180,
+        "image_offset": 125364,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 219,
+      "table_address": 53430,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 182,
+        "image_offset": 125366,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 220,
+      "table_address": 53432,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 184,
+        "image_offset": 125368,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 221,
+      "table_address": 53434,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 186,
+        "image_offset": 125370,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 222,
+      "table_address": 53436,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 188,
+        "image_offset": 125372,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 223,
+      "table_address": 53438,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 190,
+        "image_offset": 125374,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 224,
+      "table_address": 53440,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 192,
+        "image_offset": 125376,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 225,
+      "table_address": 53442,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 194,
+        "image_offset": 125378,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 226,
+      "table_address": 53444,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 196,
+        "image_offset": 125380,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 227,
+      "table_address": 53446,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 198,
+        "image_offset": 125382,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 228,
+      "table_address": 53448,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 200,
+        "image_offset": 125384,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 229,
+      "table_address": 53450,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 202,
+        "image_offset": 125386,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 230,
+      "table_address": 53452,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 204,
+        "image_offset": 125388,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 231,
+      "table_address": 53454,
+      "handler": 53994,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 206,
+        "image_offset": 125390,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 124672,
+        "byte_in_sector": 234,
+        "image_offset": 124906,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 232,
+      "table_address": 53456,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 208,
+        "image_offset": 125392,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 233,
+      "table_address": 53458,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 210,
+        "image_offset": 125394,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 234,
+      "table_address": 53460,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 212,
+        "image_offset": 125396,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 235,
+      "table_address": 53462,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 214,
+        "image_offset": 125398,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 236,
+      "table_address": 53464,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 216,
+        "image_offset": 125400,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 237,
+      "table_address": 53466,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 218,
+        "image_offset": 125402,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 238,
+      "table_address": 53468,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 220,
+        "image_offset": 125404,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 239,
+      "table_address": 53470,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 222,
+        "image_offset": 125406,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 240,
+      "table_address": 53472,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 224,
+        "image_offset": 125408,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 241,
+      "table_address": 53474,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 226,
+        "image_offset": 125410,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 242,
+      "table_address": 53476,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 228,
+        "image_offset": 125412,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 243,
+      "table_address": 53478,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 230,
+        "image_offset": 125414,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 244,
+      "table_address": 53480,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 232,
+        "image_offset": 125416,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 245,
+      "table_address": 53482,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 234,
+        "image_offset": 125418,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 246,
+      "table_address": 53484,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 236,
+        "image_offset": 125420,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 247,
+      "table_address": 53486,
+      "handler": 54105,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 238,
+        "image_offset": 125422,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 124416,
+        "byte_in_sector": 89,
+        "image_offset": 124505,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 248,
+      "table_address": 53488,
+      "handler": 54443,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 240,
+        "image_offset": 125424,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 171,
+        "image_offset": 124331,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 249,
+      "table_address": 53490,
+      "handler": 54440,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 242,
+        "image_offset": 125426,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 168,
+        "image_offset": 124328,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 250,
+      "table_address": 53492,
+      "handler": 54440,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 244,
+        "image_offset": 125428,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 168,
+        "image_offset": 124328,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 251,
+      "table_address": 53494,
+      "handler": 54440,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 246,
+        "image_offset": 125430,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 168,
+        "image_offset": 124328,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 252,
+      "table_address": 53496,
+      "handler": 54440,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 248,
+        "image_offset": 125432,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 168,
+        "image_offset": 124328,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 253,
+      "table_address": 53498,
+      "handler": 54440,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 250,
+        "image_offset": 125434,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 168,
+        "image_offset": 124328,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 254,
+      "table_address": 53500,
+      "handler": 54440,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 252,
+        "image_offset": 125436,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 168,
+        "image_offset": 124328,
+        "bank": "bank1"
+      }
+    },
+    {
+      "opcode": 255,
+      "table_address": 53502,
+      "handler": 54440,
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 125184,
+        "byte_in_sector": 254,
+        "image_offset": 125438,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 124160,
+        "byte_in_sector": 168,
+        "image_offset": 124328,
+        "bank": "bank1"
+      }
+    }
+  ],
+  "secondary": [
+    {
+      "selector": 0,
+      "table_address": 53504,
+      "handler": 61148,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 0,
+        "image_offset": 124928,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 220,
+        "image_offset": 121820,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 1,
+      "table_address": 53506,
+      "handler": 54899,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 2,
+        "image_offset": 124930,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648,
+        "byte_in_sector": 115,
+        "image_offset": 123763,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 2,
+      "table_address": 53508,
+      "handler": 59512,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 4,
+        "image_offset": 124932,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 120,
+        "image_offset": 115064,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 3,
+      "table_address": 53510,
+      "handler": 59512,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 6,
+        "image_offset": 124934,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 120,
+        "image_offset": 115064,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 4,
+      "table_address": 53512,
+      "handler": 59228,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 8,
+        "image_offset": 124936,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 115200,
+        "byte_in_sector": 92,
+        "image_offset": 115292,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 5,
+      "table_address": 53514,
+      "handler": 61505,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 10,
+        "image_offset": 124938,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 121088,
+        "byte_in_sector": 65,
+        "image_offset": 121153,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 6,
+      "table_address": 53516,
+      "handler": 61510,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 12,
+        "image_offset": 124940,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 121088,
+        "byte_in_sector": 70,
+        "image_offset": 121158,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 7,
+      "table_address": 53518,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 14,
+        "image_offset": 124942,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 8,
+      "table_address": 53520,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 16,
+        "image_offset": 124944,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 9,
+      "table_address": 53522,
+      "handler": 59417,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 18,
+        "image_offset": 124946,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 25,
+        "image_offset": 114969,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 10,
+      "table_address": 53524,
+      "handler": 59018,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 20,
+        "image_offset": 124948,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 138,
+        "image_offset": 115594,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 11,
+      "table_address": 53526,
+      "handler": 59087,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 22,
+        "image_offset": 124950,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 207,
+        "image_offset": 115663,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 12,
+      "table_address": 53528,
+      "handler": 61183,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 24,
+        "image_offset": 124952,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 255,
+        "image_offset": 121855,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 13,
+      "table_address": 53530,
+      "handler": 0,
+      "status": "zero/unknown",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 26,
+        "image_offset": 124954,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 14,
+      "table_address": 53532,
+      "handler": 0,
+      "status": "zero/unknown",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 28,
+        "image_offset": 124956,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 15,
+      "table_address": 53534,
+      "handler": 0,
+      "status": "zero/unknown",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 30,
+        "image_offset": 124958,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 16,
+      "table_address": 53536,
+      "handler": 0,
+      "status": "zero/unknown",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 32,
+        "image_offset": 124960,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 17,
+      "table_address": 53538,
+      "handler": 0,
+      "status": "zero/unknown",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 34,
+        "image_offset": 124962,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 18,
+      "table_address": 53540,
+      "handler": 0,
+      "status": "zero/unknown",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 36,
+        "image_offset": 124964,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 19,
+      "table_address": 53542,
+      "handler": 0,
+      "status": "zero/unknown",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 38,
+        "image_offset": 124966,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 20,
+      "table_address": 53544,
+      "handler": 0,
+      "status": "zero/unknown",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 40,
+        "image_offset": 124968,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 21,
+      "table_address": 53546,
+      "handler": 58987,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 42,
+        "image_offset": 124970,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 107,
+        "image_offset": 115563,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 22,
+      "table_address": 53548,
+      "handler": 58997,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 44,
+        "image_offset": 124972,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 115456,
+        "byte_in_sector": 117,
+        "image_offset": 115573,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 23,
+      "table_address": 53550,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 46,
+        "image_offset": 124974,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 24,
+      "table_address": 53552,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 48,
+        "image_offset": 124976,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 25,
+      "table_address": 53554,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 50,
+        "image_offset": 124978,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 26,
+      "table_address": 53556,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 52,
+        "image_offset": 124980,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 27,
+      "table_address": 53558,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 54,
+        "image_offset": 124982,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 28,
+      "table_address": 53560,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 56,
+        "image_offset": 124984,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 29,
+      "table_address": 53562,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 58,
+        "image_offset": 124986,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 30,
+      "table_address": 53564,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 60,
+        "image_offset": 124988,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 31,
+      "table_address": 53566,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 62,
+        "image_offset": 124990,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 32,
+      "table_address": 53568,
+      "handler": 54959,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 64,
+        "image_offset": 124992,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648,
+        "byte_in_sector": 175,
+        "image_offset": 123823,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 33,
+      "table_address": 53570,
+      "handler": 54982,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 66,
+        "image_offset": 124994,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 123648,
+        "byte_in_sector": 198,
+        "image_offset": 123846,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 34,
+      "table_address": 53572,
+      "handler": 61137,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 68,
+        "image_offset": 124996,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 209,
+        "image_offset": 121809,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 35,
+      "table_address": 53574,
+      "handler": 61159,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 70,
+        "image_offset": 124998,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 231,
+        "image_offset": 121831,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 36,
+      "table_address": 53576,
+      "handler": 53743,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 72,
+        "image_offset": 125000,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 239,
+        "image_offset": 125167,
+        "bank": "bank1"
+      }
+    },
+    {
+      "selector": 37,
+      "table_address": 53578,
+      "handler": 61173,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 74,
+        "image_offset": 125002,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 121600,
+        "byte_in_sector": 245,
+        "image_offset": 121845,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 38,
+      "table_address": 53580,
+      "handler": 61309,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 76,
+        "image_offset": 125004,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 29,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 121344,
+        "byte_in_sector": 125,
+        "image_offset": 121469,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 39,
+      "table_address": 53582,
+      "handler": 59403,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 78,
+        "image_offset": 125006,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 11,
+        "image_offset": 114955,
+        "bank": "common"
+      }
+    },
+    {
+      "selector": 40,
+      "table_address": 53584,
+      "handler": 59612,
+      "status": "candidate handler",
+      "table_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 124928,
+        "byte_in_sector": 80,
+        "image_offset": 125008,
+        "bank": "bank1"
+      },
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 114944,
+        "byte_in_sector": 220,
+        "image_offset": 115164,
+        "bank": "common"
+      }
+    }
+  ],
+  "bios_wrappers": [
+    {
+      "wrapper": 65280,
+      "return_address": 65282,
+      "added_to_return": 90,
+      "trampoline": 65372,
+      "bank2_handler": 55326,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 110848,
+        "byte_in_sector": 30
+      }
+    },
+    {
+      "wrapper": 65283,
+      "return_address": 65285,
+      "added_to_return": 90,
+      "trampoline": 65375,
+      "bank2_handler": 55480,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 110848,
+        "byte_in_sector": 184
+      }
+    },
+    {
+      "wrapper": 65286,
+      "return_address": 65288,
+      "added_to_return": 90,
+      "trampoline": 65378,
+      "bank2_handler": 55279,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 111104,
+        "byte_in_sector": 239
+      }
+    },
+    {
+      "wrapper": 65289,
+      "return_address": 65291,
+      "added_to_return": 90,
+      "trampoline": 65381,
+      "bank2_handler": 55593,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 114432,
+        "byte_in_sector": 41
+      }
+    },
+    {
+      "wrapper": 65292,
+      "return_address": 65294,
+      "added_to_return": 90,
+      "trampoline": 65384,
+      "bank2_handler": 55368,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 110848,
+        "byte_in_sector": 72
+      }
+    },
+    {
+      "wrapper": 65295,
+      "return_address": 65297,
+      "added_to_return": 90,
+      "trampoline": 65387,
+      "bank2_handler": 53286,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 112896,
+        "byte_in_sector": 38
+      }
+    },
+    {
+      "wrapper": 65298,
+      "return_address": 65300,
+      "added_to_return": 90,
+      "trampoline": 65390,
+      "bank2_handler": 53289,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 112896,
+        "byte_in_sector": 41
+      }
+    },
+    {
+      "wrapper": 65301,
+      "return_address": 65303,
+      "added_to_return": 90,
+      "trampoline": 65393,
+      "bank2_handler": 54915,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 111360,
+        "byte_in_sector": 131
+      }
+    },
+    {
+      "wrapper": 65304,
+      "return_address": 65306,
+      "added_to_return": 90,
+      "trampoline": 65396,
+      "bank2_handler": 55627,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 114432,
+        "byte_in_sector": 75
+      }
+    },
+    {
+      "wrapper": 65307,
+      "return_address": 65309,
+      "added_to_return": 90,
+      "trampoline": 65399,
+      "bank2_handler": 55554,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 114432,
+        "byte_in_sector": 2
+      }
+    },
+    {
+      "wrapper": 65310,
+      "return_address": 65312,
+      "added_to_return": 90,
+      "trampoline": 65402,
+      "bank2_handler": 55429,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 110848,
+        "byte_in_sector": 133
+      }
+    },
+    {
+      "wrapper": 65313,
+      "return_address": 65315,
+      "added_to_return": 90,
+      "trampoline": 65405,
+      "bank2_handler": 65368,
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 125440,
+        "byte_in_sector": 88
+      }
+    },
+    {
+      "wrapper": 65316,
+      "return_address": 65318,
+      "added_to_return": 90,
+      "trampoline": 65408,
+      "bank2_handler": 55425,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 110848,
+        "byte_in_sector": 129
+      }
+    },
+    {
+      "wrapper": 65319,
+      "return_address": 65321,
+      "added_to_return": 90,
+      "trampoline": 65411,
+      "bank2_handler": 65368,
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 125440,
+        "byte_in_sector": 88
+      }
+    },
+    {
+      "wrapper": 65322,
+      "return_address": 65324,
+      "added_to_return": 90,
+      "trampoline": 65414,
+      "bank2_handler": 56336,
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 118016,
+        "byte_in_sector": 16
+      }
+    },
+    {
+      "wrapper": 65325,
+      "return_address": 65327,
+      "added_to_return": 90,
+      "trampoline": 65417,
+      "bank2_handler": 56323,
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 118016,
+        "byte_in_sector": 3
+      }
+    },
+    {
+      "wrapper": 65328,
+      "return_address": 65330,
+      "added_to_return": 90,
+      "trampoline": 65420,
+      "bank2_handler": 56380,
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 118016,
+        "byte_in_sector": 60
+      }
+    },
+    {
+      "wrapper": 65331,
+      "return_address": 65333,
+      "added_to_return": 90,
+      "trampoline": 65423,
+      "bank2_handler": 56323,
+      "handler_source": {
+        "side": "utility",
+        "track": 28,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 118016,
+        "byte_in_sector": 3
+      }
+    },
+    {
+      "wrapper": 65334,
+      "return_address": 65336,
+      "added_to_return": 90,
+      "trampoline": 65426,
+      "bank2_handler": 54949,
+      "handler_source": {
+        "side": "utility",
+        "track": 27,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 111360,
+        "byte_in_sector": 165
+      }
+    },
+    {
+      "wrapper": 65337,
+      "return_address": 65339,
+      "added_to_return": 90,
+      "trampoline": 65429,
+      "bank2_handler": 65240,
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 125696,
+        "byte_in_sector": 216
+      }
+    },
+    {
+      "wrapper": 65340,
+      "return_address": 65342,
+      "added_to_return": 90,
+      "trampoline": 65432,
+      "bank2_handler": 65346,
+      "handler_source": {
+        "side": "utility",
+        "track": 30,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 125440,
+        "byte_in_sector": 66
+      }
+    }
+  ],
+  "fetch_address": 53907,
+  "instruction_pointer": [
+    88,
+    89
+  ],
+  "primary_patch": 53918,
+  "secondary_patch": 59016,
+  "secondary_dispatch_opcode": 158,
+  "confidence": "high for native instructions and table values; bytecode archive format and full opcode semantics not established",
+  "source_hashes": {
+    "bank1": "8cea6d3380eca10f7e12c8877be6aee22cb45f57fe7d347cc109b49eaf97b459",
+    "bank2": "dc27d73b068c54c83e0bf1ffa6a91e27c88829025c320d5b1eedcacc1b83a69f"
+  }
+}

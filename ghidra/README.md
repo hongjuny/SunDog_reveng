@@ -7,7 +7,8 @@ by `scripts/ExportBoot.java`. Instruction, reference, and function-body exports
 are written to ignored `ghidra/exports/` and should not be published as game code.
 
 Programs: boot stage at 0800, native graphics candidate at 4000, Language Card
-bank 2 at D000, post-switch bank 1 view at D000, and relocated initializer at 6800.
+bank 2 at D000, post-switch bank 1 view at D000, relocated initializer at 6800, interpreter-ready bank 1 view, and a separate
+bank 2 disk-read view.
 The bank 2 program's automatic analysis must not be used for the D152 path after
 FEF2 reads C08B. Even the bank 1 program is one snapshot: later switching can
 invalidate its low-bank analysis. ROM and unobserved ordinary RAM are unmapped.
@@ -18,3 +19,11 @@ compiling its ownership helper because Swift's external module-cache directory
 was not writable. Evidence is retained locally in `analysis/local/rea-doctor.json`.
 Direct Ghidra analysis completed independently. No REA setup or client config was
 changed; a future session can supply proper provider and cache environment.
+
+Milestone 2 seeds the synthetic return continuations 68B9 and 68C4 explicitly.
+The interpreter-ready Program marks F248..FE7B as p-code data, replacing the old
+native initializer view. Primary/secondary handler seeds come from native table
+bytes and exact fetch signatures (`tools/runtime_evidence.py`), not a borrowed VM.
+Separate disk-read and general bank 2 Programs preserve the overlapping D026/D029
+instruction streams. Ghidra still cannot model later bank switching or changing
+JMP operands automatically; reports must be read with those state limits.

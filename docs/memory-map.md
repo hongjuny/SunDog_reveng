@@ -30,3 +30,24 @@ none of these boot assignments is assumed permanent.
 The later `$F269` copy relocates common-bank `$F290–$F78F` to `$6800–$6CFF`.
 The initializer at `$6800` clears `$0000–$1FFF` on its initial path, invalidating
 the boot snapshot, then switches to bank 2 before an indirect jump to `$DAA9`.
+
+## Milestone 2: interpreter-ready state
+
+| Address | Role after native initialization | Evidence |
+|---|---|---|
+| `$58/$59` | p-code instruction pointer, initially `$F248` | `$E229–$E237`, `$D293–$D29F` |
+| `$5C/$5D` | downward allocation pointer used by segment loader | `$E49B–$E4A6` |
+| `$6000–$61FF` | temporary directory/dictionary buffer | initial native disk-read arguments |
+| `$BE3E` onward | sixteen six-byte segment records | `$6B32–$6B7A` |
+| `$BC72–$BD1B` | 170-byte helper from dictionary slot 15 | initial top `$BD1C` minus 170 |
+| bank 1 `$D000–$D0FF` | primary native handler addresses | self-modified indirect JMP at `$D29D` |
+| `$D100` onward, bank 1 | secondary handler cells | `$E67F–$E689` |
+| common `$F248–$FE7B` | initial SYSTEM.PASCAL segment 0 | explicit top `$FE7C` minus 3124 |
+| `$FF00–$FF3C` | validated BIOS wrapper entries | `$FF9E` switches to bank 2 and later restores bank 1 |
+| `$BF1A/$BF1B` | saved native caller return address during BIOS wrapper | `$FFAB–$FFC4` |
+
+The final initialization loop clears `$6000–$6C30`, including most of its own
+relocated code. The final loop/jump at `$6C31–$6C45` survives long enough to enter
+`$D293`. Do not retain the old `$F269/$F290` native definitions after the segment 0
+load, or the `$6800` definitions after that final clear. The interpreter-ready
+Ghidra view marks the segment 0 range as p-code data rather than 6502 instructions.

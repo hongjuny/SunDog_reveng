@@ -26,3 +26,10 @@ resident-signature interaction, graphical content, and later reuse remain open.
 This is an identified native graphics component, not a reconstructed game-wide
 renderer. Mouse/joystick, window composition, sprites, text, and screen-update
 scheduling remain unidentified. No performance conclusions have been measured.
+
+Milestone 2 narrows the common-resource candidates: the entire directory-mapped
+SYSTEM.LIBRARY extent is identical across both sides, with four type-7 (6502)
+and three type-2 (little-endian p-code) stored descriptors. Their graphics/UI
+responsibilities are still unknown. The Utility SYSTEM.STARTUP descriptor range
+also conflicts with independently verified native boot/graphics data, so its
+p-code-looking header cannot classify every byte in that range as p-code.

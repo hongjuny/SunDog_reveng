@@ -1,0 +1,12 @@
+[
+  {
+    "path": "/Users/ay5/Projects/CiderPress2/FileConv/Code/ApplePascal_Code.cs",
+    "sha256": "b700e3c4eb5d7ddcd04bf519eb4240574891fc3777f7c4433c74801b15c6d720",
+    "purpose": "independent Apple codefile header field interpretation; core block/length fields also checked against game native code"
+  },
+  {
+    "path": "/Users/ay5/Projects/CiderPress2/FileConv/Code/ApplePascal-notes.md",
+    "sha256": "6c8ca477ce7ef9c4becb50f2fa7df0574e1f10e5c51fbe51a650f9bab3bd8547",
+    "purpose": "independent Apple codefile header field interpretation; core block/length fields also checked against game native code"
+  }
+]

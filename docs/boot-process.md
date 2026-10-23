@@ -95,3 +95,13 @@ need analysis and an observed boot trace.
 The synthetic return address is `$68B8`, so an ordinary native `RTS` would
 continue at `$68B9`. Ghidra does not infer this edge through the indirect jump;
 that continuation and its bank state need an explicit follow-up analysis.
+
+## Milestone 2 continuation
+
+The continuation at `$68B9` and its second synthetic return at `$68C4` have now
+been traced. The native initializer reads directory block 79, finds SYSTEM.PASCAL,
+builds its segment table, loads a 170-byte helper at `$BC72` and a 3124-byte segment
+at `$F248`, then jumps to the interpreter's fetch loop at `$D293`. The latter load
+overwrites the original common-bank initializer, invalidating the earlier native
+memory view. Detailed source mapping, version checks, procedure pointer arithmetic
+and remaining branch assumptions are in [runtime handoff](runtime-handoff.md).

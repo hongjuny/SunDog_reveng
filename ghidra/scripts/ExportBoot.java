@@ -3,11 +3,21 @@ import ghidra.app.script.GhidraScript;
 import ghidra.program.model.address.*;
 import ghidra.program.model.listing.*;
 import ghidra.program.model.symbol.*;
+import ghidra.program.model.data.*;
 import java.io.*;
 public class ExportBoot extends GhidraScript {
  public void run() throws Exception {
-  int[] entries=getScriptArgs().length>1 ? new int[]{Integer.parseInt(getScriptArgs()[1],16)} : new int[]{0x801,0x8ff};
-  for(int n:entries){disassemble(toAddr(n)); createLabel(toAddr(n),n==0x801?"boot_entry":n==0x8ff?"disk_loader":"region_entry",true); createFunction(toAddr(n),null);}
+  boolean ready=currentProgram.getName().equals("interpreter-ready.bin");
+  if(ready) {
+   clearListing(toAddr(0xf248),toAddr(0xfe7b));
+   createData(toAddr(0xf248),new ArrayDataType(ByteDataType.dataType,3124,1));
+   createLabel(toAddr(0xf248),"system_pascal_segment0_pcode",true);
+   setPreComment(toAddr(0xf248),"P-code data, not 6502 instructions. Static load arithmetic and procedure directory put procedure 1 here. Overwrites the original F269/F290 initializer region.");
+  }
+  String[] seeds=getScriptArgs().length>1 ? getScriptArgs()[1].split(",") : new String[]{"801","8ff"};
+  int[] entries=new int[seeds.length];
+  for(int j=0;j<seeds.length;j++) entries[j]=Integer.parseInt(seeds[j],16);
+  for(int n:entries){disassemble(toAddr(n)); createLabel(toAddr(n),n==0x801?"boot_entry":n==0x8ff?"disk_loader":"region_entry_"+Integer.toHexString(n),true); createFunction(toAddr(n),null);}
   if (getScriptArgs().length==1) {
    createLabel(toAddr(0x094e),"read_sector",true);
    createLabel(toAddr(0x097a),"decode_6and2",true);
@@ -22,6 +32,13 @@ public class ExportBoot extends GhidraScript {
    setPreComment(toAddr(0x4000),"Utility blocks 201..218 using loader sector table; native graphics candidate. All 192 row table addresses verified against HGR page 1.");
   } else if(entries[0]==0xfef2) {
    setPreComment(toAddr(0xfef2),"Static boot handoff through loaded FFF8 vector. Reads C08B then jumps D152, switching the D000 bank. Use runtime-bank1.bin for the post-switch D000 mapping; lc-bank2.bin is the pre-switch view.");
+  }
+  if(currentProgram.getName().equals("runtime-bank1.bin") || ready) {
+   createLabel(toAddr(0xd000),"primary_pcode_dispatch",true);
+   createLabel(toAddr(0xd100),"secondary_dispatch_cells",true);
+   createLabel(toAddr(0xd293),"pcode_fetch",true);
+   setPreComment(toAddr(0xd293),"Fetches through ZP 58/59; 00..7F push a two-byte immediate using PHA. 80..FF index D000 words by patching the operand at D29E. Requires bank 1, with writable Language Card RAM.");
+   setPreComment(toAddr(0xe67f),"Opcode 9E reads its following byte and patches E688 to dispatch through D100. Valid selector range not yet established.");
   }
   String dest=getScriptArgs()[0];
   try(PrintWriter w=new PrintWriter(dest)){

@@ -46,3 +46,20 @@ reported in the task; readable-sector access still works without filesystem reco
 Graphics layouts remain candidates. Full-track exports permit experiments, but
 no track is classified as graphics from its entropy. Cross-disk identical tracks
 13–17 are high-priority common-resource candidates with unknown semantics.
+
+## Milestone 2 update: complete decoding and bootstrap directory
+
+`python3 tools/verify_woz.py --full` independently reads all 1,120 sector slots
+from the original WOZ files through CiderPress2. All **1,104 readable sectors match**
+the supplied logical images; only Play T34/S0–15 fail. The report records decoder
+executable/assembly hashes, every result and all 69 complete decoded tracks.
+Only complete readable tracks are exported under `analysis/regions/woz-read/`.
+No failed read becomes a zero-filled sector or a valid track. This validates the
+supplied DOS ordering across every readable sector, not merely boot samples.
+
+Native initialization now connects block 79 to the directory-shaped group at
+Utility DOS offset `$9100`. The standard filesystem directory location is not
+being assumed; this is a custom bootstrap read. The entire directory-mapped
+SYSTEM.LIBRARY extent (blocks 103–139) is identical on both sides and contains
+coherent native/p-code descriptor metadata. See `analysis/archive-inventory.json`
+and `docs/pascal-runtime.md` for limits and conflicting SYSTEM.STARTUP descriptors.

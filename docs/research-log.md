@@ -16,7 +16,10 @@ and disassembly. REA interactive native analysis was therefore not used.
 Initial Ghidra launch could not save its JDK selection outside the workspace.
 The reproducible wrapper redirects Java user home and temporary files locally.
 First successful run also warned about an external cache-maintenance path; the
-wrapper's explicit temporary directory avoids that path on subsequent runs.
+wrapper's explicit temporary directory was an attempted remedy. Later runs still
+log the external cache-maintenance warning; it does not prevent analysis or saving
+the project. The earlier assumption that the temporary-directory override fixed
+Ghidra's separate file cache was incorrect.
 
 Corrected an initially inverted DOS skew table before final artifacts: the inverse
 is not interchangeable. A wrong skew produced table/graphics bytes at loader
@@ -67,3 +70,45 @@ was created at `analysis/local/repository/.git`, with repository root supplied a
 an explicit work tree by `tools/git-local.sh`. Use that wrapper for `status`,
 `log`, and other local Git commands. No original images, derived binaries, raw
 string dumps or disassembly exports are staged. Nothing was published or pushed.
+
+
+## 2026-10-23 — milestone 2: native-to-Pascal handoff
+
+Followed synthetic returns 68B9 and 68C4, then the initializer through the custom
+directory read at block 79 and SYSTEM.PASCAL header read at block 251. Native code
+copies sixteen block/length descriptors into six-byte runtime records at BE3E.
+The version predicate is header byte 103 hex masked by E0 equals A0; the A2 byte
+passes, and failure names version 1.2. This supports a 1.2-family requirement,
+not byte-for-byte stock runtime identity.
+
+Identified bank 1 fetch D293, primary D000 words, and secondary D100 cells reached
+by opcode 9E. Both dispatches patch native JMP operands. No full p-code decoder
+was built. Identified 21 BIOS wrappers that switch to bank 2 and restore bank 1;
+the apparent FF3F wrapper does not pass the same JMP-shape check. D026/D029 are
+overlapping instruction streams; independent Ghidra views preserve both.
+
+Native allocation arithmetic loads slot 15's 170 bytes to BC72 and segment 0's
+3124 bytes to F248. The latter overwrites the original initializer. All 39 procedure
+records resolve, including procedure 38's cross-region pointer to the BC72 helper.
+The final initialization clear removes 6000..6C30 and jumps to D293, with the first
+p-code pointer resolving to F248 (initial byte 9F, native handler D2D7).
+
+Archive inventory found the whole SYSTEM.LIBRARY extent identical across both
+disks. Four stored descriptors have 6502 machine-type metadata, three have
+little-endian p-code metadata, and three data allocations have no stored payload.
+A naive SYSTEM.STARTUP slicing hypothesis failed: four descriptors exceed the
+79-block directory extent; other in-range bytes overlap Utility boot-native data.
+Those conflicts are retained rather than exported as validated out-of-file code.
+The metadata fields were compared to local CiderPress2 ApplePascal_Code.cs; its
+schema was used as an independent Apple reference, not an Atari compatibility assumption.
+
+Full CiderPress2 decoding reproduced all 1,104 readable sectors from the original
+WOZ files. All sixteen Play Track 34 reads failed; complete known tracks alone
+were exported. Decoder executable and assembly hashes are recorded. Original
+media hashes remain unchanged.
+
+Validation: thirteen deterministic tests pass without game media; reports
+reproduce byte-for-byte. Seven bounded Ghidra Programs save successfully, including
+the interpreter-ready view with segment 0 classified as p-code data. A controlled
+emulator trace, exact interpreter variant, opcode operand semantics, and the
+transition into game-specific startup remain unresolved.

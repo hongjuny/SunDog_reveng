@@ -1,0 +1,2713 @@
+{
+  "directory_block": 79,
+  "directory_source": [
+    {
+      "track": 9,
+      "sector": 1,
+      "physical_sector": 13,
+      "offset": 37120
+    },
+    {
+      "track": 9,
+      "sector": 15,
+      "physical_sector": 15,
+      "offset": 40704
+    }
+  ],
+  "directory_entries": [
+    {
+      "record_offset": 26,
+      "start_block": 3,
+      "end_block": 85,
+      "kind": 5,
+      "name": "SYSTEM.DATA",
+      "last_block_bytes": 512
+    },
+    {
+      "record_offset": 52,
+      "start_block": 85,
+      "end_block": 103,
+      "kind": 2,
+      "name": "SUNDOG.LIBRARY",
+      "last_block_bytes": 512
+    },
+    {
+      "record_offset": 78,
+      "start_block": 103,
+      "end_block": 140,
+      "kind": 5,
+      "name": "SYSTEM.LIBRARY",
+      "last_block_bytes": 512
+    },
+    {
+      "record_offset": 104,
+      "start_block": 140,
+      "end_block": 219,
+      "kind": 2,
+      "name": "SYSTEM.STARTUP",
+      "last_block_bytes": 512
+    },
+    {
+      "record_offset": 130,
+      "start_block": 219,
+      "end_block": 251,
+      "kind": 5,
+      "name": "SYSTEM.APPLE",
+      "last_block_bytes": 512
+    },
+    {
+      "record_offset": 156,
+      "start_block": 251,
+      "end_block": 280,
+      "kind": 2,
+      "name": "SYSTEM.PASCAL",
+      "last_block_bytes": 512
+    }
+  ],
+  "archives": [
+    {
+      "record_offset": 52,
+      "start_block": 85,
+      "end_block": 103,
+      "kind": 2,
+      "name": "SUNDOG.LIBRARY",
+      "last_block_bytes": 512,
+      "side": "utility",
+      "extent_sha256": "0583fc42ce868e4ba59b84a98344fa55cf0e2b6c87685af558ff185c40604bee",
+      "extent_identical_on_play": false,
+      "header_sources": [
+        {
+          "track": 10,
+          "sector": 5,
+          "physical_sector": 5,
+          "offset": 42240
+        },
+        {
+          "track": 10,
+          "sector": 4,
+          "physical_sector": 7,
+          "offset": 41984
+        }
+      ],
+      "dictionary_sha256": "57e04c9d3d1fdfda4301beab37278b9296c45c43d301e7a659a3417e93bdeafc",
+      "segments": [
+        {
+          "status": "stored",
+          "slot": 0,
+          "relative_block": 1,
+          "length": 8644,
+          "storage_blocks": 17,
+          "segment_number": 1,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 86,
+          "sha256": "3d0ad5c10da8631faabef1aabb87a42f8892fc13b51dd8a0d7bf814dfb724553",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 10,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 41728
+            },
+            {
+              "track": 10,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 41472
+            },
+            {
+              "track": 10,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 41216
+            },
+            {
+              "track": 10,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 44800
+            },
+            {
+              "track": 11,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 45056
+            },
+            {
+              "track": 11,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 48640
+            },
+            {
+              "track": 11,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 48384
+            },
+            {
+              "track": 11,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 48128
+            },
+            {
+              "track": 11,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 47872
+            },
+            {
+              "track": 11,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 47616
+            },
+            {
+              "track": 11,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 47360
+            },
+            {
+              "track": 11,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 47104
+            },
+            {
+              "track": 11,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 46848
+            },
+            {
+              "track": 11,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 46592
+            },
+            {
+              "track": 11,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 46336
+            },
+            {
+              "track": 11,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 46080
+            },
+            {
+              "track": 11,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 45824
+            },
+            {
+              "track": 11,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 45568
+            },
+            {
+              "track": 11,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 45312
+            },
+            {
+              "track": 11,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 48896
+            },
+            {
+              "track": 12,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 49152
+            },
+            {
+              "track": 12,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 52736
+            },
+            {
+              "track": 12,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 52480
+            },
+            {
+              "track": 12,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 52224
+            },
+            {
+              "track": 12,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 51968
+            },
+            {
+              "track": 12,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 51712
+            },
+            {
+              "track": 12,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 51456
+            },
+            {
+              "track": 12,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 51200
+            },
+            {
+              "track": 12,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 50944
+            },
+            {
+              "track": 12,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 50688
+            },
+            {
+              "track": 12,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 50432
+            },
+            {
+              "track": 12,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 50176
+            },
+            {
+              "track": 12,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 49920
+            },
+            {
+              "track": 12,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 49664
+            }
+          ],
+          "source_byte_count_last_sector": 196,
+          "path": "analysis/regions/archives/SUNDOG.LIBRARY-slot-00.bin",
+          "identical_on_play": false
+        }
+      ],
+      "uncovered_relative_blocks": [],
+      "confidence": "high for block/length descriptors used by native bootstrap; info fields cross-checked with CiderPress2 ApplePascal_Code.cs, not ST layouts"
+    },
+    {
+      "record_offset": 78,
+      "start_block": 103,
+      "end_block": 140,
+      "kind": 5,
+      "name": "SYSTEM.LIBRARY",
+      "last_block_bytes": 512,
+      "side": "utility",
+      "extent_sha256": "46ba55cf8a77d8edb4dd6020194f879b4a3a77593aceed5ff3eca2130c375e1f",
+      "extent_identical_on_play": true,
+      "header_sources": [
+        {
+          "track": 12,
+          "sector": 1,
+          "physical_sector": 13,
+          "offset": 49408
+        },
+        {
+          "track": 12,
+          "sector": 15,
+          "physical_sector": 15,
+          "offset": 52992
+        }
+      ],
+      "dictionary_sha256": "7ce671275b84caeb21838619ee1957aa8c6c5bf0df53320dc580ea1c289a9b79",
+      "segments": [
+        {
+          "status": "stored",
+          "slot": 1,
+          "relative_block": 1,
+          "length": 6126,
+          "storage_blocks": 12,
+          "segment_number": 22,
+          "machine_type": 7,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 6,
+          "name_bytes_zero": true,
+          "absolute_block": 104,
+          "sha256": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 13,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 53248
+            },
+            {
+              "track": 13,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 56832
+            },
+            {
+              "track": 13,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 56576
+            },
+            {
+              "track": 13,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 56320
+            },
+            {
+              "track": 13,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 56064
+            },
+            {
+              "track": 13,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 55808
+            },
+            {
+              "track": 13,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 55552
+            },
+            {
+              "track": 13,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 55296
+            },
+            {
+              "track": 13,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 55040
+            },
+            {
+              "track": 13,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 54784
+            },
+            {
+              "track": 13,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 54528
+            },
+            {
+              "track": 13,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 54272
+            },
+            {
+              "track": 13,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 54016
+            },
+            {
+              "track": 13,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 53760
+            },
+            {
+              "track": 13,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 53504
+            },
+            {
+              "track": 13,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 57088
+            },
+            {
+              "track": 14,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 57344
+            },
+            {
+              "track": 14,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 60928
+            },
+            {
+              "track": 14,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 60672
+            },
+            {
+              "track": 14,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 60416
+            },
+            {
+              "track": 14,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 60160
+            },
+            {
+              "track": 14,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 59904
+            },
+            {
+              "track": 14,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 59648
+            },
+            {
+              "track": 14,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 59392
+            }
+          ],
+          "source_byte_count_last_sector": 238,
+          "path": "analysis/regions/archives/SYSTEM.LIBRARY-slot-01.bin",
+          "identical_on_play": true
+        },
+        {
+          "status": "stored",
+          "slot": 2,
+          "relative_block": 13,
+          "length": 606,
+          "storage_blocks": 2,
+          "segment_number": 23,
+          "machine_type": 7,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 6,
+          "name_bytes_zero": true,
+          "absolute_block": 116,
+          "sha256": "af7267c0fb90b5e2e8c477d12d13f90afd98010a140f1e6f09b12bdb69e5529f",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 14,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 59136
+            },
+            {
+              "track": 14,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 58880
+            },
+            {
+              "track": 14,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 58624
+            },
+            {
+              "track": 14,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 58368
+            }
+          ],
+          "source_byte_count_last_sector": 94,
+          "path": "analysis/regions/archives/SYSTEM.LIBRARY-slot-02.bin",
+          "identical_on_play": true
+        },
+        {
+          "status": "stored",
+          "slot": 3,
+          "relative_block": 15,
+          "length": 4306,
+          "storage_blocks": 9,
+          "segment_number": 24,
+          "machine_type": 7,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 6,
+          "name_bytes_zero": true,
+          "absolute_block": 118,
+          "sha256": "acaadfd85907933575a035fe67f716630e3c3695430008f90a4b48ea6b1fd68c",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 14,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 58112
+            },
+            {
+              "track": 14,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 57856
+            },
+            {
+              "track": 14,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 57600
+            },
+            {
+              "track": 14,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 61184
+            },
+            {
+              "track": 15,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 61440
+            },
+            {
+              "track": 15,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 65024
+            },
+            {
+              "track": 15,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 64768
+            },
+            {
+              "track": 15,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 64512
+            },
+            {
+              "track": 15,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 64256
+            },
+            {
+              "track": 15,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 64000
+            },
+            {
+              "track": 15,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 63744
+            },
+            {
+              "track": 15,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 63488
+            },
+            {
+              "track": 15,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 63232
+            },
+            {
+              "track": 15,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 62976
+            },
+            {
+              "track": 15,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 62720
+            },
+            {
+              "track": 15,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 62464
+            },
+            {
+              "track": 15,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 62208
+            },
+            {
+              "track": 15,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 61952
+            }
+          ],
+          "source_byte_count_last_sector": 210,
+          "path": "analysis/regions/archives/SYSTEM.LIBRARY-slot-03.bin",
+          "identical_on_play": true
+        },
+        {
+          "status": "stored",
+          "slot": 4,
+          "relative_block": 24,
+          "length": 958,
+          "storage_blocks": 2,
+          "segment_number": 25,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 6,
+          "name_bytes_zero": true,
+          "absolute_block": 127,
+          "sha256": "16048527422b435b2f6e811d3abddade3318f4570746a2e8e5b1419d16c9a4b3",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 15,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 61696
+            },
+            {
+              "track": 15,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 65280
+            },
+            {
+              "track": 16,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 65536
+            },
+            {
+              "track": 16,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 69120
+            }
+          ],
+          "source_byte_count_last_sector": 190,
+          "path": "analysis/regions/archives/SYSTEM.LIBRARY-slot-04.bin",
+          "identical_on_play": true
+        },
+        {
+          "status": "stored",
+          "slot": 5,
+          "relative_block": 26,
+          "length": 3058,
+          "storage_blocks": 6,
+          "segment_number": 26,
+          "machine_type": 7,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 6,
+          "name_bytes_zero": true,
+          "absolute_block": 129,
+          "sha256": "188476754bcdeb89a5843ec91e2e626e2680c324ee6d2b3641ad292dc1d99b5d",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 16,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 68864
+            },
+            {
+              "track": 16,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 68608
+            },
+            {
+              "track": 16,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 68352
+            },
+            {
+              "track": 16,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 68096
+            },
+            {
+              "track": 16,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 67840
+            },
+            {
+              "track": 16,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 67584
+            },
+            {
+              "track": 16,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 67328
+            },
+            {
+              "track": 16,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 67072
+            },
+            {
+              "track": 16,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 66816
+            },
+            {
+              "track": 16,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 66560
+            },
+            {
+              "track": 16,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 66304
+            },
+            {
+              "track": 16,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 66048
+            }
+          ],
+          "source_byte_count_last_sector": 242,
+          "path": "analysis/regions/archives/SYSTEM.LIBRARY-slot-05.bin",
+          "identical_on_play": true
+        },
+        {
+          "status": "stored",
+          "slot": 6,
+          "relative_block": 32,
+          "length": 1616,
+          "storage_blocks": 4,
+          "segment_number": 27,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 6,
+          "name_bytes_zero": true,
+          "absolute_block": 135,
+          "sha256": "90687f83d0ea2ae33be2e211b686b174fbf7cee15b886cebb52884f4ce687c80",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 16,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 65792
+            },
+            {
+              "track": 16,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 69376
+            },
+            {
+              "track": 17,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 69632
+            },
+            {
+              "track": 17,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 73216
+            },
+            {
+              "track": 17,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 72960
+            },
+            {
+              "track": 17,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 72704
+            },
+            {
+              "track": 17,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 72448
+            },
+            {
+              "track": 17,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 72192
+            }
+          ],
+          "source_byte_count_last_sector": 80,
+          "path": "analysis/regions/archives/SYSTEM.LIBRARY-slot-06.bin",
+          "identical_on_play": true
+        },
+        {
+          "status": "stored",
+          "slot": 7,
+          "relative_block": 36,
+          "length": 328,
+          "storage_blocks": 1,
+          "segment_number": 28,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 6,
+          "name_bytes_zero": true,
+          "absolute_block": 139,
+          "sha256": "c8054603d64cdcafa4cfdee95ab756aeb94ac26545b2a42888edd98e59d0d960",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 17,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 71936
+            },
+            {
+              "track": 17,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 71680
+            }
+          ],
+          "source_byte_count_last_sector": 72,
+          "path": "analysis/regions/archives/SYSTEM.LIBRARY-slot-07.bin",
+          "identical_on_play": true
+        },
+        {
+          "status": "allocation_only",
+          "slot": 8,
+          "relative_block": 0,
+          "length": 760,
+          "storage_blocks": 2,
+          "segment_number": 29,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 7,
+          "name_bytes_zero": true
+        },
+        {
+          "status": "allocation_only",
+          "slot": 9,
+          "relative_block": 0,
+          "length": 342,
+          "storage_blocks": 1,
+          "segment_number": 30,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 7,
+          "name_bytes_zero": true
+        },
+        {
+          "status": "allocation_only",
+          "slot": 10,
+          "relative_block": 0,
+          "length": 152,
+          "storage_blocks": 1,
+          "segment_number": 31,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 7,
+          "name_bytes_zero": true
+        }
+      ],
+      "uncovered_relative_blocks": [],
+      "confidence": "high for block/length descriptors used by native bootstrap; info fields cross-checked with CiderPress2 ApplePascal_Code.cs, not ST layouts"
+    },
+    {
+      "record_offset": 104,
+      "start_block": 140,
+      "end_block": 219,
+      "kind": 2,
+      "name": "SYSTEM.STARTUP",
+      "last_block_bytes": 512,
+      "side": "utility",
+      "extent_sha256": "83cefd7e79089424327474fd8643dc9b0b4e19879cc1413e71c2481d6068ff7b",
+      "extent_identical_on_play": false,
+      "header_sources": [
+        {
+          "track": 17,
+          "sector": 7,
+          "physical_sector": 1,
+          "offset": 71424
+        },
+        {
+          "track": 17,
+          "sector": 6,
+          "physical_sector": 3,
+          "offset": 71168
+        }
+      ],
+      "dictionary_sha256": "40a2a4a2b2ed1f4c7c97d61a093874ac0a2c9e101906aba4c0e9d25a6b003642",
+      "segments": [
+        {
+          "status": "stored",
+          "slot": 0,
+          "relative_block": 1,
+          "length": 576,
+          "storage_blocks": 2,
+          "segment_number": 1,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 141,
+          "sha256": "c01644b696e7b2bdef1e9773c6b98cc12ad139230edcf4a7994047c2396fcdc6",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 17,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 70912
+            },
+            {
+              "track": 17,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 70656
+            },
+            {
+              "track": 17,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 70400
+            },
+            {
+              "track": 17,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 70144
+            }
+          ],
+          "source_byte_count_last_sector": 64,
+          "path": "analysis/regions/archives/SYSTEM.STARTUP-slot-00.bin",
+          "identical_on_play": true
+        },
+        {
+          "status": "stored",
+          "slot": 1,
+          "relative_block": 3,
+          "length": 1868,
+          "storage_blocks": 4,
+          "segment_number": 7,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 143,
+          "sha256": "2c4cdfee9d22a90d65b09a47a3f6bd895301952e21bc6bbfd3116e410cffa370",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 17,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 69888
+            },
+            {
+              "track": 17,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 73472
+            },
+            {
+              "track": 18,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 73728
+            },
+            {
+              "track": 18,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 77312
+            },
+            {
+              "track": 18,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 77056
+            },
+            {
+              "track": 18,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 76800
+            },
+            {
+              "track": 18,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 76544
+            },
+            {
+              "track": 18,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 76288
+            }
+          ],
+          "source_byte_count_last_sector": 76,
+          "path": "analysis/regions/archives/SYSTEM.STARTUP-slot-01.bin",
+          "identical_on_play": true
+        },
+        {
+          "status": "stored",
+          "slot": 2,
+          "relative_block": 7,
+          "length": 3130,
+          "storage_blocks": 7,
+          "segment_number": 8,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 147,
+          "sha256": "8a43d790396899e24e4f09e8f7ff1ca3a1ac72e067fa9e12fb52c2d6c45a8417",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 18,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 76032
+            },
+            {
+              "track": 18,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 75776
+            },
+            {
+              "track": 18,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 75520
+            },
+            {
+              "track": 18,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 75264
+            },
+            {
+              "track": 18,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 75008
+            },
+            {
+              "track": 18,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 74752
+            },
+            {
+              "track": 18,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 74496
+            },
+            {
+              "track": 18,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 74240
+            },
+            {
+              "track": 18,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 73984
+            },
+            {
+              "track": 18,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 77568
+            },
+            {
+              "track": 19,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 77824
+            },
+            {
+              "track": 19,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 81408
+            },
+            {
+              "track": 19,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 81152
+            },
+            {
+              "track": 19,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 80896
+            }
+          ],
+          "source_byte_count_last_sector": 58,
+          "path": "analysis/regions/archives/SYSTEM.STARTUP-slot-02.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 6,
+          "relative_block": 34,
+          "length": 5546,
+          "storage_blocks": 11,
+          "segment_number": 12,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 174,
+          "sha256": "8976779ee878c5952d9167a455a4d5c4046845b4ed0e19c96ecc320f4f7310b4",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 21,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 86784
+            },
+            {
+              "track": 21,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 86528
+            },
+            {
+              "track": 21,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 86272
+            },
+            {
+              "track": 21,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 89856
+            },
+            {
+              "track": 22,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 90112
+            },
+            {
+              "track": 22,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 93696
+            },
+            {
+              "track": 22,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 93440
+            },
+            {
+              "track": 22,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 93184
+            },
+            {
+              "track": 22,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 92928
+            },
+            {
+              "track": 22,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 92672
+            },
+            {
+              "track": 22,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 92416
+            },
+            {
+              "track": 22,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 92160
+            },
+            {
+              "track": 22,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 91904
+            },
+            {
+              "track": 22,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 91648
+            },
+            {
+              "track": 22,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 91392
+            },
+            {
+              "track": 22,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 91136
+            },
+            {
+              "track": 22,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 90880
+            },
+            {
+              "track": 22,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 90624
+            },
+            {
+              "track": 22,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 90368
+            },
+            {
+              "track": 22,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 93952
+            },
+            {
+              "track": 23,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 94208
+            },
+            {
+              "track": 23,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 97792
+            }
+          ],
+          "source_byte_count_last_sector": 170,
+          "path": "analysis/regions/archives/SYSTEM.STARTUP-slot-06.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 7,
+          "relative_block": 14,
+          "length": 10214,
+          "storage_blocks": 20,
+          "segment_number": 13,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 154,
+          "sha256": "d1d1e5239cc9d01da49afcc81b358b6aa8b3cf5fdbbfa9e1a466304f5a5e973e",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 19,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 80640
+            },
+            {
+              "track": 19,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 80384
+            },
+            {
+              "track": 19,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 80128
+            },
+            {
+              "track": 19,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 79872
+            },
+            {
+              "track": 19,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 79616
+            },
+            {
+              "track": 19,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 79360
+            },
+            {
+              "track": 19,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 79104
+            },
+            {
+              "track": 19,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 78848
+            },
+            {
+              "track": 19,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 78592
+            },
+            {
+              "track": 19,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 78336
+            },
+            {
+              "track": 19,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 78080
+            },
+            {
+              "track": 19,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 81664
+            },
+            {
+              "track": 20,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 81920
+            },
+            {
+              "track": 20,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 85504
+            },
+            {
+              "track": 20,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 85248
+            },
+            {
+              "track": 20,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 84992
+            },
+            {
+              "track": 20,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 84736
+            },
+            {
+              "track": 20,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 84480
+            },
+            {
+              "track": 20,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 84224
+            },
+            {
+              "track": 20,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 83968
+            },
+            {
+              "track": 20,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 83712
+            },
+            {
+              "track": 20,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 83456
+            },
+            {
+              "track": 20,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 83200
+            },
+            {
+              "track": 20,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 82944
+            },
+            {
+              "track": 20,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 82688
+            },
+            {
+              "track": 20,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 82432
+            },
+            {
+              "track": 20,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 82176
+            },
+            {
+              "track": 20,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 85760
+            },
+            {
+              "track": 21,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 86016
+            },
+            {
+              "track": 21,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 89600
+            },
+            {
+              "track": 21,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 89344
+            },
+            {
+              "track": 21,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 89088
+            },
+            {
+              "track": 21,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 88832
+            },
+            {
+              "track": 21,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 88576
+            },
+            {
+              "track": 21,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 88320
+            },
+            {
+              "track": 21,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 88064
+            },
+            {
+              "track": 21,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 87808
+            },
+            {
+              "track": 21,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 87552
+            },
+            {
+              "track": 21,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 87296
+            },
+            {
+              "track": 21,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 87040
+            }
+          ],
+          "source_byte_count_last_sector": 230,
+          "path": "analysis/regions/archives/SYSTEM.STARTUP-slot-07.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 8,
+          "relative_block": 45,
+          "length": 2544,
+          "storage_blocks": 5,
+          "segment_number": 14,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 185,
+          "sha256": "03898769e1fa5f8928f2a30fce4fd14a6fe7bfa4cdcaaf1ab899fd930db403ec",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 23,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 97536
+            },
+            {
+              "track": 23,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 97280
+            },
+            {
+              "track": 23,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 97024
+            },
+            {
+              "track": 23,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 96768
+            },
+            {
+              "track": 23,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 96512
+            },
+            {
+              "track": 23,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 96256
+            },
+            {
+              "track": 23,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 96000
+            },
+            {
+              "track": 23,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 95744
+            },
+            {
+              "track": 23,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 95488
+            },
+            {
+              "track": 23,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 95232
+            }
+          ],
+          "source_byte_count_last_sector": 240,
+          "path": "analysis/regions/archives/SYSTEM.STARTUP-slot-08.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 9,
+          "relative_block": 50,
+          "length": 2654,
+          "storage_blocks": 6,
+          "segment_number": 15,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 190,
+          "sha256": "99e8b00b5f4065fb5b6c3febefcf77aba3a388dfa9882d5b29c37182ef7b371b",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 23,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 94976
+            },
+            {
+              "track": 23,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 94720
+            },
+            {
+              "track": 23,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 94464
+            },
+            {
+              "track": 23,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 98048
+            },
+            {
+              "track": 24,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 98304
+            },
+            {
+              "track": 24,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 101888
+            },
+            {
+              "track": 24,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 101632
+            },
+            {
+              "track": 24,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 101376
+            },
+            {
+              "track": 24,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 101120
+            },
+            {
+              "track": 24,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 100864
+            },
+            {
+              "track": 24,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 100608
+            },
+            {
+              "track": 24,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 100352
+            }
+          ],
+          "source_byte_count_last_sector": 94,
+          "path": "analysis/regions/archives/SYSTEM.STARTUP-slot-09.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 10,
+          "relative_block": 56,
+          "length": 7446,
+          "storage_blocks": 15,
+          "segment_number": 16,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 196,
+          "sha256": "65c08e7308b47488972fd6ba204f47b5079197e5d63ead59ed1426f3cadb8c0c",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 24,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 100096
+            },
+            {
+              "track": 24,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 99840
+            },
+            {
+              "track": 24,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 99584
+            },
+            {
+              "track": 24,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 99328
+            },
+            {
+              "track": 24,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 99072
+            },
+            {
+              "track": 24,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 98816
+            },
+            {
+              "track": 24,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 98560
+            },
+            {
+              "track": 24,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 102144
+            },
+            {
+              "track": 25,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 102400
+            },
+            {
+              "track": 25,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 105984
+            },
+            {
+              "track": 25,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 105728
+            },
+            {
+              "track": 25,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 105472
+            },
+            {
+              "track": 25,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 105216
+            },
+            {
+              "track": 25,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 104960
+            },
+            {
+              "track": 25,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 104704
+            },
+            {
+              "track": 25,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 104448
+            },
+            {
+              "track": 25,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 104192
+            },
+            {
+              "track": 25,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 103936
+            },
+            {
+              "track": 25,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 103680
+            },
+            {
+              "track": 25,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 103424
+            },
+            {
+              "track": 25,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 103168
+            },
+            {
+              "track": 25,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 102912
+            },
+            {
+              "track": 25,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 102656
+            },
+            {
+              "track": 25,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 106240
+            },
+            {
+              "track": 26,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 106496
+            },
+            {
+              "track": 26,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 110080
+            },
+            {
+              "track": 26,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 109824
+            },
+            {
+              "track": 26,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 109568
+            },
+            {
+              "track": 26,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 109312
+            },
+            {
+              "track": 26,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 109056
+            }
+          ],
+          "source_byte_count_last_sector": 22,
+          "path": "analysis/regions/archives/SYSTEM.STARTUP-slot-10.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 11,
+          "relative_block": 71,
+          "length": 3532,
+          "storage_blocks": 7,
+          "segment_number": 17,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 211,
+          "sha256": "46647f26615b25f7b87b182433f13465dbfade94eee010903f6774abea1b56de",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 26,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 108800
+            },
+            {
+              "track": 26,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 108544
+            },
+            {
+              "track": 26,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 108288
+            },
+            {
+              "track": 26,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 108032
+            },
+            {
+              "track": 26,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 107776
+            },
+            {
+              "track": 26,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 107520
+            },
+            {
+              "track": 26,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 107264
+            },
+            {
+              "track": 26,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 107008
+            },
+            {
+              "track": 26,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 106752
+            },
+            {
+              "track": 26,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 110336
+            },
+            {
+              "track": 27,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 110592
+            },
+            {
+              "track": 27,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 114176
+            },
+            {
+              "track": 27,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 113920
+            },
+            {
+              "track": 27,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 113664
+            }
+          ],
+          "source_byte_count_last_sector": 204,
+          "path": "analysis/regions/archives/SYSTEM.STARTUP-slot-11.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "outside_directory_extent",
+          "slot": 12,
+          "relative_block": 78,
+          "length": 6280,
+          "storage_blocks": 13,
+          "segment_number": 18,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true
+        },
+        {
+          "status": "outside_directory_extent",
+          "slot": 13,
+          "relative_block": 91,
+          "length": 5200,
+          "storage_blocks": 11,
+          "segment_number": 19,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true
+        },
+        {
+          "status": "outside_directory_extent",
+          "slot": 14,
+          "relative_block": 102,
+          "length": 6836,
+          "storage_blocks": 14,
+          "segment_number": 20,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true
+        },
+        {
+          "status": "outside_directory_extent",
+          "slot": 15,
+          "relative_block": 116,
+          "length": 8132,
+          "storage_blocks": 16,
+          "segment_number": 21,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true
+        }
+      ],
+      "uncovered_relative_blocks": [
+        78
+      ],
+      "confidence": "high for block/length descriptors used by native bootstrap; info fields cross-checked with CiderPress2 ApplePascal_Code.cs, not ST layouts"
+    },
+    {
+      "record_offset": 156,
+      "start_block": 251,
+      "end_block": 280,
+      "kind": 2,
+      "name": "SYSTEM.PASCAL",
+      "last_block_bytes": 512,
+      "side": "utility",
+      "extent_sha256": "556980c955e49774b6823a2caddd4ba1c24e08852d4abdb87bbace236d548523",
+      "extent_identical_on_play": null,
+      "header_sources": [
+        {
+          "track": 31,
+          "sector": 9,
+          "physical_sector": 12,
+          "offset": 129280
+        },
+        {
+          "track": 31,
+          "sector": 8,
+          "physical_sector": 14,
+          "offset": 129024
+        }
+      ],
+      "dictionary_sha256": "46aa22d92c5d93d8bcb424dbb93e3a0966b3f80250281e025e0a01535895fe63",
+      "segments": [
+        {
+          "status": "stored",
+          "slot": 0,
+          "relative_block": 1,
+          "length": 3124,
+          "storage_blocks": 7,
+          "segment_number": 0,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 252,
+          "sha256": "86892248a50710111ef9ee4611887fbc449248646b71c3095c58b998b81b7b3c",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 31,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 128768
+            },
+            {
+              "track": 31,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 128512
+            },
+            {
+              "track": 31,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 128256
+            },
+            {
+              "track": 31,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 128000
+            },
+            {
+              "track": 31,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 127744
+            },
+            {
+              "track": 31,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 127488
+            },
+            {
+              "track": 31,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 127232
+            },
+            {
+              "track": 31,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 130816
+            },
+            {
+              "track": 32,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 131072
+            },
+            {
+              "track": 32,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 134656
+            },
+            {
+              "track": 32,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 134400
+            },
+            {
+              "track": 32,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 134144
+            },
+            {
+              "track": 32,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 133888
+            },
+            {
+              "track": 32,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 133632
+            }
+          ],
+          "source_byte_count_last_sector": 52,
+          "path": "analysis/regions/archives/SYSTEM.PASCAL-slot-00.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 1,
+          "relative_block": 9,
+          "length": 20,
+          "storage_blocks": 1,
+          "segment_number": 1,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 260,
+          "sha256": "2be48a418438ab23c5fdb82258eebe9e3252aa86d014a9021f5218b9a5bb366e",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 32,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 132864
+            },
+            {
+              "track": 32,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 132608
+            }
+          ],
+          "source_byte_count_last_sector": 20,
+          "path": "analysis/regions/archives/SYSTEM.PASCAL-slot-01.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 2,
+          "relative_block": 10,
+          "length": 808,
+          "storage_blocks": 2,
+          "segment_number": 2,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 6,
+          "name_bytes_zero": true,
+          "absolute_block": 261,
+          "sha256": "8a9dd883672a6bdfd37ef06130b65b46e60f7f7fc71d0d8c4cf0899bfe2e936d",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 32,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 132352
+            },
+            {
+              "track": 32,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 132096
+            },
+            {
+              "track": 32,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 131840
+            },
+            {
+              "track": 32,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 131584
+            }
+          ],
+          "source_byte_count_last_sector": 40,
+          "path": "analysis/regions/archives/SYSTEM.PASCAL-slot-02.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 3,
+          "relative_block": 12,
+          "length": 20,
+          "storage_blocks": 1,
+          "segment_number": 3,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 263,
+          "sha256": "156552bd66e54134b733a7befff51eab606572b1ae1d502d4be379762deaac65",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 32,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 131328
+            },
+            {
+              "track": 32,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 134912
+            }
+          ],
+          "source_byte_count_last_sector": 20,
+          "path": "analysis/regions/archives/SYSTEM.PASCAL-slot-03.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 4,
+          "relative_block": 13,
+          "length": 1998,
+          "storage_blocks": 4,
+          "segment_number": 4,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 264,
+          "sha256": "eb44e9cfed57e6d922bb071270c1e7bcc668ca9d01dc0ce60939a0fc374c9588",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 33,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 135168
+            },
+            {
+              "track": 33,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 138752
+            },
+            {
+              "track": 33,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 138496
+            },
+            {
+              "track": 33,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 138240
+            },
+            {
+              "track": 33,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 137984
+            },
+            {
+              "track": 33,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 137728
+            },
+            {
+              "track": 33,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 137472
+            },
+            {
+              "track": 33,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 137216
+            }
+          ],
+          "source_byte_count_last_sector": 206,
+          "path": "analysis/regions/archives/SYSTEM.PASCAL-slot-04.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 5,
+          "relative_block": 17,
+          "length": 1670,
+          "storage_blocks": 4,
+          "segment_number": 5,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 268,
+          "sha256": "b0d893a6c4e2ef89913699de1f87c76f11a5003b834cc5b088af9c117a790752",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 33,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 136960
+            },
+            {
+              "track": 33,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 136704
+            },
+            {
+              "track": 33,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 136448
+            },
+            {
+              "track": 33,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 136192
+            },
+            {
+              "track": 33,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 135936
+            },
+            {
+              "track": 33,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 135680
+            },
+            {
+              "track": 33,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 135424
+            },
+            {
+              "track": 33,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 139008
+            }
+          ],
+          "source_byte_count_last_sector": 134,
+          "path": "analysis/regions/archives/SYSTEM.PASCAL-slot-05.bin",
+          "identical_on_play": false
+        },
+        {
+          "status": "stored",
+          "slot": 6,
+          "relative_block": 21,
+          "length": 3652,
+          "storage_blocks": 8,
+          "segment_number": 6,
+          "machine_type": 2,
+          "reserved": 0,
+          "version_bits": 5,
+          "kind": 6,
+          "name_bytes_zero": true,
+          "absolute_block": 272,
+          "sha256": "6d7d68690c762bba59560ebae4d65148dbd832b268a7e0cb4bd03f7991260a79",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 34,
+              "sector": 0,
+              "physical_sector": 0,
+              "offset": 139264
+            },
+            {
+              "track": 34,
+              "sector": 14,
+              "physical_sector": 2,
+              "offset": 142848
+            },
+            {
+              "track": 34,
+              "sector": 13,
+              "physical_sector": 4,
+              "offset": 142592
+            },
+            {
+              "track": 34,
+              "sector": 12,
+              "physical_sector": 6,
+              "offset": 142336
+            },
+            {
+              "track": 34,
+              "sector": 11,
+              "physical_sector": 8,
+              "offset": 142080
+            },
+            {
+              "track": 34,
+              "sector": 10,
+              "physical_sector": 10,
+              "offset": 141824
+            },
+            {
+              "track": 34,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 141568
+            },
+            {
+              "track": 34,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 141312
+            },
+            {
+              "track": 34,
+              "sector": 7,
+              "physical_sector": 1,
+              "offset": 141056
+            },
+            {
+              "track": 34,
+              "sector": 6,
+              "physical_sector": 3,
+              "offset": 140800
+            },
+            {
+              "track": 34,
+              "sector": 5,
+              "physical_sector": 5,
+              "offset": 140544
+            },
+            {
+              "track": 34,
+              "sector": 4,
+              "physical_sector": 7,
+              "offset": 140288
+            },
+            {
+              "track": 34,
+              "sector": 3,
+              "physical_sector": 9,
+              "offset": 140032
+            },
+            {
+              "track": 34,
+              "sector": 2,
+              "physical_sector": 11,
+              "offset": 139776
+            },
+            {
+              "track": 34,
+              "sector": 1,
+              "physical_sector": 13,
+              "offset": 139520
+            },
+            {
+              "track": 34,
+              "sector": 15,
+              "physical_sector": 15,
+              "offset": 143104
+            }
+          ],
+          "source_byte_count_last_sector": 68,
+          "path": "analysis/regions/archives/SYSTEM.PASCAL-slot-06.bin",
+          "identical_on_play": null
+        },
+        {
+          "status": "stored",
+          "slot": 15,
+          "relative_block": 8,
+          "length": 170,
+          "storage_blocks": 1,
+          "segment_number": 0,
+          "machine_type": 0,
+          "reserved": 0,
+          "version_bits": 0,
+          "kind": 0,
+          "name_bytes_zero": true,
+          "absolute_block": 259,
+          "sha256": "d7a0563c567adeb865b8e18b9e7d025d11eb715b285a784a1dccbca24f8cac96",
+          "side": "utility",
+          "sectors": [
+            {
+              "track": 32,
+              "sector": 9,
+              "physical_sector": 12,
+              "offset": 133376
+            },
+            {
+              "track": 32,
+              "sector": 8,
+              "physical_sector": 14,
+              "offset": 133120
+            }
+          ],
+          "source_byte_count_last_sector": 170,
+          "path": "analysis/regions/archives/SYSTEM.PASCAL-slot-15.bin",
+          "identical_on_play": false
+        }
+      ],
+      "uncovered_relative_blocks": [],
+      "confidence": "high for block/length descriptors used by native bootstrap; info fields cross-checked with CiderPress2 ApplePascal_Code.cs, not ST layouts"
+    }
+  ],
+  "version_check": {
+    "native_address": 27407,
+    "test_address": 24835,
+    "mask": 224,
+    "expected": 160,
+    "observed_byte": 162,
+    "observed_version_bits": 5,
+    "message_address": 62014,
+    "interpretation": "bootstrap accepts version field 5, rejected input prints SYSTEM.PASCAL is not version 1.2; not proof of unmodified stock runtime"
+  }
+}

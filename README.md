@@ -9,7 +9,7 @@ Reproduce from repository root (Python 3, standard library only):
 ```sh
 python3 -m unittest discover -s tests -v
 python3 tools/disk_analysis.py
-python3 tools/verify_woz.py
+python3 tools/verify_woz.py --full
 sh tools/run_ghidra.sh
 ```
 
@@ -17,17 +17,24 @@ sh tools/run_ghidra.sh
 `GHIDRA_INSTALL_DIR` and `JAVA_HOME` environment overrides. Place the two original
 WOZ files in `disk/` and the supplied DOS-order images in `extracted/utility.do`
 and `extracted/play.do`. Neither input directory is modified by these tools.
-The extraction that produced the supplied `.do` files is not yet reproduced;
-WOZ spot-checks are separate from complete extraction validation.
+The full verification independently decodes every WOZ sector slot, compares known
+bytes, and exports only complete readable tracks. It reproduces all 1,104 readable
+sectors; Play Track 34 remains unknown. Decoder file hashes are recorded.
 
-Start with [disk layout](docs/disk-layout.md), [boot process](docs/boot-process.md),
+Start with [native-to-Pascal handoff](docs/runtime-handoff.md), [disk layout](docs/disk-layout.md), [boot process](docs/boot-process.md),
 and [research log](docs/research-log.md). The first milestone is static analysis,
 not an observed emulator boot. Unreadable Play Track 34 remains unknown.
 
 Run `python3 tools/structural_evidence.py` after generating disk and boot regions
-to reproduce HGR table and directory-shape checks. Seven deterministic tests
+to reproduce HGR table and directory-shape checks. Thirteen deterministic tests
 require no original media. Raw searches, binaries, projects and disassembly stay
 local; structured statistics and provenance are versioned.
 
 This workspace disallows writing root `.git`. Local history is stored separately;
 use `sh tools/git-local.sh status` and `sh tools/git-local.sh log --oneline`.
+
+Milestone 2 identifies the bank 1 fetch loop at `$D293`, primary and secondary
+native dispatch tables, the custom bootstrap directory at block 79, and the first
+p-code address `$F248`. `run_ghidra.sh` also generates the archive inventory and a
+separate interpreter-ready memory snapshot. This remains static reconstruction,
+not a hardware/emulator execution trace or a full p-code disassembler.

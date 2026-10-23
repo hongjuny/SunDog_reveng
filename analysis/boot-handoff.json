@@ -1,0 +1,509 @@
+{
+  "method": "static reconstruction, conditional on successful reads and the observed native branches; not an emulator trace",
+  "directory_block": 79,
+  "system_pascal_block": 251,
+  "descriptor_sources": [
+    {
+      "track": 31,
+      "sector": 9,
+      "physical_sector": 12,
+      "offset": 129280
+    },
+    {
+      "track": 31,
+      "sector": 8,
+      "physical_sector": 14,
+      "offset": 129024
+    }
+  ],
+  "segment0": {
+    "source_block": 252,
+    "length": 3124,
+    "load_top": 65148,
+    "load_address": 62024,
+    "sectors": [
+      {
+        "track": 31,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 128768
+      },
+      {
+        "track": 31,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 128512
+      },
+      {
+        "track": 31,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 128256
+      },
+      {
+        "track": 31,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 128000
+      },
+      {
+        "track": 31,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 127744
+      },
+      {
+        "track": 31,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 127488
+      },
+      {
+        "track": 31,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 127232
+      },
+      {
+        "track": 31,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 130816
+      },
+      {
+        "track": 32,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 131072
+      },
+      {
+        "track": 32,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 134656
+      },
+      {
+        "track": 32,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 134400
+      },
+      {
+        "track": 32,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 134144
+      },
+      {
+        "track": 32,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 133888
+      },
+      {
+        "track": 32,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 133632
+      }
+    ],
+    "sha256": "86892248a50710111ef9ee4611887fbc449248646b71c3095c58b998b81b7b3c"
+  },
+  "helper": {
+    "source_block": 259,
+    "length": 170,
+    "initial_top": 48412,
+    "load_address": 48242,
+    "sectors": [
+      {
+        "track": 32,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 133376
+      },
+      {
+        "track": 32,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 133120
+      }
+    ],
+    "sha256": "d7a0563c567adeb865b8e18b9e7d025d11eb715b285a784a1dccbca24f8cac96"
+  },
+  "native_copy_region_overwritten": [
+    62096,
+    63376
+  ],
+  "first_fetch": {
+    "native_address": 53907,
+    "pointer_low": 88,
+    "pointer_high": 89,
+    "pcode_address": 62024,
+    "first_opcode": 159
+  },
+  "procedure_count": 39,
+  "procedures": [
+    {
+      "number": 1,
+      "directory_cell": 65144,
+      "trailer_address": 62058,
+      "attribute_address": 62050,
+      "lexical_level": -1,
+      "entry_address": 62024,
+      "outside_main_segment": false
+    },
+    {
+      "number": 2,
+      "directory_cell": 65142,
+      "trailer_address": 62204,
+      "attribute_address": 62196,
+      "lexical_level": 0,
+      "entry_address": 62060,
+      "outside_main_segment": false
+    },
+    {
+      "number": 3,
+      "directory_cell": 65140,
+      "trailer_address": 62222,
+      "attribute_address": 62214,
+      "lexical_level": 0,
+      "entry_address": 62206,
+      "outside_main_segment": false
+    },
+    {
+      "number": 4,
+      "directory_cell": 65138,
+      "trailer_address": 62238,
+      "attribute_address": 62230,
+      "lexical_level": 0,
+      "entry_address": 62224,
+      "outside_main_segment": false
+    },
+    {
+      "number": 5,
+      "directory_cell": 65136,
+      "trailer_address": 62258,
+      "attribute_address": 62250,
+      "lexical_level": 0,
+      "entry_address": 62240,
+      "outside_main_segment": false
+    },
+    {
+      "number": 6,
+      "directory_cell": 65134,
+      "trailer_address": 62276,
+      "attribute_address": 62268,
+      "lexical_level": 0,
+      "entry_address": 62260,
+      "outside_main_segment": false
+    },
+    {
+      "number": 7,
+      "directory_cell": 65132,
+      "trailer_address": 62574,
+      "attribute_address": 62566,
+      "lexical_level": 0,
+      "entry_address": 62278,
+      "outside_main_segment": false
+    },
+    {
+      "number": 8,
+      "directory_cell": 65130,
+      "trailer_address": 62652,
+      "attribute_address": 62644,
+      "lexical_level": 0,
+      "entry_address": 62576,
+      "outside_main_segment": false
+    },
+    {
+      "number": 9,
+      "directory_cell": 65128,
+      "trailer_address": 62664,
+      "attribute_address": 62656,
+      "lexical_level": 0,
+      "entry_address": 62654,
+      "outside_main_segment": false
+    },
+    {
+      "number": 10,
+      "directory_cell": 65126,
+      "trailer_address": 62680,
+      "attribute_address": 62672,
+      "lexical_level": 0,
+      "entry_address": 62666,
+      "outside_main_segment": false
+    },
+    {
+      "number": 11,
+      "directory_cell": 65124,
+      "trailer_address": 62696,
+      "attribute_address": 62688,
+      "lexical_level": 0,
+      "entry_address": 62682,
+      "outside_main_segment": false
+    },
+    {
+      "number": 12,
+      "directory_cell": 65122,
+      "trailer_address": 62938,
+      "attribute_address": 62930,
+      "lexical_level": 0,
+      "entry_address": 62698,
+      "outside_main_segment": false
+    },
+    {
+      "number": 13,
+      "directory_cell": 65120,
+      "trailer_address": 63108,
+      "attribute_address": 63100,
+      "lexical_level": 0,
+      "entry_address": 62940,
+      "outside_main_segment": false
+    },
+    {
+      "number": 14,
+      "directory_cell": 65118,
+      "trailer_address": 63120,
+      "attribute_address": 63112,
+      "lexical_level": 0,
+      "entry_address": 63110,
+      "outside_main_segment": false
+    },
+    {
+      "number": 15,
+      "directory_cell": 65116,
+      "trailer_address": 63132,
+      "attribute_address": 63124,
+      "lexical_level": 0,
+      "entry_address": 63122,
+      "outside_main_segment": false
+    },
+    {
+      "number": 16,
+      "directory_cell": 65114,
+      "trailer_address": 63184,
+      "attribute_address": 63176,
+      "lexical_level": 0,
+      "entry_address": 63134,
+      "outside_main_segment": false
+    },
+    {
+      "number": 17,
+      "directory_cell": 65112,
+      "trailer_address": 63240,
+      "attribute_address": 63232,
+      "lexical_level": 0,
+      "entry_address": 63186,
+      "outside_main_segment": false
+    },
+    {
+      "number": 18,
+      "directory_cell": 65110,
+      "trailer_address": 63352,
+      "attribute_address": 63344,
+      "lexical_level": 0,
+      "entry_address": 63242,
+      "outside_main_segment": false
+    },
+    {
+      "number": 19,
+      "directory_cell": 65108,
+      "trailer_address": 63384,
+      "attribute_address": 63376,
+      "lexical_level": 0,
+      "entry_address": 63354,
+      "outside_main_segment": false
+    },
+    {
+      "number": 20,
+      "directory_cell": 65106,
+      "trailer_address": 63478,
+      "attribute_address": 63470,
+      "lexical_level": 0,
+      "entry_address": 63386,
+      "outside_main_segment": false
+    },
+    {
+      "number": 21,
+      "directory_cell": 65104,
+      "trailer_address": 63524,
+      "attribute_address": 63516,
+      "lexical_level": 0,
+      "entry_address": 63480,
+      "outside_main_segment": false
+    },
+    {
+      "number": 22,
+      "directory_cell": 65102,
+      "trailer_address": 63544,
+      "attribute_address": 63536,
+      "lexical_level": 0,
+      "entry_address": 63526,
+      "outside_main_segment": false
+    },
+    {
+      "number": 23,
+      "directory_cell": 65100,
+      "trailer_address": 63590,
+      "attribute_address": 63582,
+      "lexical_level": 0,
+      "entry_address": 63546,
+      "outside_main_segment": false
+    },
+    {
+      "number": 24,
+      "directory_cell": 65098,
+      "trailer_address": 63676,
+      "attribute_address": 63668,
+      "lexical_level": 0,
+      "entry_address": 63592,
+      "outside_main_segment": false
+    },
+    {
+      "number": 25,
+      "directory_cell": 65096,
+      "trailer_address": 63724,
+      "attribute_address": 63716,
+      "lexical_level": 0,
+      "entry_address": 63678,
+      "outside_main_segment": false
+    },
+    {
+      "number": 26,
+      "directory_cell": 65094,
+      "trailer_address": 63792,
+      "attribute_address": 63784,
+      "lexical_level": 0,
+      "entry_address": 63726,
+      "outside_main_segment": false
+    },
+    {
+      "number": 27,
+      "directory_cell": 65092,
+      "trailer_address": 63898,
+      "attribute_address": 63890,
+      "lexical_level": 0,
+      "entry_address": 63794,
+      "outside_main_segment": false
+    },
+    {
+      "number": 28,
+      "directory_cell": 65090,
+      "trailer_address": 64152,
+      "attribute_address": 64144,
+      "lexical_level": 0,
+      "entry_address": 63900,
+      "outside_main_segment": false
+    },
+    {
+      "number": 29,
+      "directory_cell": 65088,
+      "trailer_address": 64242,
+      "attribute_address": 64234,
+      "lexical_level": 0,
+      "entry_address": 64154,
+      "outside_main_segment": false
+    },
+    {
+      "number": 30,
+      "directory_cell": 65086,
+      "trailer_address": 64286,
+      "attribute_address": 64278,
+      "lexical_level": 0,
+      "entry_address": 64244,
+      "outside_main_segment": false
+    },
+    {
+      "number": 31,
+      "directory_cell": 65084,
+      "trailer_address": 64344,
+      "attribute_address": 64336,
+      "lexical_level": 0,
+      "entry_address": 64288,
+      "outside_main_segment": false
+    },
+    {
+      "number": 32,
+      "directory_cell": 65082,
+      "trailer_address": 64390,
+      "attribute_address": 64382,
+      "lexical_level": 0,
+      "entry_address": 64346,
+      "outside_main_segment": false
+    },
+    {
+      "number": 33,
+      "directory_cell": 65080,
+      "trailer_address": 64644,
+      "attribute_address": 64636,
+      "lexical_level": 0,
+      "entry_address": 64392,
+      "outside_main_segment": false
+    },
+    {
+      "number": 34,
+      "directory_cell": 65078,
+      "trailer_address": 64718,
+      "attribute_address": 64710,
+      "lexical_level": 0,
+      "entry_address": 64646,
+      "outside_main_segment": false
+    },
+    {
+      "number": 35,
+      "directory_cell": 65076,
+      "trailer_address": 64850,
+      "attribute_address": 64842,
+      "lexical_level": 0,
+      "entry_address": 64720,
+      "outside_main_segment": false
+    },
+    {
+      "number": 36,
+      "directory_cell": 65074,
+      "trailer_address": 64952,
+      "attribute_address": 64944,
+      "lexical_level": 1,
+      "entry_address": 64852,
+      "outside_main_segment": false
+    },
+    {
+      "number": 37,
+      "directory_cell": 65072,
+      "trailer_address": 65004,
+      "attribute_address": 64996,
+      "lexical_level": 0,
+      "entry_address": 64954,
+      "outside_main_segment": false
+    },
+    {
+      "number": 38,
+      "directory_cell": 65070,
+      "trailer_address": 48410,
+      "attribute_address": 48402,
+      "lexical_level": 1,
+      "entry_address": 48242,
+      "outside_main_segment": true
+    },
+    {
+      "number": 39,
+      "directory_cell": 65068,
+      "trailer_address": 65066,
+      "attribute_address": 65058,
+      "lexical_level": 1,
+      "entry_address": 65006,
+      "outside_main_segment": false
+    }
+  ],
+  "cleanup": {
+    "start": 24576,
+    "end_inclusive": 27696,
+    "preserved_final_jump": 27715
+  },
+  "snapshot": {
+    "path": "analysis/regions/interpreter-ready.bin",
+    "base": 53248,
+    "length": 12288,
+    "sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b"
+  }
+}
