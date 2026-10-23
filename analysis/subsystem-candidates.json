@@ -1,0 +1,4568 @@
+{
+  "method": "Review prioritization from decoded original Play p-code; labels are hypotheses, not a native implementation specification",
+  "candidates": [
+    {
+      "segment_number": 8,
+      "procedure": 15,
+      "entry_offset": 1686,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 1741,
+          "payload_length": 7,
+          "payload_sha256": "3eab5b5ff983057b803189cf5ab0a27a9a75aeb4604442ad57b2dc79371c9a28",
+          "matched_terms": {
+            "location_display": [
+              "city:"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 74496,
+            "byte_in_sector": 205
+          }
+        },
+        {
+          "pcode_offset": 1865,
+          "payload_length": 9,
+          "payload_sha256": "944ee8317e1cfbde60072257ae240af903611cdb084372cafad09ff0212c93b1",
+          "matched_terms": {
+            "ship_navigation": [
+              "planet:"
+            ],
+            "location_display": [
+              "planet:"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 18,
+            "sector": 2,
+            "physical_sector": 11,
+            "offset": 74240,
+            "byte_in_sector": 73
+          }
+        }
+      ],
+      "operation_counts": {
+        "address_local": 1,
+        "address_table_indexed": 9,
+        "copy_words_forward": 1,
+        "load_nonlocal": 4,
+        "call_external_segment": 17,
+        "push_short_constant": 28,
+        "store_nonlocal": 1,
+        "inline_length_pointer": 8,
+        "advance_only": 8,
+        "load_table_indexed": 6,
+        "add16": 3,
+        "store_table_indexed": 3,
+        "load_packed_field": 8,
+        "compare_equal16": 5,
+        "branch_even_word": 4,
+        "jump_encoded": 4,
+        "bitwise_and16": 1,
+        "subtract16": 3,
+        "scaled_indexed_address": 3,
+        "call_current_lexical_link": 2,
+        "load_local_short": 4,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 11,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 37,
+          "occurrences": 6
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 38,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 39,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 18,
+          "occurrences": 3
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 23,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 24,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 25,
+          "occurrences": 1
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 18,
+          "occurrences": 3
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 1705,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 50
+        },
+        {
+          "pcode_offset": 1708,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 44
+        },
+        {
+          "pcode_offset": 1729,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1750,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1776,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1818,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1833,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1851,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1854,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 45
+        },
+        {
+          "pcode_offset": 1877,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1898,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1916,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1919,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 45
+        },
+        {
+          "pcode_offset": 1942,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1958,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1961,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 45
+        },
+        {
+          "pcode_offset": 1964,
+          "kind": "current-segment",
+          "procedure": 11
+        },
+        {
+          "pcode_offset": 1966,
+          "kind": "current-segment",
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 1972,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 50
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 12,
+      "procedure": 1,
+      "entry_offset": 4980,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 5177,
+          "payload_length": 4,
+          "payload_sha256": "f5d887a087580006e4ea38e794f832016bbddc1f747d8c0065502cbaaa1e6592",
+          "matched_terms": {
+            "ship_inventory": [
+              "guns"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 23,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 94208,
+            "byte_in_sector": 57
+          }
+        }
+      ],
+      "operation_counts": {
+        "advance_only": 3,
+        "inline_length_pointer": 3,
+        "call_current_dynamic_link": 24,
+        "push_short_constant": 76,
+        "store_local": 5,
+        "load_table_indexed": 8,
+        "add16": 1,
+        "store_table_indexed": 3,
+        "branch_even_word": 14,
+        "jump_encoded": 21,
+        "address_local": 7,
+        "call_external_segment": 14,
+        "address_table_indexed": 18,
+        "load_local_short": 15,
+        "compare_equal16": 6,
+        "subtract16": 3,
+        "compare_signed_greater16": 1,
+        "packed_array_descriptor": 3,
+        "store_packed_field": 8,
+        "negate16": 2,
+        "literal_word": 2,
+        "case_table_branch": 1,
+        "bitwise_not16": 2,
+        "bitwise_or16": 1,
+        "load_local": 3,
+        "load_packed_field": 2,
+        "bitwise_and16": 1,
+        "compare_not_equal16": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 45,
+          "occurrences": 7
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 82,
+          "occurrences": 3
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 224,
+          "occurrences": 4
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 335,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 339,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 343,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 15,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 16,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 227,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 347,
+          "occurrences": 3
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 354,
+          "occurrences": 2
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 203,
+          "occurrences": 2
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 354,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 4991,
+          "kind": "current-segment",
+          "procedure": 13
+        },
+        {
+          "pcode_offset": 4993,
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 4995,
+          "kind": "current-segment",
+          "procedure": 15
+        },
+        {
+          "pcode_offset": 5016,
+          "kind": "current-segment",
+          "procedure": 12
+        },
+        {
+          "pcode_offset": 5024,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 43
+        },
+        {
+          "pcode_offset": 5032,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 5038,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 5058,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 5060,
+          "kind": "current-segment",
+          "procedure": 4
+        },
+        {
+          "pcode_offset": 5062,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 5067,
+          "kind": "current-segment",
+          "procedure": 14
+        },
+        {
+          "pcode_offset": 5069,
+          "kind": "current-segment",
+          "procedure": 15
+        },
+        {
+          "pcode_offset": 5074,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 5084,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 5099,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 5114,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 4
+        },
+        {
+          "pcode_offset": 5119,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 41
+        },
+        {
+          "pcode_offset": 5122,
+          "kind": "current-segment",
+          "procedure": 12
+        },
+        {
+          "pcode_offset": 5135,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 8
+        },
+        {
+          "pcode_offset": 5156,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 4
+        },
+        {
+          "pcode_offset": 5172,
+          "kind": "current-segment",
+          "procedure": 20
+        },
+        {
+          "pcode_offset": 5184,
+          "kind": "current-segment",
+          "procedure": 20
+        },
+        {
+          "pcode_offset": 5189,
+          "kind": "current-segment",
+          "procedure": 21
+        },
+        {
+          "pcode_offset": 5193,
+          "kind": "current-segment",
+          "procedure": 23
+        },
+        {
+          "pcode_offset": 5208,
+          "kind": "current-segment",
+          "procedure": 22
+        },
+        {
+          "pcode_offset": 5218,
+          "kind": "current-segment",
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 5229,
+          "kind": "current-segment",
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 5242,
+          "kind": "current-segment",
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 5249,
+          "kind": "current-segment",
+          "procedure": 21
+        },
+        {
+          "pcode_offset": 5258,
+          "kind": "current-segment",
+          "procedure": 17
+        },
+        {
+          "pcode_offset": 5262,
+          "kind": "current-segment",
+          "procedure": 18
+        },
+        {
+          "pcode_offset": 5274,
+          "kind": "current-segment",
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 5322,
+          "kind": "current-segment",
+          "procedure": 15
+        },
+        {
+          "pcode_offset": 5356,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 21
+        },
+        {
+          "pcode_offset": 5433,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 5462,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 5469,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 21
+        },
+        {
+          "pcode_offset": 5472,
+          "kind": "current-segment",
+          "procedure": 14
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 12,
+      "procedure": 6,
+      "entry_offset": 380,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 543,
+          "payload_length": 28,
+          "payload_sha256": "304eef2247e80cc6408d2056ecb7e3668fbd5f20f8da1ad44885cbe31bb93997",
+          "matched_terms": {
+            "ship_inventory": [
+              "cargo"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 1,
+            "physical_sector": 13,
+            "offset": 86272,
+            "byte_in_sector": 31
+          }
+        }
+      ],
+      "operation_counts": {
+        "call_external_segment": 10,
+        "inline_length_pointer": 4,
+        "advance_only": 4,
+        "load_table_indexed": 5,
+        "address_table_indexed": 4,
+        "push_short_constant": 43,
+        "load_packed_field": 5,
+        "subtract16": 2,
+        "scaled_indexed_address": 2,
+        "offset_pointer_words": 3,
+        "packed_array_descriptor": 4,
+        "store_local": 5,
+        "load_local_short": 8,
+        "add16": 3,
+        "compare_signed_greater16": 1,
+        "branch_even_word": 4,
+        "multiply16": 1,
+        "compare_equal16": 1,
+        "load_indirect_short": 1,
+        "store_indirect_word": 1,
+        "compare_signed_less_equal16": 1,
+        "store_nonlocal": 2,
+        "store_packed_field": 4,
+        "store_table_indexed": 2,
+        "jump_encoded": 1,
+        "address_nonlocal": 3,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 73,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 82,
+          "occurrences": 2
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 23,
+          "occurrences": 2
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 214,
+          "occurrences": 3
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 207,
+          "occurrences": 2
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 380,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 44
+        },
+        {
+          "pcode_offset": 404,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 475,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 489,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 31
+        },
+        {
+          "pcode_offset": 505,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 49
+        },
+        {
+          "pcode_offset": 518,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 533,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 40
+        },
+        {
+          "pcode_offset": 574,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 621,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 40
+        },
+        {
+          "pcode_offset": 634,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 40
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 12,
+      "procedure": 15,
+      "entry_offset": 3302,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 3373,
+          "payload_length": 4,
+          "payload_sha256": "f5d887a087580006e4ea38e794f832016bbddc1f747d8c0065502cbaaa1e6592",
+          "matched_terms": {
+            "ship_inventory": [
+              "guns"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 22,
+            "sector": 6,
+            "physical_sector": 3,
+            "offset": 91648,
+            "byte_in_sector": 45
+          }
+        }
+      ],
+      "operation_counts": {
+        "call_current_lexical_link": 3,
+        "call_external_segment": 8,
+        "push_short_constant": 65,
+        "store_local": 16,
+        "load_nonlocal": 12,
+        "compare_equal16": 6,
+        "branch_even_word": 23,
+        "compare_signed_greater16": 7,
+        "address_table_indexed": 12,
+        "packed_array_descriptor": 6,
+        "load_packed_field": 8,
+        "bitwise_and16": 4,
+        "advance_only": 17,
+        "inline_length_pointer": 17,
+        "call_current_dynamic_link": 17,
+        "load_local_short": 14,
+        "add16": 7,
+        "jump_encoded": 5,
+        "load_table_indexed": 4,
+        "literal_word": 2,
+        "compare_signed_less16": 3,
+        "address_local": 9,
+        "assign_length_string": 1,
+        "load_local": 3,
+        "compare_signed_less_equal16": 1,
+        "subtract16": 1,
+        "scaled_indexed_address": 1,
+        "store_indexed_byte": 1,
+        "bitwise_not16": 2,
+        "bitwise_or16": 1,
+        "address_nonlocal": 2,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 82,
+          "occurrences": 6
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 234,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 335,
+          "occurrences": 5
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 224,
+          "occurrences": 3
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 227,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 3302,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 3304,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 3357,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3379,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3407,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3443,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3459,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3469,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3504,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3519,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3542,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3567,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3646,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3678,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3698,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3710,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3728,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3767,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3798,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 3805,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 3812,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 6
+        },
+        {
+          "pcode_offset": 3836,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 8
+        },
+        {
+          "pcode_offset": 3860,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 8
+        },
+        {
+          "pcode_offset": 3863,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 3865,
+          "kind": "current-segment",
+          "procedure": 12
+        },
+        {
+          "pcode_offset": 3870,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 3876,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 3896,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 42
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 12,
+      "procedure": 18,
+      "entry_offset": 4042,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 4179,
+          "payload_length": 12,
+          "payload_sha256": "756507680c9eab8970bcef47eea114169716d268cdd49258c8cc3bd679557620",
+          "matched_terms": {
+            "ship_inventory": [
+              "cargo"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 22,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 90880,
+            "byte_in_sector": 83
+          }
+        }
+      ],
+      "operation_counts": {
+        "call_current_lexical_link": 5,
+        "push_short_constant": 16,
+        "store_local": 2,
+        "address_table_indexed": 4,
+        "load_local_short": 6,
+        "subtract16": 4,
+        "scaled_indexed_address": 3,
+        "load_packed_field": 1,
+        "compare_signed_greater16": 2,
+        "bitwise_and16": 1,
+        "branch_even_word": 4,
+        "jump_encoded": 3,
+        "call_external_segment": 5,
+        "load_nonlocal": 1,
+        "bitwise_not16": 1,
+        "inline_length_pointer": 5,
+        "advance_only": 5,
+        "compare_equal16": 2,
+        "negate16": 1,
+        "store_table_indexed": 2,
+        "load_table_indexed": 2,
+        "add16": 1,
+        "address_nonlocal": 1,
+        "copy_words_forward": 1,
+        "assign_length_string": 1,
+        "store_nonlocal": 1,
+        "packed_array_descriptor": 1,
+        "store_packed_field": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 82,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 234,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 238,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 217,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 354,
+          "occurrences": 1
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 207,
+          "occurrences": 1
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 354,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 4042,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 4074,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 44
+        },
+        {
+          "pcode_offset": 4098,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4118,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4145,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4154,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 4166,
+          "kind": "current-segment",
+          "procedure": 12
+        },
+        {
+          "pcode_offset": 4176,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 4193,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4244,
+          "kind": "current-segment",
+          "procedure": 2
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 13,
+      "procedure": 21,
+      "entry_offset": 3464,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 3535,
+          "payload_length": 9,
+          "payload_sha256": "c81f86cb4e9eaaa6fc9feb672e52f7e193c89cb5b50c425ccb98ced30f585c36",
+          "matched_terms": {
+            "ship_navigation": [
+              "planet:"
+            ],
+            "location_display": [
+              "planet:"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 20,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 85504,
+            "byte_in_sector": 207
+          }
+        }
+      ],
+      "operation_counts": {
+        "load_local_short": 9,
+        "push_short_constant": 16,
+        "compare_equal16": 1,
+        "compare_signed_greater16": 1,
+        "bitwise_or16": 1,
+        "branch_even_word": 1,
+        "inline_length_pointer": 2,
+        "advance_only": 2,
+        "call_external_segment": 4,
+        "call_current_dynamic_link": 2,
+        "jump_encoded": 1,
+        "load_table_indexed": 2,
+        "load_nonlocal": 1,
+        "offset_pointer_words": 4,
+        "load_packed_field": 4,
+        "subtract16": 3,
+        "scaled_indexed_address": 2,
+        "store_local": 3,
+        "add16": 2,
+        "multiply16": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 23,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 24,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 3487,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 3492,
+          "kind": "current-segment",
+          "procedure": 22
+        },
+        {
+          "pcode_offset": 3547,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 3551,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 3554,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 45
+        },
+        {
+          "pcode_offset": 3573,
+          "kind": "current-segment",
+          "procedure": 22
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 13,
+      "procedure": 23,
+      "entry_offset": 3588,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 3647,
+          "payload_length": 7,
+          "payload_sha256": "acc8e8a9c0f6a0256646a89cd093970f6ff8813e50da700fbb66eda523c6172c",
+          "matched_terms": {
+            "location_display": [
+              "city:"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 20,
+            "sector": 13,
+            "physical_sector": 4,
+            "offset": 85248,
+            "byte_in_sector": 63
+          }
+        }
+      ],
+      "operation_counts": {
+        "load_table_indexed": 2,
+        "load_nonlocal": 1,
+        "offset_pointer_words": 3,
+        "push_short_constant": 10,
+        "load_packed_field": 3,
+        "subtract16": 3,
+        "scaled_indexed_address": 2,
+        "store_local": 2,
+        "load_local_short": 7,
+        "compare_equal16": 2,
+        "branch_even_word": 2,
+        "advance_only": 3,
+        "inline_length_pointer": 3,
+        "call_external_segment": 6,
+        "jump_encoded": 1,
+        "add16": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 24,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 25,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 3626,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 3630,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 3657,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 3668,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 3695,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 3698,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 45
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 13,
+      "procedure": 29,
+      "entry_offset": 5326,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 5329,
+          "payload_length": 11,
+          "payload_sha256": "57a064efdcb43cbc90685a2865f8117a0b29b68624cbae73af5df0baa0a39b21",
+          "matched_terms": {
+            "ship_navigation": [
+              "out of fuel"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 20,
+            "sector": 7,
+            "physical_sector": 1,
+            "offset": 83712,
+            "byte_in_sector": 209
+          }
+        }
+      ],
+      "operation_counts": {
+        "load_local_short": 3,
+        "jump_encoded": 9,
+        "inline_length_pointer": 9,
+        "advance_only": 9,
+        "call_current_dynamic_link": 9,
+        "push_short_constant": 2,
+        "compare_equal16": 2,
+        "branch_even_word": 2,
+        "case_table_branch": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [],
+      "static_calls": [
+        {
+          "pcode_offset": 5343,
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "pcode_offset": 5369,
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "pcode_offset": 5394,
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "pcode_offset": 5422,
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "pcode_offset": 5454,
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "pcode_offset": 5480,
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "pcode_offset": 5510,
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "pcode_offset": 5536,
+          "kind": "current-segment",
+          "procedure": 30
+        },
+        {
+          "pcode_offset": 5554,
+          "kind": "current-segment",
+          "procedure": 30
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 13,
+      "procedure": 39,
+      "entry_offset": 7516,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 7581,
+          "payload_length": 9,
+          "payload_sha256": "bdc7dea6a6a22dba7f42c6bef1699eadfa37e025e52b166ec44a1ab3b67667b5",
+          "matched_terms": {
+            "ship_navigation": [
+              "planetary"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 14,
+            "physical_sector": 2,
+            "offset": 89600,
+            "byte_in_sector": 157
+          }
+        }
+      ],
+      "operation_counts": {
+        "address_table_indexed": 26,
+        "push_short_constant": 71,
+        "load_packed_field": 8,
+        "store_local": 5,
+        "load_local_short": 21,
+        "offset_pointer_words": 2,
+        "address_local": 5,
+        "load_table_indexed": 7,
+        "subtract16": 1,
+        "scaled_indexed_address": 1,
+        "copy_words_forward": 5,
+        "compare_not_equal16": 2,
+        "compare_equal16": 7,
+        "bitwise_and16": 4,
+        "bitwise_or16": 6,
+        "bitwise_not16": 1,
+        "call_current_dynamic_link": 5,
+        "inline_length_pointer": 7,
+        "advance_only": 7,
+        "call_current_lexical_link": 6,
+        "branch_even_word": 11,
+        "secondary_dispatch": 4,
+        "load_indexed_byte": 1,
+        "load_local": 2,
+        "compare_signed_less16": 2,
+        "load_nonlocal": 1,
+        "call_external_segment": 14,
+        "packed_array_descriptor": 12,
+        "store_packed_field": 7,
+        "store_table_indexed": 7,
+        "jump_encoded": 3,
+        "compare_signed_greater16": 2,
+        "negate16": 1,
+        "address_nonlocal": 1,
+        "literal_word": 1,
+        "add16": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 37,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 42,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 66,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 72,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 73,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 80,
+          "occurrences": 4
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 82,
+          "occurrences": 12
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 90,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 303,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 315,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 23,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 211,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 224,
+          "occurrences": 2
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 225,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 227,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 353,
+          "occurrences": 1
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 203,
+          "occurrences": 1
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 204,
+          "occurrences": 1
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 211,
+          "occurrences": 2
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 224,
+          "occurrences": 1
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 350,
+          "occurrences": 1
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 354,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 7574,
+          "kind": "current-segment",
+          "procedure": 40
+        },
+        {
+          "pcode_offset": 7579,
+          "kind": "current-segment",
+          "procedure": 40
+        },
+        {
+          "pcode_offset": 7597,
+          "kind": "current-segment",
+          "procedure": 28
+        },
+        {
+          "pcode_offset": 7608,
+          "kind": "current-segment",
+          "procedure": 29
+        },
+        {
+          "pcode_offset": 7626,
+          "kind": "current-segment",
+          "procedure": 29
+        },
+        {
+          "pcode_offset": 7648,
+          "kind": "current-segment",
+          "procedure": 29
+        },
+        {
+          "pcode_offset": 7664,
+          "kind": "current-segment",
+          "procedure": 29
+        },
+        {
+          "pcode_offset": 7670,
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 7678,
+          "kind": "current-segment",
+          "procedure": 31
+        },
+        {
+          "pcode_offset": 7732,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 7791,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 26
+        },
+        {
+          "pcode_offset": 7804,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 7810,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 28
+        },
+        {
+          "pcode_offset": 7813,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 45
+        },
+        {
+          "pcode_offset": 7857,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 7881,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 7918,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 7931,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 7967,
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 7997,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 8007,
+          "kind": "current-segment",
+          "procedure": 41
+        },
+        {
+          "pcode_offset": 8017,
+          "kind": "current-segment",
+          "procedure": 41
+        },
+        {
+          "pcode_offset": 8024,
+          "kind": "current-segment",
+          "procedure": 41
+        },
+        {
+          "pcode_offset": 8032,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 25
+        },
+        {
+          "pcode_offset": 8053,
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 9
+        }
+      ],
+      "boundaries": [
+        {
+          "address": 7612,
+          "reason": "secondary service operand/continuation not verified",
+          "selector": 4
+        },
+        {
+          "address": 7630,
+          "reason": "secondary service operand/continuation not verified",
+          "selector": 4
+        },
+        {
+          "address": 7652,
+          "reason": "secondary service operand/continuation not verified",
+          "selector": 4
+        },
+        {
+          "address": 7668,
+          "reason": "secondary service operand/continuation not verified",
+          "selector": 4
+        }
+      ]
+    },
+    {
+      "segment_number": 13,
+      "procedure": 48,
+      "entry_offset": 8732,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 8835,
+          "payload_length": 9,
+          "payload_sha256": "2e502ea6d99656322edbf7e97ec60e2f2cfc01a3f166c540a0dbff1c3a3d2f7d",
+          "matched_terms": {
+            "ship_navigation": [
+              "city-city"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 88320,
+            "byte_in_sector": 131
+          }
+        }
+      ],
+      "operation_counts": {
+        "call_external_segment": 1,
+        "push_short_constant": 33,
+        "store_nonlocal": 3,
+        "advance_only": 9,
+        "inline_length_pointer": 9,
+        "call_current_lexical_link": 9,
+        "address_table_indexed": 8,
+        "load_packed_field": 9,
+        "compare_signed_greater16": 2,
+        "branch_even_word": 7,
+        "compare_equal16": 3,
+        "jump_encoded": 2,
+        "packed_array_descriptor": 3,
+        "load_table_indexed": 3,
+        "subtract16": 1,
+        "scaled_indexed_address": 1,
+        "offset_pointer_words": 1,
+        "bitwise_and16": 2,
+        "compare_signed_greater_equal16": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 73,
+          "occurrences": 5
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 82,
+          "occurrences": 3
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 24,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 222,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 223,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 8732,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 8755,
+          "kind": "current-segment",
+          "procedure": 42
+        },
+        {
+          "pcode_offset": 8785,
+          "kind": "current-segment",
+          "procedure": 42
+        },
+        {
+          "pcode_offset": 8800,
+          "kind": "current-segment",
+          "procedure": 42
+        },
+        {
+          "pcode_offset": 8846,
+          "kind": "current-segment",
+          "procedure": 42
+        },
+        {
+          "pcode_offset": 8876,
+          "kind": "current-segment",
+          "procedure": 42
+        },
+        {
+          "pcode_offset": 8891,
+          "kind": "current-segment",
+          "procedure": 42
+        },
+        {
+          "pcode_offset": 8934,
+          "kind": "current-segment",
+          "procedure": 42
+        },
+        {
+          "pcode_offset": 8949,
+          "kind": "current-segment",
+          "procedure": 42
+        },
+        {
+          "pcode_offset": 8965,
+          "kind": "current-segment",
+          "procedure": 42
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 13,
+      "procedure": 52,
+      "entry_offset": 9490,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 9569,
+          "payload_length": 13,
+          "payload_sha256": "9d691f33ba2f4a1ba55acc20191c9fa8fa4b096163ba8f451ec755c9ac3c8df9",
+          "matched_terms": {
+            "ship_navigation": [
+              "refuel"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 21,
+            "sector": 6,
+            "physical_sector": 3,
+            "offset": 87552,
+            "byte_in_sector": 97
+          }
+        }
+      ],
+      "operation_counts": {
+        "load_table_indexed": 4,
+        "call_external_segment": 6,
+        "address_table_indexed": 7,
+        "push_short_constant": 12,
+        "packed_array_descriptor": 2,
+        "store_packed_field": 2,
+        "copy_words_forward": 1,
+        "store_local": 2,
+        "load_packed_field": 1,
+        "compare_equal16": 1,
+        "branch_even_word": 1,
+        "load_local_short": 2,
+        "add16": 1,
+        "inline_length_pointer": 1,
+        "advance_only": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 42,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 73,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 78,
+          "occurrences": 3
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 82,
+          "occurrences": 2
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 339,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 340,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 341,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 342,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 9506,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 50
+        },
+        {
+          "pcode_offset": 9509,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 44
+        },
+        {
+          "pcode_offset": 9556,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 40
+        },
+        {
+          "pcode_offset": 9566,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 26
+        },
+        {
+          "pcode_offset": 9585,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 9591,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 28
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 14,
+      "procedure": 3,
+      "entry_offset": 18,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 481,
+          "payload_length": 11,
+          "payload_sha256": "4fd19e774c67fefca158535ecb3b44988ce2801c46a5055003aee79750b4b1d1",
+          "matched_terms": {
+            "ship_inventory": [
+              "guns"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 23,
+            "sector": 12,
+            "physical_sector": 6,
+            "offset": 97280,
+            "byte_in_sector": 225
+          }
+        },
+        {
+          "pcode_offset": 581,
+          "payload_length": 13,
+          "payload_sha256": "a02f72715910b4bfa55bc975530bc7127d790f637cad5454a37ec9aea1389378",
+          "matched_terms": {
+            "ship_inventory": [
+              "locker"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 23,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 97024,
+            "byte_in_sector": 69
+          }
+        },
+        {
+          "pcode_offset": 605,
+          "payload_length": 13,
+          "payload_sha256": "c2fd61be741a971a0a0029b4ed44c8fec66aedcbf5afe9ba786ac3d62f70f3a6",
+          "matched_terms": {
+            "ship_inventory": [
+              "stores"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 23,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 97024,
+            "byte_in_sector": 93
+          }
+        }
+      ],
+      "operation_counts": {
+        "load_local_short": 23,
+        "push_short_constant": 69,
+        "compare_signed_less_equal16": 2,
+        "store_nonlocal": 6,
+        "compare_equal16": 2,
+        "load_nonlocal": 13,
+        "branch_even_word": 11,
+        "address_table_indexed": 1,
+        "load_packed_field": 1,
+        "store_local": 17,
+        "jump_encoded": 20,
+        "call_external_segment": 16,
+        "case_table_branch": 2,
+        "load_table_indexed": 19,
+        "divide_signed16": 3,
+        "multiply16": 5,
+        "store_table_indexed": 2,
+        "address_nonlocal": 14,
+        "add16": 26,
+        "literal_word": 2,
+        "bitwise_not16": 3,
+        "scaled_indexed_address": 9,
+        "inline_length_pointer": 8,
+        "advance_only": 8,
+        "assign_length_string": 8,
+        "subtract16": 4,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 45,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 12,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 14,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 31,
+          "index": 11,
+          "occurrences": 9
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 31,
+          "index": 12,
+          "occurrences": 8
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 31,
+          "index": 11,
+          "occurrences": 1
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 31,
+          "index": 12,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 68,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 51
+        },
+        {
+          "pcode_offset": 75,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 51
+        },
+        {
+          "pcode_offset": 82,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 51
+        },
+        {
+          "pcode_offset": 89,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 51
+        },
+        {
+          "pcode_offset": 96,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 51
+        },
+        {
+          "pcode_offset": 150,
+          "kind": "external-segment-operand",
+          "segment_operand": 27,
+          "procedure": 13
+        },
+        {
+          "pcode_offset": 156,
+          "kind": "external-segment-operand",
+          "segment_operand": 27,
+          "procedure": 13
+        },
+        {
+          "pcode_offset": 162,
+          "kind": "external-segment-operand",
+          "segment_operand": 27,
+          "procedure": 13
+        },
+        {
+          "pcode_offset": 230,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 18
+        },
+        {
+          "pcode_offset": 288,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 18
+        },
+        {
+          "pcode_offset": 295,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 302,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 331,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 14
+        },
+        {
+          "pcode_offset": 335,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 368,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 18
+        },
+        {
+          "pcode_offset": 408,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 18
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 14,
+      "procedure": 6,
+      "entry_offset": 1038,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 1057,
+          "payload_length": 10,
+          "payload_sha256": "82f84925c7ee8bc212963abee9bd4deff99e97a91b135ab1a3a4b5fa5c5e2280",
+          "matched_terms": {
+            "ship_inventory": [
+              "cargo"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 23,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 96512,
+            "byte_in_sector": 33
+          }
+        }
+      ],
+      "operation_counts": {
+        "address_local": 2,
+        "address_table_indexed": 6,
+        "copy_words_forward": 2,
+        "address_nonlocal": 1,
+        "call_external_segment": 9,
+        "advance_only": 3,
+        "inline_length_pointer": 3,
+        "literal_word": 1,
+        "push_short_constant": 26,
+        "store_local": 5,
+        "load_local_short": 20,
+        "compare_signed_less_equal16": 1,
+        "branch_even_word": 4,
+        "subtract16": 6,
+        "scaled_indexed_address": 6,
+        "load_packed_field": 5,
+        "compare_signed_greater16": 3,
+        "multiply16": 1,
+        "typed_compare_equal": 1,
+        "assign_length_string": 1,
+        "bitwise_and16": 1,
+        "add16": 2,
+        "load_table_indexed": 1,
+        "jump_encoded": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 11,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 234,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 238,
+          "occurrences": 3
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 25,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 1053,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 44
+        },
+        {
+          "pcode_offset": 1069,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1077,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 23
+        },
+        {
+          "pcode_offset": 1119,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 1172,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1194,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 1205,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1219,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 1233,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 50
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 15,
+      "procedure": 4,
+      "entry_offset": 128,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 207,
+          "payload_length": 4,
+          "payload_sha256": "f5d887a087580006e4ea38e794f832016bbddc1f747d8c0065502cbaaa1e6592",
+          "matched_terms": {
+            "ship_inventory": [
+              "guns"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 23,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 94976,
+            "byte_in_sector": 207
+          }
+        }
+      ],
+      "operation_counts": {
+        "call_external_segment": 26,
+        "push_short_constant": 54,
+        "address_table_indexed": 24,
+        "literal_word": 4,
+        "call_current_lexical_link": 8,
+        "advance_only": 4,
+        "inline_length_pointer": 4,
+        "load_table_indexed": 20,
+        "subtract16": 4,
+        "add16": 8,
+        "packed_array_descriptor": 2,
+        "load_packed_field": 4,
+        "branch_even_word": 3,
+        "jump_encoded": 2,
+        "bitwise_not16": 1,
+        "compare_signed_greater16": 1,
+        "store_local": 2,
+        "load_local_short": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 7,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 42,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 72,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 73,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 82,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 303,
+          "occurrences": 3
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 307,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 311,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 315,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 319,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 323,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 327,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 331,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 335,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 339,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 343,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 223,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 225,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 226,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 227,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 307,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 310,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 327,
+          "occurrences": 2
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 328,
+          "occurrences": 2
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 329,
+          "occurrences": 2
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 330,
+          "occurrences": 3
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 335,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 343,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 344,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 345,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 346,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 128,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 6
+        },
+        {
+          "pcode_offset": 132,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 17
+        },
+        {
+          "pcode_offset": 139,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 154,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 18
+        },
+        {
+          "pcode_offset": 169,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 18
+        },
+        {
+          "pcode_offset": 180,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 18
+        },
+        {
+          "pcode_offset": 188,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 201,
+          "kind": "current-segment",
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 214,
+          "kind": "current-segment",
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 227,
+          "kind": "current-segment",
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 240,
+          "kind": "current-segment",
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 247,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 273,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 14
+        },
+        {
+          "pcode_offset": 277,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 285,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 292,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 309,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 319,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 344,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 14
+        },
+        {
+          "pcode_offset": 348,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 371,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 14
+        },
+        {
+          "pcode_offset": 375,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 388,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 12
+        },
+        {
+          "pcode_offset": 394,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 28
+        },
+        {
+          "pcode_offset": 407,
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 420,
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 433,
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 446,
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 454,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 494,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 30
+        },
+        {
+          "pcode_offset": 500,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 11
+        },
+        {
+          "pcode_offset": 513,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 12
+        },
+        {
+          "pcode_offset": 519,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 39
+        },
+        {
+          "pcode_offset": 522,
+          "kind": "external-segment-operand",
+          "segment_operand": 24,
+          "procedure": 9
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 19,
+      "procedure": 12,
+      "entry_offset": 1936,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 1999,
+          "payload_length": 11,
+          "payload_sha256": "a0d4ef3ce7b18de8ace9a5a9696d1c86c55b846b95bea6170418c8c22a215f96",
+          "matched_terms": {
+            "location_display": [
+              "city:"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 29,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 121344,
+            "byte_in_sector": 207
+          }
+        },
+        {
+          "pcode_offset": 2019,
+          "payload_length": 11,
+          "payload_sha256": "6db049f13d57bdf3f69d0c35410ba2ac971b360b28a52cfff1ba3a61f66fce53",
+          "matched_terms": {
+            "ship_navigation": [
+              "planet:"
+            ],
+            "location_display": [
+              "planet:"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 29,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 121344,
+            "byte_in_sector": 227
+          }
+        }
+      ],
+      "operation_counts": {
+        "address_local": 16,
+        "load_local_short": 7,
+        "copy_words_forward": 3,
+        "push_short_constant": 65,
+        "call_external_segment": 30,
+        "address_table_indexed": 12,
+        "call_current_lexical_link": 3,
+        "inline_length_pointer": 10,
+        "advance_only": 10,
+        "address_nonlocal": 6,
+        "store_local": 4,
+        "load_packed_field": 9,
+        "call_current_dynamic_link": 6,
+        "jump_encoded": 6,
+        "case_table_branch": 1,
+        "branch_even_word": 4,
+        "literal_word": 1,
+        "load_local": 3,
+        "subtract16": 2,
+        "compare_equal16": 2,
+        "bitwise_or16": 2,
+        "load_nonlocal": 4,
+        "store_nonlocal": 2,
+        "load_table_indexed": 7,
+        "add16": 1,
+        "packed_array_descriptor": 3,
+        "store_packed_field": 3,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 11,
+          "occurrences": 3
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 36,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 37,
+          "occurrences": 3
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 42,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 82,
+          "occurrences": 3
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 11,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 13,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 14,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 18,
+          "occurrences": 2
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 19,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 297,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 1944,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 1951,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 1958,
+          "kind": "current-segment",
+          "procedure": 10
+        },
+        {
+          "pcode_offset": 1962,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 1984,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 2017,
+          "kind": "current-segment",
+          "procedure": 13
+        },
+        {
+          "pcode_offset": 2038,
+          "kind": "current-segment",
+          "procedure": 13
+        },
+        {
+          "pcode_offset": 2059,
+          "kind": "current-segment",
+          "procedure": 13
+        },
+        {
+          "pcode_offset": 2076,
+          "kind": "current-segment",
+          "procedure": 14
+        },
+        {
+          "pcode_offset": 2092,
+          "kind": "current-segment",
+          "procedure": 14
+        },
+        {
+          "pcode_offset": 2108,
+          "kind": "current-segment",
+          "procedure": 14
+        },
+        {
+          "pcode_offset": 2128,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 2147,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 5
+        },
+        {
+          "pcode_offset": 2152,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 2160,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 2170,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 6
+        },
+        {
+          "pcode_offset": 2177,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 2203,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 2224,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 2231,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 2241,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 2260,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 2265,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 28
+        },
+        {
+          "pcode_offset": 2268,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 2298,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 2323,
+          "kind": "current-segment",
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 2336,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 2339,
+          "kind": "current-segment",
+          "procedure": 6
+        },
+        {
+          "pcode_offset": 2343,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 2360,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 14
+        },
+        {
+          "pcode_offset": 2364,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 2371,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 19
+        },
+        {
+          "pcode_offset": 2376,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 2395,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 2400,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 2407,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 26
+        },
+        {
+          "pcode_offset": 2416,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 12
+        },
+        {
+          "pcode_offset": 2422,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 28
+        },
+        {
+          "pcode_offset": 2429,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 27
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 19,
+      "procedure": 25,
+      "entry_offset": 4636,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 4723,
+          "payload_length": 11,
+          "payload_sha256": "9320caef264fb73d6f4b4a72240aec7e59887df144fe916037ff06e8670264bd",
+          "matched_terms": {
+            "ship_navigation": [
+              "refuel"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 30,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 122880,
+            "byte_in_sector": 115
+          }
+        },
+        {
+          "pcode_offset": 4789,
+          "payload_length": 12,
+          "payload_sha256": "a18c67d182d87381ee58caed75e8a79543d7a273e5dcce337fbcaf52e64eff76",
+          "matched_terms": {
+            "trade": [
+              "buy"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 30,
+            "sector": 0,
+            "physical_sector": 0,
+            "offset": 122880,
+            "byte_in_sector": 181
+          }
+        }
+      ],
+      "operation_counts": {
+        "call_current_lexical_link": 7,
+        "push_short_constant": 18,
+        "store_local": 5,
+        "address_local": 6,
+        "load_table_indexed": 7,
+        "address_table_indexed": 2,
+        "load_packed_field": 1,
+        "subtract16": 3,
+        "scaled_indexed_address": 1,
+        "call_external_segment": 7,
+        "advance_only": 4,
+        "inline_length_pointer": 4,
+        "load_nonlocal": 10,
+        "add16": 9,
+        "store_nonlocal": 1,
+        "load_local_short": 11,
+        "jump_encoded": 5,
+        "case_table_branch": 1,
+        "bitwise_not16": 1,
+        "bitwise_or16": 1,
+        "branch_even_word": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 11,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 37,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 11,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 12,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 13,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 14,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 25,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 297,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 347,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 4636,
+          "kind": "current-segment",
+          "procedure": 5
+        },
+        {
+          "pcode_offset": 4657,
+          "kind": "external-segment-operand",
+          "segment_operand": 0,
+          "procedure": 23
+        },
+        {
+          "pcode_offset": 4672,
+          "kind": "external-segment-operand",
+          "segment_operand": 0,
+          "procedure": 23
+        },
+        {
+          "pcode_offset": 4677,
+          "kind": "current-segment",
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 4709,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 50
+        },
+        {
+          "pcode_offset": 4712,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 4747,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 4780,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 4814,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 4835,
+          "kind": "current-segment",
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 4840,
+          "kind": "current-segment",
+          "procedure": 20
+        },
+        {
+          "pcode_offset": 4844,
+          "kind": "current-segment",
+          "procedure": 21
+        },
+        {
+          "pcode_offset": 4848,
+          "kind": "current-segment",
+          "procedure": 24
+        },
+        {
+          "pcode_offset": 4875,
+          "kind": "current-segment",
+          "procedure": 6
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 20,
+      "procedure": 23,
+      "entry_offset": 3876,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 4333,
+          "payload_length": 23,
+          "payload_sha256": "c2ed8ff13ba618a5bf3ca56e1c6ed4e977daad0c97a23ff23a3033e9d37ebc8c",
+          "matched_terms": {
+            "trade": [
+              "price"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 11,
+            "physical_sector": 8,
+            "offset": 129792,
+            "byte_in_sector": 237
+          }
+        },
+        {
+          "pcode_offset": 4457,
+          "payload_length": 12,
+          "payload_sha256": "e5856cbecb4fb7d41876097970f06bdbfad42d9805912d5fc5914722d07fd2df",
+          "matched_terms": {
+            "trade": [
+              "price"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 10,
+            "physical_sector": 10,
+            "offset": 129536,
+            "byte_in_sector": 105
+          }
+        }
+      ],
+      "operation_counts": {
+        "push_short_constant": 85,
+        "store_local": 17,
+        "load_local_short": 54,
+        "branch_even_word": 18,
+        "load_packed_field": 11,
+        "jump_encoded": 11,
+        "compare_signed_greater16": 2,
+        "load_indirect_short": 9,
+        "add16": 4,
+        "remainder_magnitude16": 4,
+        "store_indirect_word": 4,
+        "address_nonlocal": 7,
+        "scaled_indexed_address": 3,
+        "load_local": 11,
+        "divide_signed16": 3,
+        "multiply16": 3,
+        "call_external_segment": 28,
+        "bitwise_and16": 1,
+        "compare_equal16": 6,
+        "bitwise_or16": 2,
+        "bitwise_not16": 3,
+        "inline_length_pointer": 21,
+        "advance_only": 21,
+        "copy_words_forward": 2,
+        "secondary_dispatch": 1,
+        "store_packed_field": 3,
+        "address_table_indexed": 2,
+        "offset_pointer_words": 1,
+        "load_nonlocal": 7,
+        "call_current_lexical_link": 5,
+        "assign_length_string": 1,
+        "load_indexed_byte": 1,
+        "compare_signed_less_equal16": 1,
+        "store_indexed_byte": 2,
+        "subtract16": 5,
+        "packed_array_descriptor": 1,
+        "compare_not_equal16": 2,
+        "address_local": 5,
+        "load_table_indexed": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 11,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 37,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 297,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 3935,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 4
+        },
+        {
+          "pcode_offset": 3945,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 6
+        },
+        {
+          "pcode_offset": 3974,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 44
+        },
+        {
+          "pcode_offset": 4016,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4141,
+          "kind": "current-segment",
+          "procedure": 16
+        },
+        {
+          "pcode_offset": 4154,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 4
+        },
+        {
+          "pcode_offset": 4237,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4241,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4244,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 45
+        },
+        {
+          "pcode_offset": 4247,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 45
+        },
+        {
+          "pcode_offset": 4264,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4285,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 4
+        },
+        {
+          "pcode_offset": 4300,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4308,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 49
+        },
+        {
+          "pcode_offset": 4319,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4328,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 47
+        },
+        {
+          "pcode_offset": 4359,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4363,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4366,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 45
+        },
+        {
+          "pcode_offset": 4391,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4400,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 47
+        },
+        {
+          "pcode_offset": 4403,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 45
+        },
+        {
+          "pcode_offset": 4434,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4454,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 4
+        },
+        {
+          "pcode_offset": 4474,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 5
+        },
+        {
+          "pcode_offset": 4493,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 5
+        },
+        {
+          "pcode_offset": 4514,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 5
+        },
+        {
+          "pcode_offset": 4520,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 4548,
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 4588,
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 4622,
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 4637,
+          "kind": "current-segment",
+          "procedure": 8
+        },
+        {
+          "pcode_offset": 4672,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 5
+        }
+      ],
+      "boundaries": [
+        {
+          "address": 4033,
+          "reason": "secondary service operand/continuation not verified",
+          "selector": 10
+        }
+      ]
+    },
+    {
+      "segment_number": 20,
+      "procedure": 24,
+      "entry_offset": 4696,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 4775,
+          "payload_length": 7,
+          "payload_sha256": "634a801d4f975bf6c32b6d2bf42f80db71cf197e506cea0735102dac6b8fdf54",
+          "matched_terms": {
+            "trade": [
+              "sell"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 9,
+            "physical_sector": 12,
+            "offset": 129280,
+            "byte_in_sector": 167
+          }
+        },
+        {
+          "pcode_offset": 4925,
+          "payload_length": 9,
+          "payload_sha256": "5e503e34a2f6e9705f1cd9dcbd97bfc59f6e5f2a0cea6953e1e8a297efadd565",
+          "matched_terms": {
+            "trade": [
+              "sell"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 8,
+            "physical_sector": 14,
+            "offset": 129024,
+            "byte_in_sector": 61
+          }
+        },
+        {
+          "pcode_offset": 5069,
+          "payload_length": 19,
+          "payload_sha256": "58d5d6691e567fdb370a3ab3b3c71dcde4ef81cf03fdb268ee3121c72f3f0206",
+          "matched_terms": {
+            "trade": [
+              "storing cargo"
+            ],
+            "ship_inventory": [
+              "cargo"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 8,
+            "physical_sector": 14,
+            "offset": 129024,
+            "byte_in_sector": 205
+          }
+        }
+      ],
+      "operation_counts": {
+        "address_local": 4,
+        "load_local_short": 37,
+        "copy_words_forward": 5,
+        "push_short_constant": 27,
+        "store_indirect_word": 2,
+        "call_external_segment": 19,
+        "load_nonlocal": 6,
+        "branch_even_word": 16,
+        "advance_only": 17,
+        "inline_length_pointer": 17,
+        "call_current_lexical_link": 6,
+        "bitwise_or16": 1,
+        "jump_encoded": 10,
+        "load_table_indexed": 4,
+        "address_table_indexed": 4,
+        "store_local": 7,
+        "compare_equal16": 3,
+        "secondary_dispatch": 1,
+        "subtract16": 6,
+        "add16": 2,
+        "bitwise_not16": 2,
+        "load_indirect_short": 8,
+        "compare_signed_less_equal16": 1,
+        "bitwise_and16": 1,
+        "compare_signed_greater16": 1,
+        "scaled_indexed_address": 6,
+        "address_nonlocal": 2,
+        "load_packed_field": 1,
+        "assign_length_string": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 11,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 234,
+          "occurrences": 2
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 238,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 18,
+          "occurrences": 2
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 19,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 297,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 4704,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 44
+        },
+        {
+          "pcode_offset": 4707,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 4739,
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 4743,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 4769,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4784,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4802,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4826,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4842,
+          "kind": "current-segment",
+          "procedure": 8
+        },
+        {
+          "pcode_offset": 4870,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4880,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 4920,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4937,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4956,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 4975,
+          "kind": "current-segment",
+          "procedure": 12
+        },
+        {
+          "pcode_offset": 4989,
+          "kind": "current-segment",
+          "procedure": 11
+        },
+        {
+          "pcode_offset": 4995,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 44
+        },
+        {
+          "pcode_offset": 5023,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 5038,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 5058,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 5067,
+          "kind": "current-segment",
+          "procedure": 11
+        },
+        {
+          "pcode_offset": 5091,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 5104,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 5122,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 5125,
+          "kind": "current-segment",
+          "procedure": 2
+        }
+      ],
+      "boundaries": [
+        {
+          "address": 4893,
+          "reason": "secondary service operand/continuation not verified",
+          "selector": 4
+        }
+      ]
+    },
+    {
+      "segment_number": 20,
+      "procedure": 27,
+      "entry_offset": 5508,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 5539,
+          "payload_length": 3,
+          "payload_sha256": "64e3cb0e4960ba69298843d481376d1ce7b92cd43cf70e61a982da651c0335f3",
+          "matched_terms": {
+            "trade": [
+              "buy"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 6,
+            "physical_sector": 3,
+            "offset": 128512,
+            "byte_in_sector": 163
+          }
+        }
+      ],
+      "operation_counts": {
+        "address_local": 16,
+        "push_short_constant": 28,
+        "call_current_lexical_link": 8,
+        "call_external_segment": 5,
+        "load_table_indexed": 5,
+        "bitwise_or16": 2,
+        "bitwise_not16": 3,
+        "bitwise_and16": 2,
+        "branch_even_word": 8,
+        "load_nonlocal": 3,
+        "subtract16": 1,
+        "inline_length_pointer": 3,
+        "advance_only": 3,
+        "store_local": 6,
+        "load_local_short": 7,
+        "store_table_indexed": 2,
+        "remainder_magnitude16": 2,
+        "compare_equal16": 3,
+        "negate16": 1,
+        "address_nonlocal": 3,
+        "typed_compare_not_equal": 2,
+        "address_table_indexed": 1,
+        "jump_encoded": 2,
+        "add16": 1,
+        "compare_not_equal16": 1,
+        "secondary_dispatch": 1,
+        "load_packed_field": 1,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 11,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 18,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 19,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 297,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 347,
+          "occurrences": 2
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 18,
+          "occurrences": 1
+        },
+        {
+          "operation": "store_table_indexed",
+          "selector": 29,
+          "index": 19,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 5512,
+          "kind": "current-segment",
+          "procedure": 26
+        },
+        {
+          "pcode_offset": 5517,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 5529,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 5555,
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 5557,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 44
+        },
+        {
+          "pcode_offset": 5586,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 5602,
+          "kind": "current-segment",
+          "procedure": 21
+        },
+        {
+          "pcode_offset": 5615,
+          "kind": "current-segment",
+          "procedure": 23
+        },
+        {
+          "pcode_offset": 5641,
+          "kind": "current-segment",
+          "procedure": 8
+        },
+        {
+          "pcode_offset": 5680,
+          "kind": "current-segment",
+          "procedure": 21
+        },
+        {
+          "pcode_offset": 5705,
+          "kind": "external-segment-operand",
+          "segment_operand": 28,
+          "procedure": 3
+        },
+        {
+          "pcode_offset": 5715,
+          "kind": "current-segment",
+          "procedure": 24
+        },
+        {
+          "pcode_offset": 5723,
+          "kind": "current-segment",
+          "procedure": 20
+        }
+      ],
+      "boundaries": [
+        {
+          "address": 5677,
+          "reason": "secondary service operand/continuation not verified",
+          "selector": 4
+        }
+      ]
+    },
+    {
+      "segment_number": 20,
+      "procedure": 30,
+      "entry_offset": 5876,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 6011,
+          "payload_length": 3,
+          "payload_sha256": "64e3cb0e4960ba69298843d481376d1ce7b92cd43cf70e61a982da651c0335f3",
+          "matched_terms": {
+            "trade": [
+              "buy"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 128000,
+            "byte_in_sector": 123
+          }
+        },
+        {
+          "pcode_offset": 6017,
+          "payload_length": 4,
+          "payload_sha256": "2ec1e28159466f2a82a3d778394486baba97f065f20073206788bcfdc7f6d2ec",
+          "matched_terms": {
+            "trade": [
+              "sell"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 4,
+            "physical_sector": 7,
+            "offset": 128000,
+            "byte_in_sector": 129
+          }
+        }
+      ],
+      "operation_counts": {
+        "address_local": 11,
+        "load_table_indexed": 6,
+        "push_short_constant": 33,
+        "add16": 1,
+        "subtract16": 3,
+        "call_external_segment": 11,
+        "load_nonlocal": 2,
+        "branch_even_word": 6,
+        "inline_length_pointer": 12,
+        "advance_only": 12,
+        "call_current_lexical_link": 5,
+        "jump_encoded": 3,
+        "load_local_short": 15,
+        "compare_equal16": 1,
+        "store_local": 5,
+        "store_indirect_word": 1,
+        "compare_signed_greater16": 1,
+        "bitwise_or16": 2,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 11,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 12,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 13,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 14,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 297,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 347,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 5894,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 18
+        },
+        {
+          "pcode_offset": 5897,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 5939,
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 5966,
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 6004,
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 6027,
+          "kind": "current-segment",
+          "procedure": 9
+        },
+        {
+          "pcode_offset": 6031,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 6
+        },
+        {
+          "pcode_offset": 6044,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 42
+        },
+        {
+          "pcode_offset": 6062,
+          "kind": "current-segment",
+          "procedure": 29
+        },
+        {
+          "pcode_offset": 6068,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 43
+        },
+        {
+          "pcode_offset": 6074,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 6088,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 7
+        },
+        {
+          "pcode_offset": 6104,
+          "kind": "external-segment-operand",
+          "segment_operand": 25,
+          "procedure": 8
+        },
+        {
+          "pcode_offset": 6114,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 4
+        },
+        {
+          "pcode_offset": 6124,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 2
+        },
+        {
+          "pcode_offset": 6137,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 41
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "segment_number": 20,
+      "procedure": 31,
+      "entry_offset": 6154,
+      "confidence": "candidate from decoded inline text and static procedure context; not verified subsystem semantics",
+      "hints": [
+        {
+          "pcode_offset": 6359,
+          "payload_length": 21,
+          "payload_sha256": "42340cddfaeb41c8acf8100927e136d6cb1338357f0eb32da523671033676642",
+          "matched_terms": {
+            "trade": [
+              "sell",
+              "lots"
+            ]
+          },
+          "source": {
+            "side": "play",
+            "track": 31,
+            "sector": 3,
+            "physical_sector": 9,
+            "offset": 127744,
+            "byte_in_sector": 215
+          }
+        }
+      ],
+      "operation_counts": {
+        "call_external_segment": 13,
+        "load_nonlocal": 5,
+        "branch_even_word": 2,
+        "address_nonlocal": 3,
+        "inline_length_pointer": 5,
+        "advance_only": 5,
+        "assign_length_string": 2,
+        "jump_encoded": 2,
+        "push_short_constant": 22,
+        "store_local": 2,
+        "address_local": 3,
+        "load_table_indexed": 1,
+        "address_table_indexed": 2,
+        "load_packed_field": 1,
+        "subtract16": 3,
+        "scaled_indexed_address": 1,
+        "call_current_lexical_link": 1,
+        "load_indexed_byte": 1,
+        "load_local_short": 2,
+        "return_restore_context": 1
+      },
+      "table_accesses": [
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 37,
+          "occurrences": 1
+        },
+        {
+          "operation": "address_table_indexed",
+          "selector": 29,
+          "index": 271,
+          "occurrences": 1
+        },
+        {
+          "operation": "load_table_indexed",
+          "selector": 29,
+          "index": 25,
+          "occurrences": 1
+        }
+      ],
+      "static_calls": [
+        {
+          "pcode_offset": 6154,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 44
+        },
+        {
+          "pcode_offset": 6212,
+          "kind": "external-segment-operand",
+          "segment_operand": 0,
+          "procedure": 23
+        },
+        {
+          "pcode_offset": 6221,
+          "kind": "external-segment-operand",
+          "segment_operand": 0,
+          "procedure": 23
+        },
+        {
+          "pcode_offset": 6237,
+          "kind": "current-segment",
+          "procedure": 10
+        },
+        {
+          "pcode_offset": 6241,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 6259,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 6284,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 6292,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 49
+        },
+        {
+          "pcode_offset": 6297,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 6339,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        },
+        {
+          "pcode_offset": 6345,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 49
+        },
+        {
+          "pcode_offset": 6349,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 47
+        },
+        {
+          "pcode_offset": 6356,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 46
+        },
+        {
+          "pcode_offset": 6383,
+          "kind": "external-segment-operand",
+          "segment_operand": 22,
+          "procedure": 48
+        }
+      ],
+      "boundaries": []
+    }
+  ]
+}
