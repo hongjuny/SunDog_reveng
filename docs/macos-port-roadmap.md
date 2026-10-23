@@ -11,7 +11,9 @@ p-code 실행기를 제품 코어로 넣는 방향은 중단했다. 원본 실�
 Play의 SYSTEM.STARTUP 13개 segment/327개 procedure를 구조 검증했고, 라이브러리와
 런타임을 포함한 정적 p-code 호출 관계를 생성했다. 문자열 배치에서 native HGR
 글리프 쓰기로 이어지는 경로를 찾고 정상 합성 body의 420개 경우를 대조했다.
-게임 전체의 상태 모델과 규칙은 아직 복원되지 않았다.
+게임 시작의 상태 dispatcher와 native 입력 래치 hook을 추가로 확인했다. 산술 helper
+하나를 명세·733개 사례로 대조한 뒤 `native/`의 Swift 함수로 옮겼다. 게임 전체의
+상태 모델과 규칙은 아직 복원되지 않았다.
 
 | 순서 | 해야 할 일 | 통과 기준 |
 |---|---|---|
@@ -27,6 +29,6 @@ Play의 SYSTEM.STARTUP 13개 segment/327개 procedure를 구조 검증했고, �
 앱 셸 빌드를 게임 로직 포팅으로 계산하지 않는다. 과거 `Sources/`의 캡처 뷰어는
 검증용 실험이며 제품 구현의 근거로 간주하지 않는다.
 
-우선 작업은 시작 경로의 미확인 서비스, segment 22의 문자열/문자 렌더링 계약,
-Play segment 20의 거래 후보 절차다. Play T34는 계속 unknown이며 유효한 0-valued
+우선 작업은 segment 21의 참조 인자/event 구조, 거래 caller의 잔액·재고 변경,
+segment 22의 문자열/문자 렌더링 계약과 미확인 서비스다. Play T34는 계속 unknown이며 유효한 0-valued
 sector로 취급하지 않는다. 원본 미디어와 추출 바이너리는 공개 저장소에 넣지 않는다.

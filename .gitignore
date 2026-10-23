@@ -17,3 +17,6 @@ __pycache__/
 
 *.nib
 *.rom
+
+/native/.build/
+/native/.swiftpm/

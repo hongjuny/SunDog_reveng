@@ -1,0 +1,13 @@
+{
+  "native_cases": 733,
+  "zero_error_cases": 3,
+  "unsupported_domain_rejected": true,
+  "method": "Swift native arithmetic rule versus synthetic cases already checked through original Apple II handlers",
+  "source_files": {
+    "native/SunDogLogic/GameIntegerScale.swift": "76e0af0f2e9152d2f6d01574bcb40df7b480081a076a7d3c4f3401c5e1f46781",
+    "tests/native/VerifyGameIntegerScale.swift": "681d39d2fc00343e1f76301d4fffadbd111fcdb96c052eeb7bbc337d3a6da865"
+  },
+  "cases_sha256": "75be676f64857a0c503428f53ee758d80d51dcfe600b6cfce9a7e854adf54292",
+  "native_probe_report": "analysis/trade-scaling-evidence.json",
+  "scope": "One reconstructed game arithmetic helper; no application shell or original-code execution backend"
+}

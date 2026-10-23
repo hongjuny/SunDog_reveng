@@ -456,3 +456,51 @@ span and failed; a bounded imported-span hash passed. Full assembly and project
 remain private. Tests: 67 deterministic Python tests pass. Remaining work includes
 secondary-service continuation, actual game-entry/input flow, text layout/clipping,
 mode-2 glyph behavior, native relocation tables and gameplay state/rule reconstruction.
+
+## 2026-10-23 — startup dispatcher, input modification and first rewritten rule
+
+Used actual REA/Ghidra on five bounded 9E handlers (15, 16, 20, 21, 22 in hex).
+Preserved Evidence/snapshots and closed each session. Verified 72 declared native
+cases for resident segment reference counts, the nonresident boundary, allocation
+cursor save/restore, I/O-result reads and conditional PC+2 continuation. Complete
+nonresident loader/device behavior remains unverified. Added the missing LDX
+absolute, STA absolute-X and DEC absolute-X instructions to the bounded analysis
+probe, with flags/cross-page tests; this is not an application execution backend.
+Persisted five service interface comments in the existing Ghidra interpreter project.
+
+Enabled those evidenced continuations in the static decoder. All six Play startup
+segment-1 procedures now have complete CFGs under the selected normal-return
+model. Root control reads bits 8..11 of table-29 word index 45, splits low states
+through P3 and others through P4, and exits at state >=11. Case tables identify
+calls into segments 13/15/16/17/18/19/20/21 and the P5 subdispatch to 14/8. Detailed
+semantic state names, the eight reference-argument contracts of segment 21 and
+physical input timing remain open. Current combined graph: 45,033 reachable
+instructions and 3,462 static call sites across the same 590 procedure records.
+
+Reconstructed segment-20/P18's nonnegative-domain integer scaling helper from its
+actual short-local operands, 10 parameter bytes, branches and native handler
+results. The branch changes multiplication/division order and creates observable
+rounding discontinuities (x=8,y=4095,d=8 returns 4088). Compared 733 synthetic cases
+and three zero-divisor/error-106 boundaries. Only after that check, rewrote the
+selected contract as native/SunDogLogic/GameIntegerScale.swift. Direct Swift
+compilation matched all 733 native-backed cases; negative inputs are explicitly
+outside the exposed contract. This is one original game function port, not a
+complete trading system. Caller value meanings, balance and inventory ownership
+remain open. No app shell or emulator core was added.
+
+Traced SYSTEM.LIBRARY/native P2 as an edge/level channel filter. Static installation
+patches D004/D005; the retained Utility-menu LC1 points from the initial ADD16
+handler D71D to hook A29B. The hook ORs C061/C062 into pending bytes, preserves
+A/status and jumps via a saved operand back to ADD16. This is a concrete modified
+p-system dispatch path. The first hook slice omitted the trailing JMP operands;
+retained it and reimported the full three-byte JMP before asserting the chain.
+Actual REA IDs, hashes and capture scope are in button-input-evidence.json.
+
+Compared 512 native filter fixtures, 256 latch-body fixtures and two install/restore
+fixtures against reconstructed expressions. Hardware reads were declared RAM
+samples, not live device execution. Added OR absolute-X and a flags/cross-page test.
+Persisted six input/hook labels with Ghidra comment readback and project-save checks.
+No new reference emulator was run; the existing capture was used only as corroboration.
+Python suite: 77 deterministic tests. Native Swift rule: 733 cases, three zero-error
+cases and an explicit unverified-domain rejection. Complete joystick/keyboard event
+construction, game-state ownership, transaction rules and rendering edge cases remain.

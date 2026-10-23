@@ -30,7 +30,7 @@ and [research log](docs/research-log.md). The first milestone is static analysis
 not an observed emulator boot. Unreadable Play Track 34 remains unknown.
 
 Run `python3 tools/structural_evidence.py` after generating disk and boot regions
-to reproduce HGR table and directory-shape checks. Sixty-seven deterministic Python tests
+to reproduce HGR table and directory-shape checks. Seventy-seven deterministic Python tests
 require no original media. Raw searches, binaries, projects and disassembly stay
 local; structured statistics and provenance are versioned.
 
@@ -97,3 +97,19 @@ These commands consume previously extracted regions, independent WOZ verificatio
 reports and retained REA/reference evidence. Full p-code listings and native
 Evidence stay in ignored local paths; source coordinates, hashes, call metadata
 and verification summaries are versioned. Unsupported service paths stop explicitly.
+
+The next analysis milestone connects the startup state dispatcher, identifies
+original button latching through an ADD16 dispatch hook, and reconstructs one
+integer scaling helper. See [startup](docs/game-startup-flow.md),
+[input](docs/input-system.md), and [arithmetic](docs/trade-arithmetic.md).
+The first rewritten native rule lives in [native/](native/README.md); its 733
+synthetic cases agree with the original native-handler paths.
+
+```sh
+sh tools/run_service_analysis.sh
+sh tools/run_input_analysis.sh
+```
+
+These wrappers require the retained actual REA evidence and existing Ghidra
+project. They persist annotation readbacks and reproduce the corresponding
+static/controlled checks. Full nonresident I/O and event timing remain open.

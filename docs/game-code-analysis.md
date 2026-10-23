@@ -35,7 +35,7 @@ Apple II native handler에서 검증한 operand 길이와 분기 규칙으로 �
 변위가 아니라 **프로시저 trailer를 기준으로 고른 self-relative word cell**이다.
 `$E239..E244`의 `$54/$55` 설정을 실제 REA/Ghidra에서 다시 확인했다.
 
-- 현재 590개 프로시저 목록, 43,471개 도달 가능한 p-code 명령, 3,310개 정적 call site.
+- 현재 590개 프로시저 목록, 45,033개 도달 가능한 p-code 명령, 3,462개 정적 call site.
 - 이 목록에는 별도 6502 분석 대상으로 구분한 native 프로시저 31개도 포함한다.
 - 미확인 `$9E` 서비스에서는 해당 경로를 중단한다. 추측한 길이로 다음 명령을 읽지 않는다.
 - call 뒤의 경로는 정상 복귀를 조건으로 한다. 실행된 call trace라고 주장하지 않는다.
@@ -114,3 +114,14 @@ Decoded inline text의 참조 위치와 같은 프로시저의 call·산술·tab
 다음은 시작 segment의 `$9E` 초기화 서비스 경계를 확인해 호출 흐름을 이어가고,
 위 후보에서 상태 필드의 소유자, 입력 조건, 계산·갱신 순서와 부작용을 복원하는
 작업이다. 문자열 발견만으로 거래 규칙이나 저장 자료구조를 구현하지 않는다.
+
+## 후속 확인: 시작 루프·입력·첫 네이티브 함수
+
+[시작 제어 흐름](game-startup-flow.md)은 서비스 5개의 길이/복귀 경계를 확인한 뒤
+게임 시작 segment의 6개 절차를 잇는다. 상태는 table[29] word 45의 bits 8..11이며
+각 case의 실제 segment 호출을 기록했다. [입력 분석](input-system.md)은 native P2와
+ADD16-dispatch 입력 래치 hook을 확인한다. 물리 타이밍과 scene event 구조는 남아 있다.
+
+[산술 helper](trade-arithmetic.md)는 원본 733개 합성 사례를 대조한 뒤
+`native/SunDogLogic/GameIntegerScale.swift`로 구현했고 같은 사례를 네이티브로 검증했다.
+이는 함수 단위의 첫 이식이며 전체 거래 로직·네이티브 앱 완성을 뜻하지 않는다.

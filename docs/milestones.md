@@ -13,7 +13,7 @@ connection is not counted as passed merely because a launcher exists.
 | 5. SYSTEM.STARTUP conflicts | All 13 descriptor payloads validate structurally on Play; 327 procedures; runtime side-selection open | Explain disk selection and descriptor addressing without slicing unrelated bytes |
 | 6. P-code analysis tool | Bounded native-backed static decoder/call graph implemented; unsupported services stop paths | Implement only verified instructions and segment structures, with deterministic tests |
 | 7. Controlled execution | Bounded actual a2m boot, first BIOS, Ctrl-U latch and utility menu observed; WOZ continuation difference open | Reproducible ROM/emulator setup and memory/disk/bank trace |
-| 8. Game subsystems | Original string/character/native glyph chain identified; normal compositor: 420 synthetic checks; business/event semantics open | Trace UI/input, ship, trade, navigation, environments and persistence with provenance |
+| 8. Game subsystems | Original glyph chain, root state dispatcher and ADD16 input hook identified; one arithmetic helper ported; business/event semantics open | Trace UI/input, ship, trade, navigation, environments and persistence with provenance |
 | 9. Performance | Not measured | Repeatable interpreter, disk, graphics and memory-management measurements |
 
 See [connection checkpoint](rea-integration.md) and
