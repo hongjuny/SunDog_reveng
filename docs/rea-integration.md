@@ -99,7 +99,9 @@ python3 tools/verify_rea_probe.py analysis/local/rea/instruction-evidence.json
 
 The validator requires a Ghidra provider, an Evidence ID, and the decoded byte and
 instruction facts. It does not accept a doctor result or direct Ghidra export as
-REA analysis. No successful `analysis/rea-crosscheck.json` exists yet.
+REA analysis. The successful `analysis/rea-crosscheck.json` now records the actual
+instruction acceptance. Checkpoint 2 additionally passed its bounded byte and
+memory-view acceptance; see [REA memory views](rea-memory-views.md).
 
 ## Historical apply attempt and successful operator action
 
@@ -119,13 +121,13 @@ recorded in `analysis/rea-config-apply-result.json`; the reviewed keys/backup pa
 are in `analysis/rea-config-review.json`. No sandbox or provider ownership check
 was bypassed. This is a file-access restriction, not successful REA configuration.
 
-Run this reviewed action in a normal terminal with access to your settings:
+The user ran this reviewed action successfully in a normal terminal:
 
 ```sh
 /opt/homebrew/bin/python3 /Users/ay5/works/fun/porting/SunDog/tools/configure_rea.py --apply
 ```
 
-Then reconnect the REA MCP server so it receives the new environment. Its existing
-`npx -y rea-agents@6.7.0 mcp` registration is preserved. Continue with the actual
-REA native load/instruction/reference acceptance test above; shell-only Ghidra
-results still do not count as passing this checkpoint.
+After reconnection and the generated-cache repair described above, the actual
+REA native load/instruction/reference acceptance passed. The existing
+`npx -y rea-agents@6.7.0 mcp` registration was preserved. Historical failed
+file-access and diagnostic reports remain distinct from successful analysis.

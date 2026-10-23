@@ -26,7 +26,7 @@ and [research log](docs/research-log.md). The first milestone is static analysis
 not an observed emulator boot. Unreadable Play Track 34 remains unknown.
 
 Run `python3 tools/structural_evidence.py` after generating disk and boot regions
-to reproduce HGR table and directory-shape checks. Thirty-one deterministic tests
+to reproduce HGR table and directory-shape checks. Thirty-six deterministic tests
 require no original media. Raw searches, binaries, projects and disassembly stay
 local; structured statistics and provenance are versioned.
 
@@ -40,19 +40,22 @@ separate interpreter-ready memory snapshot. This remains static reconstruction,
 not a hardware/emulator execution trace or a full p-code disassembler.
 
 The current ordered tool-integration checkpoints are in
-[checkpoints](docs/milestones.md). [REA connection recovery](docs/rea-integration.md)
-contains a prepared environment fragment and a bounded native smoke test.
-Run `sh tools/rea-env.sh --check-files` for installed-file validation; this does
-not mark the REA integration as passed.
+[checkpoints](docs/milestones.md). Actual REA with Ghidra 12.1.4 passed the native
+connection test and [bounded memory comparison](docs/rea-memory-views.md).
+Six memory imports verified 7,825 complete bytes, bank-specific D152 entries,
+the initial p-code overlay and relocated initializer. Evidence IDs and limits are
+in `analysis/rea-memory-crosscheck.json`; full Evidence and snapshots stay local.
 
 Selected Apple II [opcode semantics](docs/opcode-semantics.md) are checked through
 908 controlled native-handler replay cases, without claiming a full CPU/device
 emulator or p-code disassembler. `sh tools/run_opcode_analysis.sh` updates the
 focused Ghidra annotations, memory classification checks and startup-prefix probe.
-REA's connection acceptance remains pending independently of these direct results.
+These direct checks retain native/data annotations in the persistent project;
+REA's temporary imports do not mirror them or emulate Language Card hardware.
 
 To review the explicitly requested REA client environment merge, run
 `python3 tools/configure_rea.py`. `--apply` performs the backed-up, scoped change
 when executed with normal access to the global settings file. This restricted
-session's actual apply attempt was denied before writing; see
-[connection recovery](docs/rea-integration.md). Actual REA verification is pending.
+session's earlier apply attempt was denied before writing; the user subsequently
+applied it successfully and reconnected. See [connection record](docs/rea-integration.md).
+No configuration reapplication is needed for the verified connection.

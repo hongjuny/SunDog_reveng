@@ -225,3 +225,30 @@ references were D282/D286/D28F, matching the bounded direct Ghidra export. Saved
 four actual Evidence records plus snapshot locally, ran verify_rea_probe.py, and
 closed the session. High confidence for this bounded static integration check;
 no claim of observed Apple II execution or independent decoder agreement.
+
+## 2026-10-23 — Bounded REA memory-view acceptance
+
+Prepared six immutable slices with per-byte checks back to Utility DOS sectors:
+bank 1 and bank 2 D152 entries, common memory before/after the segment 0 load,
+the native copy routine, and its relocated initializer. Actual REA/Ghidra 12.1.4
+verified 23 load checks per target and read all 7,825 requested bytes completely.
+D152 is JMP F269 in bank 1 and JSR D26B in bank 2. The after-load F248–FE7B range
+equals all 3,124 archive bytes; 2,818 byte values differ from the before-load view.
+The original F267 pointer is F290, and its 1,280-byte source matches the 6800
+initializer. REA assembly preserves the five-page copy loop and entry's RAM clear.
+
+The common-data probes use the existing F1CA RTS as a deliberately bounded import
+seed, not a boot entry. This avoids seeding native execution in p-code. REA's F248
+observation is undecodable and its common-after inventory reports one procedure;
+these do not establish full p-code semantics or full-range type classification.
+Fresh direct Ghidra analysis confirms the full table and p-code array types and
+zero native instructions in their ranges. Ghidra annotations are not transferred
+to REA. Bank hardware, actual reads and boot execution remain unobserved.
+
+Saved complete Evidence and snapshots locally and closed all six REA sessions.
+Versioned manifests/results contain hashes, sector provenance and Evidence IDs.
+Added tools/rea_memory_views.py and five validator tests, rejecting partial reads,
+wrong target/operation/address and same-address wrong-bank bytes. All 36 tests
+pass; the focused Ghidra pipeline also passes 908 controlled handler cases,
+memory/type checks, annotation readback and the bounded startup-prefix probe.
+Checkpoint 2 passed within the documented bounded scope; checkpoint 3 is next.

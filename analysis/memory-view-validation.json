@@ -1,5 +1,5 @@
 {
-  "scope": "direct Ghidra and source-byte composition verification; REA cross-check still pending",
+  "scope": "direct Ghidra and source-byte composition verification; separate bounded REA acceptance in analysis/rea-memory-crosscheck.json",
   "checks": {
     "low_bank_matches": true,
     "common_upper_matches": true,

@@ -1,0 +1,136 @@
+{
+  "status": "verified_bounded_memory_views",
+  "provider": "ghidra",
+  "views": [
+    {
+      "name": "bank1-entry",
+      "sha256": "db95ae9208dd2a7e633448f9a8b3a0a45eeacbe51a7aacb2752de74483a3b634",
+      "complete_bytes_verified": 3,
+      "load_checks": 23,
+      "entry_address": "0xd152",
+      "entry_mnemonic": "JMP",
+      "evidence_ids": {
+        "load": "ev_7b0ed314cadb4df22cb0e0724873978d173615bdb8fbbc791086d267bf853ad5",
+        "bytes": "ev_9bcf31beca6231fa23299cdb86972fef279f17a02d6ebcf44f3bff8f7dbbc2a0",
+        "entry": "ev_42ed6bec9bbc86e48fe166845249cf6a02997dab2c7c8d4b49fac3c645b7c0e3"
+      }
+    },
+    {
+      "name": "bank2-entry",
+      "sha256": "3ee0f7a563ee84a54383d3a626ffea57b75ec5e35051c4624fef7202dd46e949",
+      "complete_bytes_verified": 3,
+      "load_checks": 23,
+      "entry_address": "0xd152",
+      "entry_mnemonic": "JSR",
+      "evidence_ids": {
+        "load": "ev_460a92c43ab83c1d2b89c812e76bd98cb58a0e15b3618b999f2c7005242f7eb8",
+        "bytes": "ev_ebd8fed2c2488119d32d40fa7a2bc18db749ced2580b98935a797b9a0fe8ef58",
+        "entry": "ev_326ec6b3df4acdf8fa11443565ca8c0b7e5683d6294a4f0dd970709c0fec3d98"
+      }
+    },
+    {
+      "name": "common-before",
+      "sha256": "70c686ac4e9292b76114dc9215c0fac08f736a8f764f140fac83180aa53d98d2",
+      "complete_bytes_verified": 3250,
+      "load_checks": 23,
+      "entry_address": "0xf1ca",
+      "entry_mnemonic": "RTS",
+      "evidence_ids": {
+        "load": "ev_1bd61776af8359f7936b237cbd66b88420662c33c8461d9fe22e4a57a5f94aef",
+        "bytes": "ev_a287afb50852589022abee08794499455be310511b3bd8e488d3d9ced67f2328",
+        "entry": "ev_dad16bf3588c74883e6e732c0a3c8fc609272e4e024cc0b27cc239ad9bba0d64"
+      }
+    },
+    {
+      "name": "common-after",
+      "sha256": "ecd4b6e6e8d5d207ff84142e173d4d42f5c2d694c5f5edf7766ef438caa1c68f",
+      "complete_bytes_verified": 3250,
+      "load_checks": 23,
+      "entry_address": "0xf1ca",
+      "entry_mnemonic": "RTS",
+      "evidence_ids": {
+        "load": "ev_3a702595c61787bae65391fcfbb356780ecdb849d7075fa495be8f4dc7dc09be",
+        "bytes": "ev_d0513f716f8ce53830af734a3b9f0ffc862c4815bf4305d16423b11b8ce1545b",
+        "entry": "ev_84e1d6e9944635c5eba63b86a599d41afab599974ed19e352921386581e2e236"
+      }
+    },
+    {
+      "name": "copy-routine",
+      "sha256": "cdd4b66e002ad636477c21841b8296f3b401d58b095533b17b019625a82c2733",
+      "complete_bytes_verified": 39,
+      "load_checks": 23,
+      "entry_address": "0xf269",
+      "entry_mnemonic": "LDA",
+      "evidence_ids": {
+        "load": "ev_5cca6cb4746004c01a511dc542a75438134ecadfcd9897e0bed55eca8bd1832e",
+        "bytes": "ev_a4ea0669da52fc134acc86902d379bde9b6a4d36e19bbe69bbf95c2f36e67983",
+        "entry": "ev_fe59c28e9faf37ac59ca003ab102cc583f056847a7dc23f32e29967cfb7b8662"
+      }
+    },
+    {
+      "name": "relocated-init",
+      "sha256": "0173682c76bc82d93d6298d0c93d8d8be980be09ff6cbf0a8f3e5336a2bcd2cc",
+      "complete_bytes_verified": 1280,
+      "load_checks": 23,
+      "entry_address": "0x6800",
+      "entry_mnemonic": "CLD",
+      "evidence_ids": {
+        "load": "ev_41fc74eb0af85cf409361aa62be23b24beded345c7777795949b765c73adb9a5",
+        "bytes": "ev_44e4e6c8dc7fa74331ca90d13eede83acf546c76f626c06cc199a663887a4834",
+        "entry": "ev_a9d1dfe870a9de0cdb533a41750317c25b62322526778390e76c6e105692d2c8"
+      }
+    }
+  ],
+  "overlay_length": 3124,
+  "overlay_changed_byte_values": 2818,
+  "relocation": {
+    "source": "0xf290",
+    "destination": "0x6800",
+    "length": 1280,
+    "scope": "Static source-pointer and payload equality, not executed copy"
+  },
+  "rea_pcode_entry": {
+    "address": "0xf248",
+    "status": "undecodable",
+    "evidence_id": "ev_551e0ef7724db8bb153a2d96b57570f487e444d852c5baa70beb9a6c304eb6eb",
+    "scope": "Single address; full-range array classification is direct Ghidra evidence"
+  },
+  "scope": "Actual REA byte reads compared with disk-derived snapshots and direct Ghidra",
+  "limitations": [
+    "Static imports do not emulate bank hardware or boot execution.",
+    "Low-bank REA probes cover D152..D154, not the entire low bank.",
+    "Persistent array typing is checked in direct Ghidra, not imported into REA.",
+    "Both analysis routes use Ghidra, not independent decoders."
+  ],
+  "direct_ghidra": {
+    "report": "analysis/memory-view-validation.json",
+    "snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
+    "region_classifications": [
+      {
+        "start": "d000",
+        "end_inclusive": "d0ff",
+        "native_instruction_count": 0,
+        "data_type": "word[128]",
+        "data_length": 256
+      },
+      {
+        "start": "d100",
+        "end_inclusive": "d151",
+        "native_instruction_count": 0,
+        "data_type": "word[41]",
+        "data_length": 82
+      },
+      {
+        "start": "f248",
+        "end_inclusive": "fe7b",
+        "native_instruction_count": 0,
+        "data_type": "byte[3124]",
+        "data_length": 3124
+      }
+    ]
+  },
+  "assembly_evidence_ids": {
+    "copy-routine": "ev_3cc85a28f0720a30cb711e9f4ad552247e309ab8aedc89d07c219870b1afdf7c",
+    "relocated-init": "ev_f2bd876b74b6e49b6ce57b6e383f75b4c0b14286ba72531cb7b6a21064ddb630"
+  }
+}

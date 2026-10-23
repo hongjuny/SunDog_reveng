@@ -67,4 +67,13 @@ source snapshot. Ghidra also creates ZERO_PAGE and STACK blocks, but both are
 
 The synthetic handler probes intentionally supply RAM/stack values for isolated
 checks. Their initialized test memory is not an observed machine state or a
-replacement for the uninitialized Ghidra blocks. REA agreement remains pending.
+replacement for the uninitialized Ghidra blocks.
+
+## Actual REA comparison
+
+Six bounded REA/Ghidra imports passed complete byte comparisons on 2026-10-23.
+The bank-specific D152 instructions, common-memory overlay, native copy loop and
+relocated initializer agree with the static snapshots. See
+[REA memory views](rea-memory-views.md) and `analysis/rea-memory-crosscheck.json`
+for scope, Evidence IDs and reproduction. Full array typing remains in the
+persistent Ghidra Program; REA does not mirror those annotations or emulate banks.

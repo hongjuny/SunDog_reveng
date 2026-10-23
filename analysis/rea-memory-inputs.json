@@ -1,0 +1,482 @@
+{
+  "method": "Static disk-derived views; no Language Card emulation",
+  "composition": {
+    "low_bank_matches": true,
+    "common_upper_matches": true,
+    "segment0_overlay_matches": true,
+    "outside_overlay_unchanged": true,
+    "changed_bytes": 2818
+  },
+  "views": [
+    {
+      "name": "bank1-entry",
+      "path": "analysis/regions/rea-memory-bank1-entry.bin",
+      "base_and_entry": "0xd152",
+      "end_exclusive": "0xd155",
+      "length": 3,
+      "sha256": "db95ae9208dd2a7e633448f9a8b3a0a45eeacbe51a7aacb2752de74483a3b634",
+      "source_snapshot": "analysis/regions/runtime-bank1.bin",
+      "source_snapshot_sha256": "275beee7358872e73e06cf423c9969ffa77589102d478ad5b2fbca2f26ca41f6",
+      "source_snapshot_offset": 338,
+      "expected_entry_mnemonic": "JMP",
+      "sectors": [
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 30,
+          "sector": 8,
+          "physical_sector": 14,
+          "disk_offset": 125010,
+          "memory_address": "0xd152",
+          "length": 3
+        }
+      ],
+      "entry_scope": "Bounded native entry"
+    },
+    {
+      "name": "bank2-entry",
+      "path": "analysis/regions/rea-memory-bank2-entry.bin",
+      "base_and_entry": "0xd152",
+      "end_exclusive": "0xd155",
+      "length": 3,
+      "sha256": "3ee0f7a563ee84a54383d3a626ffea57b75ec5e35051c4624fef7202dd46e949",
+      "source_snapshot": "analysis/regions/lc-bank2.bin",
+      "source_snapshot_sha256": "dc27d73b068c54c83e0bf1ffa6a91e27c88829025c320d5b1eedcacc1b83a69f",
+      "source_snapshot_offset": 338,
+      "expected_entry_mnemonic": "JSR",
+      "sectors": [
+        {
+          "source_kind": "lc-bank2",
+          "side": "utility",
+          "track": 27,
+          "sector": 8,
+          "physical_sector": 14,
+          "disk_offset": 112722,
+          "memory_address": "0xd152",
+          "length": 3
+        }
+      ],
+      "entry_scope": "Bounded native entry"
+    },
+    {
+      "name": "common-before",
+      "path": "analysis/regions/rea-memory-common-before.bin",
+      "base_and_entry": "0xf1ca",
+      "end_exclusive": "0xfe7c",
+      "length": 3250,
+      "sha256": "70c686ac4e9292b76114dc9215c0fac08f736a8f764f140fac83180aa53d98d2",
+      "source_snapshot": "analysis/regions/runtime-bank1.bin",
+      "source_snapshot_sha256": "275beee7358872e73e06cf423c9969ffa77589102d478ad5b2fbca2f26ca41f6",
+      "source_snapshot_offset": 8650,
+      "expected_entry_mnemonic": "RTS",
+      "sectors": [
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 8,
+          "physical_sector": 14,
+          "disk_offset": 121034,
+          "memory_address": "0xf1ca",
+          "length": 54
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 120576,
+          "memory_address": "0xf200",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 6,
+          "physical_sector": 3,
+          "disk_offset": 120320,
+          "memory_address": "0xf300",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 5,
+          "physical_sector": 5,
+          "disk_offset": 120064,
+          "memory_address": "0xf400",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 4,
+          "physical_sector": 7,
+          "disk_offset": 119808,
+          "memory_address": "0xf500",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 3,
+          "physical_sector": 9,
+          "disk_offset": 119552,
+          "memory_address": "0xf600",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 2,
+          "physical_sector": 11,
+          "disk_offset": 119296,
+          "memory_address": "0xf700",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 1,
+          "physical_sector": 13,
+          "disk_offset": 119040,
+          "memory_address": "0xf800",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 15,
+          "physical_sector": 15,
+          "disk_offset": 122624,
+          "memory_address": "0xf900",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 30,
+          "sector": 0,
+          "physical_sector": 0,
+          "disk_offset": 122880,
+          "memory_address": "0xfa00",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 30,
+          "sector": 14,
+          "physical_sector": 2,
+          "disk_offset": 126464,
+          "memory_address": "0xfb00",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 30,
+          "sector": 13,
+          "physical_sector": 4,
+          "disk_offset": 126208,
+          "memory_address": "0xfc00",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 30,
+          "sector": 12,
+          "physical_sector": 6,
+          "disk_offset": 125952,
+          "memory_address": "0xfd00",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 30,
+          "sector": 11,
+          "physical_sector": 8,
+          "disk_offset": 125696,
+          "memory_address": "0xfe00",
+          "length": 124
+        }
+      ],
+      "entry_scope": "Existing native RTS selected to stop flow before data; not a boot entry"
+    },
+    {
+      "name": "common-after",
+      "path": "analysis/regions/rea-memory-common-after.bin",
+      "base_and_entry": "0xf1ca",
+      "end_exclusive": "0xfe7c",
+      "length": 3250,
+      "sha256": "ecd4b6e6e8d5d207ff84142e173d4d42f5c2d694c5f5edf7766ef438caa1c68f",
+      "source_snapshot": "analysis/regions/interpreter-ready.bin",
+      "source_snapshot_sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b",
+      "source_snapshot_offset": 8650,
+      "expected_entry_mnemonic": "RTS",
+      "sectors": [
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 8,
+          "physical_sector": 14,
+          "disk_offset": 121034,
+          "memory_address": "0xf1ca",
+          "length": 54
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 120576,
+          "memory_address": "0xf200",
+          "length": 72
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 31,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 128768,
+          "memory_address": "0xf248",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 31,
+          "sector": 6,
+          "physical_sector": 3,
+          "disk_offset": 128512,
+          "memory_address": "0xf348",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 31,
+          "sector": 5,
+          "physical_sector": 5,
+          "disk_offset": 128256,
+          "memory_address": "0xf448",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 31,
+          "sector": 4,
+          "physical_sector": 7,
+          "disk_offset": 128000,
+          "memory_address": "0xf548",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 31,
+          "sector": 3,
+          "physical_sector": 9,
+          "disk_offset": 127744,
+          "memory_address": "0xf648",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 31,
+          "sector": 2,
+          "physical_sector": 11,
+          "disk_offset": 127488,
+          "memory_address": "0xf748",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 31,
+          "sector": 1,
+          "physical_sector": 13,
+          "disk_offset": 127232,
+          "memory_address": "0xf848",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 31,
+          "sector": 15,
+          "physical_sector": 15,
+          "disk_offset": 130816,
+          "memory_address": "0xf948",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 32,
+          "sector": 0,
+          "physical_sector": 0,
+          "disk_offset": 131072,
+          "memory_address": "0xfa48",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 32,
+          "sector": 14,
+          "physical_sector": 2,
+          "disk_offset": 134656,
+          "memory_address": "0xfb48",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 32,
+          "sector": 13,
+          "physical_sector": 4,
+          "disk_offset": 134400,
+          "memory_address": "0xfc48",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 32,
+          "sector": 12,
+          "physical_sector": 6,
+          "disk_offset": 134144,
+          "memory_address": "0xfd48",
+          "length": 256
+        },
+        {
+          "source_kind": "segment0",
+          "side": "utility",
+          "track": 32,
+          "sector": 11,
+          "physical_sector": 8,
+          "disk_offset": 133888,
+          "memory_address": "0xfe48",
+          "length": 52
+        }
+      ],
+      "entry_scope": "Existing native RTS selected to stop flow before data; not a boot entry"
+    },
+    {
+      "name": "copy-routine",
+      "path": "analysis/regions/rea-memory-copy-routine.bin",
+      "base_and_entry": "0xf269",
+      "end_exclusive": "0xf290",
+      "length": 39,
+      "sha256": "cdd4b66e002ad636477c21841b8296f3b401d58b095533b17b019625a82c2733",
+      "source_snapshot": "analysis/regions/runtime-bank1.bin",
+      "source_snapshot_sha256": "275beee7358872e73e06cf423c9969ffa77589102d478ad5b2fbca2f26ca41f6",
+      "source_snapshot_offset": 8809,
+      "expected_entry_mnemonic": "LDA",
+      "sectors": [
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 120681,
+          "memory_address": "0xf269",
+          "length": 39
+        }
+      ],
+      "entry_scope": "Bounded native entry"
+    },
+    {
+      "name": "relocated-init",
+      "path": "analysis/regions/rea-memory-relocated-init.bin",
+      "base_and_entry": "0x6800",
+      "end_exclusive": "0x6d00",
+      "length": 1280,
+      "sha256": "0173682c76bc82d93d6298d0c93d8d8be980be09ff6cbf0a8f3e5336a2bcd2cc",
+      "source_snapshot": "analysis/regions/relocated-6800.bin",
+      "source_snapshot_sha256": "0173682c76bc82d93d6298d0c93d8d8be980be09ff6cbf0a8f3e5336a2bcd2cc",
+      "source_snapshot_offset": 0,
+      "expected_entry_mnemonic": "CLD",
+      "sectors": [
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 7,
+          "physical_sector": 1,
+          "disk_offset": 120720,
+          "memory_address": "0x6800",
+          "length": 112
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 6,
+          "physical_sector": 3,
+          "disk_offset": 120320,
+          "memory_address": "0x6870",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 5,
+          "physical_sector": 5,
+          "disk_offset": 120064,
+          "memory_address": "0x6970",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 4,
+          "physical_sector": 7,
+          "disk_offset": 119808,
+          "memory_address": "0x6a70",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 3,
+          "physical_sector": 9,
+          "disk_offset": 119552,
+          "memory_address": "0x6b70",
+          "length": 256
+        },
+        {
+          "source_kind": "runtime-bank1",
+          "side": "utility",
+          "track": 29,
+          "sector": 2,
+          "physical_sector": 11,
+          "disk_offset": 119296,
+          "memory_address": "0x6c70",
+          "length": 144
+        }
+      ],
+      "entry_scope": "Bounded native entry"
+    }
+  ]
+}
