@@ -27,5 +27,5 @@ seeds=p.read_text().split(',')
 Path('analysis/local/ready-seeds.txt').write_text(','.join(n for n in seeds if n!='fef2'))
 Path('analysis/regions/bios-read-bank2.bin').write_bytes(Path('analysis/regions/lc-bank2.bin').read_bytes())
 PYCODE
-"$GHIDRA_INSTALL_DIR/support/analyzeHeadless" ghidra/projects SunDog -import analysis/regions/interpreter-ready.bin -overwrite -processor 6502:LE:16:default -loader BinaryLoader -loader-baseAddr d000 -scriptPath ghidra/scripts -postScript ExportBoot.java ghidra/exports/interpreter-ready.txt "$(cat analysis/local/ready-seeds.txt)" > analysis/local/ghidra-ready.log 2>&1
 "$GHIDRA_INSTALL_DIR/support/analyzeHeadless" ghidra/projects SunDog -import analysis/regions/bios-read-bank2.bin -overwrite -processor 6502:LE:16:default -loader BinaryLoader -loader-baseAddr d000 -scriptPath ghidra/scripts -postScript ExportBoot.java ghidra/exports/bios-read-bank2.txt d029 > analysis/local/ghidra-read.log 2>&1
+sh tools/run_opcode_analysis.sh

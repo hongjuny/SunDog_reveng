@@ -8,6 +8,11 @@ import java.io.*;
 public class ExportBoot extends GhidraScript {
  public void run() throws Exception {
   boolean ready=currentProgram.getName().equals("interpreter-ready.bin");
+  if(ready || currentProgram.getName().equals("runtime-bank1.bin")) {
+   clearListing(toAddr(0xd000),toAddr(0xd151));
+   createData(toAddr(0xd000),new ArrayDataType(WordDataType.dataType,128,2));
+   createData(toAddr(0xd100),new ArrayDataType(WordDataType.dataType,41,2));
+  }
   if(ready) {
    clearListing(toAddr(0xf248),toAddr(0xfe7b));
    createData(toAddr(0xf248),new ArrayDataType(ByteDataType.dataType,3124,1));

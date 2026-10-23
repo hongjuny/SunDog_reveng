@@ -27,3 +27,10 @@ bytes and exact fetch signatures (`tools/runtime_evidence.py`), not a borrowed V
 Separate disk-read and general bank 2 Programs preserve the overlapping D026/D029
 instruction streams. Ghidra still cannot model later bank switching or changing
 JMP operands automatically; reports must be read with those state limits.
+
+Milestone 3 adds `AnnotateOpcodes.java` and `ExportMemoryState.java`. The focused
+wrapper `tools/run_opcode_analysis.sh` verifies that tables and p-code are data,
+checks annotation readback, and saves snapshot-specific selected handler semantics.
+The alias handlers rely on A/Carry/Y left by dispatch; decompiling them as normal
+independent functions loses this interface. Reports distinguish the 908 controlled
+native-model cases from actual hardware execution and from missing REA Evidence.

@@ -128,3 +128,11 @@ control-flow rules, native procedures and later segment loading still need check
 The next step is to follow the initial Pascal procedures into SYSTEM.STARTUP and
 library loading, using the actual Apple II handler semantics and banked memory
 state. A controlled emulator trace remains necessary to observe the hardware path.
+
+## Milestone 3 continuation
+
+The selected native-handler model now reproduces the first three p-code
+operations from F248 on synthetic frame/stack state. The following selector 26
+reaches EF7D and, with the initial mapping, BIOS FF06 with the two pointer words
+D1E3 and BDDE. Execution stops before the wrapper; bank 2 D7EF is a static mapped
+destination, not an observed device execution. See [opcode evidence](opcode-semantics.md).

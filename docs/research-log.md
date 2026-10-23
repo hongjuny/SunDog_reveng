@@ -142,3 +142,56 @@ D000 data table as executable code. Direct Ghidra saved the reference disassembl
 and finds A000 (LDY #0) at D293. Actual REA Evidence is still required. A validator
 and three added deterministic tests distinguish installed-file/readiness checks
 from matching native instruction Evidence. Sixteen tests pass.
+
+## 2026-10-23 — continued independent checks and selected opcode semantics
+
+The user requested continued progress. Rechecked the live REA session and existing
+client environment: GHIDRA_INSTALL_DIR remains absent. No duplicate failing open
+request, configuration rewrite, safety bypass or false connection-pass claim was
+made. Checkpoint 1 remains pending. Independent direct Ghidra/source checks and
+handler investigation proceeded with that limitation recorded.
+
+Memory-view verification now checks low-bank composition, common upper RAM,
+segment 0 overlay and unchanged bytes outside it. Ghidra explicitly classifies
+the two dispatch tables as word arrays and the p-code overlay as byte data, with
+zero native instructions in those spans. The loaded initialized-block hash agrees
+with the source snapshot. A first validator assumed a single total memory block;
+it failed because Ghidra creates uninitialized ZERO_PAGE and STACK blocks too.
+The corrected check examines initialized bytes and preserves those blocks as
+unknown/uninitialized rather than treating them as zero-filled observations.
+
+A key semantic finding: high opcode dispatch preserves A=(opcode*2)&FF, Carry=1,
+and Y=0. Shared handlers use that state, so collapsing all aliases by native
+address would lose local/global/indirect offsets. D155 returns twice a 7-bit or
+15-bit encoded index, unlike the little-endian literal word instruction.
+
+Added a limited binary-mode 6502 handler-replay tool, not an Apple II emulator.
+Eight native-model unit tests exercise flags, rotates, calls, page-wrap behavior,
+branches and explicit unsupported/budget failures. With actual snapshot bytes,
+908 declared synthetic cases check all 128 short constants, 62 ordinary high
+opcode values, and the prefix of the shared error-111 path for 18 more. Forty-eight
+high opcode values remain unresolved. All 407 distinct native addresses visited
+by these selected probes are defined instructions in the Ghidra listing.
+
+Ghidra labels/comments were persisted at 26 native entries. Comment readback and
+alias membership are exported and checked; the project save succeeded. Tables and
+p-code remain data. Opcode facts, source locations, synthetic case counts and
+limitations are in analysis/opcode-evidence.json and docs/opcode-semantics.md.
+
+A bounded replay of original startup p-code on synthetic frame/stack state checks
+F248 push-zero, F249 store-local index 5, and F24B push-one. The following 9E/26
+selector reaches EF7D and then FF06, with pointer-word arguments D1E3 and BDDE.
+It stops before the BIOS wrapper and bank switch. The mapped bank 2 target is
+D7EF; hardware/device behavior and actual startup frame values remain unobserved.
+The prefix's visited native instruction boundaries also agree with Ghidra.
+
+Validation: 27 deterministic tests (without game media), 908 native-binary model
+cases, direct Ghidra memory/type/annotation checks, and reproducible reports.
+REA cross-validation and a controlled hardware/ROM execution trace remain open.
+
+The complete Ghidra pipeline was rerun successfully with the new classification,
+annotation/readback and replay checks integrated. A conditional follow-up seed was
+also recorded without simulating BIOS success: normal return would resume at
+F24E, where CD selects SYSTEM.PASCAL slot 4 / procedure 1. Native operand selection,
+archive extent and all ten procedure records agree; entry offset 060A maps to
+Utility T33/DOS9 byte 10. Runtime allocation and actual call execution remain open.

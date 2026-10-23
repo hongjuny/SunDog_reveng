@@ -26,7 +26,7 @@ and [research log](docs/research-log.md). The first milestone is static analysis
 not an observed emulator boot. Unreadable Play Track 34 remains unknown.
 
 Run `python3 tools/structural_evidence.py` after generating disk and boot regions
-to reproduce HGR table and directory-shape checks. Sixteen deterministic tests
+to reproduce HGR table and directory-shape checks. Twenty-seven deterministic tests
 require no original media. Raw searches, binaries, projects and disassembly stay
 local; structured statistics and provenance are versioned.
 
@@ -44,3 +44,9 @@ The current ordered tool-integration checkpoints are in
 contains a prepared environment fragment and a bounded native smoke test.
 Run `sh tools/rea-env.sh --check-files` for installed-file validation; this does
 not mark the REA integration as passed.
+
+Selected Apple II [opcode semantics](docs/opcode-semantics.md) are checked through
+908 controlled native-handler replay cases, without claiming a full CPU/device
+emulator or p-code disassembler. `sh tools/run_opcode_analysis.sh` updates the
+focused Ghidra annotations, memory classification checks and startup-prefix probe.
+REA's connection acceptance remains pending independently of these direct results.

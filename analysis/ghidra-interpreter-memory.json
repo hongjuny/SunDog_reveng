@@ -1,0 +1,48 @@
+{
+  "program": "interpreter-ready.bin",
+  "language": "6502:LE:16:default",
+  "blocks": [
+    {
+      "name": "ZERO_PAGE",
+      "start": "0000",
+      "length": 256,
+      "initialized": false
+    },
+    {
+      "name": "STACK",
+      "start": "0100",
+      "length": 256,
+      "initialized": false
+    },
+    {
+      "name": "RAM",
+      "start": "d000",
+      "length": 12288,
+      "initialized": true,
+      "sha256": "fbb9094b9dd0e11eadcc91351cc2ebdb9c65739762072b2cf14e291b99907f7b"
+    }
+  ],
+  "regions": [
+    {
+      "start": "d000",
+      "end_inclusive": "d0ff",
+      "native_instruction_count": 0,
+      "data_type": "word[128]",
+      "data_length": 256
+    },
+    {
+      "start": "d100",
+      "end_inclusive": "d151",
+      "native_instruction_count": 0,
+      "data_type": "word[41]",
+      "data_length": 82
+    },
+    {
+      "start": "f248",
+      "end_inclusive": "fe7b",
+      "native_instruction_count": 0,
+      "data_type": "byte[3124]",
+      "data_length": 3124
+    }
+  ]
+}

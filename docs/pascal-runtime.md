@@ -77,3 +77,15 @@ Resolve SYSTEM.STARTUP's out-of-extent descriptors and identify when the Play di
 is selected. Then reconstruct procedure calls, segment relocation, and stack/heap
 management beyond the initial native handoff. Observe the boot in a controlled
 emulator before describing hardware-specific branches as executed facts.
+
+## Milestone 3: selected handler semantics
+
+[Selected opcode semantics](opcode-semantics.md) now records the Apple II native
+basis for arithmetic/bitwise operations, short constants, local/global/nonlocal
+addressing, literal words, inline pointers and the variable-width scaled index.
+908 native-model probes exercise 62 ordinary high opcode values, 18 shared error
+slots, and all 128 short-immediate values. Forty-eight high opcode values remain
+unresolved. Aliases depend on the opcode-derived A/Carry/Y state; pointer equality
+alone is insufficient. Full p-code disassembly and complete interpreter emulation
+are still deferred. The startup prefix now reaches BIOS FF06 in controlled
+synthetic replay, stopping before its bank switch/device behavior.

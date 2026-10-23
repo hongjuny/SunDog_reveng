@@ -1,0 +1,264 @@
+[
+  {
+    "handler": 53743,
+    "label": "pc_shared_error_111",
+    "comment_readback_matches": true,
+    "opcodes": [
+      129,
+      131,
+      133,
+      135,
+      137,
+      138,
+      139,
+      140,
+      144,
+      146,
+      148,
+      150,
+      151,
+      153,
+      156,
+      160,
+      211,
+      212
+    ]
+  },
+  {
+    "handler": 53901,
+    "label": "pc_advance_only",
+    "comment_readback_matches": true,
+    "opcodes": [
+      210,
+      215
+    ]
+  },
+  {
+    "handler": 53975,
+    "label": "pc_zero_word",
+    "comment_readback_matches": true,
+    "opcodes": [
+      159
+    ]
+  },
+  {
+    "handler": 53982,
+    "label": "pc_literal_word",
+    "comment_readback_matches": true,
+    "opcodes": [
+      199
+    ]
+  },
+  {
+    "handler": 53994,
+    "label": "pc_load_local_short",
+    "comment_readback_matches": true,
+    "opcodes": [
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231
+    ]
+  },
+  {
+    "handler": 54007,
+    "label": "pc_load_local",
+    "comment_readback_matches": true,
+    "opcodes": [
+      202
+    ]
+  },
+  {
+    "handler": 54037,
+    "label": "pc_address_local",
+    "comment_readback_matches": true,
+    "opcodes": [
+      198
+    ]
+  },
+  {
+    "handler": 54075,
+    "label": "pc_store_local",
+    "comment_readback_matches": true,
+    "opcodes": [
+      204
+    ]
+  },
+  {
+    "handler": 54105,
+    "label": "pc_load_global_short",
+    "comment_readback_matches": true,
+    "opcodes": [
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247
+    ]
+  },
+  {
+    "handler": 54118,
+    "label": "pc_load_global",
+    "comment_readback_matches": true,
+    "opcodes": [
+      169
+    ]
+  },
+  {
+    "handler": 54148,
+    "label": "pc_address_global",
+    "comment_readback_matches": true,
+    "opcodes": [
+      165
+    ]
+  },
+  {
+    "handler": 54186,
+    "label": "pc_store_global",
+    "comment_readback_matches": true,
+    "opcodes": [
+      171
+    ]
+  },
+  {
+    "handler": 54216,
+    "label": "pc_load_nonlocal",
+    "comment_readback_matches": true,
+    "opcodes": [
+      182
+    ]
+  },
+  {
+    "handler": 54254,
+    "label": "pc_address_nonlocal",
+    "comment_readback_matches": true,
+    "opcodes": [
+      178
+    ]
+  },
+  {
+    "handler": 54300,
+    "label": "pc_store_nonlocal",
+    "comment_readback_matches": true,
+    "opcodes": [
+      184
+    ]
+  },
+  {
+    "handler": 54440,
+    "label": "pc_load_indirect_short",
+    "comment_readback_matches": true,
+    "opcodes": [
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255
+    ]
+  },
+  {
+    "handler": 54443,
+    "label": "pc_load_indirect_short",
+    "comment_readback_matches": true,
+    "opcodes": [
+      248
+    ]
+  },
+  {
+    "handler": 54703,
+    "label": "pc_bitwise_and16",
+    "comment_readback_matches": true,
+    "opcodes": [
+      132
+    ]
+  },
+  {
+    "handler": 54722,
+    "label": "pc_bitwise_or16",
+    "comment_readback_matches": true,
+    "opcodes": [
+      141
+    ]
+  },
+  {
+    "handler": 54741,
+    "label": "pc_bitwise_not16",
+    "comment_readback_matches": true,
+    "opcodes": [
+      147
+    ]
+  },
+  {
+    "handler": 55039,
+    "label": "pc_absolute16",
+    "comment_readback_matches": true,
+    "opcodes": [
+      128
+    ]
+  },
+  {
+    "handler": 55069,
+    "label": "pc_add16",
+    "comment_readback_matches": true,
+    "opcodes": [
+      130
+    ]
+  },
+  {
+    "handler": 55093,
+    "label": "pc_negate16",
+    "comment_readback_matches": true,
+    "opcodes": [
+      145
+    ]
+  },
+  {
+    "handler": 55111,
+    "label": "pc_subtract16",
+    "comment_readback_matches": true,
+    "opcodes": [
+      149
+    ]
+  },
+  {
+    "handler": 55569,
+    "label": "pc_inline_payload_pointer",
+    "comment_readback_matches": true,
+    "opcodes": [
+      208
+    ]
+  },
+  {
+    "handler": 55593,
+    "label": "pc_inline_length_pointer",
+    "comment_readback_matches": true,
+    "opcodes": [
+      166
+    ]
+  }
+]

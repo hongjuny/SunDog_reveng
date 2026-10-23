@@ -51,3 +51,20 @@ relocated code. The final loop/jump at `$6C31–$6C45` survives long enough to e
 `$D293`. Do not retain the old `$F269/$F290` native definitions after the segment 0
 load, or the `$6800` definitions after that final clear. The interpreter-ready
 Ghidra view marks the segment 0 range as p-code data rather than 6502 instructions.
+
+## Milestone 3: direct Ghidra view verification
+
+`analysis/memory-view-validation.json` verifies low-bank composition, shared upper
+RAM, the 3124-byte segment 0 overlay and the unchanged bytes outside that overlay.
+There are 2818 differing byte values between the two snapshots; this is a byte
+comparison count, not a claim that only 2818 bytes were copied or written.
+
+In the interpreter-ready Ghidra Program, `$D000–$D0FF` is `word[128]`,
+`$D100–$D151` is `word[41]`, and `$F248–$FE7B` is `byte[3124]`. None contains native
+instructions in the listing. The initialized RAM block hash matches the bounded
+source snapshot. Ghidra also creates ZERO_PAGE and STACK blocks, but both are
+**uninitialized**; they must not be treated as observed zero-filled memory.
+
+The synthetic handler probes intentionally supply RAM/stack values for isolated
+checks. Their initialized test memory is not an observed machine state or a
+replacement for the uninitialized Ghidra blocks. REA agreement remains pending.
