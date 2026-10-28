@@ -1,0 +1,38 @@
+{
+  "evidence_documents": [
+    "ship-main-loop.json",
+    "joystick-pointer.json",
+    "ship-actions.json",
+    "ghidra-gameplay-annotations.json"
+  ],
+  "periodic": {
+    "source": {
+      "segment": 24,
+      "procedure": 9,
+      "start": 3590,
+      "end_exclusive": 3666,
+      "sha256": "9d105be6ea419064d99e373a1a269ab7883598fcca0339ce45ce26ec41e46f9b",
+      "source": {
+        "side": "play",
+        "track": 15,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 62720,
+        "byte_in_sector": 6,
+        "image_offset": 62726
+      }
+    },
+    "confidence": "high-static",
+    "operations": [
+      "Copy global227 into local1",
+      "global352 %= 4; when zero call22P29; then increment global352",
+      "Call24P12 and24P15 with local1 reference; optionally24P13 when flag40 set",
+      "Write local1 back toglobal227; call24P7 with global323 address and values227/8/10"
+    ],
+    "limitations": [
+      "24P9 itself does not store loop counter354; indirect callees not resolved here",
+      "No conversion of loop count15 into seconds or frames is justified",
+      "Names and effects of nested periodic subsystems need further analysis"
+    ]
+  }
+}

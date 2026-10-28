@@ -1,0 +1,698 @@
+{
+  "method": "Static decoded CFG, original segment hash and opcode/operand guards; no runtime execution",
+  "confidence": "high for guarded control flow; gameplay names and timing remain qualified",
+  "source_sha256": "874bbe8ddf38a0b63f2304b63392a9ad9cbf9058ca107a8febb2c2ed5e28d8bb",
+  "root_source_sha256": "c01644b696e7b2bdef1e9773c6b98cc12ad139230edcf4a7994047c2396fcdc6",
+  "root_entry": {
+    "segment": 1,
+    "procedure": 3,
+    "start": 32,
+    "end_exclusive": 132,
+    "sha256": "f6647925db9c739144bcd997a91883c79fb12e1594f3a8b0344ff0a941d1a21d",
+    "source": {
+      "side": "play",
+      "track": 17,
+      "sector": 5,
+      "physical_sector": 5,
+      "offset": 70912,
+      "byte_in_sector": 32,
+      "image_offset": 70944
+    }
+  },
+  "root_dispatch": {
+    "entry": "Root1P3 clears word347 then mode2 calls15P1 at0034",
+    "on_return": "Modes3/4 or>=11 release24 and return; other modes repeat dispatch",
+    "downstream": "Root1P6 chooses rootP3 for mode<=2, rootP4 otherwise; exits mode>=11"
+  },
+  "evidence_spans": [
+    {
+      "segment": 15,
+      "procedure": 1,
+      "start": 2416,
+      "end_exclusive": 2603,
+      "sha256": "9bf3d0de83f4b4ee835d809f1b1dc94c505a6d05afaa6b440404b5ae55f0dd8e",
+      "source": {
+        "side": "play",
+        "track": 24,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 100864,
+        "byte_in_sector": 112,
+        "image_offset": 100976
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 11,
+      "start": 1278,
+      "end_exclusive": 1759,
+      "sha256": "ea02026ff9e6b67f09687f0f9680443ca79a8e0377f75bee67ea01c7daed8899",
+      "source": {
+        "side": "play",
+        "track": 24,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 98304,
+        "byte_in_sector": 254,
+        "image_offset": 98558
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 13,
+      "start": 1804,
+      "end_exclusive": 1984,
+      "sha256": "941dec8ae7a6bd5f23a621062895c475ac1a8f1e5bce34c3eabd2dfafb3e7a7a",
+      "source": {
+        "side": "play",
+        "track": 24,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 101376,
+        "byte_in_sector": 12,
+        "image_offset": 101388
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 14,
+      "start": 1996,
+      "end_exclusive": 2211,
+      "sha256": "9453f76f7512f1b18c4bddfa13ddeffea8e40d1af043700b14570b6da1de1913",
+      "source": {
+        "side": "play",
+        "track": 24,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 101376,
+        "byte_in_sector": 204,
+        "image_offset": 101580
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 15,
+      "start": 2226,
+      "end_exclusive": 2268,
+      "sha256": "1b46e30a6b8db093dec100613998d6cb2fec019d5448a129d45ee124db181424",
+      "source": {
+        "side": "play",
+        "track": 24,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 101120,
+        "byte_in_sector": 178,
+        "image_offset": 101298
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 16,
+      "start": 2278,
+      "end_exclusive": 2405,
+      "sha256": "0496d2b290712c986ff7af9835f8b3dc2beb36a5b154bd8dbaec23158adc14ad",
+      "source": {
+        "side": "play",
+        "track": 24,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 101120,
+        "byte_in_sector": 230,
+        "image_offset": 101350
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 4,
+      "start": 128,
+      "end_exclusive": 527,
+      "sha256": "9da3b88cb61a5a2f82713228226171a380681485ef6a200f7dbc9469e298f430",
+      "source": {
+        "side": "play",
+        "track": 23,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 94976,
+        "byte_in_sector": 128,
+        "image_offset": 95104
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 6,
+      "start": 570,
+      "end_exclusive": 623,
+      "sha256": "a6f076fd759eb6a93e562a3a88185dd5ba116ff57fbd4adf875ec415b33e481c",
+      "source": {
+        "side": "play",
+        "track": 23,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 94464,
+        "byte_in_sector": 58,
+        "image_offset": 94522
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 7,
+      "start": 634,
+      "end_exclusive": 733,
+      "sha256": "82f4c3c7fbd1444a7835ea7c8de30cbeb7dab02c997b586543c99aa8515327a0",
+      "source": {
+        "side": "play",
+        "track": 23,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 94464,
+        "byte_in_sector": 122,
+        "image_offset": 94586
+      }
+    }
+  ],
+  "guards": [
+    {
+      "procedure": 1,
+      "address": 2456,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 2
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2467,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 43
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2473,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 2
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2491,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 8,
+        "procedure": 1
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2527,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 24,
+        "procedure": 9
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2533,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 2
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2543,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 2
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2554,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 2
+      }
+    },
+    {
+      "procedure": 11,
+      "address": 1754,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 42
+      }
+    },
+    {
+      "procedure": 13,
+      "address": 1838,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 34
+      }
+    },
+    {
+      "procedure": 13,
+      "address": 1851,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 35
+      }
+    },
+    {
+      "procedure": 13,
+      "address": 1903,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 41
+      }
+    },
+    {
+      "procedure": 13,
+      "address": 1930,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 22
+      }
+    },
+    {
+      "procedure": 13,
+      "address": 1970,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 22
+      }
+    },
+    {
+      "procedure": 13,
+      "address": 1979,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 41
+      }
+    },
+    {
+      "procedure": 15,
+      "address": 2232,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 22,
+        "procedure": 41
+      }
+    },
+    {
+      "procedure": 16,
+      "address": 2391,
+      "operation": "call_external_segment",
+      "operands": {
+        "segment_operand": 14,
+        "procedure": 1
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2461,
+      "operation": "call_current_dynamic_link",
+      "operands": {
+        "procedure": 13
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2487,
+      "operation": "call_current_dynamic_link",
+      "operands": {
+        "procedure": 15
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2504,
+      "operation": "call_current_dynamic_link",
+      "operands": {
+        "procedure": 11
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2538,
+      "operation": "call_current_dynamic_link",
+      "operands": {
+        "procedure": 13
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2563,
+      "operation": "call_current_dynamic_link",
+      "operands": {
+        "procedure": 16
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2432,
+      "operation": "call_current_dynamic_link",
+      "operands": {
+        "procedure": 11
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2437,
+      "operation": "push_short_constant",
+      "operands": {
+        "value": 4
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2438,
+      "operation": "push_short_constant",
+      "operands": {
+        "value": 8
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2440,
+      "operation": "push_short_constant",
+      "operands": {
+        "value": 2
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2448,
+      "operation": "push_short_constant",
+      "operands": {
+        "value": 10
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2453,
+      "operation": "push_short_constant",
+      "operands": {
+        "value": 4
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2470,
+      "operation": "push_short_constant",
+      "operands": {
+        "value": 1
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2482,
+      "operation": "push_short_constant",
+      "operands": {
+        "value": 10
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2577,
+      "operation": "push_short_constant",
+      "operands": {
+        "value": 2
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2451,
+      "operation": "branch_even_word",
+      "operands": {}
+    },
+    {
+      "procedure": 1,
+      "address": 2485,
+      "operation": "branch_even_word",
+      "operands": {}
+    },
+    {
+      "procedure": 1,
+      "address": 2561,
+      "operation": "branch_even_word",
+      "operands": {}
+    },
+    {
+      "procedure": 1,
+      "address": 2570,
+      "operation": "jump_encoded",
+      "operands": {}
+    },
+    {
+      "procedure": 1,
+      "address": 2512,
+      "operation": "store_table_indexed",
+      "operands": {
+        "selector_or_depth": 29,
+        "index": 354
+      }
+    },
+    {
+      "procedure": 1,
+      "address": 2520,
+      "operation": "load_table_indexed",
+      "operands": {
+        "selector_or_depth": 29,
+        "index": 353
+      }
+    },
+    {
+      "procedure": 11,
+      "address": 1682,
+      "operation": "push_short_constant",
+      "operands": {
+        "value": 15
+      }
+    },
+    {
+      "procedure": 16,
+      "address": 2286,
+      "operation": "call_current_lexical_link",
+      "operands": {
+        "procedure": 14
+      }
+    },
+    {
+      "procedure": 16,
+      "address": 2302,
+      "operation": "secondary_dispatch",
+      "operands": {
+        "effective_selector": 4
+      }
+    },
+    {
+      "procedure": 16,
+      "address": 2331,
+      "operation": "call_current_lexical_link",
+      "operands": {
+        "procedure": 15
+      }
+    },
+    {
+      "procedure": 16,
+      "address": 2347,
+      "operation": "call_current_lexical_link",
+      "operands": {
+        "procedure": 4
+      }
+    },
+    {
+      "procedure": 16,
+      "address": 2358,
+      "operation": "call_current_lexical_link",
+      "operands": {
+        "procedure": 7
+      }
+    },
+    {
+      "procedure": 16,
+      "address": 2369,
+      "operation": "call_current_lexical_link",
+      "operands": {
+        "procedure": 6
+      }
+    },
+    {
+      "procedure": 16,
+      "address": 2401,
+      "operation": "call_current_lexical_link",
+      "operands": {
+        "procedure": 11
+      }
+    },
+    {
+      "procedure": 13,
+      "address": 1808,
+      "operation": "subtract16",
+      "operands": {}
+    },
+    {
+      "procedure": 13,
+      "address": 1812,
+      "operation": "subtract16",
+      "operands": {}
+    },
+    {
+      "procedure": 13,
+      "address": 1819,
+      "operation": "add16",
+      "operands": {}
+    },
+    {
+      "procedure": 13,
+      "address": 1823,
+      "operation": "subtract16",
+      "operands": {}
+    },
+    {
+      "procedure": 13,
+      "address": 1845,
+      "operation": "add16",
+      "operands": {}
+    },
+    {
+      "procedure": 13,
+      "address": 1876,
+      "operation": "add16",
+      "operands": {}
+    }
+  ],
+  "state": {
+    "table": 29,
+    "word": 45,
+    "current_mode": {
+      "shift": 8,
+      "bits": 4
+    },
+    "previous_mode": {
+      "shift": 4,
+      "bits": 4
+    },
+    "action_nibble": {
+      "shift": 0,
+      "bits": 4
+    },
+    "ship_loop_modes": [
+      2,
+      10
+    ],
+    "mode2": "SHIP interior control loop"
+  },
+  "initialization": {
+    "procedure": 11,
+    "pointer_init_call": "22P42@06DA",
+    "tick_threshold": {
+      "word": 353,
+      "value": 15
+    },
+    "button_level_history_local": 12,
+    "initial_button_level": 0,
+    "actor_locals": [
+      6,
+      5
+    ],
+    "pointer_locals": [
+      3,
+      2
+    ],
+    "persisted_actor_words": [
+      40,
+      41
+    ],
+    "previous_mode_controls_reentry": true
+  },
+  "loop_order": [
+    {
+      "address": 2434,
+      "effect": "Continue only for mode2 or10"
+    },
+    {
+      "address": 2456,
+      "effect": "Selector4 button0 level: if down, P13 moves actor toward old pointer"
+    },
+    {
+      "address": 2467,
+      "effect": "22P43 samples/updates pointer locals3/2"
+    },
+    {
+      "address": 2473,
+      "effect": "Selector1 button1 rising edge OR mode10: P15 then8P1; P11 if resulting mode<11"
+    },
+    {
+      "address": 2506,
+      "effect": "Increment word354; signed >= word353 invokes24P9"
+    },
+    {
+      "address": 2533,
+      "effect": "Button0 level: P13 moves actor toward updated pointer"
+    },
+    {
+      "address": 2543,
+      "effect": "Compare level with local12; press resets local4=0; release callsP16"
+    },
+    {
+      "address": 2570,
+      "effect": "Return to mode predicate; cleanup records previousmode2 and releases27,14,8"
+    }
+  ],
+  "held_motion": {
+    "procedure": 13,
+    "delta": [
+      "(local3-3)-local6",
+      "(local2+3)-local5"
+    ],
+    "primary_step": "sign(delta)*min(2,abs(delta))",
+    "collision_call": "22P22 with references to actor locals6/5",
+    "fallback": "If both actor coordinates unchanged, retry with sign-only deltas",
+    "screen": "22P41 before and after move; 22P22 updates actor/rendering"
+  },
+  "release_action": {
+    "procedure": 16,
+    "hit_test": "P14(actorlocal6,actorlocal5), not pointer position",
+    "repeated_target": "If result equals local4, service EXIT(15,16)",
+    "preparation": "P15 removes pointer, saves previousmode2/actionnibble11 and actor words40/41, callsP5",
+    "branches": {
+      "0": "No positive-target modal",
+      "1": "mode0 then P4 cockpit redraw",
+      "3": "P7 sets mode3, previousmode2, bits13=0/12=1",
+      "4": "P6 clears bitarray116/117; mode3 if !word347; word292=6; actorlocal5+=20; P5",
+      "other_positive": "If !word347,14P1(&local1); if still !word347,P11 reinitializes"
+    }
+  },
+  "modal_boundary": {
+    "segment": 8,
+    "procedure": 1,
+    "entry": "button1 rising edge or mode10",
+    "distinction": "P15 persists actor/context in RAM; this alone does not prove disk save",
+    "return_path": "mode<11 callsP11; top predicate finally exits if mode not2/10"
+  },
+  "unknowns": [
+    "24P9 exact time-unit and word354 reset ownership",
+    "Meaning of word347 and mode10 beyond proven modal routing",
+    "Full8P1 save/quit menu and eventual disk-write chain",
+    "Measured frame pacing, physical joystick feel and render ordering under real runtime",
+    "Semantic labels of each P14 numeric target; use separately verified action evidence"
+  ]
+}

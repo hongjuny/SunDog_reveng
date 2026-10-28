@@ -721,3 +721,22 @@ four-stage checks pass, including gate/image hashes and transition history.
 The generated prompt, Bowie menu and initial SHIP images were visually inspected.
 Opening the GUI from this agent session still returns LaunchServices-10827;
 desktop input/presentation of this new build is not claimed as observed.
+
+## 2026-10-28 — SHIP main loop and joystick pointer
+
+User requested analysis of the joystick-pointer gameplay before implementation.
+Traced15P1 held-movement/pointer/modal/periodic/release ordering;15P13/P14/P16
+actor movement and actor-position interaction;22P5/P41/P42/P43/P61/P62 absolute
+paddle sampling and cursor redraw; native22P22 collision candidate ordering.
+Fresh REA/Ghidra12.1.4 evidence retained privately for native sampler and mover.
+Persisted source-SHA-checked labels/comments in SunDogNativeComplete with readback
+and project-save verification. Actual Bowie coordinates42,103 classify as action1;
+stationary-pointer45,100 gives a conditional press/release path to cockpit mode0.
+This is source-derived, not a live gameplay capture. Shared24P9 call sequence
+is guarded separately; its nested subsystem meanings/time units remain unresolved.
+No native app changes. See docs/game-main-loop.md and linked reproducible reports.
+Validation: all150 deterministic Python tests pass. Source-bound P14 classifier
+matches45,220 cases; native P22 four controlled synthetic collision fixtures pass.
+Native sampler correction exhaustively checks65,536 pairs,100 declared paddle
+sequences and576 arithmetic shift cases. These are controlled analysis probes,
+not hardware timing measurements or a complete original gameplay replay.

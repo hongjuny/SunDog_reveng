@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "archive_sha256": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49",
+  "segment": 22,
+  "rea": {
+    "evidence_id": "ev_e989c265fb5ba9e6ba1a7bc3ec18acdd914187aa5d4f3a6c89a1c25899c17f7d",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "subject_sha256": "2c658666c06fc8da3479b55717c40a051a80cd8d622abc3b398bff7365794b38",
+    "original_body_sha256": "54af20adac0dcbd19c54fa52fe809915921f0485a45d4bd4c8d83f9581f8c379",
+    "captured_base": 38334,
+    "source_body": [
+      3498,
+      3616
+    ],
+    "relocation": {
+      "source_operand_offset": 3543,
+      "stored_word": 29,
+      "captured_word": 41861
+    }
+  },
+  "validation": {
+    "counter_tail_cases": 65536,
+    "declared_pulse_sequence_cases": 100,
+    "shift_cases": 576,
+    "rea_defined_tail_instruction_starts": 36,
+    "binary_mode": true,
+    "physical_device_execution": false
+  },
+  "native_correction": {
+    "x": "clamp(c064_counter-3,0,139)",
+    "y": "q=c065_counter//2; clamp(q+(q+1)//2-5,0,95)",
+    "carry": "Second LSR replaces CLC carry before ADC; rounding term is ceil(q/2)."
+  },
+  "axis_mapping": {
+    "x_counter_register": "Y",
+    "y_counter_register": "X",
+    "x_mmio": "C064",
+    "y_mmio": "C065",
+    "timer_strobe": "C070",
+    "nominal_spans": [
+      140,
+      96
+    ],
+    "inset_bounds": [
+      "left+3",
+      "right-5",
+      "top+5",
+      "bottom-3"
+    ],
+    "scale": "2 iff inset span > nominal; otherwise 1",
+    "offset": "lower - arithmetic_shift_right(scale*nominal - inset_span,1)"
+  },
+  "examples": [
+    {
+      "rectangle": [
+        0,
+        279,
+        0,
+        191
+      ],
+      "x_scale_offset": [
+        2,
+        -1
+      ],
+      "y_scale_offset": [
+        2,
+        1
+      ]
+    },
+    {
+      "rectangle": [
+        135,
+        270,
+        90,
+        181
+      ],
+      "x_scale_offset": [
+        1,
+        132
+      ],
+      "y_scale_offset": [
+        1,
+        89
+      ]
+    }
+  ],
+  "redraw": {
+    "procedure": 43,
+    "changed": [
+      "P41 XOR erase old",
+      "store new coordinates",
+      "P41 XOR draw new"
+    ],
+    "unchanged": [],
+    "glyph_table_word": 374,
+    "glyph_position": [
+      "x-3",
+      "y+3"
+    ],
+    "mode": "P41 sets P11(1), draws via native P9, then P11(0)"
+  },
+  "procedures": [
+    {
+      "number": 5,
+      "role": "paddle timer sampling and counter correction",
+      "segment_offset": 3498,
+      "captured_address": 41832,
+      "source": {
+        "track": 13,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 53760,
+        "side": "utility",
+        "byte_in_sector": 170
+      },
+      "body_to_attribute_sha256": "db040780838897b18c1065618379af8480801e3fc745d5f84c15edc6261286a7",
+      "confidence": "high; source control-flow reconstruction, native transformations independently replayed"
+    },
+    {
+      "number": 30,
+      "role": "16-bit left shift",
+      "segment_offset": 4008,
+      "captured_address": 42342,
+      "source": {
+        "track": 13,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 57088,
+        "side": "utility",
+        "byte_in_sector": 168
+      },
+      "body_to_attribute_sha256": "f193cc9cb2c259ff9eca2a3a21c1200881a7697a973f5bfd2d94f6d39782ea4e",
+      "confidence": "high; source control-flow reconstruction, native transformations independently replayed"
+    },
+    {
+      "number": 31,
+      "role": "signed arithmetic right shift",
+      "segment_offset": 3948,
+      "captured_address": 42282,
+      "source": {
+        "track": 13,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 57088,
+        "side": "utility",
+        "byte_in_sector": 108
+      },
+      "body_to_attribute_sha256": "428da86ed1457fd06b5c6e13bb39dc6319aee69c818a352d653ecd33fd6c27ca",
+      "confidence": "high; source control-flow reconstruction, native transformations independently replayed"
+    },
+    {
+      "number": 37,
+      "role": "signed coordinate clamp",
+      "segment_offset": 1754,
+      "captured_address": 40088,
+      "source": {
+        "track": 13,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 55552,
+        "side": "utility",
+        "byte_in_sector": 218
+      },
+      "body_to_attribute_sha256": "7137843bb03b0207371f936021345b36f849ae76bd9805f939d8ff01bd42429e",
+      "confidence": "high; source control-flow reconstruction, native transformations independently replayed"
+    },
+    {
+      "number": 41,
+      "role": "XOR pointer glyph",
+      "segment_offset": 1786,
+      "captured_address": 40120,
+      "source": {
+        "track": 13,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 55552,
+        "side": "utility",
+        "byte_in_sector": 250
+      },
+      "body_to_attribute_sha256": "5b2f22be65d69cf5d460f9ea66b4eafc192fb89c8db842e88509132f5fb45d38",
+      "confidence": "high; source control-flow reconstruction, native transformations independently replayed"
+    },
+    {
+      "number": 42,
+      "role": "pointer bounds and initial draw",
+      "segment_offset": 1946,
+      "captured_address": 40280,
+      "source": {
+        "track": 13,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 55296,
+        "side": "utility",
+        "byte_in_sector": 154
+      },
+      "body_to_attribute_sha256": "3fa64467ef2bc19a614cea89a8f1fb01e86f1a0f6cd11e5f9d4cea5404aa8767",
+      "confidence": "high; source control-flow reconstruction, native transformations independently replayed"
+    },
+    {
+      "number": 43,
+      "role": "sample and redraw only changed pointer",
+      "segment_offset": 2054,
+      "captured_address": 40388,
+      "source": {
+        "track": 13,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 55040,
+        "side": "utility",
+        "byte_in_sector": 6
+      },
+      "body_to_attribute_sha256": "66b11b1cce55e121fff71d3414d390a1a0cdb073fd07bdfeb9ff5a9196e85f10",
+      "confidence": "high; source control-flow reconstruction, native transformations independently replayed"
+    },
+    {
+      "number": 61,
+      "role": "scale offset clamp and output",
+      "segment_offset": 1818,
+      "captured_address": 40152,
+      "source": {
+        "track": 13,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 55296,
+        "side": "utility",
+        "byte_in_sector": 26
+      },
+      "body_to_attribute_sha256": "c615fbe2fc4a8b9b6909dde3c8f54a210d6a6c2ee2bbde9e2d8b76c890d1a5e5",
+      "confidence": "high; source control-flow reconstruction, native transformations independently replayed"
+    },
+    {
+      "number": 62,
+      "role": "axis scale and centering setup",
+      "segment_offset": 1908,
+      "captured_address": 40242,
+      "source": {
+        "track": 13,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 55296,
+        "side": "utility",
+        "byte_in_sector": 116
+      },
+      "body_to_attribute_sha256": "4c9cccc5c2a8afcc651ca53396b1ca8b36f4db5d47cee634c25acb75dbfdf433",
+      "confidence": "high; source control-flow reconstruction, native transformations independently replayed"
+    }
+  ],
+  "uncertainties": [
+    "No real joystick acquisition or electrical timing was measured.",
+    "Eight-bit counters wrap; native loop has no observed timeout. Stuck-high input can loop indefinitely.",
+    "No center deadzone or velocity accumulation in this chain; other configuration paths are not excluded.",
+    "P-code pointer procedures were reconstructed statically, not executed end to end in a live original gameplay session."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "program": "library-22-normalized.bin",
+  "source_sha256": "36f6e96013a05fc236032f9e925d34649e0908dae19b5eea0e673051f5232c8c",
+  "annotations": [
+    {
+      "address": 19882,
+      "label": "JoystickAbsoluteSample",
+      "comment": "Native library22 P5. C070 starts paddle timers; C064/C065 counted in balanced loop. Absolute coordinates, not velocity. See docs/joystick-pointer.md and REA ev_e989c265fb5ba9e6ba1a7bc3ec18acdd914187aa5d4f3a6c89a1c25899c17f7d. This program uses synthetic relocation segment4000/data9000, not actual runtime addresses.",
+      "readback_verified": true
+    },
+    {
+      "address": 21758,
+      "label": "ActorMoveCollisionSlide",
+      "comment": "Native library22 P22. Try (dx,dy), then (dx,0), then (0,dy); P9 mode2 sets overlap scratch word9000. First unblocked candidate updates caller actor coordinates. SHIP15P13 retries one-pixel deltas when unchanged. REA ev_4d639db5476cf53d2fd3134f0c34c92d65ccb6e5bd4575c40a1c0c0de2923fe8. See docs/ship-actions.md.",
+      "readback_verified": true
+    }
+  ]
+}

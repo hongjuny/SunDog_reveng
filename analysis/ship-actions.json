@@ -1,0 +1,458 @@
+{
+  "schema_version": 1,
+  "source_sha256": "874bbe8ddf38a0b63f2304b63392a9ad9cbf9058ca107a8febb2c2ed5e28d8bb",
+  "confidence": "source-confirmed; controlled fixtures",
+  "evidence": [
+    {
+      "segment": 15,
+      "procedure": 1,
+      "start": 2453,
+      "end_exclusive": 2570,
+      "sha256": "30395eaeb79fb3cbfef67398b332b113d52e25310c128c25fa6c0cdd2a501121",
+      "source": {
+        "side": "play",
+        "track": 24,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 100864,
+        "byte_in_sector": 149,
+        "image_offset": 101013
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 13,
+      "start": 1804,
+      "end_exclusive": 1984,
+      "sha256": "941dec8ae7a6bd5f23a621062895c475ac1a8f1e5bce34c3eabd2dfafb3e7a7a",
+      "source": {
+        "side": "play",
+        "track": 24,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 101376,
+        "byte_in_sector": 12,
+        "image_offset": 101388
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 14,
+      "start": 1996,
+      "end_exclusive": 2211,
+      "sha256": "9453f76f7512f1b18c4bddfa13ddeffea8e40d1af043700b14570b6da1de1913",
+      "source": {
+        "side": "play",
+        "track": 24,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 101376,
+        "byte_in_sector": 204,
+        "image_offset": 101580
+      }
+    },
+    {
+      "segment": 15,
+      "procedure": 16,
+      "start": 2278,
+      "end_exclusive": 2405,
+      "sha256": "0496d2b290712c986ff7af9835f8b3dc2beb36a5b154bd8dbaec23158adc14ad",
+      "source": {
+        "side": "play",
+        "track": 24,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 101120,
+        "byte_in_sector": 230,
+        "image_offset": 101350
+      }
+    }
+  ],
+  "classifier_checks": 45220,
+  "supplied_profile_trace": {
+    "side": "utility",
+    "absolute_block": 37,
+    "sectors": [
+      {
+        "side": "utility",
+        "track": 4,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 17664,
+        "resource_offset": 0,
+        "sha256": "a5f9a2c1aaed32c02adc4a2db16cdd747070d57ff4ea9d49ea4a28bc341804c5"
+      },
+      {
+        "side": "utility",
+        "track": 4,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 17408,
+        "resource_offset": 256,
+        "sha256": "8cd080a1c5d89153e95c1e3ac025f168739c5219b26585c954f2338d5beaa970"
+      }
+    ],
+    "profile_record_sha256": "4a45d4775e904782dbaf7330bd78d61d5d0529d26854d827e1b3157c97466f22",
+    "state_word45": 12987,
+    "previous_mode": 11,
+    "actor": [
+      42,
+      103
+    ],
+    "word38": 6160,
+    "word39": 3340,
+    "classifier_result": 1,
+    "example_stationary_pointer": [
+      45,
+      100
+    ],
+    "condition": "Pointer at declared stationary target; button0 observed down then released; actor remains at supplied saved position",
+    "result": "P16 new ID1 after P11 previous_action=0; P15 then mode0 and P4 cockpit instruments",
+    "limitation": "Source-derived conditional trace, not captured live input"
+  },
+  "rea_native_confirmation": {
+    "evidence_id": "ev_4d639db5476cf53d2fd3134f0c34c92d65ccb6e5bd4575c40a1c0c0de2923fe8",
+    "address_range": [
+      "0xAABC",
+      "0xAB82"
+    ],
+    "segment_memory_base": "0x95BE",
+    "sha256": "1307ab43ea5af86dc593aca34ab5cedb83404233812557756e0ffa114613e7e4"
+  },
+  "classifier_case_columns": {
+    "6": "0x7e7",
+    "7": "0x884",
+    "8": "0x7f1",
+    "9": "0x884",
+    "10": "0x884",
+    "11": "0x884",
+    "12": "0x815",
+    "13": "0x884",
+    "14": "0x847",
+    "15": "0x884",
+    "16": "0x81f",
+    "17": "0x861"
+  },
+  "action_dispatch": {
+    "1": "set packed mode 0, call P4 cockpit instrumentation",
+    "3": "P7, set mode3 and packed state flags",
+    "4": "P6, clear two flags; mode3 unless word347; actor y+=20",
+    "other_positive": "segment14 P1 by-reference action ID unless word347"
+  },
+  "semantics": {
+    "held_button0": "P13 moves actor toward pointer minus/plus anchor offsets",
+    "released_button0": "P16 classifies actor coordinates, suppresses repeated action ID",
+    "button1_edge": "P15 then segment8 P1",
+    "collision": "native P22 tries diagonal, x only, y only; P9 mode2 pixel-mask collision; P13 retries unit step if unchanged"
+  },
+  "native_fixtures": [
+    {
+      "actor_before": [
+        48,
+        114
+      ],
+      "pointer": [
+        53,
+        112
+      ],
+      "requested_delta": [
+        2,
+        1
+      ],
+      "blocked_points": [],
+      "candidate_points": [
+        [
+          50,
+          115
+        ]
+      ],
+      "actor_after": [
+        50,
+        115
+      ],
+      "sprite_calls": [
+        {
+          "mode": 1,
+          "sprite": 12,
+          "point": [
+            48,
+            114
+          ]
+        },
+        {
+          "mode": 2,
+          "sprite": 13,
+          "point": [
+            50,
+            115
+          ]
+        },
+        {
+          "mode": 1,
+          "sprite": 12,
+          "point": [
+            50,
+            115
+          ]
+        }
+      ],
+      "steps": 153,
+      "limitation": "P9 collision/drawing intercepted; synthetic oracle, not captured game execution",
+      "library_sha256": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49"
+    },
+    {
+      "actor_before": [
+        48,
+        114
+      ],
+      "pointer": [
+        53,
+        112
+      ],
+      "requested_delta": [
+        2,
+        1
+      ],
+      "blocked_points": [
+        [
+          50,
+          115
+        ]
+      ],
+      "candidate_points": [
+        [
+          50,
+          115
+        ],
+        [
+          50,
+          114
+        ]
+      ],
+      "actor_after": [
+        50,
+        114
+      ],
+      "sprite_calls": [
+        {
+          "mode": 1,
+          "sprite": 12,
+          "point": [
+            48,
+            114
+          ]
+        },
+        {
+          "mode": 2,
+          "sprite": 13,
+          "point": [
+            50,
+            115
+          ]
+        },
+        {
+          "mode": 2,
+          "sprite": 13,
+          "point": [
+            50,
+            114
+          ]
+        },
+        {
+          "mode": 1,
+          "sprite": 12,
+          "point": [
+            50,
+            114
+          ]
+        }
+      ],
+      "steps": 183,
+      "limitation": "P9 collision/drawing intercepted; synthetic oracle, not captured game execution",
+      "library_sha256": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49"
+    },
+    {
+      "actor_before": [
+        48,
+        114
+      ],
+      "pointer": [
+        53,
+        112
+      ],
+      "requested_delta": [
+        2,
+        1
+      ],
+      "blocked_points": [
+        [
+          50,
+          114
+        ],
+        [
+          50,
+          115
+        ]
+      ],
+      "candidate_points": [
+        [
+          50,
+          115
+        ],
+        [
+          50,
+          114
+        ],
+        [
+          48,
+          115
+        ]
+      ],
+      "actor_after": [
+        48,
+        115
+      ],
+      "sprite_calls": [
+        {
+          "mode": 1,
+          "sprite": 12,
+          "point": [
+            48,
+            114
+          ]
+        },
+        {
+          "mode": 2,
+          "sprite": 13,
+          "point": [
+            50,
+            115
+          ]
+        },
+        {
+          "mode": 2,
+          "sprite": 13,
+          "point": [
+            50,
+            114
+          ]
+        },
+        {
+          "mode": 2,
+          "sprite": 13,
+          "point": [
+            48,
+            115
+          ]
+        },
+        {
+          "mode": 1,
+          "sprite": 12,
+          "point": [
+            48,
+            115
+          ]
+        }
+      ],
+      "steps": 217,
+      "limitation": "P9 collision/drawing intercepted; synthetic oracle, not captured game execution",
+      "library_sha256": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49"
+    },
+    {
+      "actor_before": [
+        48,
+        114
+      ],
+      "pointer": [
+        53,
+        112
+      ],
+      "requested_delta": [
+        2,
+        1
+      ],
+      "blocked_points": [
+        [
+          48,
+          115
+        ],
+        [
+          50,
+          114
+        ],
+        [
+          50,
+          115
+        ]
+      ],
+      "candidate_points": [
+        [
+          50,
+          115
+        ],
+        [
+          50,
+          114
+        ],
+        [
+          48,
+          115
+        ]
+      ],
+      "actor_after": [
+        48,
+        114
+      ],
+      "sprite_calls": [
+        {
+          "mode": 1,
+          "sprite": 12,
+          "point": [
+            48,
+            114
+          ]
+        },
+        {
+          "mode": 2,
+          "sprite": 13,
+          "point": [
+            50,
+            115
+          ]
+        },
+        {
+          "mode": 2,
+          "sprite": 13,
+          "point": [
+            50,
+            114
+          ]
+        },
+        {
+          "mode": 2,
+          "sprite": 13,
+          "point": [
+            48,
+            115
+          ]
+        },
+        {
+          "mode": 1,
+          "sprite": 12,
+          "point": [
+            48,
+            114
+          ]
+        }
+      ],
+      "steps": 215,
+      "limitation": "P9 collision/drawing intercepted; synthetic oracle, not captured game execution",
+      "library_sha256": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49"
+    }
+  ],
+  "unknowns": [
+    "Original mask/palette bytes used by each collision plane need independent extraction and replay",
+    "Action IDs 5\u201313 require full segment14 semantic labels",
+    "No measured real-time walking speed or captured joystick trajectory"
+  ]
+}
