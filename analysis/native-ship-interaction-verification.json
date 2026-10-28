@@ -1,0 +1,13 @@
+{
+  "collision_checks": 1440,
+  "classifier_checks": 45220,
+  "all_matched": true,
+  "library_sha256": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49",
+  "font_sha256": "eeadc8615ae25ac5611744c0f32589698d4d3cc4c57808a98df85268d08ca775",
+  "background_sha256": "e3f6e1f949b7600953fbacd152c05d8da531a0fd657c9ea19eb7b1fe2c3fdf56",
+  "method": "Original P9 mode2 with actual glyph13, original color8 masks and original SHIP background compared against native Swift",
+  "limitations": [
+    "Controlled native subroutine probes, not live Apple II timing",
+    "Nested world simulation and facility scenes not included"
+  ]
+}

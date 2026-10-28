@@ -18,6 +18,8 @@ import SunDogLogic
     private var title: TitleLogo?
     private var startupResources: StartupResources?
     private var startup: StartupFlow?
+    private var shipInteraction: ShipInteraction?
+    private var shipTicker: Task<Void,Never>?
     private var presentedPage: [UInt8]?
     private var samples: [UInt8] = [0,0]
     private var diskButtons = ButtonInput()
@@ -122,7 +124,17 @@ import SunDogLogic
         guard (0..<2).contains(channel) else { return }
         samples[channel] = down ? 0x80 : 0
         do {
-            if screen == .awaitingBegin { try pollBegin() }
+            if screen == .ship, channel==0, var ship=shipInteraction {
+                let action=ship.button(down:down)
+                shipInteraction=ship
+                if let action {
+                    notice = action==1 ? "조종석을 선택했습니다. 조종석 화면과 계기 조작은 아직 포팅 중입니다."
+                        : "이 장소를 선택했습니다. 이 장소의 화면과 동작은 아직 포팅 중입니다."
+                }
+            } else if screen == .ship, channel==1, down {
+                cancelShipInput()
+                notice="원본 두 번째 버튼의 메뉴·저장 기능은 아직 포팅 중입니다."
+            } else if screen == .awaitingBegin { try pollBegin() }
             else if screen == .playDisk, let resources=startupResources {
                 diskButtons.latch(first:samples[0],second:samples[1])
                 let a=try diskButtons.poll(selector:0,sample:samples[0]).value
@@ -132,12 +144,45 @@ import SunDogLogic
                         notice="The bundled disk does not pass the original PLAY-side check."
                         return
                     }
-                    try present(resources.initialShip)
+                    let saved=resources.shipState
+                    shipInteraction=try ShipInteraction(background:resources.initialShip,font:resources.font,
+                        actor:.init(saved.x,saved.y),word38:saved.word38,word39:saved.word39,pointerGlyph:saved.pointerGlyph)
+                    try present(shipInteraction!.page())
                     setScreen(.ship)
+                    startShipTicker()
                 }
             }
         } catch { self.error=error.localizedDescription; notice=error.localizedDescription }
     }
+    func movePointer(x: Double, y: Double) {
+        guard screen == .ship, var ship=shipInteraction else { return }
+        ship.movePointer(x:x,y:y);shipInteraction=ship
+        do { try present(ship.page()) } catch { self.error=error.localizedDescription }
+    }
+    func cancelShipInput() {
+        samples=[0,0];shipInteraction?.cancel()
+    }
+    private func startShipTicker() {
+        shipTicker?.cancel()
+        shipTicker=Task { [weak self] in
+            while !Task.isCancelled {
+                do { try await Task.sleep(for:.milliseconds(33)) } catch { return }
+                guard let self, self.screen == .ship else { return }
+                self.advanceShip()
+            }
+        }
+    }
+    func advanceShip() {
+        guard var ship=shipInteraction,ship.held else { return }
+        // Declared host pacing: two movement stages, approximately30Hz.
+        // Original Apple II loop timing/world simulation is not reconstructed.
+        ship.step();ship.step();shipInteraction=ship
+        do { try present(ship.page()) } catch { self.error=error.localizedDescription }
+    }
+    var shipActor: ShipInteraction.Point? { shipInteraction?.actor }
+    var shipPointer: ShipInteraction.Point? { shipInteraction?.pointer }
+    var shipHeld: Bool { shipInteraction?.held ?? false }
+    var shipAction: Int { shipInteraction?.lastAction ?? 0 }
     private func pollBegin() throws {
         guard var state=startup, state.stage == .awaitingBegin else { return }
         let finished=try state.poll(first:samples[0],second:samples[1])
@@ -225,10 +270,27 @@ import SunDogLogic
                     }
                 } catch { model.error=error.localizedDescription }
             }
+            if args.contains("--ship-mouse-check"), model.screen == .ship {
+                model.movePointer(x:80,y:100);model.input(channel:0,down:true)
+                for _ in 0..<12 { model.advanceShip() }
+                model.input(channel:0,down:false)
+                model.advanceShip()
+            }
+            if args.contains("--ship-action-check"), model.screen == .ship {
+                model.movePointer(x:45,y:100);model.input(channel:0,down:true)
+                model.advanceShip();model.input(channel:0,down:false)
+            }
             var report: [String: Any] = ["screen": backgroundOnly ? "boot-background" : "original-title", "gameplay_available": false,
                                          "gui_verified": false, "error": model.error ?? "",
                                          "applied_writes": model.appliedWriteCount, "page_sha256": model.pageSHA256,
                                          "title_steps": model.titleStepCount, "title_complete": model.titleComplete]
+            if let actor=model.shipActor, let pointer=model.shipPointer {
+                report["actor"]=[actor.x,actor.y];report["pointer"]=[pointer.x,pointer.y]
+                report["left_held"]=model.shipHeld
+                report["selected_action"]=model.shipAction
+                report["notice"]=model.notice ?? ""
+                report["ship_mouse_control"]=true
+            }
             if startupScreen != nil {
                 report["screen"]=model.screen.rawValue
                 report["history"]=model.history
@@ -284,7 +346,8 @@ import SunDogLogic
                                 let choosing=model.screen == .choices
                                 model.input(channel:channel,down:down)
                                 if choosing && down { model.click(x:x,y:y) }
-                            }, activate: {
+                            }, pointer: { x,y in model.movePointer(x:x,y:y) },
+                            cancel: { model.cancelShipInput() }, activate: {
                                 if model.screen == .choices {
                                     do { try model.selectChoice(.play) } catch { model.notice=error.localizedDescription }
                                 } else { model.input(channel:0,down:true) }
@@ -294,7 +357,7 @@ import SunDogLogic
                                 }
                             }))
                         .aspectRatio(4.0 / 3.0, contentMode: .fit)
-                        .accessibilityLabel("Original SunDog title screen: spaceship and planet")
+                        .accessibilityLabel("SunDog game display")
                 } else {
                     VStack(spacing: 16) {
                         Text("SunDog").font(.title)
@@ -306,7 +369,7 @@ import SunDogLogic
             }.frame(minWidth: 560, minHeight: 420)
             .task { await model.play() }
             .onReceive(NotificationCenter.default.publisher(for:NSApplication.didResignActiveNotification)) { _ in
-                model.input(channel:0,down:false);model.input(channel:1,down:false)
+                model.cancelShipInput()
             }
             .alert("SunDog",isPresented:Binding(get:{model.notice != nil},set:{if !$0 {model.notice=nil}})) {
                 Button("OK") { model.notice=nil }
@@ -317,7 +380,7 @@ import SunDogLogic
                 Button("About SunDog") {
                     let alert = NSAlert()
                     alert.messageText = "SunDog: Frozen Legacy — Native Port"
-                    alert.informativeText = "Title, original begin prompt, startup choices, PLAY-side validation and the initial SHIP graphics are reconstructed in native code. Click or press Space/Return to advance. Ship controls, utility/demo programs and full gameplay are not implemented yet."
+                    alert.informativeText = "Title, original begin prompt, startup choices, PLAY-side validation and the initial SHIP graphics are reconstructed in native code. Click or press Space/Return to advance. Move the mouse to aim, hold the left button to walk, and release to select at the actor position. Facility screens, world simulation and utility/demo programs are not implemented yet."
                     alert.runModal()
                 }
             }

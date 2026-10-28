@@ -36,7 +36,7 @@ def build(tests=False, include_local_assets=False):
     for name in ('sundog-font.bin','sundog-splash.hgr','sundog-splash.json','sundog-splash-timing.json',
                  'sundog-title-logo.bin','sundog-title-logo.json','startup-text.json',
                  'sundog-startup-profile.json','sundog-startup-ui.json','sundog-play-boot.bin',
-                 'sundog-initial-ship.bin','sundog-initial-ship.json'):
+                 'sundog-initial-ship.bin','sundog-initial-ship.json','sundog-ship-interaction.json'):
         asset=resources/name
         if asset.exists():asset.unlink()
     if include_local_assets:
@@ -45,7 +45,7 @@ def build(tests=False, include_local_assets=False):
         subprocess.run([os.sys.executable,str(ROOT/'tools/verify_native_splash.py')],cwd=ROOT,check=True)
         subprocess.run([os.sys.executable,str(ROOT/'tools/verify_native_title.py')],cwd=ROOT,check=True)
         for tool in ('export_native_font.py','verify_native_startup.py','verify_native_startup_screen.py',
-                     'verify_native_ship.py','export_startup_ui.py'):
+                     'verify_native_ship.py','export_startup_ui.py','export_ship_interaction.py'):
             subprocess.run([os.sys.executable,str(ROOT/'tools'/tool)],cwd=ROOT,check=True)
         shutil.copy2(ROOT/'analysis/local/native-assets/sundog-splash.hgr',resources/'sundog-splash.hgr')
         shutil.copy2(ROOT/'analysis/splash-asset.json',resources/'sundog-splash.json')
@@ -53,12 +53,12 @@ def build(tests=False, include_local_assets=False):
         shutil.copy2(ROOT/'analysis/local/native-assets/sundog-logo.bin',resources/'sundog-title-logo.bin')
         shutil.copy2(ROOT/'analysis/title-logo-asset.json',resources/'sundog-title-logo.json')
         for name in ('sundog-font.bin','startup-text.json','sundog-startup-profile.json',
-                     'sundog-startup-ui.json','sundog-play-boot.bin','sundog-initial-ship.bin'):
+                     'sundog-startup-ui.json','sundog-play-boot.bin','sundog-initial-ship.bin','sundog-ship-interaction.json'):
             shutil.copy2(ROOT/'analysis/local/native-assets'/name,resources/name)
         shutil.copy2(ROOT/'analysis/initial-ship-asset.json',resources/'sundog-initial-ship.json')
     info=dict(CFBundleExecutable='SunDog',CFBundleIdentifier='org.sundog.port.native',
               CFBundleName='SunDog',CFBundleDisplayName='SunDog',CFBundlePackageType='APPL',
-              CFBundleShortVersionString='0.6.0',CFBundleVersion='8',LSMinimumSystemVersion='14.0',
+              CFBundleShortVersionString='0.7.0',CFBundleVersion='9',LSMinimumSystemVersion='14.0',
               NSHighResolutionCapable=True,NSPrincipalClass='NSApplication')
     (app/'Contents/Info.plist').write_bytes(plistlib.dumps(info))
     run(['codesign','--force','--sign','-',str(app)])
@@ -73,6 +73,7 @@ def build(tests=False, include_local_assets=False):
         (directory/'startup-diagnostic.json').write_text(json.dumps(diagnostic,indent=2)+'\n')
         subprocess.run([os.sys.executable,str(ROOT/'tools/verify_splash_app.py')],cwd=ROOT,check=True)
         subprocess.run([os.sys.executable,str(ROOT/'tools/verify_startup_app.py')],cwd=ROOT,check=True)
+        subprocess.run([os.sys.executable,str(ROOT/'tools/verify_ship_mouse_app.py')],cwd=ROOT,check=True)
     if tests:
         developer=Path(subprocess.check_output(['xcode-select','-p'],text=True).strip())
         frameworks=developer/'Platforms/MacOSX.platform/Developer/Library/Frameworks'
@@ -94,7 +95,7 @@ def build(tests=False, include_local_assets=False):
         run(['xcrun','xctest',str(bundle)])
     print(json.dumps(dict(app=str(app),inspector=str(directory/'SunDogInspect'),architecture=arch,
                          deployment='macOS 14+',local_assets=include_local_assets,
-                         scope='Original title, begin prompt, startup choices, Play-side gate and initial SHIP graphics; ship controls are not implemented')))
+                         scope='Original title, begin prompt, startup choices, Play-side gate and initial SHIP graphics; mouse pointer, held walking and release target selection; facility scenes not implemented')))
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--tests',action='store_true')

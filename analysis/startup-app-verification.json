@@ -1,6 +1,6 @@
 {
   "method": "Actual native bundle title-to-ship script using button edges, original choices and Play marker check",
-  "executable_sha256": "51e691b898a431977f76bd28c496ff7d3cdff600ba0c7633a292a46c7470b50a",
+  "executable_sha256": "7f74c5ad31eecd4a5696afb27bedbc782f515f65fe0a15869bb6962726d5c02c",
   "stages": [
     {
       "stage": "gate",
@@ -42,14 +42,14 @@
         "playDisk",
         "ship"
       ],
-      "page_sha256": "e3f6e1f949b7600953fbacd152c05d8da531a0fd657c9ea19eb7b1fe2c3fdf56"
+      "page_sha256": "9154123931d0c4dc58d202e5c3c3a6f77243aa3fa3fa9e470578fa09b781f314"
     }
   ],
   "all_matched": true,
   "source_profile": "analysis/post-title-flow.json",
   "gui_verified": false,
   "limitations": [
-    "Initial SHIP graphics are source-decoded; status/cursor overlays and ship interaction are not yet ported.",
+    "Initial SHIP graphics are source-decoded; actor/pointer overlays and basic interaction are connected; facility scenes and status remain unported.",
     "Mouse/keyboard bindings and wall-clock gate sampling are host policy.",
     "Utility and demo program routes are identified but not implemented."
   ]

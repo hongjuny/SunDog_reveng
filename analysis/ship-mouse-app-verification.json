@@ -1,0 +1,19 @@
+{
+  "executable_sha256": "7f74c5ad31eecd4a5696afb27bedbc782f515f65fe0a15869bb6962726d5c02c",
+  "all_matched": true,
+  "initial_actor": [
+    42,
+    103
+  ],
+  "moved_actor": [
+    77,
+    103
+  ],
+  "stationary_release_action": 1,
+  "scope": "Native model used by AppKit mouse callbacks; actual OS event delivery not observed",
+  "host_policy": "33ms per two movement stages; no Apple II timing equivalence",
+  "limitations": [
+    "Facility selection shows a notice; target scenes are not yet implemented",
+    "No world simulation/save path"
+  ]
+}

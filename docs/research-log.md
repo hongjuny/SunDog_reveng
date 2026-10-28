@@ -740,3 +740,20 @@ matches45,220 cases; native P22 four controlled synthetic collision fixtures pas
 Native sampler correction exhaustively checks65,536 pairs,100 declared paddle
 sequences and576 arithmetic shift cases. These are controlled analysis probes,
 not hardware timing measurements or a complete original gameplay replay.
+
+## 2026-10-28 — Native mouse-controlled SHIP
+
+Implemented native Swift pointer/actor state and AppKit hover/drag/left-button
+hold/release integration. Original glyph12 renders actor,13 queries collision,
+2 renders pointer;7P4 initializes pointer selection. Extracted supplied Bowie
+save coordinates without embedding game state in application source. Original
+P9 mode2 collision on actual background matchesSwift1,440 cases; classifier
+matches45,220 cases. Facility releases report selection without claiming their
+scenes are implemented. Focus loss cancels movement without activation.
+Host pacing33ms/two movement stages is explicitly provisional, not measured
+Apple II timing. Product includes no emulation/interpreter. Original game bytes
+remain ignored/local. Details and reproducible checks: docs/ship-mouse-controls.md.
+Validation:150 Python tests and21 Swift XCTest cases pass; actual native bundle
+startup four-stage checks and mouse-model movement/release checks pass. Rebuilt
+and ad-hoc signed local app0.7.0. Exported SHIP frame inspected visually; real
+AppKit mouse event delivery remains a desktop check, not an automated claim.

@@ -19,6 +19,11 @@ public struct StartupResources: Sendable {
     public let playFlipMessages: [[UInt8]]
     public let playBoot: [UInt8]
     public let initialShip: [UInt8]
+    public struct ShipState: Decodable, Sendable {
+        public let x: Int; public let y: Int
+        public let word38: Int; public let word39: Int; public let pointerGlyph: Int
+    }
+    public let shipState: ShipState
     private struct ShipMetadata: Decodable { let length: Int; let sha256: String; let decoded_sha256: String }
     public enum Failure: Error { case invalidResources }
 
@@ -33,6 +38,7 @@ public struct StartupResources: Sendable {
         let font=try read("sundog-font.bin")
         let digest=SHA256.hash(data:font).map { String(format:"%02x",$0) }.joined()
         let boot=[UInt8](try read("sundog-play-boot.bin"))
+        let shipState=try decoder.decode(ShipState.self,from:read("sundog-ship-interaction.json"))
         let shipSource=try read("sundog-initial-ship.bin")
         let shipMetadata=try decoder.decode(ShipMetadata.self,from:read("sundog-initial-ship.json"))
         let sourceDigest=SHA256.hash(data:shipSource).map { String(format:"%02x",$0) }.joined()
@@ -46,7 +52,7 @@ public struct StartupResources: Sendable {
         }
         return StartupResources(profile:profile,mode:named.mode,name:named.name,font:Array(font),
             gateMessages:gate.gate_messages,greeting:texts.greeting,labels:texts.labels,
-            playFlipMessages:texts.playFlip,playBoot:boot,initialShip:ship.page)
+            playFlipMessages:texts.playFlip,playBoot:boot,initialShip:ship.page,shipState:shipState)
     }
     public func greetingMessages() throws -> [[UInt8]] {
         func word(_ key: String) throws -> [UInt8] {

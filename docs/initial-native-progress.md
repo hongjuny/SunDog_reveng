@@ -66,3 +66,10 @@ are not described as observed desktop interaction.
 Evidence and remaining scope:
 [post-title decisions](post-title-flow.md), [rendering](post-title-render.md),
 [Play initialization](initial-game-flow.md), [saved profile and SHIP resource](startup-profile.md).
+
+## 2026-10-28 업데이트: SHIP 마우스 조작
+
+앱0.7.0에서 원본 주인공/포인터 글리프를 표시하고, 마우스 이동→포인터,
+왼쪽 버튼 유지→충돌을 반영한 보행, 놓음→주인공 위치의 시설 판정을 연결했다.
+시설은 선택 안내까지이며 실제 장면/기능·세계 시간·저장은 미구현이다.
+상세 조작·원본 근거·호스트 페이싱과 검증은 [ship-mouse-controls.md](ship-mouse-controls.md)를 참조한다.
