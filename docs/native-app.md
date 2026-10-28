@@ -1,5 +1,11 @@
 # Native macOS startup screen
 
+Version0.6 now continues through the original begin prompt and startup choices
+to PLAY-side validation and the first source-decoded SHIP graphics. See
+[initial native progress](initial-native-progress.md) for controls, exact scope,
+verification and the remaining ship interaction/status work. The sections below
+document the preceding title implementation, which is retained.
+
 Version0.5.1 fixes the missing SUN DOG lettering. Startup has two separate stages:
 
 1. Native4000..41FF reveals the disk's spaceship/planet background from its center.

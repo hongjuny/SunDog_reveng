@@ -21,6 +21,6 @@ let package = Package(
         .executableTarget(name: "SunDogRender", dependencies: ["SunDogCore", "AppleIIVideo"]),
         .executableTarget(name: "SunDogInspect", dependencies: ["SunDogCore", "AppleIIVideo"]),
         .executableTarget(name: "SunDogMac", dependencies: ["SunDogCore", "AppleIIVideo", "SunDogLogic"]),
-        .testTarget(name: "VideoTests", dependencies: ["AppleIIVideo", "SunDogCore"], path: "tests/VideoTests")
+        .testTarget(name: "VideoTests", dependencies: ["AppleIIVideo", "SunDogCore", "SunDogLogic"], path: "tests/VideoTests")
     ]
 )

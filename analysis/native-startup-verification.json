@@ -1,0 +1,22 @@
+{
+  "profiles": 288,
+  "timeout_polls": 11400,
+  "edge_channels": 2,
+  "choice_routes": 6,
+  "invalid_actions": 2,
+  "all_matched": true,
+  "method": "Swift startup rules versus source-bound P6 predicates, branch routes and original gate-expression evaluation",
+  "evidence": "analysis/post-title-flow.json",
+  "original_gate_cases": 28,
+  "cases_sha256": "f2ed420d8a9a138b17e221efc0c2815d038e2b693219d5dc4aac83abad4651e3",
+  "source_files": {
+    "native/SunDogLogic/ButtonInput.swift": "85788385c2b5e512eb3bab1c7884ec6bdf6d80a4332223584f812adead128d47",
+    "native/SunDogLogic/StartupFlow.swift": "5e8bf46bf8592323172a08bcea1d13d3384ab289583a323ae685fa496e6fffc8",
+    "tests/native/VerifyStartupFlow.swift": "8e53e4c9c7366ba8ac717f3253df891fe6aa70db5626f24d6b335e467565a86c"
+  },
+  "limitations": [
+    "The 11400-count gate has no inferred physical duration.",
+    "ButtonInput is separately native-verified; no physical input or complete game runtime is executed here.",
+    "Original directory writes and slot6 reboot are represented by route metadata, never performed by this module."
+  ]
+}

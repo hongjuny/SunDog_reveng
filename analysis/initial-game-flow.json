@@ -1,0 +1,419 @@
+{
+  "method": "Source-bound Play segment7/13 decoded CFG and operand checks; static normal-return contracts",
+  "source_sha256": "2c4cdfee9d22a90d65b09a47a3f6bd895301952e21bc6bbfd3116e410cffa370",
+  "ship_segment_sha256": "2c876905d523d89fc2c5216cbc199b01a18bf5dcc223addc188dc1510388211d",
+  "initialization": {
+    "procedure": 1,
+    "argument_true_calls": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "argument_false_call": 8,
+    "evidence": {
+      "segment": 7,
+      "procedure": 1,
+      "start": 1798,
+      "end_exclusive": 1820,
+      "sha256": "b1e9786215a01832e506af7939307bc0e9af3d2cf179b6ccd96635e9010fd127",
+      "source": {
+        "side": "play",
+        "track": 18,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 76288,
+        "byte_in_sector": 6,
+        "image_offset": 76294
+      }
+    }
+  },
+  "initial_table_constants": [
+    {
+      "word_index": 293,
+      "value": 0,
+      "address": 227,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 69888,
+        "byte_in_sector": 227,
+        "image_offset": 70115
+      }
+    },
+    {
+      "word_index": 297,
+      "value": 1,
+      "address": 232,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 69888,
+        "byte_in_sector": 232,
+        "image_offset": 70120
+      }
+    },
+    {
+      "word_index": 298,
+      "value": 2,
+      "address": 237,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 69888,
+        "byte_in_sector": 237,
+        "image_offset": 70125
+      }
+    },
+    {
+      "word_index": 296,
+      "value": 8,
+      "address": 242,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 69888,
+        "byte_in_sector": 242,
+        "image_offset": 70130
+      }
+    },
+    {
+      "word_index": 295,
+      "value": 9,
+      "address": 247,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 69888,
+        "byte_in_sector": 247,
+        "image_offset": 70135
+      }
+    },
+    {
+      "word_index": 350,
+      "value": 0,
+      "address": 252,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 69888,
+        "byte_in_sector": 252,
+        "image_offset": 70140
+      }
+    },
+    {
+      "word_index": 349,
+      "value": 0,
+      "address": 257,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 73472,
+        "byte_in_sector": 1,
+        "image_offset": 73473
+      }
+    },
+    {
+      "word_index": 347,
+      "value": 0,
+      "address": 262,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 73472,
+        "byte_in_sector": 6,
+        "image_offset": 73478
+      }
+    },
+    {
+      "word_index": 292,
+      "value": 0,
+      "address": 267,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 73472,
+        "byte_in_sector": 11,
+        "image_offset": 73483
+      }
+    },
+    {
+      "word_index": 354,
+      "value": 0,
+      "address": 272,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 73472,
+        "byte_in_sector": 16,
+        "image_offset": 73488
+      }
+    },
+    {
+      "word_index": 352,
+      "value": 0,
+      "address": 277,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 73472,
+        "byte_in_sector": 21,
+        "image_offset": 73493
+      }
+    },
+    {
+      "word_index": 353,
+      "value": 5,
+      "address": 282,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 73472,
+        "byte_in_sector": 26,
+        "image_offset": 73498
+      }
+    },
+    {
+      "word_index": 351,
+      "value": 1,
+      "address": 287,
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 73472,
+        "byte_in_sector": 31,
+        "image_offset": 73503
+      }
+    }
+  ],
+  "relative_resource_bases": {
+    "32": 26,
+    "30": 42,
+    "29": 52,
+    "28": 61,
+    "27": 76,
+    "26": 85
+  },
+  "title_to_play_gate": {
+    "title_call": {
+      "segment": 7,
+      "procedure": 5,
+      "start": 454,
+      "end_exclusive": 458,
+      "sha256": "04f16f66a88b9ee514e4ed44e7972680015fc67e507871f43fbb610b319f0103",
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 73472,
+        "byte_in_sector": 198,
+        "image_offset": 73670
+      }
+    },
+    "title_callee": {
+      "segment": 26,
+      "procedure": 6,
+      "argument": 1
+    },
+    "gate_call": {
+      "segment": 7,
+      "procedure": 5,
+      "start": 458,
+      "end_exclusive": 461,
+      "sha256": "d2f0ca6f0d21b259ecd0b2ce6983179bcefb7f09487ae7975eee197c32b8b035",
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 73472,
+        "byte_in_sector": 202,
+        "image_offset": 73674
+      }
+    },
+    "desired_utility": false,
+    "note": "Segment26 P6 performs more than the logo; its menu/result contract must be traced separately."
+  },
+  "side_gate": {
+    "procedure": 2,
+    "unit": 4,
+    "block": 0,
+    "bytes": 512,
+    "marker_offset": 252,
+    "utility_marker": 0,
+    "play_marker": 9,
+    "utility_test": 24,
+    "io_predicate": "signed16(IORESULT)>0 invokes nonlocal EXIT service with preceding constants7,2",
+    "evidence": {
+      "segment": 7,
+      "procedure": 2,
+      "start": 0,
+      "end_exclusive": 51,
+      "sha256": "a31d844eaf67adb644b5f63a3d189929ff17d2050a83c2b9c4fd907236f4b730",
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 69888,
+        "byte_in_sector": 0,
+        "image_offset": 69888
+      }
+    }
+  },
+  "side_prompt": {
+    "procedure": 3,
+    "button_selectors": [
+      0,
+      1
+    ],
+    "predicate": "(edge0 OR edge1) bit0",
+    "no_button_target": 187,
+    "wrong_side_target": 62,
+    "accepted_return": 209,
+    "evidence": {
+      "segment": 7,
+      "procedure": 3,
+      "start": 62,
+      "end_exclusive": 211,
+      "sha256": "ac4a145f2e7b1e76d9a4f6efcaaf87dffcfd2d602fc78135fd1faccc390f677b",
+      "source": {
+        "side": "play",
+        "track": 17,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 69888,
+        "byte_in_sector": 62,
+        "image_offset": 69950
+      }
+    }
+  },
+  "supplied_boot_blocks": [
+    {
+      "side": "utility",
+      "block": 0,
+      "length": 512,
+      "marker_offset": 252,
+      "marker": 0,
+      "sha256": "a3475d95f73710177aea4e124db801691033be8722270c82011dd4fd9e381a5d",
+      "sectors": [
+        {
+          "track": 0,
+          "sector": 0,
+          "physical_sector": 0,
+          "offset": 0
+        },
+        {
+          "track": 0,
+          "sector": 14,
+          "physical_sector": 2,
+          "offset": 3584
+        }
+      ],
+      "outcome_for_play": "wrong_side"
+    },
+    {
+      "side": "play",
+      "block": 0,
+      "length": 512,
+      "marker_offset": 252,
+      "marker": 9,
+      "sha256": "4a333fde4adc649d7b5b0216f0ce62a24f3b4fd9b01885aaa4f678d8673fdb78",
+      "sectors": [
+        {
+          "track": 0,
+          "sector": 0,
+          "physical_sector": 0,
+          "offset": 0
+        },
+        {
+          "track": 0,
+          "sector": 14,
+          "physical_sector": 2,
+          "offset": 3584
+        }
+      ],
+      "outcome_for_play": "accepted"
+    }
+  ],
+  "first_scene": {
+    "root_state_field": "(table29.word45 >> 8) &15",
+    "root_routes": {
+      "0,1": "segment13 P1",
+      "2": "segment15 P1"
+    },
+    "segment13_entry": {
+      "segment": 13,
+      "procedure": 1,
+      "start": 9606,
+      "end_exclusive": 9616,
+      "sha256": "44c8695a67c77d47e70c48ed10bf54b1c6271630e11c8c61f5daaf7fe1f92b6d",
+      "source": {
+        "side": "play",
+        "track": 21,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 87552,
+        "byte_in_sector": 134,
+        "image_offset": 87686
+      }
+    },
+    "initial_resource_read": {
+      "destination": 2048,
+      "blocks": 2,
+      "relative_block": "table29.word27 + 2",
+      "absolute_block_if_P5_bases_unchanged": 81,
+      "call": {
+        "segment": 13,
+        "procedure": 1,
+        "start": 9706,
+        "end_exclusive": 9719,
+        "sha256": "97feaa153249e32e8c832cb28adf0362e60736994174c0db7ce3f93ec10461f4",
+        "source": {
+          "side": "play",
+          "track": 21,
+          "sector": 6,
+          "physical_sector": 3,
+          "offset": 87552,
+          "byte_in_sector": 234,
+          "image_offset": 87786
+        }
+      }
+    },
+    "note": "No new-game state value is assumed. Word45 is not initialized by the selected constant-init stores; preceding menu/data side effects remain material."
+  },
+  "confidence": "High for identified source operands, selected branches and supplied disk markers; no full game start execution claimed",
+  "remaining": [
+    "Segment26 P6 choice/data initialization and state ownership",
+    "Complete Play-side writes and initial saved/new-game data construction",
+    "First interactive scene render/input loop and physical control mapping",
+    "Original window clear/scroll and resource lifetimes across scene transitions"
+  ]
+}

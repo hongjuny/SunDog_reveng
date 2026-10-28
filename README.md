@@ -4,6 +4,11 @@ The product goal is a macOS app faithful to the Apple II game's graphics and
 behavior. See the [macOS port roadmap](docs/macos-port-roadmap.md) for staged
 implementation, fidelity criteria and release gates.
 
+Version0.6 adds [initial native progress](docs/initial-native-progress.md): original
+begin prompt, startup choices, PLAY-side validation and the source-decoded first
+SHIP graphics. It uses the supplied existing Bowie save profile; ship controls
+and later gameplay remain unimplemented.
+
 The [native app implementation](docs/native-app.md) now displays the original
 disk ship-and-planet background and the subsequent animated SUN DOG logo.
 Version0.5.1 fixes the missing second stage: both background and logo visuals

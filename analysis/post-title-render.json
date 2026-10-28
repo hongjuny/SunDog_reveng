@@ -1,0 +1,380 @@
+{
+  "method": "Original P51/P44 geometry, bounded native P7 rectangle checks and P48 CFG placements, compared with full retained prompt HGR",
+  "source_libraries": {
+    "22": "7d52f0e6959d0a8b9ac3f08bc78ced7e7af44ed87a00d80d4d82025ab7735f49",
+    "25": "16048527422b435b2f6e811d3abddade3318f4570746a2e8e5b1419d16c9a4b3",
+    "26": "188476754bcdeb89a5843ec91e2e626e2680c324ee6d2b3641ad292dc1d99b5d"
+  },
+  "messages": [
+    {
+      "address": 943,
+      "length": 15,
+      "sha256": "2fb1639841479c3588d0eb0cdd3a43d05384e6a366ae3ff6045251714f137143",
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 68096,
+        "byte_in_sector": 175
+      }
+    },
+    {
+      "address": 965,
+      "length": 18,
+      "sha256": "7a400a856bda3fba90178e97b2592325388269970ec8aca4079c3a0766e1d117",
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 68096,
+        "byte_in_sector": 197
+      }
+    },
+    {
+      "address": 989,
+      "length": 19,
+      "sha256": "b171b3ce0444e4f025a8cfe33703f08649c5ec46d9dd8805eb9dbbd03eadfc51",
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 68096,
+        "byte_in_sector": 221
+      }
+    },
+    {
+      "address": 1013,
+      "length": 20,
+      "sha256": "6937315ea2528550750c7993c38276797b0cb6c6398bd3a79cc03eedfcf0903d",
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 68096,
+        "byte_in_sector": 245
+      }
+    },
+    {
+      "address": 1039,
+      "length": 20,
+      "sha256": "aa1f526f0c0ba8ddab1f144e95ea51253b1852bae81c8ced7f80cc61be5969a1",
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 67840,
+        "byte_in_sector": 15
+      }
+    },
+    {
+      "address": 1065,
+      "length": 23,
+      "sha256": "db7b3fd338029c7e753558ad169d4dbb9cec9598e7e0c197ed195d3a46e0d280",
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 67840,
+        "byte_in_sector": 41
+      }
+    },
+    {
+      "address": 1095,
+      "length": 23,
+      "sha256": "7c11fa85fbcf6bf8d6b642a0c386510888d89c8ef793ac97b9e8c8164b8ab3e6",
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 67840,
+        "byte_in_sector": 71
+      }
+    },
+    {
+      "address": 1123,
+      "length": 19,
+      "sha256": "10ba9917bd9e27d3f94de12fb54b79f92bd364fd79bc4f661215a2da271481b4",
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 67840,
+        "byte_in_sector": 99
+      }
+    }
+  ],
+  "window": {
+    "outer": [
+      133,
+      272,
+      88,
+      183
+    ],
+    "inner": [
+      135,
+      270,
+      89,
+      182
+    ],
+    "text": [
+      135,
+      270,
+      90,
+      181
+    ],
+    "cursor": [
+      137,
+      100
+    ],
+    "right": 270
+  },
+  "template_bounds": [
+    0,
+    139,
+    0,
+    95
+  ],
+  "native_rectangle_checks": [
+    {
+      "mode": 8,
+      "bounds": [
+        135,
+        270,
+        90,
+        181
+      ],
+      "instructions": 13380,
+      "matched": true
+    },
+    {
+      "mode": 11,
+      "bounds": [
+        133,
+        272,
+        88,
+        183
+      ],
+      "instructions": 13956,
+      "matched": true
+    },
+    {
+      "mode": 10,
+      "bounds": [
+        137,
+        268,
+        137,
+        151
+      ],
+      "instructions": 2292,
+      "matched": true
+    }
+  ],
+  "rea_evidence_id": "ev_508d5c7ce07524dfbaaeb2bbd38307a5ce6601e788dfdf2b85c11c3fe8a6f64b",
+  "rea_slice_sha256": "6592b3a4d291577726ae708c3e40ef1cdaf8a580f03355d4ad27e282f77549ba",
+  "native_instruction_addresses": 157,
+  "placements": 148,
+  "font_proof": "analysis/native-font-asset.json",
+  "font_sha256": "eeadc8615ae25ac5611744c0f32589698d4d3cc4c57808a98df85268d08ca775",
+  "full_page_equal": true,
+  "final_page_sha256": "4bcf4c0178d3c8dc719c6e2a57f5e79c595a9108d3f11fd4a2b90f064e001ac5",
+  "reference_capture": "analysis/local/reference/follow-20261023-120102/after-720-frames-main.bin",
+  "reference_memory_sha256": "6279ec7a9ca90cb756c47226ab84f8d04727b3009dfab83be3ed41074fda5e76",
+  "original_text_asset": "analysis/local/native-assets/startup-text.json",
+  "confidence": "High for selected original startup prompt window and message path",
+  "menu": {
+    "full_page_equal": true,
+    "page_sha256": "0967cb895e490023b01aa0df3c8257a73019bd220c57d25ab25f97b291aa74ff",
+    "reference": "analysis/local/reference/advance-20261023-122315/advanced-main.bin",
+    "reference_memory_sha256": "a7242b1e18479c5e6a0a890a6ea195070e607f2e8f061520483a4684c90b58dd",
+    "cursor": {
+      "character": 1,
+      "raw": [
+        199,
+        137
+      ],
+      "glyph": [
+        196,
+        140
+      ],
+      "mode": 1,
+      "mask": 0
+    },
+    "label_sources": [
+      {
+        "address": 1575,
+        "length": 12,
+        "sha256": "3c83b5b21d01b948614673a0d48b61aaa5d7391d3251c24b91d8f569eee4eb8f",
+        "source": {
+          "side": "utility",
+          "track": 16,
+          "sector": 7,
+          "physical_sector": 1,
+          "offset": 67328,
+          "byte_in_sector": 39
+        }
+      },
+      {
+        "address": 1605,
+        "length": 13,
+        "sha256": "ec8d28297e25aee90b3eaa6319e95bedd4343632e3c00ca488cdc5c071881b80",
+        "source": {
+          "side": "utility",
+          "track": 16,
+          "sector": 7,
+          "physical_sector": 1,
+          "offset": 67328,
+          "byte_in_sector": 69
+        }
+      },
+      {
+        "address": 1637,
+        "length": 8,
+        "sha256": "87f83ff8086ce2ffa3fdd7aecb87c74145f7eb8857128b776f3a5c136517ff73",
+        "source": {
+          "side": "utility",
+          "track": 16,
+          "sector": 7,
+          "physical_sector": 1,
+          "offset": 67328,
+          "byte_in_sector": 101
+        }
+      }
+    ],
+    "renderer_sources": [
+      {
+        "segment": 25,
+        "procedure": 3,
+        "entry": 20,
+        "source": {
+          "side": "utility",
+          "track": 15,
+          "sector": 1,
+          "physical_sector": 13,
+          "offset": 61696,
+          "byte_in_sector": 20
+        }
+      },
+      {
+        "segment": 25,
+        "procedure": 6,
+        "entry": 378,
+        "source": {
+          "side": "utility",
+          "track": 15,
+          "sector": 15,
+          "physical_sector": 15,
+          "offset": 65280,
+          "byte_in_sector": 122
+        }
+      },
+      {
+        "segment": 25,
+        "procedure": 9,
+        "entry": 198,
+        "source": {
+          "side": "utility",
+          "track": 15,
+          "sector": 1,
+          "physical_sector": 13,
+          "offset": 61696,
+          "byte_in_sector": 198
+        }
+      },
+      {
+        "segment": 25,
+        "procedure": 7,
+        "entry": 528,
+        "source": {
+          "side": "utility",
+          "track": 16,
+          "sector": 0,
+          "physical_sector": 0,
+          "offset": 65536,
+          "byte_in_sector": 16
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "index": 0,
+        "left": 139,
+        "right": 266,
+        "top": 139,
+        "bottom": 149,
+        "hit_top": 137,
+        "hit_bottom": 151,
+        "label_baseline": 148
+      },
+      {
+        "index": 1,
+        "left": 139,
+        "right": 266,
+        "top": 154,
+        "bottom": 164,
+        "hit_top": 152,
+        "hit_bottom": 166,
+        "label_baseline": 163
+      },
+      {
+        "index": 2,
+        "left": 139,
+        "right": 266,
+        "top": 169,
+        "bottom": 179,
+        "hit_top": 167,
+        "hit_bottom": 181,
+        "label_baseline": 178
+      }
+    ],
+    "mode10_pattern": {
+      "even_byte": 213,
+      "odd_byte": 170
+    },
+    "original_records": [
+      {
+        "id": 2,
+        "word_index": 67,
+        "relative_bottom": 59,
+        "relative_top": 49,
+        "relative_right": 131,
+        "relative_left": 4,
+        "button_flag": 1,
+        "label_index": 1
+      },
+      {
+        "id": 1,
+        "word_index": 72,
+        "relative_bottom": 74,
+        "relative_top": 64,
+        "relative_right": 131,
+        "relative_left": 4,
+        "button_flag": 1,
+        "label_index": 2
+      },
+      {
+        "id": 3,
+        "word_index": 77,
+        "relative_bottom": 89,
+        "relative_top": 79,
+        "relative_right": 131,
+        "relative_left": 4,
+        "button_flag": 1,
+        "label_index": 3
+      }
+    ],
+    "greeting": "Selected retained healthy continuation branch; player name is fixture input, not an app asset copied from RAM"
+  },
+  "limitations": [
+    "Original window-opening/sound timing is not reconstructed.",
+    "The current contract selects the original P51(40,24) window; it is not a general game window engine.",
+    "Reference RAM is corroboration only; app inputs are original font/messages and rewritten pixel operations."
+  ]
+}

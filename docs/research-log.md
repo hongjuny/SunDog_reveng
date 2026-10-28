@@ -678,3 +678,46 @@ a background-only screen. Version0.5.1 plays both stages. Logo steps use a decla
 16ms host interval; the154original sound calls are recorded but sound and original
 sound-driven timing remain open. The user has observed the background on desktop;
 the corrected logo is verified through the actual bundle's headless output.
+
+## 2026-10-28 — Begin gate, native startup choices and initial SHIP resource
+
+Continued beyond the title instead of inventing a new-game menu. Original
+segment26 P6 displays credits and waits for selector0/1 button edges or11,400
+logical polls. Choice IDs2/1/3 are Play/Utilities/Demo. Cross-mode original paths
+rewrite a boot directory and reenterC600; the native state machine describes those
+routes without writing original media. Warm skipIntro bypasses both gate and menu.
+
+Derived the supplied profile directly from Utility metadata83 and slot1's block37
+record, with native checksumA697. The player isBowie, stateword32BB means mode2
+(not mode3), and word82bit7 is set. This supports existing-game continuation,
+not a fabricated default/new game. The actual first dispatcher selects segment15.
+
+Reconstructed P51/P44/P48 startup-window pixels and source strings with the
+original font. The full prompt and selected reference menu pages match original
+RAM. Native P7 selected fills and mode10 button patterns were independently checked;
+fresh REA/Ghidra evidence ev_508d5c7ce07524dfbaaeb2bbd38307a5ce6601e788dfdf2b85c11c3fe8a6f64b
+is retained privately. Menu player names in comparison fixtures are not product
+assets; the app obtains its name from the disk-backed profile.
+
+Play segment7 P3 waits for either button, then P2 checks byte252 of a512-byte
+unit block:9 forPlay,0 forUtility. Wrong markers repeat the prompt; positive
+signedIORESULT is a nonlocal-exit boundary. The supplied two media markers were
+verified against decoded WOZ sectors. The native app retains that gate with its
+bundled read-only Play data.
+
+Mode2 reaches segment15 SHIP. Its selected image is four Play blocks29..33,
+expanded by native24 P5's strided run-length rule. Twenty original-native/Swift
+comparisons match output8192bytes and consumed source positions. The native app
+connects title→begin→choices→Playgate→initialSHIPgraphics. Ship status/cursor
+overlays and movement/interactions remain explicitly unported; image decoding is
+not described as a complete playable game. Original media and game binaries remain
+ignored. Host input bindings and nominal gate sampling are separate from measured
+Apple II timings. Unrelated bulk executable-bit changes were observed on workspace
+files and are excluded from this work's content review/commit.
+Validation:137 deterministic Python tests,18 Swift XCTest cases,288 startup
+profiles,20 original-native/Swift ship decoder cases and two full original
+startup-window pixel comparisons pass. The actual native bundle's scripted
+four-stage checks pass, including gate/image hashes and transition history.
+The generated prompt, Bowie menu and initial SHIP images were visually inspected.
+Opening the GUI from this agent session still returns LaunchServices-10827;
+desktop input/presentation of this new build is not claimed as observed.

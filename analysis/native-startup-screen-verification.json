@@ -1,0 +1,21 @@
+{
+  "full_page_cases": 2,
+  "all_matched": true,
+  "method": "Swift startup window, text and buttons versus full original prompt/menu HGR pages",
+  "evidence": "analysis/post-title-render.json",
+  "source_files": {
+    "native/SunDogLogic/GlyphCompositor.swift": "87ec973ace19e4170ef1f429d502fdb52528cb5840e3b443387a1b7644739a87",
+    "native/SunDogLogic/WindowTextLayout.swift": "e4175298d5911ef5d98323a4f3034396e6d8ec5b0a246fcbe32638851579521a",
+    "native/SunDogLogic/StartupTextScreen.swift": "e8e9ccebdcc69e22a0b932cf04f612bf99f172410f1df90b3bbd4fc60f7ddb0a",
+    "tests/native/VerifyStartupTextScreen.swift": "3273160b5ee46508dde124f1972e54202d74f15a428fbb1d3ab43d3905f5b1d5"
+  },
+  "cases": {
+    "analysis/local/post-title/render-cases.json": "65cb707d704a218654791cf6a73cc1508603bb6232aa27175cb72b42c3b9a420",
+    "analysis/local/post-title/menu-render-case.json": "e27e6c51f5c9a7907f19c9d0d05a153708ff5e79a7054f5f2ace2cf19f67e9d5"
+  },
+  "limitations": [
+    "Selected P51(40,24) window and healthy continuation menu only, not a general game UI.",
+    "Sound, opening animation and original input timing are not reproduced.",
+    "Menu cursor comparison uses the recorded original point; host input mapping is separate."
+  ]
+}

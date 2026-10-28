@@ -1,0 +1,153 @@
+{
+  "method": "Original decoded string identities and Play boot block; no reference-screen data",
+  "source_sha256": "188476754bcdeb89a5843ec91e2e626e2680c324ee6d2b3641ad292dc1d99b5d",
+  "ui_asset_sha256": "b6f9c09231e2c9f673bc4e569a910a2c68108e7c48ca107f268a9689fc128fb0",
+  "strings": [
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1251,
+      "length": 9,
+      "sha256": "d732322066fbc702c7e5dbaa30ef638aac163ac96178913b76a501b39fd8af39"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1273,
+      "length": 11,
+      "sha256": "296db4e166995bb9714c9ee98acde0fb69cbdee02420a9b97d42ee0d407ff27d"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1291,
+      "length": 7,
+      "sha256": "23429bd9ba98dd5140309bb9b0094b3aad642430fff6fb3ca61f008ce644f34a"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1337,
+      "length": 11,
+      "sha256": "c35e38196daa6d4721f353efbade258e29162df820bb8a2596634ade59dc1c22"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1357,
+      "length": 10,
+      "sha256": "0fcc574c2858394c5626db05f0b30d4cef02ad3ba224f2fd650abb785119e1f9"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1373,
+      "length": 22,
+      "sha256": "498c6a2e13b8de869ea9ee2fa9947d8e56792781fd703be230295ecd20ce73ce"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1407,
+      "length": 23,
+      "sha256": "31dc23cfe9b4e9b571ecbf10ecccbbea82ab7e8e8c294cbb418075c21d09cb63"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1435,
+      "length": 11,
+      "sha256": "c9e2c8fe6bd30cb86cf6ca4f8094bab33107abc2882fcd46bc465e9b9701ec0c"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1461,
+      "length": 5,
+      "sha256": "cced28c6dc3f99c2396a5eaad732bf6b28142335892b1cd0e6af6cdb53f5ccfa"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1473,
+      "length": 8,
+      "sha256": "e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1487,
+      "length": 12,
+      "sha256": "bf0d7fb86ec79997b8b0dca4aa6f8cecb746103f7a58a6a9ef4916e5ede93b05"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1505,
+      "length": 34,
+      "sha256": "c3d9dfb102119a7d5571f240a746d5fded02739b41ce50776f032d222e31e715"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1575,
+      "length": 12,
+      "sha256": "3c83b5b21d01b948614673a0d48b61aaa5d7391d3251c24b91d8f569eee4eb8f"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1605,
+      "length": 13,
+      "sha256": "ec8d28297e25aee90b3eaa6319e95bedd4343632e3c00ca488cdc5c071881b80"
+    },
+    {
+      "segment": 26,
+      "procedure": 6,
+      "address": 1637,
+      "length": 8,
+      "sha256": "87f83ff8086ce2ffa3fdd7aecb87c74145f7eb8857128b776f3a5c136517ff73"
+    },
+    {
+      "segment": 7,
+      "procedure": 3,
+      "address": 65,
+      "length": 22,
+      "sha256": "3d55be64f17652197eace6597c0e832655f861eb8cc85be7cf0a273b3f281693"
+    },
+    {
+      "segment": 7,
+      "procedure": 3,
+      "address": 119,
+      "length": 10,
+      "sha256": "19312ea28ee294ccf49aa6b1a04d2e5d850883a8a28c0af252d528d97ae9e37b"
+    },
+    {
+      "segment": 7,
+      "procedure": 3,
+      "address": 135,
+      "length": 47,
+      "sha256": "3a1624311e30ca4411beaff24c16fba12316386bce62d3c9bb8a986a23dc17d5"
+    }
+  ],
+  "play_boot_sha256": "4a333fde4adc649d7b5b0216f0ce62a24f3b4fd9b01885aaa4f678d8673fdb78",
+  "play_marker": 9,
+  "play_boot_sectors": [
+    {
+      "track": 0,
+      "sector": 0,
+      "physical_sector": 0,
+      "offset": 0
+    },
+    {
+      "track": 0,
+      "sector": 14,
+      "physical_sector": 2,
+      "offset": 3584
+    }
+  ],
+  "limitations": [
+    "Text extraction alone does not prove UI layout; renderer evidence is separate.",
+    "A marker check is the original gate, not complete filesystem or game validity."
+  ]
+}

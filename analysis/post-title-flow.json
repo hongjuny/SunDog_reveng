@@ -1,0 +1,767 @@
+{
+  "method": "Original decoded static CFG, exact source instruction checks and hash-bound existing reference observations",
+  "source": {
+    "archive": "SYSTEM.LIBRARY",
+    "segment": 26,
+    "slot": 5,
+    "sha256": "188476754bcdeb89a5843ec91e2e626e2680c324ee6d2b3641ad292dc1d99b5d"
+  },
+  "caller_modes": [
+    {
+      "archive": "SUNDOG.LIBRARY",
+      "segment": 1,
+      "procedure": 8,
+      "call_offset": 87,
+      "parameter": 0,
+      "source_sha256": "3d0ad5c10da8631faabef1aabb87a42f8892fc13b51dd8a0d7bf814dfb724553",
+      "meaning": "Utility mode"
+    },
+    {
+      "archive": "Play SYSTEM.STARTUP",
+      "segment": 7,
+      "procedure": 5,
+      "call_offset": 455,
+      "parameter": 1,
+      "source_sha256": "2c4cdfee9d22a90d65b09a47a3f6bd895301952e21bc6bbfd3116e410cffa370",
+      "meaning": "Play mode"
+    }
+  ],
+  "metadata": {
+    "relative_block": 80,
+    "absolute_loader_block": 83,
+    "destination": 5120,
+    "length": 512,
+    "sha256": "ff580ec60d9a9580b9a992ead6e8c3bbbd8cc1884d2c07b7afa0392b15cf7c3b",
+    "sectors": [
+      {
+        "track": 10,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 43264
+      },
+      {
+        "track": 10,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 43008
+      }
+    ],
+    "fields": {
+      "0": "nonzero skips logo, intro and menu; clear marker, write header and return to caller",
+      "1": "selected game/save index; indices>=4 block Play choice",
+      "2..5": "four copied game words corresponding table29 words21..22",
+      "7": "directory replacement target block; source read uses value-3 before P53 adds3"
+    },
+    "observed_prefix": [
+      0,
+      1,
+      46,
+      231,
+      17,
+      88,
+      2,
+      79
+    ],
+    "side": "utility",
+    "limitation": "The same absolute block on Play is not interchangeable metadata; disk context matters"
+  },
+  "flow": [
+    {
+      "stage": "optional_logo",
+      "procedure": 6,
+      "span": [
+        800,
+        807
+      ],
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 68096,
+        "byte_in_sector": 32,
+        "image_offset": 68128
+      },
+      "predicate": "metadata[0] == 0",
+      "call": "segment26 P13"
+    },
+    {
+      "stage": "skip_startup_ui",
+      "procedure": 6,
+      "span": [
+        935,
+        940
+      ],
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 68096,
+        "byte_in_sector": 167,
+        "image_offset": 68263
+      },
+      "predicate": "metadata[0] != 0",
+      "branch_target": 1741,
+      "behavior": "Set header byte0 to0, write relative block80, return; no intro, gate or choices"
+    },
+    {
+      "stage": "intro_and_button_prompt",
+      "procedure": 6,
+      "span": [
+        935,
+        1148
+      ],
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 68096,
+        "byte_in_sector": 167,
+        "image_offset": 68263
+      },
+      "predicate": "metadata[0] == 0",
+      "renderer": "segment22 P44 then P48 strings",
+      "strings": [
+        {
+          "address": 943,
+          "length": 15,
+          "sha256": "2fb1639841479c3588d0eb0cdd3a43d05384e6a366ae3ff6045251714f137143"
+        },
+        {
+          "address": 965,
+          "length": 18,
+          "sha256": "7a400a856bda3fba90178e97b2592325388269970ec8aca4079c3a0766e1d117"
+        },
+        {
+          "address": 989,
+          "length": 19,
+          "sha256": "b171b3ce0444e4f025a8cfe33703f08649c5ec46d9dd8805eb9dbbd03eadfc51"
+        },
+        {
+          "address": 1013,
+          "length": 20,
+          "sha256": "6937315ea2528550750c7993c38276797b0cb6c6398bd3a79cc03eedfcf0903d"
+        },
+        {
+          "address": 1039,
+          "length": 20,
+          "sha256": "aa1f526f0c0ba8ddab1f144e95ea51253b1852bae81c8ced7f80cc61be5969a1"
+        },
+        {
+          "address": 1065,
+          "length": 23,
+          "sha256": "db7b3fd338029c7e753558ad169d4dbb9cec9598e7e0c197ed195d3a46e0d280"
+        },
+        {
+          "address": 1095,
+          "length": 23,
+          "sha256": "7c11fa85fbcf6bf8d6b642a0c386510888d89c8ef793ac97b9e8c8164b8ab3e6"
+        },
+        {
+          "address": 1123,
+          "length": 19,
+          "sha256": "10ba9917bd9e27d3f94de12fb54b79f92bd364fd79bc4f661215a2da271481b4"
+        }
+      ]
+    },
+    {
+      "stage": "begin_gate",
+      "procedure": 6,
+      "span": [
+        1148,
+        1184
+      ],
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 67840,
+        "byte_in_sector": 124,
+        "image_offset": 67964
+      },
+      "initial_iterations": 11400,
+      "predicate": "edge(channel0) OR edge(channel1) OR signed16(--remaining)<=0",
+      "channel_selectors": [
+        0,
+        1
+      ],
+      "native_input": "segment22 native P2",
+      "other_call": "segment22 native P3 updates pseudo-random state; it is not keyboard input",
+      "timing": "Iteration budget, not milliseconds or frames; original execution timing unresolved"
+    },
+    {
+      "stage": "startup_choices",
+      "procedure": 6,
+      "span": [
+        1184,
+        1675
+      ],
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 67840,
+        "byte_in_sector": 160,
+        "image_offset": 68000
+      },
+      "choice_ids": {
+        "1": "Use utilities",
+        "2": "Play SunDog",
+        "3": "Run demo"
+      },
+      "play_blocked": "state nibble12/13 OR checksum_mismatch OR metadata[1]>=4",
+      "new_game_predicate": "table29.word43 bits0..13==0 AND word42 bits8..15==0 AND word42 bits0..5==0"
+    },
+    {
+      "stage": "return_or_reboot",
+      "procedure": 6,
+      "span": [
+        1666,
+        1754
+      ],
+      "source": {
+        "side": "utility",
+        "track": 16,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 67328,
+        "byte_in_sector": 130,
+        "image_offset": 67458
+      },
+      "same_mode": "Utility1 or Play2 returns to its caller",
+      "cross_mode": "Utility2 selects directory block80; Play1 selects block81; both write marker83[0]=255",
+      "demo": "Both modes choice3 selects directory block82 without writing the skip-title marker",
+      "native_handoff": "segment26 P2(\"MUST\") then native P8: LDA C08A; JMP C600"
+    }
+  ],
+  "directory_templates": [
+    {
+      "block": 79,
+      "sha256": "53eb9221831976646bffe3034839b2fbeee171ef6acf5e73006977cb6c4972f3",
+      "sectors": [
+        {
+          "track": 9,
+          "sector": 1,
+          "physical_sector": 13,
+          "offset": 37120
+        },
+        {
+          "track": 9,
+          "sector": 15,
+          "physical_sector": 15,
+          "offset": 40704
+        }
+      ],
+      "directory_entries": [
+        {
+          "record_offset": 26,
+          "start_block": 3,
+          "end_block": 85,
+          "kind": 5,
+          "name": "SYSTEM.DATA",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 52,
+          "start_block": 85,
+          "end_block": 103,
+          "kind": 2,
+          "name": "SUNDOG.LIBRARY",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 78,
+          "start_block": 103,
+          "end_block": 140,
+          "kind": 5,
+          "name": "SYSTEM.LIBRARY",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 104,
+          "start_block": 140,
+          "end_block": 219,
+          "kind": 2,
+          "name": "SYSTEM.STARTUP",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 130,
+          "start_block": 219,
+          "end_block": 251,
+          "kind": 5,
+          "name": "SYSTEM.APPLE",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 156,
+          "start_block": 251,
+          "end_block": 280,
+          "kind": 2,
+          "name": "SYSTEM.PASCAL",
+          "last_block_bytes": 512
+        }
+      ]
+    },
+    {
+      "block": 80,
+      "sha256": "0302761ed0de98816484a7eb71b5727901dac698427adfb310686568dd29282a",
+      "sectors": [
+        {
+          "track": 10,
+          "sector": 0,
+          "physical_sector": 0,
+          "offset": 40960
+        },
+        {
+          "track": 10,
+          "sector": 14,
+          "physical_sector": 2,
+          "offset": 44544
+        }
+      ],
+      "directory_entries": [
+        {
+          "record_offset": 26,
+          "start_block": 3,
+          "end_block": 85,
+          "kind": 5,
+          "name": "SYSTEM.DATA",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 52,
+          "start_block": 85,
+          "end_block": 103,
+          "kind": 2,
+          "name": "SYSTEM.STARTUP",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 78,
+          "start_block": 103,
+          "end_block": 140,
+          "kind": 5,
+          "name": "SYSTEM.LIBRARY",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 104,
+          "start_block": 140,
+          "end_block": 219,
+          "kind": 5,
+          "name": "SUNDOG.LIBRARY",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 130,
+          "start_block": 219,
+          "end_block": 251,
+          "kind": 5,
+          "name": "SYSTEM.APPLE",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 156,
+          "start_block": 251,
+          "end_block": 280,
+          "kind": 2,
+          "name": "SYSTEM.PASCAL",
+          "last_block_bytes": 512
+        }
+      ]
+    },
+    {
+      "block": 81,
+      "sha256": "53eb9221831976646bffe3034839b2fbeee171ef6acf5e73006977cb6c4972f3",
+      "sectors": [
+        {
+          "track": 10,
+          "sector": 13,
+          "physical_sector": 4,
+          "offset": 44288
+        },
+        {
+          "track": 10,
+          "sector": 12,
+          "physical_sector": 6,
+          "offset": 44032
+        }
+      ],
+      "directory_entries": [
+        {
+          "record_offset": 26,
+          "start_block": 3,
+          "end_block": 85,
+          "kind": 5,
+          "name": "SYSTEM.DATA",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 52,
+          "start_block": 85,
+          "end_block": 103,
+          "kind": 2,
+          "name": "SUNDOG.LIBRARY",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 78,
+          "start_block": 103,
+          "end_block": 140,
+          "kind": 5,
+          "name": "SYSTEM.LIBRARY",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 104,
+          "start_block": 140,
+          "end_block": 219,
+          "kind": 2,
+          "name": "SYSTEM.STARTUP",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 130,
+          "start_block": 219,
+          "end_block": 251,
+          "kind": 5,
+          "name": "SYSTEM.APPLE",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 156,
+          "start_block": 251,
+          "end_block": 280,
+          "kind": 2,
+          "name": "SYSTEM.PASCAL",
+          "last_block_bytes": 512
+        }
+      ]
+    },
+    {
+      "block": 82,
+      "sha256": "879156c30b85dfe3b4eebd69f1cf9b0d9411aaaebc8c1582b6a98c6437d2c184",
+      "sectors": [
+        {
+          "track": 10,
+          "sector": 11,
+          "physical_sector": 8,
+          "offset": 43776
+        },
+        {
+          "track": 10,
+          "sector": 10,
+          "physical_sector": 10,
+          "offset": 43520
+        }
+      ],
+      "directory_entries": [
+        {
+          "record_offset": 26,
+          "start_block": 3,
+          "end_block": 103,
+          "kind": 5,
+          "name": "SUNDOG.LIBRARY",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 52,
+          "start_block": 103,
+          "end_block": 140,
+          "kind": 5,
+          "name": "SYSTEM.LIBRARY",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 78,
+          "start_block": 140,
+          "end_block": 157,
+          "kind": 5,
+          "name": "DEMO.LIBRARY",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 104,
+          "start_block": 157,
+          "end_block": 174,
+          "kind": 2,
+          "name": "SYSTEM.STARTUP",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 130,
+          "start_block": 174,
+          "end_block": 219,
+          "kind": 5,
+          "name": "DEMO.DATA",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 156,
+          "start_block": 219,
+          "end_block": 251,
+          "kind": 5,
+          "name": "SYSTEM.APPLE",
+          "last_block_bytes": 512
+        },
+        {
+          "record_offset": 182,
+          "start_block": 251,
+          "end_block": 280,
+          "kind": 2,
+          "name": "SYSTEM.PASCAL",
+          "last_block_bytes": 512
+        }
+      ]
+    }
+  ],
+  "reference_observations": [
+    {
+      "capture": "analysis/local/reference/follow-20261023-120102",
+      "label": "after-720-frames",
+      "main_sha256": "6279ec7a9ca90cb756c47226ab84f8d04727b3009dfab83be3ed41074fda5e76",
+      "frame_rgba_sha256": "9cbc39bfba42f2fd4a5b50bfe16efee90ebe1e04aba92b8f5c5f3dbbc6988f23",
+      "table29": 44474,
+      "text_fields": {
+        "11": 181,
+        "12": 90,
+        "13": 270,
+        "14": 135,
+        "17": 270,
+        "18": 172,
+        "19": 251,
+        "357": 63,
+        "364": 172,
+        "365": 251,
+        "366": 0,
+        "367": 3
+      },
+      "interpretation": "Original intro/button prompt"
+    },
+    {
+      "capture": "analysis/local/reference/advance-20261023-122315",
+      "label": "advanced",
+      "main_sha256": "a7242b1e18479c5e6a0a890a6ea195070e607f2e8f061520483a4684c90b58dd",
+      "frame_rgba_sha256": "8f2ee6ddeecd3823f185ea7946f4a0faa911b8b1ead624ee9987361f26b9aa63",
+      "table29": 44474,
+      "text_fields": {
+        "11": 181,
+        "12": 90,
+        "13": 270,
+        "14": 135,
+        "17": 270,
+        "18": 124,
+        "19": 215,
+        "357": 255,
+        "364": 140,
+        "365": 202,
+        "366": 0,
+        "367": 0
+      },
+      "interpretation": "Original subsequent three-choice startup menu"
+    }
+  ],
+  "cold_utility_profile": {
+    "source_side": "utility",
+    "metadata_block": 83,
+    "metadata_sha256": "ff580ec60d9a9580b9a992ead6e8c3bbbd8cc1884d2c07b7afa0392b15cf7c3b",
+    "metadata_sectors": [
+      {
+        "track": 10,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 43264
+      },
+      {
+        "track": 10,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 43008
+      }
+    ],
+    "selected_slot": 1,
+    "game_relative_block": 34,
+    "game_loader_block": 37,
+    "game_blocks": 10,
+    "game_sha256": "1237517268778affe17fe03a88667922bc02b63f9d9386a9ed30366b9f923941",
+    "game_sectors": [
+      {
+        "track": 4,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 17664
+      },
+      {
+        "track": 4,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 17408
+      },
+      {
+        "track": 4,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 17152
+      },
+      {
+        "track": 4,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 16896
+      },
+      {
+        "track": 4,
+        "sector": 1,
+        "physical_sector": 13,
+        "offset": 16640
+      },
+      {
+        "track": 4,
+        "sector": 15,
+        "physical_sector": 15,
+        "offset": 20224
+      },
+      {
+        "track": 5,
+        "sector": 0,
+        "physical_sector": 0,
+        "offset": 20480
+      },
+      {
+        "track": 5,
+        "sector": 14,
+        "physical_sector": 2,
+        "offset": 24064
+      },
+      {
+        "track": 5,
+        "sector": 13,
+        "physical_sector": 4,
+        "offset": 23808
+      },
+      {
+        "track": 5,
+        "sector": 12,
+        "physical_sector": 6,
+        "offset": 23552
+      },
+      {
+        "track": 5,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 23296
+      },
+      {
+        "track": 5,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 23040
+      },
+      {
+        "track": 5,
+        "sector": 9,
+        "physical_sector": 12,
+        "offset": 22784
+      },
+      {
+        "track": 5,
+        "sector": 8,
+        "physical_sector": 14,
+        "offset": 22528
+      },
+      {
+        "track": 5,
+        "sector": 7,
+        "physical_sector": 1,
+        "offset": 22272
+      },
+      {
+        "track": 5,
+        "sector": 6,
+        "physical_sector": 3,
+        "offset": 22016
+      },
+      {
+        "track": 5,
+        "sector": 5,
+        "physical_sector": 5,
+        "offset": 21760
+      },
+      {
+        "track": 5,
+        "sector": 4,
+        "physical_sector": 7,
+        "offset": 21504
+      },
+      {
+        "track": 5,
+        "sector": 3,
+        "physical_sector": 9,
+        "offset": 21248
+      },
+      {
+        "track": 5,
+        "sector": 2,
+        "physical_sector": 11,
+        "offset": 20992
+      }
+    ],
+    "catalog_loader_block": 26,
+    "catalog_sha256": "41d53e25b2710082bd7ed2f4d611e800e1044c0ae00078ea29dc0db81e65b497",
+    "catalog_sectors": [
+      {
+        "track": 3,
+        "sector": 11,
+        "physical_sector": 8,
+        "offset": 15104
+      },
+      {
+        "track": 3,
+        "sector": 10,
+        "physical_sector": 10,
+        "offset": 14848
+      }
+    ],
+    "stored_checksum_offset": 94,
+    "checksum_expected": 42647,
+    "checksum_actual": 42647,
+    "native_checksum_agrees": true,
+    "native_checksum_ghidra_boundaries_agree": true,
+    "native_checksum_entry": 1978,
+    "native_checksum_body_sha256": "8403c5c3e136faa975432d7545cd13a7f502c46381b3e8ee83bb39ccf44fe968",
+    "name_source_offset": 438,
+    "name_length": 5,
+    "name_sha256": "858e45c5784f3eb5183387800ac269584d9a735521aecbad51da16fc0130c9e3",
+    "table_load": "P24 preserves pointer(table29.word36); P53 reads first512bytes of selected game into word36 onward",
+    "state_word_index": 45,
+    "state_source_byte_offset": 18,
+    "state_word": 12987,
+    "state": 2,
+    "word42": 5174,
+    "word43": 13,
+    "play_allowed": true,
+    "new_game": false,
+    "artifact": "analysis/local/native-assets/sundog-startup-profile.json",
+    "artifact_sha256": "665c07f65a1f6b9debdd2dc76109aa777dd994a21319e5cdfde7bac916cd3453"
+  },
+  "next_play_steps": {
+    "segment": 7,
+    "procedure": 5,
+    "after_call_offsets": [
+      458,
+      461
+    ],
+    "behavior": "P3(false) requests/verifies Play side, then segment22 P52; remaining initialization precedes gameplay dispatcher"
+  },
+  "confidence": "High for the source-specific flow and existing observed screens; not every disk/event path was executed",
+  "limitations": [
+    "No app-side writes to original disks are authorized by this analysis; model the selected transition natively.",
+    "Ctrl-U is not a direct predicate of this P6 button loop; the earlier BIOS keyboard route is separate.",
+    "Physical joystick mapping, countdown duration, media timing and full scene initialization remain unresolved."
+  ]
+}

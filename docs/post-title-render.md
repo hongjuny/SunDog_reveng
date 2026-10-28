@@ -1,0 +1,96 @@
+# Original post-title prompt and startup choices
+
+`StartupTextScreen.swift` reconstructs the selected original startup window,
+the segment26 P6 prompt text, and segment25 button visuals. It accepts original
+font/message bytes as data. It does not display a captured screenshot or execute
+a p-machine in the product.
+
+## Window and text
+
+At segment26 P6 `$03A2..03A4`, P51 receives `(40,24)`. P51 computes and clamps
+`40-10` to1..19 and `24*8-48` to7..88, producing cell19 and row88. Its selected
+20-byte ×96-row window occupies logical pixels x133..272, rows88..183. The
+template's white outside rectangle has a black inset x135..270, rows89..182.
+P50 selects text bounds left135/right270/top90/bottom181. P44 clears that text
+rectangle using native P7 mode8, then sets logical x137, baseline100, right270.
+
+The saved original RAM independently contains window-template fields
+`[bottom95,top0,right139,left0]`, text fields `[181,90,270,135]` and template
+position `[column19,row88]`. Original P7 mode8 clears seven-bit pixels while
+setting the phase bit; mode11 fills white. Selected native rectangle probes on
+synthetic pages match the independent per-bit equations exactly, including
+partial-byte edges. Fresh REA/Ghidra P7 evidence is
+`ev_508d5c7ce07524dfbaaeb2bbd38307a5ce6601e788dfdf2b85c11c3fe8a6f64b`.
+The imported captured P7 region is `$A782..$A903`, source `$11C4..$1345` in
+SYSTEM.LIBRARY segment22. The helper outside that slice is checked against the
+persistent full Ghidra export; it is not falsely covered by the bounded import.
+
+P6's eight source strings at `$03AF,$03C5,$03DD,$03F5,$040F,$0429,$0447,$0463`
+are decoded from the immutable original segment26 payload. These include game
+identification, copyright and the two-button instruction. They are exported only
+to ignored `analysis/local/native-assets/startup-text.json`; the public report
+retains source coordinates and hashes. Their placement follows the already
+verified P48/P47/P45 layout, preserving state between string calls. P11(3) selects
+mode3/mask003F. The font is the previously source-verified1,024-byte prefix.
+
+The reproduced prompt HGR page matches all8,192 bytes of the original retained
+`follow-20261023-120102/after-720-frames` RAM. Its SHA-256 is
+`4bcf4c0178d3c8dc719c6e2a57f5e79c595a9108d3f11fd4a2b90f064e001ac5`.
+
+## Buttons and pointer
+
+Segment25 P3 stores up to8 string labels and21 item records. For the startup's
+selected three buttons, the relative rectangles are `[4,131,49,59]`,
+`[4,131,64,74]`, `[4,131,79,89]` in left/right/top/bottom order. P6 supplies the
+identities2,1,3 in that order, conditional on the first choice being eligible.
+For two choices, the labels occupy the first two vertical positions instead.
+
+P25 P9 expands each rectangle by2 pixels and draws it using native P7 mode10,
+then fills the original rectangle with mode8. Mode10 selects byte pattern `$D5`
+on even global byte columns and `$AA` on odd columns. This differs from the
+large SUN DOG logo bars; the byte patterns, rather than a guessed color name,
+are the source contract. Labels are centered with six-pixel character advance.
+
+For the first button, the displayed outer rectangle is x137..268/y137..151,
+inner rectangle x139..266/y139..149, and label baseline148. Subsequent buttons
+add15 to y. The label's x coordinate is `139+(128-6*length)/2`, with integer
+division. Original P25 P7's hit test accepts x139..266 and a two-pixel vertical
+margin, yielding y137..151,152..166,167..181 for the three item slots.
+
+P22 P41 draws the selected pointer by XORing font glyph1 with mask0 at
+`(rawX-3,rawY+3)`. The retained original menu point is `(199,137)`, so its glyph
+starts at x196/baseline140. The native helper `pointer(on:font:x:y:)` starts from
+a pointer-free page to avoid XOR trails. It supports the verified glyph bounds;
+host mouse mapping and timing are separate from this pixel contract.
+
+The healthy-continuation greeting, three buttons and recorded pointer reproduce
+all8,192 bytes of the retained `advance-20261023-122315/advanced` HGR page. The
+player name in that comparator is a fixture parameter from reference RAM, not
+an app asset copied from RAM. The app's actual name and eligibility must come
+from independently verified original save/init data.
+
+## Reproduction and APIs
+
+```sh
+python3 tools/post_title_render_evidence.py
+python3 tools/verify_native_startup_screen.py
+python3 -m unittest discover -s tests -p test_post_title_render.py
+```
+
+Public APIs:
+
+- `StartupTextScreen.compose(background:font:messages:)` draws the selected
+  window and sequential original messages.
+- `StartupTextScreen.composeChoices(background:font:messages:labels:cursorX:cursorY:)`
+  adds up to three centered original buttons and an optional pointer.
+- `StartupTextScreen.pointer(on:font:x:y:)` applies the original selected XOR glyph.
+
+Swift comparisons match the complete prompt and menu pages, not just a screen
+hash generated by the same rewrite. Native rectangle checks and original text
+CFG evaluation provide separate pixel/placement evidence; the retained whole
+pages corroborate their composition. Four media-independent tests cover partial
+byte preservation, global byte parity, XOR restoration and capacity boundaries.
+
+Confidence is high for this selected startup window and menu rendering. General
+window allocation, window-opening animation, sound, arbitrary menu records and
+hardware input timing remain outside this contract.

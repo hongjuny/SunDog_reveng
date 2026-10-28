@@ -1,0 +1,25 @@
+{
+  "native_cases": 20,
+  "invalid_sources": 4,
+  "all_matched": true,
+  "method": "Compiled Swift decoder versus bounded original native segment24P5 on original and synthetic resources",
+  "original_source_sha256": "acaadfd85907933575a035fe67f716630e3c3695430008f90a4b48ea6b1fd68c",
+  "native_entry": 4112,
+  "declared_native_view_base": 16384,
+  "original_resource_blocks": [
+    29,
+    33
+  ],
+  "native_instruction_count": 78,
+  "native_steps": 1841723,
+  "native_ghidra_boundaries_match": true,
+  "cases_sha256": "4cfd8dd91b4f99ccd5a1f235c6c81b947af87294472897e8f9178e79713a2784",
+  "source_files": {
+    "native/SunDogLogic/ShipScreenDecoder.swift": "bcf3d5af2c12710ce2d7fa6330d3213f7a3072e434b764508941eaa9b3559e03",
+    "tests/native/VerifyShipScreen.swift": "4674fc62c42d1dba85ca9efa917f9ca533f8ff9747f265a70a90a667267c16be"
+  },
+  "limitations": [
+    "Base SHIP image decoding is not the subsequent interactive scene or status overlays.",
+    "No machine, p-code interpreter, ROM or device execution backend is included in the product."
+  ]
+}
